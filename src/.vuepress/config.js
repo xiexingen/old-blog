@@ -62,29 +62,29 @@ module.exports = {
     menus: [
       // icons by https://fontawesome.com/icons
       {
-        text: 'Home',
+        text: '首页',
         icon: 'fa fa-home',
         url: '/'
       },
       {
-        text: 'Tags',
+        text: '标签',
         icon: 'fa fa-tag',
         url: '/tags'
       },
       {
         text: 'Github',
         icon: 'fab fa-github',
-        url: 'https://github.com/yscoder',
+        url: 'https://github.com/xiexingen',
         external: true
       },
+      // {
+      //   text: 'Weibo',
+      //   icon: 'fab fa-weibo',
+      //   url: 'https://www.weibo.com/ysweb',
+      //   external: true
+      // },
       {
-        text: 'Weibo',
-        icon: 'fab fa-weibo',
-        url: 'https://www.weibo.com/ysweb',
-        external: true
-      },
-      {
-        text: 'About',
+        text: '关于',
         icon: 'fa fa-user-secret',
         url: '/about'
       }
