@@ -60,6 +60,8 @@ module.exports = {
     since: 2015,
     avatar: '/face.jpg',
     avatarLink: '/',
+    search: true,
+    searchMaxSuggestions: 10,
     menus: [
       // icons by https://fontawesome.com/icons
       {
@@ -72,11 +74,11 @@ module.exports = {
         icon: 'fa fa-tag',
         url: '/tags'
       },
-      {
-        text:'时间轴',
-        icon:'fa fa-calendar',
-        url:'/timelines'
-      },
+      // {
+      //   text:'时间轴',
+      //   icon:'fa fa-calendar',
+      //   url:'/timelines'
+      // },
       // {
       //   text: 'Weibo',
       //   icon: 'fab fa-weibo',
