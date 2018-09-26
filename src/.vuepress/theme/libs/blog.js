@@ -13,7 +13,6 @@ const install = (Vue, { theme, pages }) => {
   const postList = []
   const posts = {}
   const postDir = theme.postDir
-
   sortBy(pages, page => -new Date(page.frontmatter.date)).forEach(page => {
     if (page.path.indexOf(postDir) === 0) {
       const slug = matchSlug(page.path)
@@ -35,10 +34,22 @@ const install = (Vue, { theme, pages }) => {
     })
   })
 
+  const timelines={};
+  postList.forEach(slug=>{
+    const date=posts[slug].frontmatter.date;
+    if(date){
+      const year=dayjs(date).format("YYYY");
+      if(!timelines[year]){
+        timelines[year]=[];
+      }
+      timelines[year].push(slug);
+    }
+  })
+
   Vue.mixin({
     computed: {
       $blog() {
-        return { postList, posts, tags, tagList }
+        return { postList, posts, tags, tagList,timelines }
       },
       $postNav() {
         const slug = matchSlug(this.$route.path)
@@ -68,6 +79,7 @@ const install = (Vue, { theme, pages }) => {
   const format = theme.format
   Vue.filter('date', value => dayjs(value).format(format.date))
   Vue.filter('dateTime', value => dayjs(value).format(format.dateTime))
+  Vue.filter('monthDate', value => dayjs(value).format("MM-DD"))
 }
 
 export default { install }

@@ -73,10 +73,9 @@ module.exports = {
         url: '/tags'
       },
       {
-        text: 'Github',
-        icon: 'fab fa-github',
-        url: 'https://github.com/xiexingen',
-        external: true
+        text:'时间轴',
+        icon:'fa fa-calendar',
+        url:'/timelines'
       },
       // {
       //   text: 'Weibo',
@@ -85,28 +84,27 @@ module.exports = {
       //   external: true
       // },
       {
-        text: '关于',
+        text: '关于我',
         icon: 'fa fa-user-secret',
         url: '/about'
+      },
+      {
+        text: 'Github',
+        icon: 'fab fa-github',
+        url: 'https://github.com/xiexingen',
+        external: true
       }
     ],
     socials: ['Weibo', 'QQ', 'Facebook', 'Twitter', 'GooglePlus'],
     colors: {
       // generate by https://vuetifyjs.com/zh-Hans/theme-generator
-      // primary: '#3F51B5',
-      // secondary: '#6d6d6d',
-      // accent: '#E91E63',
-      // error: '#f44336',
-      // warning: '#FFC107',
-      // info: '#00B8D4',
-      // success: '#4caf50'
-      primary: "#448AFF",
-      secondary: "#2979FF",
-      accent: "#448AFF",
-      error: "#FF4081",
-      warning: "#FBC02D",
-      info: "#00B0FF",
-      success: "#4caf50"
+      primary: '#448AFF',
+      secondary: '#6d6d6d',
+      accent: '#E91E63',
+      error: '#f44336',
+      warning: '#FFC107',
+      info: '#00B8D4',
+      success: '#4caf50'
     },
     format: {
       date: 'YYYY年MM月DD日',
@@ -121,6 +119,10 @@ module.exports = {
     },
     categories: {
       path: '/categories/:category'
+    },
+    timelines: {
+      path: '/timelines/:pageNum',
+      pageSize:15
     }
   }
 }
