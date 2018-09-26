@@ -113,7 +113,7 @@ module.exports = {
     },
     pagination: {
       path: '/page/:pageNum',
-      pageSize: 5
+      pageSize: 10
     },
     tags: {
       path: '/tags/:tagName'

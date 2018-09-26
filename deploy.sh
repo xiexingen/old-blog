@@ -12,6 +12,7 @@ cd docs
 # 如果是发布到自定义域名
 echo 'blog.xxgtalk.cn' > CNAME
 
+cd ..
 # git add -A
 # git commit -m 'deploy'
 

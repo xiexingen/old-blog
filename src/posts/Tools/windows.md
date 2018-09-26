@@ -3,10 +3,12 @@ title: windows使用相关
 date: 2018-05-20 09:10:15
 categories: ['工具']
 tags: ['工具']
-comments: true
 ---
 
-#### 一、技巧篇
+#### window技巧-长期更新
+<!-- more -->
+
+##### 一、技巧篇
 * 查看占用端口  
 netstat -aon    [|findstr "1005"]      查找1005端口被那个占用  
 * windows下删除多层级文件夹：  
@@ -18,7 +20,7 @@ netstat -aon    [|findstr "1005"]      查找1005端口被那个占用
 * 打开本地连接：ncpa.cpl
 * 查看系统支持的最大内存：wmic memphysical get maxcapacity
 * 修改hosts文件后刷新 ipconfig -flushdns
-#### 二、快捷键
+##### 二、快捷键
 * comexp.msc:打开window组件服务，可以查看事务  
 * netplwiz   :修改用户组相关  
 * inetmgr:打开IIS  

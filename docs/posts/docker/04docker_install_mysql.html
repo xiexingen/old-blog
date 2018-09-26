@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Docker 安装MySql · XXG&#39;s Blog · 爱代码爱生活！</title>
+    <meta name="description" content="谢新根的博客。不乱于心 不困于情 不畏将来 不念过去 如此 甚好！">
+    <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#3F51B5">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/icons/192.png">
+  <meta name="msapplication-TileImage" content="/icons/192.png">
+  <meta name="msapplication-TileColor" content="#3F51B5">
+    
+    <link rel="preload" href="/assets/css/styles.52febe92.css" as="style"><link rel="preload" href="/assets/js/app.52febe92.js" as="script"><link rel="preload" href="/assets/css/styles.52febe92.css" as="style"><link rel="preload" href="/assets/js/7.78ee0c5a.js" as="script"><link rel="prefetch" href="/assets/js/1.1cfa1348.js"><link rel="prefetch" href="/assets/js/2.d59735c7.js"><link rel="prefetch" href="/assets/js/3.b690d377.js"><link rel="prefetch" href="/assets/js/4.5b9cf134.js"><link rel="prefetch" href="/assets/js/5.e946ca98.js"><link rel="prefetch" href="/assets/js/6.d4445601.js"><link rel="prefetch" href="/assets/js/8.590ec567.js"><link rel="prefetch" href="/assets/js/9.02737991.js"><link rel="prefetch" href="/assets/js/10.b2662825.js"><link rel="prefetch" href="/assets/js/11.c094f50e.js"><link rel="prefetch" href="/assets/js/12.3ad41e5d.js"><link rel="prefetch" href="/assets/js/13.48fe8a44.js"><link rel="prefetch" href="/assets/js/14.d9b00257.js"><link rel="prefetch" href="/assets/js/15.f0aa3ac9.js"><link rel="prefetch" href="/assets/js/16.a123efc9.js"><link rel="prefetch" href="/assets/js/17.c37599e0.js"><link rel="prefetch" href="/assets/js/18.3a427c60.js"><link rel="prefetch" href="/assets/js/19.802157fe.js"><link rel="prefetch" href="/assets/js/20.b29d8e59.js"><link rel="prefetch" href="/assets/js/21.ce943164.js"><link rel="prefetch" href="/assets/js/22.294a256c.js"><link rel="prefetch" href="/assets/js/23.15393509.js"><link rel="prefetch" href="/assets/js/24.6607c835.js"><link rel="prefetch" href="/assets/js/25.a83f7a8e.js"><link rel="prefetch" href="/assets/js/26.cd03b490.js"><link rel="prefetch" href="/assets/js/27.d720255b.js"><link rel="prefetch" href="/assets/js/28.5153349a.js">
+    <link rel="stylesheet" href="/assets/css/styles.52febe92.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div data-app="true" id="app" class="application theme--light"><div class="application--wrap"><div class="v-progress-linear blog-progress" style="height:3px;display:none;"><div class="v-progress-linear__background accent" style="height:3px;opacity:0.4;width:100%;"></div><div class="v-progress-linear__bar"><!----><div class="v-progress-linear__bar__determinate accent" style="width:0%;"></div></div></div><aside class="v-navigation-drawer v-navigation-drawer--close v-navigation-drawer--fixed v-navigation-drawer--is-mobile theme--light" style="height:100%;margin-top:0px;max-height:calc(100% - 0px);transform:translateX(-240px);width:240px;"><div><div class="aside-brand-wrap"><div class="aside-brand"><a href="/" class="aside-avatar elevation-2 router-link-active"><img src="/face.jpg" alt="avatar"></a><hgroup class="mt-3 variant-hide"><div class="subheading white--text">谢新根</div><a href="mailto:1002275364@qq.com" title="1002275364@qq.com" class="aside-mail primary--text text--lighten-5">1002275364@qq.com</a></hgroup></div></div><hr class="v-divider theme--dark"><div class="v-list nav-list theme--light"><div class="secondary--text"><a href="/" class="v-list__tile v-list__tile--link theme--light"><div class="v-list__tile__avatar"><div class="v-avatar" style="height:40px;width:40px;"><i class="fa fa-home"></i></div></div><div class="v-list__tile__content">首页</div></a></div><div class="secondary--text"><a href="/tags" class="v-list__tile v-list__tile--link theme--light"><div class="v-list__tile__avatar"><div class="v-avatar" style="height:40px;width:40px;"><i class="fa fa-tag"></i></div></div><div class="v-list__tile__content">标签</div></a></div><div class="secondary--text"><a href="https://github.com/xiexingen" target="_blank" class="v-list__tile v-list__tile--link theme--light"><div class="v-list__tile__avatar"><div class="v-avatar" style="height:40px;width:40px;"><i class="fab fa-github"></i></div></div><div class="v-list__tile__content">Github</div></a></div><div class="secondary--text"><a href="/about" class="v-list__tile v-list__tile--link theme--light"><div class="v-list__tile__avatar"><div class="v-avatar" style="height:40px;width:40px;"><i class="fa fa-user-secret"></i></div></div><div class="v-list__tile__content">关于</div></a></div></div></div><div class="v-navigation-drawer__border"></div></aside><nav class="blog-toolbar v-toolbar v-toolbar--fixed theme--dark primary" style="margin-top:0px;padding-right:0px;padding-left:0px;transform:translateY(0px);"><div class="v-toolbar__content" style="height:56px;"><button type="button" class="v-btn v-btn--icon theme--dark"><div class="v-btn__content"><i class="fa fa-bars"></i></div></button><div class="v-toolbar__title">Docker 安装MySql</div><div class="spacer"></div><button type="button" class="v-btn v-btn--icon theme--dark"><div class="v-btn__content"><i class="fa fa-search"></i></div></button><div class="v-menu v-menu--inline" style="display:none;"><div class="v-menu__activator"><button type="button" class="v-btn v-btn--icon theme--dark"><div class="v-btn__content"><i class="fa fa-share-alt"></i></div></button></div><div class="v-menu__content" style="max-height:auto;min-width:0px;max-width:auto;top:12px;left:0px;transform-origin:top right;z-index:0;display:none;"><div class="v-list theme--light"><div class="secondary--text"><a class="v-list__tile v-list__tile--link theme--light"><div class="v-list__tile__avatar"><div class="v-avatar" style="height:40px;width:40px;"><i class="fa fa-lg fa-copy"></i></div></div><div class="v-list__tile__title">复制链接</div></a></div></div><input type="text" tabindex="-1" aria-hidden="true" value="" class="fake-hide"></div></div></div></nav><main class="v-content" style="padding-top:56px;padding-right:0px;padding-bottom:0px;padding-left:0px;"><div class="v-content__wrap"><div class="container blog-container grid-list-xl align-center"><div class="layout row wrap"><div class="flex mb-3 xs12"><article class="v-card theme--light elevation-16 post-card" style="height:undefined;"><div class="v-card__title"><div class="flex xs12"><h2 class="display-1 mb-3">Docker 安装MySql</h2><div class="post-meta"><time datetime="2018-06-02T09:20:10.000Z" class="secondary--text post-time">2018年06月02日</time></div></div></div><div class="v-card__text pt-0 pb-0"><div class="flex xs12"><div class="content custom"><p>Docker 安装MySql
+</p><blockquote><p>将docker容器中的实例中的文件跟物理文件链接起来 即使删掉容器 数据还在 再创建容器的时候 任然可以对应上之前的数据</p></blockquote><h4 id="一、安装篇"><a href="#一、安装篇" aria-hidden="true" class="header-anchor">#</a> 一、安装篇</h4><ol><li>使用docker-compose安装</li></ol><ul><li>[1.1] 在目录/docker/mysql/mysql-init下创建init-user.sql文件 内容如下</li></ul><pre class="language-text"><code>use mysql;
+CREATE USER 'sa'@'%' IDENTIFIED BY 'Abcd1234';
+GRANT ALL PRIVILEGES ON *.* TO 'sa'@'%';
+</code></pre><ul><li>[1.2]<br>
+docker-compose -f mysql-docker-compose.yml up -d<br>
+对应的mysql-docker-compose.yml文件</li></ul><pre class="language-bash"><code>version: <span class="token string">'2.3'</span>
+
+services:
+  db:
+    image: mysql/mysql-server
+    container_name: mysql01
+    restart: always
+    command: mysqld --character-set-server<span class="token operator">=</span>utf8 --collation-server<span class="token operator">=</span>utf8_general_ci
+    ports:
+      - 3306:3306
+<span class="token comment"># networks:</span>
+<span class="token comment">#   - net_mysql</span>
+    environment:
+      MYSQL_ROOT_PASSWORD: Abcd1234
+    volumes:
+      - /docker/mysql/mysql-init:/docker-entrypoint-initdb.d
+      - /docker/mysql/data:/var/lib/mysql
+<span class="token comment"># volumes:</span>
+<span class="token comment">#   mysql-data:</span>
+<span class="token comment">#     external: true</span>
+<span class="token comment"># networks:</span>
+<span class="token comment">#   net_mysql:</span>
+<span class="token comment">#     external: true</span>
+</code></pre><ol start="2"><li>mount【推荐使用】</li></ol><pre class="language-text"><code>docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Abcd1234 --name mysql01 --restart always --mount type=bind,src=/docker/mysql/config/my.cnf,dst=/etc/my.cnf --mount type=bind,src=/docker/mysql/data,dst=/var/lib/mysql mysql
+</code></pre><blockquote><p>/docker/mysql/config/my.cnf	  对应物理磁盘位置 需要新建my.cnf 内容如下</p></blockquote><pre class="language-text"><code>[mysqld]
+user=root
+character-set-server=utf8
+[client]
+default-character-set=utf8
+[mysql]
+default-character-set=utf8
+</code></pre><blockquote><p>/etc/my.cnf	--docker创建mysql后该mysql容器对应的配置文件<br>
+/docker/mysql/data	--对应物理磁盘位置 表示docker中数据映射到的物理文件位置<br>
+/var/lib/mysql mysql/mysql-server   对应docker中mysql实例容器的文件位置<br>
+-e  MYSQL_ROOT_PASSWORD=Abcd1234  设置初始密码</p></blockquote><ol><li>volume[后期废用]  推荐使用mount形式</li></ol><pre class="language-text"><code>docker run -d -p 3306:3306 --name mysql01 -v=/docker/mysql/config/my.cnf:/etc/my.cnf -v=/docker/mysql/data:/var/lib/mysql mysql/mysql-server
+</code></pre><h4 id="二、使用篇"><a href="#二、使用篇" aria-hidden="true" class="header-anchor">#</a> 二、使用篇</h4><blockquote><p>docker 操作mysql</p></blockquote><ol><li>连接mysql<br>
+docker exec -it mysql01 bash<br>
+mysql -u root -p [密码] 	--密码可以待mysql容器启动后<br>
+通过docker logs mysql01 找到生成的随机密码 密码在一段类型：
+<img src="/images/docker/040101.png" alt></li><li>设置mysql密码<br>
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('Abcd1234');	--用户名为root 密码为Abcd1234</li><li>实验一下	【--exit 退出当前】<br>
+use mysql;	--使用数据库查询<br>
+select user,host from user;	--查询用户信息<br>
+show variables like ‘%char%’;		--查看当前使用的字符集<br>
+在mysql中创建网络用户 这样可以非本机访问<br>
+mysql&gt; CREATE USER 'sa'@'%' IDENTIFIED BY 'Abcd1234';<br>
+mysql&gt; GRANT ALL PRIVILEGES ON <em>.</em> TO 'sa'@'%';</li></ol><blockquote><p>docker run -d -p 3306:3306 -e&quot;MYSQL_USER=Zarc&quot; -e&quot;MYSQL_PASSWORD=pwd123456&quot; -e&quot;MYSQL_ROOT_PASSWORD=password123&quot; -e&quot;MYSQL_RANDOM_ROOT_PASSWORD=true&quot; --name mysql01 mysql/mysql-server --character-set-server=utf8 --collation-server=utf8_general_ci<br>
+备注： : When this is true (which is its default state, unless MYSQL_ROOT_PASSWORD is set or MYSQL_ALLOW_EMPTY_PASSWORD is set to true), a random password for the server's root user is generated when the Docker container is started 当这个MYSQL_RANDOM_ROOT_PASSWORD 为true 时 为root用户设置密码是没有作用的还是会生成随机的密码，设置为false 或者不加这个环境变量</p></blockquote></div></div></div><div class="v-card__actions"><div class="flex xs12"><a href="/tags/Docker"><span tabindex="0" class="v-chip capitalize chip-tag v-chip--label v-chip--small theme--light"><span class="v-chip__content">Docker</span></span></a></div></div></article></div><div class="flex text-xs-left xs6"><a href="/posts/docker/04docker-mssqlserver.html" class="post-nav v-btn v-btn--flat v-btn--router theme--light"><div class="v-btn__content"><div class="grey--text"><i class="fa mr-1 fa-chevron-left"></i>上篇</div><div class="title pre-title primary--text hidden-xs-only">Docker安装MsSqlserver</div></div></a></div><div class="flex text-xs-right xs6"><a href="/posts/docker/03docker-mongodb.html" class="post-nav v-btn v-btn--flat v-btn--router theme--light"><div class="v-btn__content"><div class="grey--text">下篇
+          <i class="fa ml-1 fa-chevron-right"></i></div><div class="title next-title primary--text hidden-xs-only">Docker安装mongodb</div></div></a></div></div></div><footer class="v-footer footer blog-footer darken-1 mt-3 primary theme--dark" style="height:auto;"><div class="primary--text text--lighten-4 text-xs-center py-3 card card--flat card--tile primary v-card v-card--flat v-card--tile theme--dark primary" style="height:undefined;"><div class="v-card__text pb-0 card__text">博客内容遵循 <a rel="license noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></div><div class="v-card__text pt-0 mt-1 card__text"><span>谢新根 © 2015 - 2018</span><span><!---->
+        Power by
+        <a href="https://vuepress.vuejs.org" target="_blank" rel="noopener noreferrer">VuePress</a> Theme
+        <a href="https://github.com/yscoder/vuepress-theme-indigo" target="_blank" rel="noopener noreferrer">indigo</a></span></div></div></footer></div></main><button type="button" class="v-btn v-btn--bottom v-btn--floating v-btn--fixed v-btn--right theme--light accent" style="display:none;"><div class="v-btn__content"><i class="fa fa-lg fa-chevron-up"></i></div></button></div></div></div>
+    <script src="/assets/js/7.78ee0c5a.js" defer></script><script src="/assets/js/app.52febe92.js" defer></script>
+  </body>
+</html>

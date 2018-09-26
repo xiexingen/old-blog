@@ -6,7 +6,10 @@
               wrap>
       <Tag v-for="item in $blog.tagList"
            :key="item"
-           :slug="item">#{{item}} {{$blog.tags[item].length}}</Tag>
+           :slug="item">
+           {{item}}
+           <b class="tag-count">&nbsp;{{$blog.tags[item].length}}</b>
+      </Tag>
     </v-layout>
     <v-list row
             wrap
@@ -49,8 +52,15 @@ export default {
 }
 </script>
 <style lang="stylus">
+@import './styles/config.styl';
 .list-inline-time {
   min-width: 120px;
   width: 200px !important;
+}
+.tag-count{
+  color: $primary-color;
+}
+.tag-active{
+  font-size:large;
 }
 </style>

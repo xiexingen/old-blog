@@ -11,12 +11,12 @@
           <div class="v-card__text pt-0 pb-0">
             <div class="flex xs12">
               <div class="content custom">
-                <h4 style="padding-top:0;" id="个人信息"><a href="#个人信息" aria-hidden="true" class="header-anchor">#</a> 个人信息</h4>
-                <p>姓名: <em><strong>谢新根</strong></em>
-                  昵称: 程序有Bug <code>（英名:XXG）</code>
-                  地址：目前浪迹于大长沙
-                  QQ: 1002275364
-                  自我描述: 爱代码爱生活</p>
+                <h4 id="个人信息"><a href="#个人信息" aria-hidden="true" class="header-anchor">#</a> 个人信息</h4>
+                <p>姓名: <em><strong>谢新根</strong></em></p>
+                <p>昵称: 程序有Bug <code>（英名:XXG）</code></p>
+                  <p>地址：目前浪迹于大长沙</p>
+                  <p>QQ: 1002275364</p>
+                  <p>自我描述: 爱代码爱生活</p>                  
                 <h5 id="技术星级"><a href="#技术星级" aria-hidden="true" class="header-anchor">#</a> 技术星级</h5>
                 <table>
                   <thead>

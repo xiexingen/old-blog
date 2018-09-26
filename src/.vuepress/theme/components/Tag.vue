@@ -29,6 +29,7 @@ export default {
 @import '../styles/config.styl';
 
 .tag-active {
+  font-weight: bold;
   .chip {
     color: #fff !important;
     background: $primary-color !important;
