@@ -33,7 +33,8 @@ module.exports = {
     const myConfig = {
       resolve: {
         alias: {
-          '@pub': resolve('./public')
+          '@pub': resolve('./public'),
+          '@post-img':resolve('./public/post-assets/images')
         }
       },
       module: {
