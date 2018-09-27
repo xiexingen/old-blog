@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Docker常用命令 | 程序有Bug&#39;s后花园</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Docker">
+    <meta name="description" content="Docker常用命令">
+<meta name="keywords" content="Docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker常用命令">
+<meta property="og:url" content="http://blog.xxgtalk.cn/2018/05/28/docker/00command/index.html">
+<meta property="og:site_name" content="程序有Bug&#39;s后花园">
+<meta property="og:description" content="Docker常用命令">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-09-26T02:59:49.519Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Docker常用命令">
+<meta name="twitter:description" content="Docker常用命令">
+    
+        <link rel="alternate" type="application/atom+xml" title="程序有Bug&#39;s后花园" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/images/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">谢新根</h5>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives/"  >
+                <i class="icon icon-lg icon-archives"></i>
+                存档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags/"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories/"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/xiexingen" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Docker常用命令</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Docker常用命令</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-05-28T01:10:10.000Z" itemprop="datePublished" class="page-time">
+  2018-05-28
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Docker/">Docker</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+
+<article id="post-docker/00command"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Docker常用命令</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-05-28 09:10:10" datetime="2018-05-28T01:10:10.000Z"  itemprop="datePublished">2018-05-28</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Docker/">Docker</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>Docker常用命令<br><a id="more"></a></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">命令</th>
+<th style="text-align:left">说明</th>
+<th style="text-align:left">参数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">docker –version</td>
+<td style="text-align:left">查看当前docker版本</td>
+</tr>
+<tr>
+<td style="text-align:left">docker ps</td>
+<td style="text-align:left">查看当前正在运行的容器</td>
+</tr>
+<tr>
+<td style="text-align:left">docker images</td>
+<td style="text-align:left">查看本地所有镜像</td>
+</tr>
+<tr>
+<td style="text-align:left">docker pull [镜像名称]</td>
+<td style="text-align:left">拉取一个镜像到本地</td>
+</tr>
+<tr>
+<td style="text-align:left">docker run [容器名称]</td>
+<td style="text-align:left">运行一个容器</td>
+</tr>
+<tr>
+<td style="text-align:left">docker rm [容器名称]</td>
+<td style="text-align:left">删除本地使用过的容器</td>
+</tr>
+<tr>
+<td style="text-align:left">docker start [Name]</td>
+<td style="text-align:left">启动指定容器</td>
+</tr>
+<tr>
+<td style="text-align:left">docker stop [Name]</td>
+<td style="text-align:left">关闭指定容器</td>
+</tr>
+<tr>
+<td style="text-align:left">docker pause [Name]</td>
+<td style="text-align:left">暂停指定容器</td>
+</tr>
+<tr>
+<td style="text-align:left">docker unpause [Name]</td>
+<td style="text-align:left">恢复指定容器</td>
+</tr>
+<tr>
+<td style="text-align:left">docker rmi -f $(docker images -a -q)</td>
+<td style="text-align:left">移除所有images</td>
+</tr>
+<tr>
+<td style="text-align:left">docker rmi $(docker images -f ‘dangling=true’ -q)</td>
+<td style="text-align:left">移除none的images  </td>
+</tr>
+<tr>
+<td style="text-align:left">docker inspect [容器名称]</td>
+<td style="text-align:left">查看容器的信息</td>
+</tr>
+<tr>
+<td style="text-align:left">docker exec -it [容器名称] bash</td>
+<td style="text-align:left">在容器内执行bash 比如执行后可以执行ls查看目录 也可以创建文件等</td>
+</tr>
+<tr>
+<td style="text-align:left">docker rm -fv [容器Id]</td>
+<td style="text-align:left">停止、删除容器、清除数据</td>
+</tr>
+<tr>
+<td style="text-align:left">docker images -f [option]</td>
+<td style="text-align:left">过滤查询</td>
+</tr>
+<tr>
+<td style="text-align:left">docker logs -f [container-name]</td>
+<td style="text-align:left">查看日志</td>
+</tr>
+</tbody>
+</table>
+<p>::: warning 温馨提示</p>
+<ul>
+<li>docker run -p 8001:80   &nbsp;&nbsp;–运行 指定端口 8001外部端口  80表示内部端口</li>
+<li>docker run -d             &nbsp;&nbsp;–detach 还可以继续操作 不会阻塞</li>
+<li>docker run –name        &nbsp;&nbsp;–运行的docker镜像的名称</li>
+<li>docker run -p 8001:80 &nbsp;&nbsp;–name myapi helloapi:latest<br>表示运行docker中名为helloapi的容器 版本为latest docker的端口为80 本机的端口8001 名字为myapi</li>
+<li>docker ps -a            &nbsp;&nbsp;–查看所有容器 不管有没运行</li>
+<li>过滤查询<br>docker images –filter “before=image1” 查询image1之后的<br>docker images –filter “since=image3”  查询image3之前的<br>docker images “wechat:v1.3.<em>“  查询wechat:1.3.x的<br>docker rmi -f $(docker images “wechat:v1.2.</em>“ -q) 移除wechat:v1.2.*版本的</li>
+<li>docker logs查看日志<br>docker logs -f gitlab 查看gitlab容器所有日志<br>docker logs –tail 20 -f gitlab 查看gitlab最近20条的日志<br>docker logs –since 30s -f gitlab 查看gitlab最近30s的日志<br>:::</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-09-26T02:59:49.519Z" itemprop="dateUpdated">2018-09-26 10:59:49</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://blog.xxgtalk.cn">
+            <img src="/images/avatar.jpg" alt="谢新根">
+            谢新根
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.xxgtalk.cn/2018/05/28/docker/00command/&title=《Docker常用命令》 — 程序有Bug's后花园&pic=http://blog.xxgtalk.cn/images/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.xxgtalk.cn/2018/05/28/docker/00command/&title=《Docker常用命令》 — 程序有Bug's后花园&source=Docker常用命令" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.xxgtalk.cn/2018/05/28/docker/00command/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Docker常用命令》 — 程序有Bug's后花园&url=http://blog.xxgtalk.cn/2018/05/28/docker/00command/&via=http://blog.xxgtalk.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.xxgtalk.cn/2018/05/28/docker/00command/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/05/30/docker/01docker-config/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Docker安装及配置加速镜像</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/05/20/tools/windows/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">windows使用相关</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/images/wechat.jpg" data-alipay="/images/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>谢新根 &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.xxgtalk.cn/2018/05/28/docker/00command/&title=《Docker常用命令》 — 程序有Bug's后花园&pic=http://blog.xxgtalk.cn/images/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.xxgtalk.cn/2018/05/28/docker/00command/&title=《Docker常用命令》 — 程序有Bug's后花园&source=Docker常用命令" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.xxgtalk.cn/2018/05/28/docker/00command/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Docker常用命令》 — 程序有Bug's后花园&url=http://blog.xxgtalk.cn/2018/05/28/docker/00command/&via=http://blog.xxgtalk.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.xxgtalk.cn/2018/05/28/docker/00command/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMElEQVR42u3aS5KjMBAFQN//0vQBZsDvSdDRSMnK4cBAsijX7/OJj+Pk+Pecs/PPrnl2l88TBwYGxmsZx+VxfYPrc86+aT8nLxEDA2MHxnVAzG9z/YKuQ+315y/PjIGBgRGkce03Y/fFwMDAaC+XF58zbAwMDIy8iL3rgZIy9cFaHAMD44WMvOv++58fmW9gYGC8inGUR95Ea9PKqafCwMBYmpEHuDwtmy9o2+fBwMDYgdEugc0vhM0Uw0X6iIGBsRAjT/uSQeZYyM5HpNH/BgYGxkKMtnF/1zgzb+pdjzAxMDD2YYw17pMEsU348hWQ//xjYGBgLMpoQ1tSoCblbj5CKMI9BgbGNoxHGvRDwb0N6xgYGKsy2hQtWYyYGXyOjVQxMDD2YcwvUuRpXDsW/fJSMDAwNmC048a8od8ORHNS3ZnDwMB4OaP9WVtwtiE4WUeLMlwMDIzlGPWPg+QyueYM+453gIGB8dcZedtrLLDOnD+VtmJgYCzHmGn9P7dgUdenGBgY2zDaInbs9vkdi+EBBgbGNow2OOalbBuO2/ULDAyMfRh5WMxbckmi2a6CRSsXGBgYSzCO8kjGCXcNAwoqBgbG0oz8yC89H2rnwzoGBsZ6jLGVi7Z8nUkBiwULDAyMpRltUz4pem9uqCV5LgYGBkb5EEkeOjaEwMDAwKgXHW4dkeaLYl/mGxgYGMsx8mFAHljb3l57JgYGxj6MmaA5U4jOLFsMDjUxMDDex/gBXrMD8Zt6M14AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '你在或不在 我就在这里等你！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '终于等到你!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>DotNetCore 备忘录 | 程序有Bug&#39;s后花园</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content=".NetCore">
+    <meta name="description" content="DotNetCore 备忘录">
+<meta name="keywords" content=".NetCore">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DotNetCore 备忘录">
+<meta property="og:url" content="http://blog.xxgtalk.cn/2018/03/01/dotnetcore/core/remark/index.html">
+<meta property="og:site_name" content="程序有Bug&#39;s后花园">
+<meta property="og:description" content="DotNetCore 备忘录">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-09-26T06:06:43.193Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DotNetCore 备忘录">
+<meta name="twitter:description" content="DotNetCore 备忘录">
+    
+        <link rel="alternate" type="application/atom+xml" title="程序有Bug&#39;s后花园" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/images/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">谢新根</h5>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives/"  >
+                <i class="icon icon-lg icon-archives"></i>
+                存档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags/"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories/"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/xiexingen" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">DotNetCore 备忘录</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">DotNetCore 备忘录</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-03-01T11:01:01.000Z" itemprop="datePublished" class="page-time">
+  2018-03-01
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/NetCore/">.NetCore</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#常用备忘录"><span class="post-toc-number">1.</span> <span class="post-toc-text">常用备忘录</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-dotnetcore/core/remark"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">DotNetCore 备忘录</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-03-01 19:01:01" datetime="2018-03-01T11:01:01.000Z"  itemprop="datePublished">2018-03-01</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/NetCore/">.NetCore</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>DotNetCore 备忘录<br><a id="more"></a></p>
+<h5 id="常用备忘录"><a href="#常用备忘录" class="headerlink" title="常用备忘录"></a>常用备忘录</h5><blockquote>
+<p>docker run -d -p 8081:80 –name wechat -v /docker/wechat/App_Data/:/app/App_Data/ –restart always registry.cn-hangzhou.aliyuncs.com/xxg/wechat:v1.1.5 </p>
+<ol>
+<li>使用dotnet watch 在项目项目文件夹中添加(自.netcore2.1.0开始已经集成进去 不需要手动添加)     <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;ItemGroup&gt;</span><br><span class="line"> &lt;DotNetCliToolReference Include=&quot;Microsoft.DotNet.Watcher.Tools&quot; Version=&quot;2.0.0&quot; /&gt;</span><br><span class="line">&lt;/ItemGroup&gt;   </span><br><span class="line"></span><br><span class="line">&lt;!-- 使用dotnet ef ... --&gt;</span><br><span class="line">&lt;ItemGroup&gt;</span><br><span class="line">&lt;DotNetCliToolReference Include=&quot;Microsoft.EntityFrameworkCore.Tools.DotNet&quot; Version=&quot;2.0.1&quot; /&gt;</span><br><span class="line">&lt;/ItemGroup&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</blockquote>
+<ol start="2">
+<li>测试框架<br>Moq<br>fluentassertions</li>
+<li>查看nuget目录<br>通过dotnet dotnet nuget locals all –list  </li>
+<li><p>JSON解析不适用首字母小写形式(默认会首字母小写)<br>在ConfigureServices中配置</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">services.AddMvc()</span><br><span class="line">    .AddJsonOptions(options =&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        if (options.SerializerSettings.ContractResolver is DefaultContractResolver resolver)</span><br><span class="line">        &#123;</span><br><span class="line">            resolver.NamingStrategy = null;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加输出响应内容xml格式<br>.net core中默认只返回json格式需要xml的话需要修改Output formatter</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">services.AddMvc()</span><br><span class="line">    .AddMvcOptions(options=&gt; &#123;</span><br><span class="line">        options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>全局异常  </p>
+</li>
+</ol>
+<ul>
+<li>[6.1] 往MVC Filters中添加过滤器<br>添加一个全局异常类继承ExceptionFilterAttribute  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">public class GlobalExceptionFilter : IExceptionFilter</span><br><span class="line">&#123;</span><br><span class="line">    private readonly IHostingEnvironment _hostingEnvironment;</span><br><span class="line">    private readonly ILogger&lt;GlobalExceptionFilter&gt; _logger;</span><br><span class="line"></span><br><span class="line">    public GlobalExceptionFilter(</span><br><span class="line">        IHostingEnvironment hostingEnvironment,</span><br><span class="line">        IModelMetadataProvider modelMetadataProvider,</span><br><span class="line">        ILogger&lt;GlobalExceptionFilter&gt; logger)</span><br><span class="line">    &#123;</span><br><span class="line">        _hostingEnvironment = hostingEnvironment;</span><br><span class="line">        _logger = logger;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    public void OnException(ExceptionContext context)</span><br><span class="line">    &#123;</span><br><span class="line">        HttpStatusCode status = HttpStatusCode.InternalServerError;</span><br><span class="line">        String message = String.Empty;</span><br><span class="line"></span><br><span class="line">        var exceptionType = context.Exception.GetType();</span><br><span class="line">        if (exceptionType == typeof(UnauthorizedAccessException))</span><br><span class="line">        &#123;</span><br><span class="line">            message = &quot;Unauthorized Access&quot;;</span><br><span class="line">            status = HttpStatusCode.Unauthorized;</span><br><span class="line">        &#125;</span><br><span class="line">        else if (exceptionType == typeof(NotImplementedException))</span><br><span class="line">        &#123;</span><br><span class="line">            message = &quot;A server error occurred.&quot;;</span><br><span class="line">            status = HttpStatusCode.NotImplemented;</span><br><span class="line">        &#125;</span><br><span class="line">        else if (exceptionType == typeof(BusinessException))</span><br><span class="line">        &#123;</span><br><span class="line">            message = context.Exception.ToString();</span><br><span class="line">            status = HttpStatusCode.InternalServerError;</span><br><span class="line">        &#125;</span><br><span class="line">        else</span><br><span class="line">        &#123;</span><br><span class="line">            message = context.Exception.Message;</span><br><span class="line">            status = HttpStatusCode.NotFound;</span><br><span class="line">        &#125;</span><br><span class="line">        context.ExceptionHandled = true;</span><br><span class="line"></span><br><span class="line">        HttpResponse response = context.HttpContext.Response;</span><br><span class="line">        response.StatusCode = (int)status;</span><br><span class="line">        response.ContentType = &quot;application/json&quot;;</span><br><span class="line"></span><br><span class="line">        var ar = new AjaxResponse()</span><br><span class="line">        &#123;</span><br><span class="line">            Success = false,</span><br><span class="line">            Message = message,</span><br><span class="line">            Data = context.Exception</span><br><span class="line">        &#125;;</span><br><span class="line">        response.WriteAsync(JsonConvert.SerializeObject(ar));</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        //context.Result = new JsonNetResult(new AjaxResponse() &#123;</span><br><span class="line">        //    Success=false,</span><br><span class="line">        //    Message=context.Exception.Message,</span><br><span class="line">        //    Data=context.Exception</span><br><span class="line">        //&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在ConfigureServices方法AddMvc中<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">services.AddMvc(config=&gt; &#123;</span><br><span class="line">    config.Filters.Add(typeof(GlobalExceptionFilter));</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>[6.2] 在Configure方法中添加异常处理管道(注意在所有请求管道的最前面)  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">app.UseExceptionHandler(options =&gt;</span><br><span class="line">&#123;</span><br><span class="line">    options.Run(async context =&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;</span><br><span class="line">        context.Response.ContentType = &quot;application/json&quot;;</span><br><span class="line">        var ex = context.Features.Get&lt;IExceptionHandlerFeature&gt;();</span><br><span class="line">        if (ex != null)</span><br><span class="line">        &#123;</span><br><span class="line">            var response = new AjaxResponse()</span><br><span class="line">            &#123;</span><br><span class="line">                Success = false,</span><br><span class="line">                Message = ex.Error.Message,</span><br><span class="line">                Data = ex.Error</span><br><span class="line">            &#125;;</span><br><span class="line">            await context.Response.WriteAsync(JsonConvert.SerializeObject(response)).ConfigureAwait(false);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-09-26T06:06:43.193Z" itemprop="dateUpdated">2018-09-26 14:06:43</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://blog.xxgtalk.cn">
+            <img src="/images/avatar.jpg" alt="谢新根">
+            谢新根
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/NetCore/">.NetCore</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.xxgtalk.cn/2018/03/01/dotnetcore/core/remark/&title=《DotNetCore 备忘录》 — 程序有Bug's后花园&pic=http://blog.xxgtalk.cn/images/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.xxgtalk.cn/2018/03/01/dotnetcore/core/remark/&title=《DotNetCore 备忘录》 — 程序有Bug's后花园&source=DotNetCore 备忘录" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.xxgtalk.cn/2018/03/01/dotnetcore/core/remark/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《DotNetCore 备忘录》 — 程序有Bug's后花园&url=http://blog.xxgtalk.cn/2018/03/01/dotnetcore/core/remark/&via=http://blog.xxgtalk.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.xxgtalk.cn/2018/03/01/dotnetcore/core/remark/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/03/01/dotnetcore/core/efcore/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">EFCore相关资料</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/02/27/dotnetcore/core/collections/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">NetCore相关框架收集</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/images/wechat.jpg" data-alipay="/images/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>谢新根 &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.xxgtalk.cn/2018/03/01/dotnetcore/core/remark/&title=《DotNetCore 备忘录》 — 程序有Bug's后花园&pic=http://blog.xxgtalk.cn/images/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.xxgtalk.cn/2018/03/01/dotnetcore/core/remark/&title=《DotNetCore 备忘录》 — 程序有Bug's后花园&source=DotNetCore 备忘录" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.xxgtalk.cn/2018/03/01/dotnetcore/core/remark/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《DotNetCore 备忘录》 — 程序有Bug's后花园&url=http://blog.xxgtalk.cn/2018/03/01/dotnetcore/core/remark/&via=http://blog.xxgtalk.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.xxgtalk.cn/2018/03/01/dotnetcore/core/remark/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKElEQVR42u3aS27DMAxFUe9/0y7QWRHEuY+Ug5q6HgUJYuloQPCj48DP+fu8+0y+ef31+jnueGTIkPFYBnnd66uvF+u8jbNlyJCxG6MWZElwJKTrta73JkOGDBkkBeQhlQRuGTJkyLgv4KYbJUcgQ4YMGWkRS9JBsmkelG+pxWXIkPFARn8wcN/nr843ZMiQ8S8ZZ/vhAXftun/2IEOGjNGM6+Jz1W2Hzr2IIBDLkCFjNIM0y/hIIC1rSbkbHL0MGTJGM1aFYE6qHcGC4CtDhozHMlalaLyJlg4ySXksQ4aMeYx0VJleuaiNReOUUYYMGaMZnZKSBOX02kQafNFgQIYMGYMYpGhMEzi+FXJMMmTI2JORLsOb9bwE5aOIt1W4DBkytmHwxlk/QQxmFOSwZMiQMZqRpne1yxY8uKejhfhEZciQ8VgGD7Jpkpc2+nlaKUOGjN0Y/YCbtv5Radq5jyZDhoyhjH7gI43+zrWMDwchQ4aM0Yzahvh/OyGbR1cZMmTMZqQN/U77npe78eoyZMjYjNFJB/nynYtiKMOVIUPGIEbagudlJylH0wnGh2OSIUPGOMYZPrWRZ625xo9AhgwZsxmrxpxp6buqlJUhQ8Y+jHSIWLuukQZxfu1DhgwZ+zBqga+TwHWGDTJkyJDBh4hpME2HpsGbZciQIaM05uTf80RQhgwZOzPSZj1fhm+61ReUIUPGaEY6GEgHlryhVhuFypAhYzTjB0DYGQarH4MdAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '你在或不在 我就在这里等你！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '终于等到你!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成 | 程序有Bug&#39;s后花园</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Docker">
+    <meta name="description" content="ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成">
+<meta name="keywords" content="Docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成">
+<meta property="og:url" content="http://blog.xxgtalk.cn/2018/06/06/docker/10docker-jenkins-gogs-cicd/index.html">
+<meta property="og:site_name" content="程序有Bug&#39;s后花园">
+<meta property="og:description" content="ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-09-26T03:42:37.404Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成">
+<meta name="twitter:description" content="ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成">
+    
+        <link rel="alternate" type="application/atom+xml" title="程序有Bug&#39;s后花园" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/images/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/images/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">谢新根</h5>
+          <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives/"  >
+                <i class="icon icon-lg icon-archives"></i>
+                存档
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags/"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories/"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/xiexingen" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                GitHub
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/about"  >
+                <i class="icon icon-lg icon-user"></i>
+                关于
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-06-06T03:01:10.000Z" itemprop="datePublished" class="page-time">
+  2018-06-06
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Docker/">Docker</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+
+<article id="post-docker/10docker-jenkins-gogs-cicd"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-06-06 11:01:10" datetime="2018-06-06T03:01:10.000Z"  itemprop="datePublished">2018-06-06</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/Docker/">Docker</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成<br><a id="more"></a></p>
+<blockquote>
+<p>参考地址：<a href="https://www.cnblogs.com/stulzq/p/8629165.html" target="_blank" rel="noopener">https://www.cnblogs.com/stulzq/p/8629165.html</a><br><a href="https://www.jianshu.com/p/64e9708c23e7" target="_blank" rel="noopener">https://www.jianshu.com/p/64e9708c23e7</a><br>前置条件 安装了docker、配置了加速镜像(参考01)  </p>
+<ol>
+<li>使用docker安装免费https证书  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo docker run -it --rm --name certbot \</span><br><span class="line">   -v &quot;/etc/letsencrypt:/etc/letsencrypt&quot; \</span><br><span class="line">   -v &quot;/var/lib/letsencrypt:/var/lib/letsencrypt&quot; \</span><br><span class="line">   certbot/certbot certonly</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</blockquote>
+<p>按照提示进行操作  </p>
+<ol start="2">
+<li>docker安装Gogs (一个gitserver，类似于gitlab)<br>创建文件/docker/gogs  然后运行如下命令<br>docker run -d –name=gogs -p 23:22 -p 8090:3000 –mount type=bind,src=/docker/gogs,dst=/data –restart always gogs/gogs   <blockquote>
+<p>参考地址 <a href="https://github.com/gogits/gogs/tree/master/docker" target="_blank" rel="noopener">https://github.com/gogits/gogs/tree/master/docker</a>   </p>
+</blockquote>
+</li>
+<li>docker 安装jenkins<br>自定义镜像  <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">FROM</span> <span class="string">jenkins</span></span><br><span class="line"><span class="string">USER</span> <span class="string">root</span></span><br><span class="line"><span class="comment">#清除了基础镜像设置的源，切换成腾讯云的jessie源</span></span><br><span class="line"><span class="comment">#使用非腾讯云环境的需要将 tencentyun 改为 aliyun</span></span><br><span class="line"><span class="string">RUN</span> <span class="string">echo</span> <span class="string">''</span> <span class="string">&gt; /etc/apt/sources.list.d/jessie-backports.list \</span></span><br><span class="line"><span class="string">  &amp;&amp; echo "deb http://mirrors.tencentyun.com/debian jessie main contrib non-free" &gt; /etc/apt/sources.list \</span></span><br><span class="line"><span class="string">  &amp;&amp; echo "deb http://mirrors.tencentyun.com/debian jessie-updates main contrib non-free" &gt;&gt; /etc/apt/sources.list \</span></span><br><span class="line"><span class="string">  &amp;&amp; echo "deb http://mirrors.tencentyun.com/debian-security jessie/updates main contrib non-free" &gt;&gt; /etc/apt/sources.list</span></span><br><span class="line"><span class="string">#更新源并安装缺少的包</span></span><br><span class="line"><span class="string">RUN apt-get update &amp;&amp; apt-get install -y libltdl7 &amp;&amp; apt-get update</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">ARG dockerGid=999</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">RUN echo "docker:x:$&#123;dockerGid&#125;:jenkins" &gt;&gt; /etc/group </span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 安装 docker-compose 因为等下构建环境的需要</span></span><br><span class="line"><span class="string">RUN curl -L https://github.com/docker/compose/releases/download/1.20.1/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">RUN chmod +x /usr/local/bin/docker-compose</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>docker build -t auto-jenkins .<br>创建目录/docker/jenkins/docker.sock、/docker/jenkins/jenkins_home<br><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">docker</span> <span class="string">run</span> <span class="bullet">--name</span> <span class="string">jenkins</span> <span class="bullet">-p</span> <span class="number">8091</span><span class="string">:8080</span> <span class="bullet">-p</span> <span class="number">50000</span><span class="string">:50000</span> <span class="string">\</span></span><br><span class="line"><span class="bullet">    -</span><span class="bullet">-mount</span> <span class="string">type=bind,src=/docker/jenkins/docker.sock,dst=/var/run/docker.sock</span> <span class="string">\</span></span><br><span class="line"><span class="bullet">    -</span><span class="bullet">-mount</span> <span class="string">type=bind,src=$(which</span> <span class="string">docker),dst=/bin/docker</span> <span class="string">\</span></span><br><span class="line"><span class="bullet">    -</span><span class="bullet">-mount</span> <span class="string">type=bind,src=/docker/jenkins/jenkins_home,dst=/var/jenkins_home</span> <span class="string">\</span></span><br><span class="line"><span class="bullet">    -</span><span class="bullet">-restart</span> <span class="string">always</span> <span class="string">\</span></span><br><span class="line"><span class="bullet">    -</span><span class="string">d</span> <span class="string">auto-jenkins</span></span><br></pre></td></tr></table></figure></p>
+<p>docker run –name jenkins -p 8091:8080 -p 50000:50000 –mount type=bind,src=/docker/jenkins/docker.sock,dst=/var/run/docker.sock  –mount type=bind,src=$(which docker),dst=/bin/docke  –mount type=bind,src=/docker/jenkins/jenkins_home,dst=/var/jenkins_home –restart always -d auto-jenkins  </p>
+<ol start="4">
+<li>ASP.NET Core 持续集成  </li>
+<li>Jenkins配置Gogs webhook插件  </li>
+<li>Jenkins持续集成演示  </li>
+</ol>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-09-26T03:42:37.404Z" itemprop="dateUpdated">2018-09-26 11:42:37</time>
+</span><br>
+
+
+        
+    </div>
+    
+    <footer>
+        <a href="http://blog.xxgtalk.cn">
+            <img src="/images/avatar.jpg" alt="谢新根">
+            谢新根
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Docker/">Docker</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.xxgtalk.cn/2018/06/06/docker/10docker-jenkins-gogs-cicd/&title=《ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成》 — 程序有Bug's后花园&pic=http://blog.xxgtalk.cn/images/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.xxgtalk.cn/2018/06/06/docker/10docker-jenkins-gogs-cicd/&title=《ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成》 — 程序有Bug's后花园&source=ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.xxgtalk.cn/2018/06/06/docker/10docker-jenkins-gogs-cicd/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成》 — 程序有Bug's后花园&url=http://blog.xxgtalk.cn/2018/06/06/docker/10docker-jenkins-gogs-cicd/&via=http://blog.xxgtalk.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.xxgtalk.cn/2018/06/06/docker/10docker-jenkins-gogs-cicd/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/06/06/docker/11docker-redis/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">Docker安装redis</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/06/05/docker/07gitlab01-runner/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Centos7.x 安装gitlab-runner</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/images/wechat.jpg" data-alipay="/images/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>谢新根 &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.xxgtalk.cn/2018/06/06/docker/10docker-jenkins-gogs-cicd/&title=《ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成》 — 程序有Bug's后花园&pic=http://blog.xxgtalk.cn/images/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.xxgtalk.cn/2018/06/06/docker/10docker-jenkins-gogs-cicd/&title=《ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成》 — 程序有Bug's后花园&source=ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.xxgtalk.cn/2018/06/06/docker/10docker-jenkins-gogs-cicd/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成》 — 程序有Bug's后花园&url=http://blog.xxgtalk.cn/2018/06/06/docker/10docker-jenkins-gogs-cicd/&via=http://blog.xxgtalk.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.xxgtalk.cn/2018/06/06/docker/10docker-jenkins-gogs-cicd/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACqklEQVR42u3aO5LbQAwFQN3/0nZqB6Lewwz2U9WKXFqKnGYAwABer/jz55/P8zfJHZ5/lV957YOHh4d3cPTnW7eHm33/jvF8nnf3x8PDw9vjJbfLrz95cc8voj0DHh4e3k/gJYG+rWxbEh4eHt5v530oaoPWRtuMwMPDw/sJvKTw3UgMeYt2vdeCh4eHN4/brzxJfNe/V+Z7eHh4eMdT9by0vRumT57133Px8PDwFnhtOXvSik0GYLPmxYcr8fDw8K7yZksD+eHypsZsSPahIYKHh4e3zDsJ1m1YP2nIFi1gPDw8vAVeW33vlcJ5qsivwcPDw9vgJYdrl5zaK/NkkDzllV+Eh4eHd8DLi9dZKM8XtpK0VJTjeHh4eGu8k1Rx3qjNY3idKvDw8PAWeEmwPmkN5GOt/Ayz5i8eHh7eLV7bSkjwbdqYtUvq+R4eHh7eVV4Sdtu/JqsGJwkmebl4eHh427y82E3asm25nL+yYn0BDw8Pb42X/7e/XclKALNXGSUqPDw8vAVeSzpZGmiHXu0K19t74uHh4S3wTh4/+22yajBrRuDh4eF9JS8vl2e/ykvz2birGK3h4eHhHfPy1u3JsGr2WvOgH2U8PDw8vEu8oxwST52Shu+tZS88PDy8bV6eAPJ6dQZLGO0T8fDw8L6G1wb9Nqm0LdpZewIPDw9vmzcLzbPvZ0X5c3qIlq7w8PDwFnhtOzVPDBeK473uCB4eHt5o4FQH3CAl3H19demPh4eHt8A7Gernbd+2+D4Zmw0TCR4eHl7JS5LBbMCfp4F8LaAt5fHw8PD2ePnkaHagNqDPMljUxsXDw8P7Ybx2QeHuS8TDw8P7LbwkJSQt3ctLA3h4eHjLvHb41Ib4kzu3YzM8PDy8bd7dxax2oNU2iG+1LfDw8PBGvL8hzMU6VhOq0gAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '你在或不在 我就在这里等你！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '终于等到你!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
