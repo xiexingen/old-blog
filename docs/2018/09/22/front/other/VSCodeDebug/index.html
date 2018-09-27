@@ -20,19 +20,19 @@
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="前端">
-    <meta name="description" content="在vscode下调试es6编写的npm包">
-<meta name="keywords" content="前端">
+    <meta name="keywords" content="前端-其他">
+    <meta name="description" content="前置条件 安装好node环境 创建一个文件夹  执行npm init 更具需要选择 通过yarn安装babel-preset-es2015 (也可以通过npm等)  12345yarn add -d babel-cli babel-preset-es2015 //安装babel-cli与babel-preset-es2015yarn add -d babel-preset-stage-1 //支">
+<meta name="keywords" content="前端-其他">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vscode下调试es6编写的npm包">
 <meta property="og:url" content="http://blog.xxgtalk.cn/2018/09/22/front/other/VSCodeDebug/index.html">
 <meta property="og:site_name" content="程序有Bug&#39;s后花园">
-<meta property="og:description" content="在vscode下调试es6编写的npm包">
+<meta property="og:description" content="前置条件 安装好node环境 创建一个文件夹  执行npm init 更具需要选择 通过yarn安装babel-preset-es2015 (也可以通过npm等)  12345yarn add -d babel-cli babel-preset-es2015 //安装babel-cli与babel-preset-es2015yarn add -d babel-preset-stage-1 //支">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-26T02:44:17.295Z">
+<meta property="og:updated_time" content="2018-09-27T08:48:54.187Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vscode下调试es6编写的npm包">
-<meta name="twitter:description" content="在vscode下调试es6编写的npm包">
+<meta name="twitter:description" content="前置条件 安装好node环境 创建一个文件夹  执行npm init 更具需要选择 通过yarn安装babel-preset-es2015 (也可以通过npm等)  12345yarn add -d babel-cli babel-preset-es2015 //安装babel-cli与babel-preset-es2015yarn add -d babel-preset-stage-1 //支">
     
         <link rel="alternate" type="application/atom+xml" title="程序有Bug&#39;s后花园" href="/atom.xml">
     
@@ -150,7 +150,7 @@
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/">前端</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端-其他/">前端-其他</a></li></ul>
 
             
         </h5>
@@ -174,7 +174,7 @@
             <time class="post-time" title="2018-09-22 21:10:10" datetime="2018-09-22T13:10:10.000Z"  itemprop="datePublished">2018-09-22</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端/">前端</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端-其他/">前端-其他</a></li></ul>
 
 
 
@@ -186,23 +186,22 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>在vscode下调试es6编写的npm包<br><a id="more"></a></p>
-<ol start="0">
+            <ol start="0">
 <li>前置条件 安装好node环境</li>
 <li>创建一个文件夹  执行npm init 更具需要选择</li>
 <li><p>通过yarn安装babel-preset-es2015 (也可以通过npm等)</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yarn add -d babel-preset-es2015 </span><br><span class="line">//yarn add -d babel-preset-react //如果使用了react</span><br><span class="line">//yarn add -d babel-plugin-transform-object-assign //适用于Object.assign()</span><br><span class="line">//yarn add -d babel-plugin-transform-object-rest-spread //适用于展开运算符</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yarn add -d babel-cli babel-preset-es2015 //安装babel-cli与babel-preset-es2015</span><br><span class="line">yarn add -d babel-preset-stage-1 //支持babel-preset-stage-1</span><br><span class="line">//yarn add -d babel-preset-react //如果需要支持react</span><br><span class="line">//yarn add -d babel-plugin-transform-object-assign //适用于Object.assign()</span><br><span class="line">//yarn add -d babel-plugin-transform-object-rest-spread //适用于展开运算符</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在package.json文件夹中添加一个scripts 如下所示:</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scripts: &#123;</span><br><span class="line">    &quot;build&quot;: &quot;babel src --out-dir dist --source-maps --watch&quot; //记得--source-maps不可省略</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">scripts: &#123;</span><br><span class="line">    &quot;build&quot;: &quot;babel src --watch --source-maps --presets=es2015,stage-1 --out-dir dist&quot; //切记 --source-maps一定要加上</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>跟目录下添加.babelrc 内容如下</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;presets&quot;: [</span><br><span class="line">        &quot;es2015&quot;</span><br><span class="line">        //,&quot;react&quot; //如果有使用react</span><br><span class="line">    ],</span><br><span class="line">    &quot;plugins&quot;:[</span><br><span class="line">        &quot;transform-object-assign&quot;, //适用于Object.assign()</span><br><span class="line">        &quot;transform-object-rest-spread&quot; //适用于展开运算符 ...</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;presets&quot;: [</span><br><span class="line">        &quot;es2015&quot;</span><br><span class="line">        //,&quot;react&quot; //如果有使用react</span><br><span class="line">    ]</span><br><span class="line">    //,</span><br><span class="line">    //&quot;plugins&quot;:[</span><br><span class="line">    //    &quot;transform-object-assign&quot;, //适用于Object.assign()</span><br><span class="line">    //    &quot;transform-object-rest-spread&quot; //适用于展开运算符 ...</span><br><span class="line">    //]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>编写自己的代码，整体项目结构如下<br>|-src<br>&emsp;|–cores<br>&emsp;&emsp;|–math.js  –被引用的js文件<br>&emsp;|–index.js   –主入口js文件<br>|.babelrc<br>|.package.json  </p>
 </li>
 <li><p>切到vscode左侧的调试窗口，点击添加配置<br>这个时候会生成一个launch.json文件，修改内容如下</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    // 使用 IntelliSense 了解相关属性。 </span><br><span class="line">    // 悬停以查看现有属性的描述。</span><br><span class="line">    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387</span><br><span class="line">    &quot;version&quot;: &quot;0.2.0&quot;,</span><br><span class="line">    &quot;configurations&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;type&quot;: &quot;node&quot;,</span><br><span class="line">            &quot;request&quot;: &quot;launch&quot;,</span><br><span class="line">            &quot;name&quot;: &quot;Launch App.js&quot;,</span><br><span class="line">            &quot;program&quot;: &quot;$&#123;workspaceRoot&#125;/src/index.js&quot;,</span><br><span class="line">            &quot;outFiles&quot;: [</span><br><span class="line">                &quot;$&#123;workspaceRoot&#125;/dist/**/*.js&quot;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    // 使用 IntelliSense 了解相关属性。 </span><br><span class="line">    // 悬停以查看现有属性的描述。</span><br><span class="line">    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387</span><br><span class="line">    &quot;version&quot;: &quot;0.2.0&quot;,</span><br><span class="line">    &quot;configurations&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;type&quot;: &quot;node&quot;,</span><br><span class="line">            &quot;request&quot;: &quot;launch&quot;,</span><br><span class="line">            &quot;name&quot;: &quot;Launch App.js&quot;,</span><br><span class="line">            &quot;program&quot;: &quot;$&#123;workspaceRoot&#125;/src/index.js&quot;,</span><br><span class="line">            &quot;outFiles&quot;: [</span><br><span class="line">                &quot;$&#123;workspaceRoot&#125;/dist/**/*.js&quot;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>先生成在运行调试<br>npm run build会生成一个dist目录，然后点击调试上的运行按钮 执行调试</p>
 </li>
@@ -215,7 +214,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-09-26T02:44:17.295Z" itemprop="dateUpdated">2018-09-26 10:44:17</time>
+    最后更新时间：<time datetime="2018-09-27T08:48:54.187Z" itemprop="dateUpdated">2018-09-27 16:48:54</time>
 </span><br>
 
 
@@ -239,7 +238,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端-其他/">前端-其他</a></li></ul>
 
 
             
@@ -259,7 +258,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.xxgtalk.cn/2018/09/22/front/other/VSCodeDebug/&title=《vscode下调试es6编写的npm包》 — 程序有Bug's后花园&source=在vscode下调试es6编写的npm包" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.xxgtalk.cn/2018/09/22/front/other/VSCodeDebug/&title=《vscode下调试es6编写的npm包》 — 程序有Bug's后花园&source=不乱于心 不困于情 不畏将来 不念过去 如此 甚好！" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -310,22 +309,6 @@
 
 
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </article>
 
@@ -408,7 +391,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.xxgtalk.cn/2018/09/22/front/other/VSCodeDebug/&title=《vscode下调试es6编写的npm包》 — 程序有Bug's后花园&source=在vscode下调试es6编写的npm包" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.xxgtalk.cn/2018/09/22/front/other/VSCodeDebug/&title=《vscode下调试es6编写的npm包》 — 程序有Bug's后花园&source=不乱于心 不困于情 不畏将来 不念过去 如此 甚好！" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
