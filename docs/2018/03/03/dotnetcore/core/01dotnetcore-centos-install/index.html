@@ -29,18 +29,18 @@
 <meta property="og:site_name" content="程序有Bug&#39;s后花园">
 <meta property="og:description" content=".NetCore+centos环境搭建手摸手实战">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://blog.xxgtalk.cn/images/assets/dotnetcore/core/01/0601.png">
-<meta property="og:image" content="http://blog.xxgtalk.cn/images/assets/dotnetcore/core/01/0701.png">
-<meta property="og:image" content="http://blog.xxgtalk.cn/images/assets/dotnetcore/core/01/0702.png">
-<meta property="og:image" content="http://blog.xxgtalk.cn/images/assets/dotnetcore/core/01/0801.png">
-<meta property="og:image" content="http://blog.xxgtalk.cn/images/assets/dotnetcore/core/01/0802.png">
-<meta property="og:image" content="http://blog.xxgtalk.cn/images/assets/dotnetcore/core/01/0803.png">
-<meta property="og:image" content="http://blog.xxgtalk.cn/images/assets/dotnetcore/core/01/0901.png">
-<meta property="og:updated_time" content="2018-09-27T01:35:48.756Z">
+<meta property="og:image" content="http://pfp2er1o1.bkt.clouddn.com/blog/images/dotnetcore/core/01/0601.png">
+<meta property="og:image" content="http://pfp2er1o1.bkt.clouddn.com/blog/images/dotnetcore/core/01/0701.png">
+<meta property="og:image" content="http://pfp2er1o1.bkt.clouddn.com/blog/images/dotnetcore/core/01/0702.png">
+<meta property="og:image" content="http://pfp2er1o1.bkt.clouddn.com/blog/images/dotnetcore/core/01/0801.png">
+<meta property="og:image" content="http://pfp2er1o1.bkt.clouddn.com/blog/images/dotnetcore/core/01/0802.png">
+<meta property="og:image" content="http://pfp2er1o1.bkt.clouddn.com/blog/images/dotnetcore/core/01/0803.png">
+<meta property="og:image" content="http://pfp2er1o1.bkt.clouddn.com/blog/images/dotnetcore/core/01/0901.png">
+<meta property="og:updated_time" content="2018-09-27T05:33:05.201Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=".NetCore+centos环境搭建手摸手实战">
 <meta name="twitter:description" content=".NetCore+centos环境搭建手摸手实战">
-<meta name="twitter:image" content="http://blog.xxgtalk.cn/images/assets/dotnetcore/core/01/0601.png">
+<meta name="twitter:image" content="http://pfp2er1o1.bkt.clouddn.com/blog/images/dotnetcore/core/01/0601.png">
     
         <link rel="alternate" type="application/atom+xml" title="程序有Bug&#39;s后花园" href="/atom.xml">
     
@@ -204,35 +204,35 @@
 <li>通过Xftp上传到centos<br>通过Xftp将打包的文件直接粘贴到centos中(我是在root目录下建了个web文件夹专门用于存放部署的站点)<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/images/assets/dotnetcore/core/01/0601.png" alt="" title="">
+                    <img src="http://pfp2er1o1.bkt.clouddn.com/blog/images/dotnetcore/core/01/0601.png" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure></li>
 <li>将dotnetcore站点运行起来<br>在Xftp中点击新建终端打开XsHell 将路径定位到站点文件夹 cd /root/web/mvc  执行 dotnet HelloWord.dll  看到如下信息 表示你已经成功了<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/images/assets/dotnetcore/core/01/0701.png" alt="" title="">
+                    <img src="http://pfp2er1o1.bkt.clouddn.com/blog/images/dotnetcore/core/01/0701.png" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure>
 这个时候你在外面访问是访问不了的 因为防火墙没有启用5000端口<br>如果一定想看看 可以再开一个终端 输入如图<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/images/assets/dotnetcore/core/01/0702.png" alt="" title="">
+                    <img src="http://pfp2er1o1.bkt.clouddn.com/blog/images/dotnetcore/core/01/0702.png" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure></li>
 <li>配置nginx将80端口指向dotnetcore站点<br>这一步就是通过nginx将80请求转到上面的localhost:5000<br>先找着nginx中的配置<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/images/assets/dotnetcore/core/01/0801.png" alt="" title="">
+                    <img src="http://pfp2er1o1.bkt.clouddn.com/blog/images/dotnetcore/core/01/0801.png" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure>
 打开后会发现里面有个<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/images/assets/dotnetcore/core/01/0802.png" alt="" title="">
+                    <img src="http://pfp2er1o1.bkt.clouddn.com/blog/images/dotnetcore/core/01/0802.png" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure>
@@ -248,11 +248,11 @@
     }
 }
 </code></pre>
- <img src="/images/assets/dotnetcore/core/01/0803.png" alt=""><br>然后重启nginx ==》sudo nginx -s reload  </li>
+ <img src="http://pfp2er1o1.bkt.clouddn.com/blog/images/dotnetcore/core/01/0803.png" alt=""><br>然后重启nginx ==》sudo nginx -s reload  </li>
 <li>查看成果<br>在浏览器中输入192.168.2.105  如图<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/images/assets/dotnetcore/core/01/0901.png" alt="" title="">
+                    <img src="http://pfp2er1o1.bkt.clouddn.com/blog/images/dotnetcore/core/01/0901.png" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure>
@@ -269,7 +269,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-09-27T01:35:48.756Z" itemprop="dateUpdated">2018-09-27 09:35:48</time>
+    最后更新时间：<time datetime="2018-09-27T05:33:05.201Z" itemprop="dateUpdated">2018-09-27 13:33:05</time>
 </span><br>
 
 
