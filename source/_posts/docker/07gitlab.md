@@ -65,4 +65,4 @@ docker logs --follow gitlab
   ```
 
 ##### 使用docker-compose安装
-请查看[docker-compose文件](/images/assets/other-file/gitlab-docker-compose.yml) 
+请查看[docker-compose文件](http://pfp2er1o1.bkt.clouddn.com/blog/files/docker/gitlab-docker-compose.yml) 

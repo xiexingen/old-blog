@@ -19,4 +19,4 @@ docker network create net_redis
     ```
 3. 通过docker-compose安装  
 docker-compose -f redis-docker-compose.yml up -d  
-[文件链接](./docker-compose/redis-docker-compose.yml)  
+[文件链接](http://pfp2er1o1.bkt.clouddn.com/blog/files/docker/redis-docker-compose.yml)  
