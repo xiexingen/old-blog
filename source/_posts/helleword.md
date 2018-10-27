@@ -4,7 +4,7 @@ date: 2016-04-01 08:01:01
 author: 谢新根
 ---
 
-从hexo切换到vuepress啦！！！
+从hexo切换到vuepress又切回hexo啦！！！
 <!-- more -->
 
 ::: tip 大家好
