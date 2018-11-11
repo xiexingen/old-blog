@@ -41,4 +41,4 @@ GRANT ALL PRIVILEGES ON *.* TO 'sa'@'%' WITH GRANT OPTION;
 2. 执行命令     
 docker-compose build  
 docker up	//docker down 与docker up相反  
-> [docker-compose文件](http://pfp2er1o1.bkt.clouddn.com/blog/files/docker/mysql-docker-compose.yml)  
+> [docker-compose文件](http://qiniu.xxgtalk.cn/blog/files/docker/mysql-docker-compose.yml)  

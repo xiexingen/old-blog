@@ -29,12 +29,12 @@
 <meta property="og:site_name" content="程序有Bug&#39;s后花园">
 <meta property="og:description" content="Docker制作WebApi&amp;amp;MySql 直接上图">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://pfp2er1o1.bkt.clouddn.com/blog/images/docker/050a01.png">
-<meta property="og:updated_time" content="2018-09-27T10:59:38.613Z">
+<meta property="og:image" content="http://qiniu.xxgtalk.cn/blog/images/docker/050a01.png">
+<meta property="og:updated_time" content="2018-11-11T04:38:17.216Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker制作WebApi&amp;MySql">
 <meta name="twitter:description" content="Docker制作WebApi&amp;amp;MySql 直接上图">
-<meta name="twitter:image" content="http://pfp2er1o1.bkt.clouddn.com/blog/images/docker/050a01.png">
+<meta name="twitter:image" content="http://qiniu.xxgtalk.cn/blog/images/docker/050a01.png">
     
         <link rel="alternate" type="application/atom+xml" title="程序有Bug&#39;s后花园" href="/atom.xml">
     
@@ -192,13 +192,13 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://pfp2er1o1.bkt.clouddn.com/blog/images/docker/050a01.png" alt="" title="">
+                    <img src="http://qiniu.xxgtalk.cn/blog/images/docker/050a01.png" alt="" title="">
                 </div>
                 <div class="image-caption"></div>
             </figure>
 <ol>
 <li><p>docker文件  </p>
- <figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> microsoft/aspnetcore-build as build-<span class="keyword">env</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /code</span></span><br><span class="line"><span class="bash">COPY *.csproj ./</span></span><br><span class="line"><span class="bash">RUN dotnet restore</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">COPY . ./</span></span><br><span class="line"><span class="bash">RUN dotnet publish -c Release -o out</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">FROM microsoft/aspnetcore</span></span><br><span class="line"><span class="bash">WORKDIR /app</span></span><br><span class="line"><span class="bash">COPY --from=build-env /code/out ./</span></span><br><span class="line"><span class="bash"></span></span><br><span class="line"><span class="bash">EXPOSE 50000</span></span><br><span class="line"><span class="bash">ENTRYPOINT [<span class="string">"dotnet"</span>,<span class="string">"WebApiDocker.dll"</span>]</span></span><br></pre></td></tr></table></figure>
+ <figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> microsoft/aspnetcore-build as build-<span class="keyword">env</span></span><br><span class="line"><span class="keyword">WORKDIR</span> /code</span><br><span class="line">COPY *.csproj ./</span><br><span class="line">RUN dotnet restore</span><br><span class="line"></span><br><span class="line">COPY . ./</span><br><span class="line">RUN dotnet publish -c Release -o out</span><br><span class="line"></span><br><span class="line">FROM microsoft/aspnetcore</span><br><span class="line">WORKDIR /app</span><br><span class="line">COPY --from=build-env /code/out ./</span><br><span class="line"></span><br><span class="line">EXPOSE 50000</span><br><span class="line">ENTRYPOINT ["dotnet","WebApiDocker.dll"]</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>编译docker文件  </p>
  <figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t  xxg/aspnetcore:<span class="number">1.0</span> .</span><br></pre></td></tr></table></figure>
@@ -217,7 +217,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2018-09-27T10:59:38.613Z" itemprop="dateUpdated">2018-09-27 18:59:38</time>
+    最后更新时间：<time datetime="2018-11-11T04:38:17.216Z" itemprop="dateUpdated">2018-11-11 12:38:17</time>
 </span><br>
 
 
