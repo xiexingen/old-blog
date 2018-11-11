@@ -162,5 +162,5 @@ git clone http://用户名:密码@gitlab.xxgtalk.cn/WT/StudyNetCore.git
 ``` js
 首先指定上游地址：git remote add upstream [original repo url]
 拉取上游代码:git fetch upstream
-合并代码:git rebase upstream/master
+合并代码:git merge upstream/master
 ```
