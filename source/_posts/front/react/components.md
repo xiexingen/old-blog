@@ -12,3 +12,4 @@ ReactReact社区精选组件
 | 类型 | 推荐组件 | 描述
 | :--- | :--- | :---
 |滚动条 |[react-perfect-scrollbar](https://github.com/goldenyz/react-perfect-scrollbar)  | 虚拟滚动条
+|图片缩放|[react-viewer](https://github.com/infeng/react-viewer) | 图片缩放
