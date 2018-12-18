@@ -13,3 +13,10 @@ ReactReact社区精选组件
 | :--- | :--- | :---
 |滚动条 |[react-perfect-scrollbar](https://github.com/goldenyz/react-perfect-scrollbar)  | 虚拟滚动条
 |图片缩放|[react-viewer](https://github.com/infeng/react-viewer) | 图片缩放
+
+
+#### 其他类型
+| 类型 | 推荐组件 | 描述
+| :--- | :--- | :---
+|生成pdf |[jsPDF](https://github.com/MrRio/jsPDF?utm_source=gold_browser_extension)  | 前端生成pdf
+|谷歌浏览器API |[puppeteer](https://github.com/GoogleChrome/puppeteer)  | 可以用来写爬虫 一个无界面的谷歌浏览器
