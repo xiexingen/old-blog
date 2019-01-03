@@ -11,8 +11,9 @@ ReactReact社区精选组件
 其他地址：https://ant.design/docs/react/recommendation-cn
 | 类型 | 推荐组件 | 描述
 | :--- | :--- | :---
-|滚动条 |[react-perfect-scrollbar](https://github.com/goldenyz/react-perfect-scrollbar)  | 虚拟滚动条
+|滚动条 |[react-perfect-scrollbar](https://github.com/goldenyz/react-perfect-scrollbar) [reactScrollbar](https://github.com/souhe/reactScrollbar)  | 虚拟滚动条
 |图片缩放|[react-viewer](https://github.com/infeng/react-viewer) | 图片缩放
+|浏览器存储|[store](https://github.com/marcuswestin/store.js) | 浏览器存储技术
 
 
 #### 其他类型
