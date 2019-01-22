@@ -1,30 +1,40 @@
 ---
-title: 资料收集
+title: 资料收集(持续更新中...)
 date: 2018-09-13 09:10:10 
 categories: ['工具']
 tags: ['工具']
 ---
 
-各大开源组件收藏夹
+各大组件、工具收藏夹(持续更新中...)
 <!-- more -->
 
-##### 后端大开源组件
-| 名称 | 描述 | 地址 |
-|:-------|:-----|:-----
-|异常收集框架 | Exceptionless | https://github.com/exceptionless/Exceptionless  
-|容器监管 | portainer | https://github.com/portainer/portainer
-|爬虫 | Hawk | https://github.com/ferventdesert/Hawk
 
-##### 前端推荐库
-| 名称 | 描述 | 地址 |
-|:-------|:-----|:-----
-| nzh | 数字转中文（大写，小写）数字，金额 | https://github.com/cnwhy/nzh
-|lodash |js数组、对象类库 | https://github.com/lodash/lodash
-|moment| 日期处理库 | https://github.com/moment/moment
+#### 后端 
+| 类型 | 推荐组件
+| :--- | :--- 
+|爬虫 |[DotnetSpide](https://github.com/dotnetcore/DotnetSpider)、[Hawk](https://github.com/ferventdesert/Hawk)
+|工业物联网 | [HslCommunication](https://github.com/dathlin/HslCommunication)
+|斗地主| [FightLandlord](https://github.com/2881099/FightLandlord)
+|规则引擎| [NRules](https://github.com/NRules/NRules)
+|机器人|[BotDemo](https://github.com/leonlj/BotDemo)
+|定时任务|[quartzui](https://github.com/zhaopeiym/quartzui)、[Topshelf](https://github.com/Topshelf/Topshelf)
+|机器学| [machinelearning](https://github.com/dotnet/machinelearning)
+|导出pdf|[jsPDF](https://github.com/MrRio/jsPDF)、[wkhtmltopdf](https://github.com/wkhtmltopdf/wkhtmltopdf)、[itextsharp](https://github.com/itext/itextsharp)
+|redis桌面管理器|[RedisPlus](https://gitee.com/MaxBill/RedisPlus)
+|host切换工具|[SwitchHosts](https://github.com/oldj/SwitchHosts)
+|异常收集框架 | [Exceptionless](https://github.com/exceptionless/Exceptionless)
+|容器监管|[portainer](https://github.com/portainer/portainer)
 
-##### CICD
-###### Gitlab CI 官方配置文件参数说明（中文）  
-快速入门 https://docs.gitlab.com.cn/ce/ci/quick_start/README.html  
-配置文档讲解 https://docs.gitlab.com.cn/ce/ci/yaml/  
-###### 持续集成的概念  
-http://www.ruanyifeng.com/blog/2015/09/continuous-integration.html
+#### 工具
+| 类型 | 推荐组件
+| :--- | :--- 
+|redis桌面管理器|[RedisPlus](https://gitee.com/MaxBill/RedisPlus)
+|host切换工具|[SwitchHosts](https://github.com/oldj/SwitchHosts)
+
+#### 纯前端库
+| 类型 | 推荐组件
+| :--- | :--- 
+|数字转大写|[nzh](https://github.com/cnwhy/nzh)
+|js帮助库|[lodash](https://github.com/lodash/lodash)
+|moment|[moment](https://github.com/moment/moment)
+
