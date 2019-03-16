@@ -74,7 +74,8 @@ deploy:
     github_token: $GITHUB_TOKEN
     # 将 build 目录下的内容推送到默认的 gh-pages 分支上，并不会连带 build 目录一起
     local_dir: _site
-    #fqdn: $CUSTOM_DOMAIN
+    # 绑定自定义域名，根据自己的情况来
+    fqdn: $CUSTOM_DOMAIN
     name: $GIT_NAME
     email: $GIT_EMAIL
 ```
