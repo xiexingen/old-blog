@@ -12,7 +12,7 @@ tags: ['工具']
 #### 后端 
 | 类型 | 推荐组件
 | :--- | :--- 
-|爬虫 |[DotnetSpide](https://github.com/dotnetcore/DotnetSpider)、[Hawk](https://github.com/ferventdesert/Hawk)
+|爬虫 |[puppeteer](https://github.com/GoogleChrome/puppeteer)、[puppeteer-sharp](https://github.com/kblok/puppeteer-sharp)、[DotnetSpide](https://github.com/dotnetcore/DotnetSpider)、[Hawk](https://github.com/ferventdesert/Hawk)
 |工业物联网 | [HslCommunication](https://github.com/dathlin/HslCommunication)
 |斗地主| [FightLandlord](https://github.com/2881099/FightLandlord)
 |规则引擎| [NRules](https://github.com/NRules/NRules)
