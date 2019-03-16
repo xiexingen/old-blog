@@ -89,4 +89,4 @@ deploy:
 
 ![wetrial示例](http://qiniu.xxgtalk.cn/blog/images/tools/wetrial-site.jpg) 
 
-> 此外,打算写一篇这块的手册，[地址:https://www.yuque.com/wetrial/front-end/xuyan](https://www.yuque.com/wetrial/front-end/xuyan) 欢迎fork
+> 此外,打算写一篇这块的手册，[地址:https://www.yuque.com/wetrial/front-end/xuyan](https://www.yuque.com/wetrial/front-end/xuyan) 欢迎 [FORK](https://www.yuque.com/wetrial/front-end/xuyan)
