@@ -6,7 +6,7 @@ node_js:
 # 缓存依赖
 cache:
   directories:
-    - $HOME/.npm
+    - node_modules
 
 before_install:
   - export TZ='Asia/Shanghai' # 更改时区
