@@ -87,3 +87,5 @@ deploy:
 #### 致次，大功告成了 访问刚配置的地址:http://ant.xxgtalk.cn 可以看到部署好的文档
 
 ![github域名](http://qiniu.xxgtalk.cn/blog/images/tools/wetrial-site.jpg) 
+
+> 打算写一篇这块的手册，[地址:https://www.yuque.com/wetrial/front-end/xuyan](https://www.yuque.com/wetrial/front-end/xuyan)
