@@ -84,7 +84,8 @@ deploy:
 ![](http://qiniu.xxgtalk.cn/blog/images/tools/travis_github_config.jpg) 
 最后，去域名管理页，将自己的这个子域名一定一个类型为CNAME的，地址为:wetrial.github.io
 
-#### 致次，大功告成了 访问刚配置的地址:http://ant.xxgtalk.cn 可以看到部署好的文档
+#### 结尾  
+访问刚配置的地址:http://ant.xxgtalk.cn 可以看到部署好的文档
 
 ![wetrial示例](http://qiniu.xxgtalk.cn/blog/images/tools/wetrial-site.jpg) 
 
