@@ -81,11 +81,11 @@ deploy:
 然后提交并同步到github,回到travis将会看到如下一幕  
 ![配置](http://qiniu.xxgtalk.cn/blog/images/tools/travis_log.jpg)    
 你也可以从日志里面看到具体的执行过程，等待执行完成后回到github中将会看到里面多了一个gh-pages分支，没错 这个分支就是travis中的deploy推送过去的，里面就是编译后的代码，再回到setting里面，将会看到已经默认配置好站点地址了，这里我们改改 使用自己的域名，如图所示:  
-![github域名](http://qiniu.xxgtalk.cn/blog/images/tools/travis_github_config.jpg) 
+![](http://qiniu.xxgtalk.cn/blog/images/tools/travis_github_config.jpg) 
 最后，去域名管理页，将自己的这个子域名一定一个类型为CNAME的，地址为:wetrial.github.io
 
 #### 致次，大功告成了 访问刚配置的地址:http://ant.xxgtalk.cn 可以看到部署好的文档
 
-![github域名](http://qiniu.xxgtalk.cn/blog/images/tools/wetrial-site.jpg) 
+![wetrial示例](http://qiniu.xxgtalk.cn/blog/images/tools/wetrial-site.jpg) 
 
-> 打算写一篇这块的手册，[地址:https://www.yuque.com/wetrial/front-end/xuyan](https://www.yuque.com/wetrial/front-end/xuyan)
+> 此外,打算写一篇这块的手册，[地址:https://www.yuque.com/wetrial/front-end/xuyan](https://www.yuque.com/wetrial/front-end/xuyan) 欢迎fork
