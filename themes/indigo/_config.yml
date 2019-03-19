@@ -167,3 +167,10 @@ lightbox: true
 
 # icp备案号  ICP_license: 京ICP备1234556号-1
 ICP_license: false
+
+permalink: posts/:abbrlink/  # “posts/” 可自行更换
+
+# Abbrlink Config
+abbrlink:
+  alg: crc32  # 算法：crc16(default) and crc32 
+  rep: hex    # 进制：dec(default) and hex

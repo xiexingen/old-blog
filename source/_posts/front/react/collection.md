@@ -1,8 +1,12 @@
 ---
 title: React资料收集
-date: 2018-08-01 09:10:10 
-categories: ['React']
-tags: ['前端','React']
+categories:
+  - React
+tags:
+  - 前端
+  - React
+abbrlink: 14655
+date: 2018-08-01 09:10:10
 ---
 
 React资料收集
@@ -23,3 +27,6 @@ chrome浏览器插件
 4. nock:模拟http请求
 5. sinon：函数模拟和调用跟踪
 6. istanbul:单元测试覆盖率
+
+
+> [其他请查看](/2018/09/13/tools/collections/)

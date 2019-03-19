@@ -1,8 +1,11 @@
 ---
 title: 资料收集(持续更新中...)
-date: 2018-09-13 09:10:10 
-categories: ['工具']
-tags: ['工具']
+categories:
+  - 工具
+tags:
+  - 工具
+abbrlink: 28144
+date: 2018-09-13 09:10:10
 ---
 
 各大组件、工具收藏夹(持续更新中...)
@@ -36,5 +39,12 @@ tags: ['工具']
 | :--- | :--- 
 |数字转大写|[nzh](https://github.com/cnwhy/nzh)
 |js帮助库|[lodash](https://github.com/lodash/lodash)
-|moment|[moment](https://github.com/moment/moment)
+|时区|[moment](https://github.com/moment/moment)
+|3D动画|[Three.js](https://github.com/mrdoob/three.js)
+|动画|[Anime.js](https://github.com/juliangarnier/anime)、[GreenSock](https://github.com/greensock/GreenSock-JS)
+|打字机|[ityped](https://github.com/luisvinicius167/ityped)
+|悬停效果|[Hover](https://github.com/IanLunn/Hover)
+
+
+> [react相关](/2018/12/10/front/react/components)
 
