@@ -10,9 +10,9 @@ tags: ['前端','React','umi']
 
 # 文件格式说明 
 ### esm 用途
-es6语法格式，主要用在浏览器中 export default ...；可以做 tree-shaking(打包成一个文件，但是项目中使用时只引入需要的那一部分) 
+es6语法格式(也叫AMD)，主要用在浏览器中 export default ...；可以做 tree-shaking(打包成一个文件，但是项目中使用时只引入需要的那一部分) 
 ### cjs 用途
-es5的语法，目前主要给node用； module.exports=...
+es5的语法(也叫CommonJS)，目前主要给node用； module.exports=...
 ### umd 用途
 兼容esm和cjs，先判断是否支持node模块module.exports
 
