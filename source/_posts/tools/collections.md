@@ -44,6 +44,9 @@ date: 2018-09-13 09:10:10
 |动画|[Anime.js](https://github.com/juliangarnier/anime)、[GreenSock](https://github.com/greensock/GreenSock-JS)
 |打字机|[ityped](https://github.com/luisvinicius167/ityped)
 |悬停效果|[Hover](https://github.com/IanLunn/Hover)
+|快捷键|[hotkeys](https://github.com/jaywcjlove/hotkeys)
+|拖拽|[react-dnd](https://github.com/react-dnd/react-dnd)、[react-beautiful-dnd](https://github.com/atlassian/react-beautiful-dnd)|
+
 
 
 > [react相关](/2018/12/10/front/react/components)
