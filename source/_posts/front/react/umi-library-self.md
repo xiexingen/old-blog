@@ -1,8 +1,13 @@
 ---
 title: 使用umi-library来打包组件
-date: 2019-04-02 21:35:10 
-categories: ['React']
-tags: ['前端','React','umi']
+categories:
+  - React
+tags:
+  - 前端
+  - React
+  - umi
+abbrlink: 53720
+date: 2019-04-02 21:35:10
 ---
 
 通过umi-library将自己的组件打包成各种类型的包...

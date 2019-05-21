@@ -1,42 +1,45 @@
 ---
 title: vscode下调试es6编写的npm包
-date: 2018-09-22 21:10:10 
-categories: ['前端-其他']
-tags: ['前端-其他']
+categories:
+  - 前端-其他
+tags:
+  - 前端-其他
 comments: false
+abbrlink: 100
+date: 2018-09-22 21:10:10
 img:
 ---
 
 0. 前置条件 安装好node环境
 1. 创建一个文件夹  执行npm init 更具需要选择
 2. 通过yarn安装babel-preset-es2015 (也可以通过npm等)
-    ```
-    yarn add -d babel-cli babel-preset-es2015 //安装babel-cli与babel-preset-es2015
-    yarn add -d babel-preset-stage-1 //支持babel-preset-stage-1
-    //yarn add -d babel-preset-react //如果需要支持react
-    //yarn add -d babel-plugin-transform-object-assign //适用于Object.assign()
-    //yarn add -d babel-plugin-transform-object-rest-spread //适用于展开运算符
-    ```
+```
+yarn add -d babel-cli babel-preset-es2015 //安装babel-cli与babel-preset-es2015
+yarn add -d babel-preset-stage-1 //支持babel-preset-stage-1
+//yarn add -d babel-preset-react //如果需要支持react
+//yarn add -d babel-plugin-transform-object-assign //适用于Object.assign()
+//yarn add -d babel-plugin-transform-object-rest-spread //适用于展开运算符
+```
 3. 在package.json文件夹中添加一个scripts 如下所示:
-    ```
-    scripts: {
-        "build": "babel src --watch --source-maps --presets=es2015,stage-1 --out-dir dist" //切记 --source-maps一定要加上
-    }
-    ```
+```
+scripts: {
+    "build": "babel src --watch --source-maps --presets=es2015,stage-1 --out-dir dist" //切记 --source-maps一定要加上
+}
+```
 4. 跟目录下添加.babelrc 内容如下
-    ```
-    {
-        "presets": [
-            "es2015"
-            //,"react" //如果有使用react
-        ]
-        //,
-        //"plugins":[
-        //    "transform-object-assign", //适用于Object.assign()
-        //    "transform-object-rest-spread" //适用于展开运算符 ...
-        //]
-    }
-    ```
+```
+{
+    "presets": [
+        "es2015"
+        //,"react" //如果有使用react
+    ]
+    //,
+    //"plugins":[
+    //    "transform-object-assign", //适用于Object.assign()
+    //    "transform-object-rest-spread" //适用于展开运算符 ...
+    //]
+}
+```
 5. 编写自己的代码，整体项目结构如下  
 |-src  
 &emsp;|--cores  

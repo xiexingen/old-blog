@@ -1,0 +1,37 @@
+[{
+    "avatar": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
+    "name": "react栈",
+    "introduction": "使用react、antd、dva、umi、ts等技术创建现代化web",
+    "url": "https://github.com/wetrial/wetrial-template",
+    "title": "前去观摩"
+}, {
+    "avatar": "https://storage.360buyimg.com/taro-static/static/images/logo.png",
+    "name": "taro多端",
+    "introduction": "一份代码生成能运行在微信小程序、H5、RN 等平台的应用",
+    "url": "https://github.com/xiexingen/taro-template",
+    "title": "前去观摩"
+}, {
+    "avatar": "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
+    "name": "Ant Design",
+    "introduction": "阿里体系，一套用于研发企业级中后台产品的企业UI组件库",
+    "url": "https://ant.design/index-cn",
+    "title": "前去观摩"
+}, {
+    "avatar": "https://avatars3.githubusercontent.com/u/13409222?s=200&v=4",
+    "name": "Electron",
+    "introduction": "使用 JavaScript, HTML 和 CSS 构建跨平台的桌面应用",
+    "url": "https://electronjs.org/",
+    "title": "前去观摩"
+}, {
+    "avatar": "https://github.com/dncNew/dncNew/raw/master/img/dnc7.png",
+    "name": ".NET Core",
+    "introduction": "使用.NET开发跨端应用 桌面、Web、云、IoT、AI、App...",
+    "url": "https://github.com/dotnet/core",
+    "title": "前去观摩"
+}, {
+    "avatar": "https://user-images.githubusercontent.com/10379601/29446482-04f7036a-841f-11e7-9872-91d1fc2ea683.png",
+    "name": "爬虫",
+    "introduction": "使用Puppeteer构建自动化测试、SSR、爬虫等",
+    "url": "https://github.com/GoogleChrome/puppeteer",
+    "title": "前去观摩"
+}]
