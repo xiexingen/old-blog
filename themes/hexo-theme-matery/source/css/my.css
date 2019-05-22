@@ -1,1 +1,15 @@
 /* Here is your custom css styles. */
+.task-star{
+    width:16px;
+    height:16px;
+    display: inline-block;
+}
+.star-half{
+    background: url(/images/star-half.svg);
+}
+.star-full{
+    background: url(/images/star-full.svg);
+}
+.star-off{
+    background: url(/images/staroff.svg);
+}
