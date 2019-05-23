@@ -21,7 +21,8 @@ QQ: 1002275364
 |CAP、Consul、Ocelot、微服务、Polly、OChars、微信公众号、微信小程序|<span class="task-star star-full"></span><span class="task-star star-full"></span><span class="task-star star-full"></span></span><span class="task-star star-off"></span><span class="task-star star-off"></span>|
 |React、Antd、Vue、ElementUI、TypeScript、Webpack、umi、dva、taro|<span class="task-star star-full"></span><span class="task-star star-full"></span><span class="task-star star-full"></span></span></span><span class="task-star star-off"></span><span class="task-star star-off"></span>|
 |Docker、CICD、GitLab、Linux|<span class="task-star star-full"></span><span class="task-star star-full"></span><span class="task-star star-full"></span></span><span class="task-star star-off"></span><span class="task-star star-off"></span>|
-|puppeteer、electronjs、第三方支付、第三方登录、快递接口、短信接口、web快递单打印、条码打印、导出excel,word,pdf等常用第三的东西|<span class="task-star star-full"></span><span class="task-star star-full"></span><span class="task-star star-full"></span></span><span class="task-star star-off"></span><span class="task-star star-off"></span>|
+|第三方支付、第三方登录、快递接口、短信接口、web快递单打印、条码打印、导出excel,word,pdf等常用第三的东西|<span class="task-star star-full"></span><span class="task-star star-full"></span><span class="task-star star-full"></span></span><span class="task-star star-off"></span><span class="task-star star-off"></span>|
+|puppeteer、electronjs、egg、谷歌浏览器插件等一些好玩的|<span class="task-star star-full"></span><span class="task-star star-full"></span><span class="task-star star-full"></span></span><span class="task-star star-off"></span><span class="task-star star-off"></span>|
 ##### 做过的系统
 - [临床试验平台](http://www.wetrial.com)
 - 跨境电商物流系统  

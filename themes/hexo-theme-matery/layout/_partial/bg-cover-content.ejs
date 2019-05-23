@@ -21,5 +21,13 @@
 </div>
 <script>
 // 每天切换 banner 图.  Switch banner image every day.
-$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+// $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
+var i=0;
+setInterval(() => {
+    i++;
+    if(i>3){
+        i=0;
+    }
+    $('.bg-cover').css('background-image', 'url(http://qiniu.xxgtalk.cn/blog/images/background/banner/' + i + '.jpg)');
+}, 6000);
 </script>
