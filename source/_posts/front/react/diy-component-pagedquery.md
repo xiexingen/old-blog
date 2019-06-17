@@ -48,6 +48,7 @@ DIY一个集搜索、排序、分页功能的列表组件
 1. 在需要跳转路由的地方调用一下backRoute方法，并将路由传递给方法，该方法会返回之前记录的列表路由
 <a name="VNgB5"></a>
 # 思路
+
 实现思路，通过高阶组件实现，[代码](https://github.com/wetrial/wetrial/blob/master/src/components/PagedQuery/index.tsx)  、  [api文档](https://github.com/wetrial/wetrial/blob/master/src/components/PagedQuery/index.zh-CN.md)  <br />记录搜索状态，通过sessionStorage来实现，考虑到sessionStore的一个优势，关闭当前tab页就失效了 省去还得去手动清除记录状态的麻烦(比如放到localStorage)，再者 这种查询状态不需要持久记录  <br />回退方法backRouter，由于高阶组件中会在组件的componentWillUnmount方法中记录搜索状态，以location的pathname为key，以location的search为值存放，所以通过backRouter方法匹配的时候会从sessionStorage中查询，如果有则带上查询串，以此来达到记录页面状态的效果
 
 > 更多请参观：[https://www.yuque.com/wetrial/front-end/](https://www.yuque.com/wetrial/front-end/)
