@@ -14,6 +14,7 @@ date: 2019-04-26 09:10:10
 
 #### 前端 
 [可能是最全的前端动效库汇总](https://juejin.im/post/5cc089eae51d456e7d189f9d)
+[前端工程化-5:你所需要的npm知识储备都在这了](https://juejin.im/post/5d08d3d3f265da1b7e103a4d?utm_source=gold_browser_extension)
 
 
 #### Chrome插件开发
