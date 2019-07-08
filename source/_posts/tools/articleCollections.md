@@ -17,6 +17,7 @@ date: 2019-04-26 09:10:10
 [常用前端库](https://github.com/sorrycc/awesome-f2e-libs)
 [awesome-tools](https://github.com/sorrycc/awesome-tools)
 [前端工程化-5:你所需要的npm知识储备都在这了](https://juejin.im/post/5d08d3d3f265da1b7e103a4d?utm_source=gold_browser_extension)
+[正则相关](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)
 
 
 #### Chrome插件开发
