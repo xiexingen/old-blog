@@ -24,3 +24,5 @@ date: 2019-04-26 09:10:10
 [博客文章](http://www.cnblogs.com/champagne/p/?page=2)
 [官方资料](https://zjcqoo.github.io/-----https://developer.chrome.com/extensions)
 
+#### 其他
+NAS 私有文件服务器
