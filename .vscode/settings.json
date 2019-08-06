@@ -1,5 +1,7 @@
 {
+    // 图床配置
     "picgo.picBed.current": "qiniu",
+    // 七牛
     "picgo.picBed.qiniu.accessKey": "yB_FGsejZSv2dLiUuqU2SOqpFxkguTIwcozS_CPc",
     "picgo.picBed.qiniu.secretKey": "pf0TNvneDe9yNOdOyZGoTserp40HIcWFbGc1PP2v",
     "picgo.picBed.qiniu.bucket": "blog", // 存储空间名 
@@ -7,4 +9,11 @@
     "picgo.picBed.qiniu.area": "z0", // "z0" -> 华东, "z1" -> 华北, "z2" -> 华南, "na0" -> 北美, "as0" -> 东南亚
     "picgo.picBed.qiniu.options": "",// 网址后缀，比如?imgslim
     "picgo.picBed.qiniu.path": "blog/images/" ,// 自定义存储路径，比如img/
+
+    // github
+    "picgo.picBed.github.repo": "xiexingen/blog", // 仓库名，格式是username/reponame
+    "picgo.picBed.github.token": "45784c9d128a2e4ac836cf5e340e603be24918ad", // github token
+    "picgo.picBed.github.path": "blog/images/", // 自定义存储路径，比如img/
+    "picgo.picBed.github.customUrl": "https://blog/xxgtalk.cn", // 自定义域名，注意要加http://或者https://
+    "picgo.picBed.github.branch": "master" // 分支名，默认是master
 }
