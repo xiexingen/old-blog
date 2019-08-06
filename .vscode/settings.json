@@ -1,4 +1,5 @@
 {
+    // gist b939a6b2f15ca8bf3a7d41831fd7993b33bd889a
     // 图床配置
     "picgo.picBed.current": "qiniu",
     // 七牛
