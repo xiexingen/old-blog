@@ -34,17 +34,17 @@ docker logs --follow gitlab
 2. docker下安装gitlab runner  
 + [2.1] 安装gitlab runner
     ``` docker
-    docker run -d --name gitlab-runner --restart always -v /docker/gitlab-runner/run/docker.sock:/var/run/docker.sock -v /docker/gitlab-runner/config:/etc/gitlab-runner  gitlab/gitlab-runner
+    sudo docker run -d --name gitlab-runner --restart always -v /srv/gitlab-runner/config:/docker/gitlab-runner/config -v /var/run/docker.sock:/docker/gitlab-runner/run/docker.sock gitlab/gitlab-runner:latest
     * * * * * * 介绍 * * * * * *
-    docker run -d --name gitlab-runner --restart always \
-      -v /docker/gitlab-runner/run/docker.sock:/var/run/docker.sock \
-      -v /docker/gitlab-runner/config:/etc/gitlab-runner  \
-      gitlab/gitlab-runner
+    sudo docker run -d --name gitlab-runner --restart always \
+    v /srv/gitlab-runner/config:/docker/gitlab-runner/config \
+    -v /var/run/docker.sock:/docker/gitlab-runner/run/docker.sock \
+    gitlab/gitlab-runner:latest
     ```
 + [2.2] 注册gitlab runner(官方建议跟gitlab不要放在同一个服务器上)【最后没有成功,改用[07Gitlab01-runner](07GitLab01-runner.md) 】  
 参考地址:https://docs.gitlab.com.cn/runner/register/index.html  
   * 运行下面命令启动注册程序  
-  docker exec -it gitlab-runner gitlab-runner register  
+  sudo docker exec -it gitlab-runner gitlab-ci-multi-runner register
   * 输入 GitLab 实例 URL  
   gitlab的域名  
   * 输入获取到的用于注册 Runner 的 token:  
