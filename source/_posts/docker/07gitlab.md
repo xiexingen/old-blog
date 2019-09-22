@@ -1,8 +1,11 @@
 ---
 title: Docker安装GitLab
-date: 2018-06-05 10:30:10 
-categories: ['Docker']
-tags: ['Docker']
+categories:
+  - Docker
+tags:
+  - Docker
+abbrlink: 47017
+date: 2018-06-05 10:30:10
 ---
 
 Docker下安装GitLab
@@ -41,7 +44,7 @@ docker logs --follow gitlab
     -v /var/run/docker.sock:/docker/gitlab-runner/run/docker.sock \
     gitlab/gitlab-runner:latest
     ```
-+ [2.2] 注册gitlab runner(官方建议跟gitlab不要放在同一个服务器上)【最后没有成功,改用[07Gitlab01-runner](07GitLab01-runner.md) 】  
++ [2.2] 注册gitlab runner(官方建议跟gitlab不要放在同一个服务器上)【最后没有成功,改用[07Gitlab01-runner](/2018/06/05/docker/07gitlab01-runner/) 】  
 参考地址:https://docs.gitlab.com.cn/runner/register/index.html  
   * 运行下面命令启动注册程序  
   sudo docker exec -it gitlab-runner gitlab-ci-multi-runner register

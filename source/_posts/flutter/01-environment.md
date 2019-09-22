@@ -1,8 +1,11 @@
 ---
 title: Flutter-01 环境搭建
+categories:
+  - Flutter
+tags:
+  - Flutter
+abbrlink: 5925
 date: 2019-09-09 19:40:22
-categories: ['Flutter']
-tags: ['Flutter']
 ---
 
 Flutter-01 环境搭建

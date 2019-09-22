@@ -1,8 +1,11 @@
 ---
 title: Centos7.x 安装gitlab-runner
-date: 2018-06-05 10:35:10 
-categories: ['Docker']
-tags: ['Docker']
+categories:
+  - Docker
+tags:
+  - Docker
+abbrlink: 41583
+date: 2018-06-05 10:35:10
 ---
 
 Centos7.x 安装gitlab-runner
