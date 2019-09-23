@@ -38,12 +38,21 @@ SignalR 提供了一个用于创建服务器到客户端远程过程调用（RPC
 
 ## 使用jwt将用户跟signalr关联
 
-## 业务实现-指定推送
+## 业务分析
 
-## 增加log4net  
+## 业务实现-服务端 组、用户、连接自定义管理
+
+## 业务实现-客户端demo
+
+## 待改进&交流
+- 使用消息队列替换目前的api调用形式，同时消息队列支持定义推送优先级
+- 使用polly来重试失败的调用
+- 将连接中传递的userId改成token
+- 服务器端需要有定时任务去清除redis中的无效数据(看造化)
+
 https://github.com/zhanglilong23/Asp.NetCore.Demo/tree/master/Log4NetDemo.WebApi/Log4NetDemo.WebApi  
 
-## demo项目介绍
+
 
 ## 强烈推荐的参考文档  
 > 微软官方文档:https://docs.microsoft.com/zh-CN/aspnet/core/signalr/introduction?view=aspnetcore-3.0  

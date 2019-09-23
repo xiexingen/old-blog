@@ -50,43 +50,19 @@ abbrlink: 61069
         }
     }
   ```
-
-- 修改客户端js，监听服务器端的推送
-    ``` js
-    var connection=new signalR.HubConnectionBuilder()
-    .configureLogging(signalR.LogLevel.Error) // 前端控制台的日志级别，根据需要配置
-    .withUrl('http://localhost:50001/notify-hub') // 连接地址,这个地址是signalr项目的地址
-    .withAutomaticReconnect([0, 2000, 5000, 10000, 20000]) // 配置重连的时间
-    .build();
-
-    // 重连的时候触发
-    connection.onreconnecting(function (info) {
-        console.info('----------------------------------signalr-- onreconnecting', info);
-    });
-
-    //连接关闭的回调
-    connection.onclose(function (err) {
-        console.info('--------------------------------signalr-- onclose', err);
-    });
-
-    // 监听服务器端的通知
-    connection.on('OnNotify', function(data){
-      console.log('新客户端上线,',data);
-    });
-
-    connection.start().then(function (data) {
-        console.log('已成功连接到signalr服务器')
-    }).catch(function (error) {
-        console.error(error.toString());
-    });
-
-    ```
+  
 ## 在api中调用Hub推送
-大部分情况下，是通过客户端某个操作，比如:将任务分配给张三，那么在分配任务的这个api中会调用推送 推送给张三一个通知，xxx分配了一个任务给你
+大部分情况下，是通过客户端某个操作，比如:将任务分配给张三，那么在分配任务的这个api中会调用推送 推送给张三一个通知，xxx分配了一个任务给你，在Controller中注入强类型的Hub，代码如下
+  ``` C#
+  ...
+  private readonly IHubContext<NotifyHub,IClientNotifyHub> _notifyHub;
+  public NotifyController(IHubContext<NotifyHub,IClientNotifyHub> notifyHub)
+  {
+      _notifyHub = notifyHub;
+  }
+  ```
 
-
-
-更多内容请通过快速导航查看下一篇
+至此，强类型的Hub介绍完毕，更多内容请通过快速导航查看下一篇
 
 ## 快速导航
 
