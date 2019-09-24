@@ -104,5 +104,5 @@ abbrlink: 61070
 |   :---    |   :--- 
 |   索引    |   [.net core 3.0 Signalr - 实现一个业务推送系统](/2019/09/20/dotnetcore/signalr/00-introduct/) 
 |   下一篇  |   [.net core 3.0 Signalr - 02 使用强类型的Hub](/2019/09/22/dotnetcore/signalr/02-type-hub/) 
-|   源码地址  |   [源码](https://github.com/xiexingen/Core.Signalr.Template) 
+|   源码地址  |   [源码](https://github.com/xiexingen/CTS.Signalr) 
 |   官方文档  |   [官方文档](https://docs.microsoft.com/zh-CN/aspnet/core/?view=aspnetcore-3.0) 

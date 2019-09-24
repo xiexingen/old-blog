@@ -60,7 +60,7 @@ https://github.com/zhanglilong23/Asp.NetCore.Demo/tree/master/Log4NetDemo.WebApi
 > 发现写的不错的博客:https://www.cnblogs.com/cgzl/p/9515516.html
 
 ## 代码仓库
-> https://github.com/xiexingen/Core.Signalr.Template
+> https://github.com/xiexingen/CTS.Signalr
 
 [.net core 3.0 Signalr - 01 基础篇](/2019/09/21/dotnetcore/signalr/01-base/) 
 [.net core 3.0 Signalr - 02 使用强类型的Hub](/2019/09/22/dotnetcore/signalr/02-type-hub/) 
