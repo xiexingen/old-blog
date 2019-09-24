@@ -67,4 +67,7 @@ https://github.com/zhanglilong23/Asp.NetCore.Demo/tree/master/Log4NetDemo.WebApi
 [.net core 3.0 Signalr - 03 使用MessagePack压缩传输内容](/2019/09/29/dotnetcore/signalr/03-message-pack/) 
 [.net core 3.0 Signalr - 04 使用Redis做底板来支持横向扩展](/2019/10/01/dotnetcore/signalr/04-redis/) 
 [.net core 3.0 Signalr - 05 使用jwt将用户跟signalr关联](/2019/10/02/dotnetcore/signalr/05-jwt/) 
-[.net core 3.0 Signalr - 06 业务实现-指定推送](/2019/10/03/dotnetcore/signalr/06-notify/) 
+[.net core 3.0 Signalr - 06 业务实现-业务分析](/2019/10/03/dotnetcore/signalr/06-analysis/) 
+[.net core 3.0 Signalr - 07 业务实现-服务端 自定义管理组、用户、连接](/2019/10/04/dotnetcore/signalr/07-self-manager/) 
+[.net core 3.0 Signalr - 08 业务实现-客户端demo](/2019/10/05/dotnetcore/signalr/08-clientdemo/) 
+[.net core 3.0 Signalr - 09 待改进&交流](/2019/10/06/dotnetcore/signalr/09-todo/) 

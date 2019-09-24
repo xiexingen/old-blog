@@ -135,6 +135,6 @@ UserTokenValidation 为自定义token解析方法，[详情请参见](https://gi
 |   :---    |   :--- 
 |   索引    |   [.net core 3.0 Signalr - 实现一个业务推送系统](/2019/09/20/dotnetcore/signalr/00-introduct/) 
 |   上一篇  |   [.net core 3.0 Signalr - 04 使用Redis做底板来支持横向扩展](/2019/10/01/dotnetcore/signalr/04-redis/) 
-|   下一篇  |   [.net core 3.0 Signalr - 06 业务实现-指定推送](/2019/10/03/dotnetcore/signalr/06-notify/) 
+|   下一篇  |   [.net core 3.0 Signalr - 06 业务实现-业务分析](/2019/10/03/dotnetcore/signalr/06-analysis/) 
 |   源码地址  |   [源码](https://github.com/xiexingen/Core.Signalr.Template) 
 |   官方文档  |   [官方文档](https://docs.microsoft.com/zh-CN/aspnet/core/?view=aspnetcore-3.0) 
