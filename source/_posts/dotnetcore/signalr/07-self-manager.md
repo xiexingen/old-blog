@@ -10,8 +10,14 @@ abbrlink: 61069
 
 .net core 3.0 Signalr - 07 业务实现-服务端 自定义管理组、用户、连接
 <!-- more -->
+## Hub的管理
+- 重写OnConnectedAsync
+从连接信息中获取UserId、Groups,
+[代码请查看](https://github.com/xiexingen/CTS.Signalr/blob/master/CTS.Signalr.Server/Hubs/NotifyHub.cs)
 
+## 提供API给业务系统调用
 
+## 增加日志记录
 
 
 
