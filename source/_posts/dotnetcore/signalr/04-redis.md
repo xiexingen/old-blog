@@ -146,5 +146,5 @@ Microsoft.AspNetCore.SignalR.StackExchangeRedis
 |   索引    |   [.net core 3.0 Signalr - 实现一个业务推送系统](/2019/09/20/dotnetcore/signalr/00-introduct/) 
 |   上一篇  |   [.net core 3.0 Signalr - 03 使用MessagePack压缩传输内容](/2019/09/29/dotnetcore/signalr/03-message-pack/) 
 |   下一篇  |   [.net core 3.0 Signalr - 05 使用jwt将用户跟signalr关联](/2019/10/02/dotnetcore/signalr/05-jwt/) 
-|   源码地址  |   [源码](https://github.com/xiexingen/Core.Signalr.Template) 
+|   源码地址  |   [源码](https://github.com/xiexingen/CTS.Signalr) 
 |   官方文档  |   [官方文档](https://docs.microsoft.com/zh-CN/aspnet/core/signalr/redis-backplane?view=aspnetcore-3.0) 

@@ -119,6 +119,9 @@ Microsoft.AspNetCore.SignalR.Protocols.MessagePack
     });
 
   ```
+
+## 尚未解决问题
+发现通过json.net序列化得到的对象，直接传递给MessagePack序列化会报错，没找着解决方法，直接改成字符串传递，然后在前端解析了，有遇到过的大佬欢迎指点下
   
 至此，MessagePack介绍算结束了，更多内容请通过快速导航查看下一篇
 
@@ -129,7 +132,7 @@ Microsoft.AspNetCore.SignalR.Protocols.MessagePack
 |   索引    |   [.net core 3.0 Signalr - 实现一个业务推送系统](/2019/09/20/dotnetcore/signalr/00-introduct/) 
 |   上一篇  |   [.net core 3.0 Signalr - 02 使用强类型的Hub](/2019/09/22/dotnetcore/signalr/02-type-hub/) 
 |   下一篇  |   [.net core 3.0 Signalr - 04 使用Redis做底板来支持横向扩展](/2019/10/01/dotnetcore/signalr/04-redis/) 
-|   源码地址  |   [源码](https://github.com/xiexingen/Core.Signalr.Template) 
+|   源码地址  |   [源码](https://github.com/xiexingen/CTS.Signalr) 
 |   官方文档  |   [官方文档](https://docs.microsoft.com/zh-CN/aspnet/core/?view=aspnetcore-3.0) 
 |   MessagePack-CSharp  |   [MessagePack-CSharp](https://github.com/neuecc/MessagePack-CSharp) 
 |   MessagePack  |   [MessagePack](https://msgpack.org/index.html) 

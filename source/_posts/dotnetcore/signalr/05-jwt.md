@@ -121,8 +121,8 @@ Signalr是以Group、Connect为核心来进行推送，比如，给某个组、�
         });
   }
   ```
-其中，SignalrRedisHelper 为redis辅助方法，[详情请参见](https://github.com/xiexingen/Core.Signalr.Template/blob/master/Core.Signalr.Template.Web/Cores/SignalrRedisHelper.cs)  
-UserTokenValidation 为自定义token解析方法，[详情请参见](https://github.com/xiexingen/Core.Signalr.Template/blob/master/Core.Signalr.Template.Web/Cores/UserTokenValidation.cs),由于历史遗留问题，此处直接使用了userId，建议的做法是传递jwttoken，然后服务器端解析jwt token得到用户信息    
+其中，SignalrRedisHelper 为redis辅助方法，[详情请参见](https://github.com/xiexingen/CTS.Signalr/blob/master/Core.Signalr.Template.Web/Cores/SignalrRedisHelper.cs)  
+UserTokenValidation 为自定义token解析方法，[详情请参见](https://github.com/xiexingen/CTS.Signalr/blob/master/Core.Signalr.Template.Web/Cores/UserTokenValidation.cs),由于历史遗留问题，此处直接使用了userId，建议的做法是传递jwttoken，然后服务器端解析jwt token得到用户信息    
 
 ## Hub中跟用户关联
 在Hub中通过Context.User.Identity.Name可以获取到解析的值，通过这种关系来跟用户关联上，当然，也可以自定义修改使用其他信息，比如Email或其他自定义的名称，具体请google
@@ -136,5 +136,5 @@ UserTokenValidation 为自定义token解析方法，[详情请参见](https://gi
 |   索引    |   [.net core 3.0 Signalr - 实现一个业务推送系统](/2019/09/20/dotnetcore/signalr/00-introduct/) 
 |   上一篇  |   [.net core 3.0 Signalr - 04 使用Redis做底板来支持横向扩展](/2019/10/01/dotnetcore/signalr/04-redis/) 
 |   下一篇  |   [.net core 3.0 Signalr - 06 业务实现-业务分析](/2019/10/03/dotnetcore/signalr/06-analysis/) 
-|   源码地址  |   [源码](https://github.com/xiexingen/Core.Signalr.Template) 
+|   源码地址  |   [源码](https://github.com/xiexingen/CTS.Signalr) 
 |   官方文档  |   [官方文档](https://docs.microsoft.com/zh-CN/aspnet/core/?view=aspnetcore-3.0) 
