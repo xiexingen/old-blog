@@ -7,7 +7,7 @@
     "picgo.picBed.qiniu.accessKey": "yB_FGsejZSv2dLiUuqU2SOqpFxkguTIwcozS_CPc",
     "picgo.picBed.qiniu.secretKey": "pf0TNvneDe9yNOdOyZGoTserp40HIcWFbGc1PP2v",
     "picgo.picBed.qiniu.bucket": "blog", // 存储空间名 
-    "picgo.picBed.qiniu.url": "qiniu.xxgtalk.cn",  // 自定义域名
+    "picgo.picBed.qiniu.url": "http://qiniu.xxgtalk.cn",  // 自定义域名
     "picgo.picBed.qiniu.area": "z0", // "z0" -> 华东, "z1" -> 华北, "z2" -> 华南, "na0" -> 北美, "as0" -> 东南亚
     "picgo.picBed.qiniu.options": "",// 网址后缀，比如?imgslim
     "picgo.picBed.qiniu.path": "blog/images/" ,// 自定义存储路径，比如img/
