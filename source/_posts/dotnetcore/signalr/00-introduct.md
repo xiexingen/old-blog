@@ -44,7 +44,7 @@ SignalR 提供了一个用于创建服务器到客户端远程过程调用（RPC
 [.net core 3.0 Signalr - 06 业务实现-业务分析](/2019/10/03/dotnetcore/signalr/06-analysis/)   
 [.net core 3.0 Signalr - 07 业务实现-服务端 自定义管理组、用户、连接](/2019/10/04/dotnetcore/signalr/07-self-manager/)   
 [.net core 3.0 Signalr - 08 业务实现-客户端demo](/2019/10/05/dotnetcore/signalr/08-clientdemo/)   
-[.net core 3.0 Signalr - 09 待改进&交流](/2019/10/06/dotnetcore/signalr/09-todo/)   
+[.net core 3.0 Signalr - 09 待改进&交流](/2019/10/05/dotnetcore/signalr/09-todo/)   
 
 ## Demo源码地址
 > https://github.com/xiexingen/CTS.Signalr
