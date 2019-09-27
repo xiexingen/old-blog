@@ -14,7 +14,7 @@ abbrlink: 61069
 - 重写OnConnectedAsync
 从连接信息中获取UserId、Groups,ConnectId，并实现这三者的关系，存放于redis中
 [代码请查看](https://github.com/xiexingen/CTS.Signalr/blob/master/CTS.Signalr.Server/Hubs/NotifyHub.cs)
-  ``` c#
+  ``` C#
   using CTS.Signalr.Server.Cores;
   using CTS.Signalr.Server.Dtos;
   using Microsoft.AspNetCore.Authorization;
@@ -160,6 +160,7 @@ abbrlink: 61069
           }
       }
   }
+
   ```
 
 ## 提供给业务系统调用的API
