@@ -18,6 +18,7 @@ Docker常用命令
 |docker rm [容器名称] | 删除本地使用过的容器  |
 |docker start [Name] | 启动指定容器  |
 |docker stop [Name] | 关闭指定容器  |
+|docker kill [Name] | 强制关闭指定容器  |
 |docker pause [Name]|暂停指定容器 |
 |docker unpause [Name]|恢复指定容器 |
 |docker rmi -f $(docker images -a -q)|  移除所有images  |
@@ -44,6 +45,8 @@ Docker常用命令
  docker logs -f gitlab 查看gitlab容器所有日志
  docker logs --tail 20 -f gitlab 查看gitlab最近20条的日志
  docker logs --since 30s -f gitlab 查看gitlab最近30s的日志
+* 退出 -it  
+exit 或者ctrl+p+q
 :::
 
 
