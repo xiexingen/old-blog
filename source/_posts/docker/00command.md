@@ -28,6 +28,16 @@ Docker常用命令
 |docker rm -fv [容器Id] | 停止、删除容器、清除数据  |
 |docker images -f [option] | 过滤查询 | 
 |docker logs -f [container-name]| 查看日志
+|docker history [container-name]| 查看镜像的构建历史
+
+* 数据卷
+-v 主机目录:容器目录   
+docker run -it -v /docker/data:/config [--privileged=true] 表示将宿主机中的/docker目录跟容器中的/config目录做一个映射，如果没有将自动创建  
+> 如果遇到数据卷没权限访问，则在后面增加 --privileged=true即可
+
+* 数据卷容器
+--volumns-form containerId|name  表示容器数据卷从name容器同步  
+> docker run -it --name xxg2 --volumns-from xxg1 nginx
 
 ::: warning 温馨提示
 * docker run -p 8001:80   &nbsp;&nbsp;--运行 指定端口 8001外部端口  80表示内部端口
