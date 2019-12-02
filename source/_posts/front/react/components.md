@@ -16,6 +16,9 @@ ReactReact社区精选组件
 |媒体查询|[react-media](https://github.com/ReactTraining/react-media)|媒体查询
 |标题修改|[react-document-title](https://github.com/gaearon/react-document-title)| 修改标题
 |浏览器存储|[store](https://github.com/marcuswestin/store.js) | 浏览器存储技术
+|pdf|[react-pdf](https://github.com/diegomura/react-pdf) | pdf
+|react-virtualized|[react-virtualized](https://github.com/bvaughn/react-virtualized) | 大数据渲染
+
 
 
 #### 其他类型
