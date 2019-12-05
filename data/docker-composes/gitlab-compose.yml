@@ -1,0 +1,40 @@
+version: '3'
+services:
+    gitlab:
+      #英文版 gitlab/gitlab-ce
+      #汉化版 twang2218/gitlab-ce-zh
+      image: 'twang2218/gitlab-ce-zh'
+      container_name: gitlab
+      restart: always
+      #主机名，一般对应域名
+      hostname: 'gitlab.xxgtalk.cn'
+      environment:
+        TZ: 'Asia/Shanghai'
+        GITLAB_OMNIBUS_CONFIG: |
+          external_url 'http://gitlab.xxgtalk.cn'
+          gitlab_rails['time_zone'] = 'Asia/Shanghai'
+          # ssh 访问的端口
+          giblab_rails['gitlab_shell_ssh_port']= 2222
+          # gitlab内部端口
+          unicorn['port']= 8888
+          # nginx映射出来的端口
+          nginx['listen_port']= 80
+          ## 邮件相关
+          # gitlab_rails['smtp_enable'] = true
+          # gitlab_rails['smtp_address'] = "smtp.exmail.qq.com"
+          # gitlab_rails['smtp_port'] = 465
+          # gitlab_rails['smtp_user_name'] = "xxxx@xx.com"
+          # gitlab_rails['smtp_password'] = "password"
+          # gitlab_rails['smtp_authentication'] = "login"
+          # gitlab_rails['smtp_enable_starttls_auto'] = true
+          # gitlab_rails['smtp_tls'] = true
+          # gitlab_rails['gitlab_email_from'] = 'xxxx@xx.com'
+      ports:
+        - '8090:80'
+        - '8443:443'
+        - '2222:22'
+      volumes:
+        - /docker/data/gitlab/config:/etc/gitlab
+        - /docker/data/gitlab/data:/var/opt/gitlab
+        - /docker/data/gitlab/logs:/var/log/gitlab
+      privileged: true
