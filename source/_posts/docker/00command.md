@@ -55,6 +55,12 @@ docker run -it -v /docker/data:/config [--privileged=true] 表示将宿主机中
  docker logs -f gitlab 查看gitlab容器所有日志
  docker logs --tail 20 -f gitlab 查看gitlab最近20条的日志
  docker logs --since 30s -f gitlab 查看gitlab最近30s的日志
+
+* docker inspect --format='{{.LogPath}}' <容器ID> 查看日志文件位置  
+docker inspect --format='{{.LogPath}}' mysql  
+* 清空docker实例的日志内容  
+$(docker inspect --format='{{.LogPath}}' <容器ID>)
+
 * 退出 -it  
 exit 或者ctrl+p+q
 :::
