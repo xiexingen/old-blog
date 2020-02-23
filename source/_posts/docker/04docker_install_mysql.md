@@ -11,16 +11,16 @@ Docker 安装MySql
 >将docker容器中的实例中的文件跟物理文件链接起来 即使删掉容器 数据还在 再创建容器的时候 任然可以对应上之前的数据  
 #### 一、安装篇
 1. 使用docker-compose安装  
-+ [1.1] 在目录/docker/mysql/mysql-init下创建init-user.sql文件 内容如下  
++ [1.1] 在目录/docker/data/mysql/mysql-init下创建init-user.sql文件 内容如下  
 ```
 use mysql;
 CREATE USER 'sa'@'%' IDENTIFIED BY 'Abcd1234';
 GRANT ALL PRIVILEGES ON *.* TO 'sa'@'%';
 ```
 + [1.2]   
-docker-compose -f mysql-docker-compose.yml up -d    
-对应的mysql-docker-compose.yml文件
-``` bash
+docker-compose -f mysql-compose.yml up -d    
+对应的mysql-compose.yml文件
+``` yml
 version: '2.3'
 
 services:
@@ -36,8 +36,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: Abcd1234
     volumes:
-      - /docker/mysql/mysql-init:/docker-entrypoint-initdb.d
-      - /docker/mysql/data:/var/lib/mysql
+      - /docker/data/mysql/mysql-init:/docker-entrypoint-initdb.d
+      - /docker/data/mysql/data:/var/lib/mysql
 # volumes:
 #   mysql-data:
 #     external: true

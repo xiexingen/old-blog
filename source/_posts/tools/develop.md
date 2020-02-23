@@ -1,8 +1,11 @@
 ---
 title: 开发中能提高工作效率的工具收集
-date: 2018-05-16 09:10:11 
-categories: ['工具']
-tags: ['工具']
+categories:
+  - 工具
+tags:
+  - 工具
+abbrlink: 10236
+date: 2018-05-16 09:10:11
 ---
 
 开发工具收藏夹
@@ -17,6 +20,8 @@ tags: ['工具']
 * Web Essentials  
 * web Extension Pack  
 * Productivity Power Tools 2015:方法开始结束标线  
+* [PicGo vscode的图床管理](https://picgo.github.io/PicGo-Doc/zh/guide/config.html#github%E5%9B%BE%E5%BA%8A)、[github](http://picgo.github.io)
+* Settings Sync vscode 同步插件
 
 ##### 前端
 * 编辑器神器：webstrom、SubLime node  
