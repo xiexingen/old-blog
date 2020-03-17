@@ -17,3 +17,14 @@ scrapy环境搭建
 5. 选取Python解释器
 使用`Ctrl+Shift+P`打开命令板，输入`Python: Select Interpreter` 找到刚的安装目录，选择确定
 
+## 问题&解决
+
+执行的时候提示 Fatal error in launcher: Unable to create process using '"c:\bld\scrapy_1564100571450\_h_env\python.exe"  "C:\Users\Rodzice.Mateusz-PC\Anaconda3\Scripts\scrapy.exe" '
+
+解决办法  
+
+1. pip install scrapy
+
+2. scrapy -v
+
+3. scrapy startproject example
