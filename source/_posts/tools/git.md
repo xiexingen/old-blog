@@ -116,8 +116,14 @@ git push origin [v1.0] //将标签v1.0push到远程
 git push origin --tags //将本地的所有tag push到远程  
 git push origin :refs/tags/[v1.0] //删除v1.0  
 17. .gitignore文件无效的解决方法  
-git rm -r --cached [指定文件]  
+
+``` bash
+git rm -r --cached .  // 从 index 内删除所有变更过的文件
+git add .
+git commit -m ".gitignore is now working"
+```
 提交
+
 
 ##### 配置git使用BCompare来比对文件(用户目录\.gitconfig里面)
 ``` bash
