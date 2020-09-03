@@ -1,8 +1,11 @@
 ---
 title: Docker常用命令
-date: 2018-05-28 09:10:10 
-categories: ['Docker']
-tags: ['Docker']
+categories:
+  - Docker
+tags:
+  - Docker
+abbrlink: 7569
+date: 2018-05-28 09:10:10
 ---
 
 Docker常用命令

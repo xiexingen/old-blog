@@ -1,8 +1,11 @@
 ---
 title: redis-cli基础
-date: 2018-12-02 09:10:10 
-categories: ['redis']
-tags: ['redis']
+categories:
+  - redis
+tags:
+  - redis
+abbrlink: 21149
+date: 2018-12-02 09:10:10
 ---
 
 redis-cli基础

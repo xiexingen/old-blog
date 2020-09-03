@@ -1,8 +1,11 @@
 ---
 title: git常用命令(笔记)
-date: 2018-05-16 09:10:11 
-categories: ['工具']
-tags: ['工具']
+categories:
+  - 工具
+tags:
+  - 工具
+abbrlink: 16549
+date: 2018-05-16 09:10:11
 ---
 
 常用git命令

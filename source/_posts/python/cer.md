@@ -1,8 +1,11 @@
 ---
 title: scrapy环境搭建
-date: 2018-05-16 09:10:10 
-categories: ['python']
-tags: ['python']
+categories:
+  - python
+tags:
+  - python
+abbrlink: 50915
+date: 2018-05-16 09:10:10
 ---
 
 scrapy环境搭建

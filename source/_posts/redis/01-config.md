@@ -1,8 +1,11 @@
 ---
 title: redis-config常用点介绍
-date: 2018-12-03 09:10:10 
-categories: ['redis']
-tags: ['redis']
+categories:
+  - redis
+tags:
+  - redis
+abbrlink: 43898
+date: 2018-12-03 09:10:10
 ---
 
 redis-config常用点介绍

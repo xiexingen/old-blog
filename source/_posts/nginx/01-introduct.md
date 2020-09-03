@@ -1,8 +1,11 @@
 ---
 title: Nginx开篇
-date: 2019-11-30 09:10:10 
-categories: ['Nginx']
-tags: ['Nginx']
+categories:
+  - Nginx
+tags:
+  - Nginx
+abbrlink: 14221
+date: 2019-11-30 09:10:10
 ---
 
 Docker基础开篇
