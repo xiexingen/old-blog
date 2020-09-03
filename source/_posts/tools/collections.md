@@ -27,6 +27,7 @@ date: 2018-09-13 09:10:10
 |host切换工具|[SwitchHosts](https://github.com/oldj/SwitchHosts)
 |异常收集框架 | [Exceptionless](https://github.com/exceptionless/Exceptionless)
 |容器监管|[portainer](https://github.com/portainer/portainer)
+|dotnet内存分析(付费)|[dotmemory](https://www.jetbrains.com/zh-cn/dotmemory/)
 
 ## 工具
 | 类型 | 推荐组件
