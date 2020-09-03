@@ -71,6 +71,8 @@ lerna 默认使用 npm，而且每个子 package 都有自己的 node_modules，
 
 * `lerna clean`  删除所有包的node_modules目录
 
+* `lerna exec -- yarn remove my-package` 卸载指定的包
+
 * `lerna changed` 列出下次发版lerna publish 要更新的包
 
 * `lerna publish` 会打tag，上传git,上传npm。 如果你的包名是带scope的例如："name": "@wetrial/blogs", 那需要在packages.json添加
