@@ -1,0 +1,810 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content=".net core 3.0 Signalr - 06 业务实现-业务分析, 程序有Bug">
+    <meta name="description" content=".net core 3.0 Signalr - 06 业务实现-业务分析
+业务需求
+人-项目关系一个人可以属于多个项目，一个项目可以有多个人加入，通知的时候，可以通知项目内的所有人，也可以通知部分人或者某个责任人。
+登录互斥同一个人不允许登">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>.net core 3.0 Signalr - 06 业务实现-业务分析 | 程序有Bug技术栈</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
+
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+
+<header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="../../../../../../index.html" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">程序有Bug技术栈</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>归档</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>关于</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友情链接</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">程序有Bug技术栈</div>
+        <div class="logo-desc">
+            
+            专注于.NET CORE、大前端技术栈、爬虫、微信体系、客户端应用
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                归档
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                关于
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友情链接
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/xiexingen" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/xiexingen" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://qiniu.xxgtalk.cn/blog/images/background/featureimages/17.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        .net core 3.0 Signalr - 06 业务实现-业务分析
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="../../../../../../tags/Signalr/" target="_blank">
+                                <span class="chip bg-color">Signalr</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="../../../../../../categories/NetCore/" class="post-category" target="_blank">
+                                .NetCore
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-10-03
+                </div>
+
+                
+				
+				
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>.net core 3.0 Signalr - 06 业务实现-业务分析<br><a id="more"></a></p>
+<h2 id="业务需求"><a href="#业务需求" class="headerlink" title="业务需求"></a>业务需求</h2><ol>
+<li>人-项目关系<br>一个人可以属于多个项目，一个项目可以有多个人加入，通知的时候，可以通知项目内的所有人，也可以通知部分人或者某个责任人。</li>
+<li>登录互斥<br>同一个人不允许登录两次(不同浏览器或者不同电脑登)，后面登录的会将前面登录的人挤下线。</li>
+<li>聊天<br>可以私聊、也可以创建群聊、上线通知(多个连接的情况)</li>
+<li>文件下载<br>用户在界面上选择了多个文件，然后选择批量打包下载，后端后台线程进行压缩、压缩完成后通过signalr通知该用户(的某个连接,比如当前用户开了多个tab页，应该只能推送给操作的那个tab页)</li>
+</ol>
+<h2 id="功能设计"><a href="#功能设计" class="headerlink" title="功能设计"></a>功能设计</h2><blockquote>
+<p>名词解释: 业务系统:具体业务功能的系统     推送系统:实际的Signalr系统，跟业务系统分开部署</p>
+<ol>
+<li>将推送单独成一个子系统；支持单独部署，可一台服务器也可以多台，通过redis作为底板来分发到服务器</li>
+<li>推送子系统端自定义管理用户、连接、组，业务系统调用的时候</li>
+<li>推送系统开发一个api，给业务系统直接调用(当然这不是最佳选择，可以通过消息队列，支持重试、优先级等，性能会比http形式好很多)<br>业务系统调用推送系统的时候传递参数包括，组、用户、推送数据对象，比如如下代码  <pre class=" language-C#"><code class="language-C#">var send = new Send()
+{
+   // 推送的组，多个用,隔开
+   GroupId = GroupId,
+   // 关联的UserId 多个用,隔开
+   UserIds= UserIds,
+   // 是否排除用户
+   ExcludeUsers=ExcludeUsers,
+   // 实际推送的对象
+   NotifyObj = new NotifyObj()
+   {
+       Data = Data,
+       NotifyType = NotifyType,
+       OpType= OpType
+   },
+};
+</code></pre>
+</li>
+</ol>
+<ul>
+<li>有GroupId<ul>
+<li>ExcludeUsers=true<br>推送给指定的组中所有用户(排除掉UserIds部分)</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<ul>
+<li>ExcludeUsers=false<br>推送给组中指定(UserIds中指定的)的这些用户</li>
+</ul>
+<ul>
+<li><p>无GroupId</p>
+<ul>
+<li><p>ExcludeUsers=true<br>推送给当前所有连接(排除掉UserIds部分的用户)</p>
+</li>
+<li><p>ExcludeUsers=false<br>推送给指定用户(UserIds中指定的用户)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="架构设计"><a href="#架构设计" class="headerlink" title="架构设计"></a>架构设计</h2><ol>
+<li>组、用户、连接的关系</li>
+</ol>
+<ul>
+<li>用户:[连接Id]<br>一个用户用多个连接、以Set形式存redis中</li>
+<li>组:[连接Id:用户Id]<br>以Redis中的Hash格式存储，以Group为Key，以连接Id为Name，以UserId为值，一个用户在组中可能多个连接(开多个浏览器tab页),这样设计的好处是可以满足以下的几种情况<ul>
+<li>给某个人推送<br>从redis中直接根据该用户的UserId查询该用户的所有连接，然后通过连接推送即可</li>
+<li>给某个组推送<br>从redis中根据组名查询出所有的连接Id，通过连接直接推送</li>
+<li>给某个组中的某些人推<br>这个时候不能根据人查连接Id，需要先根据组得到组中的人、连接Id，然后只给组中这些人对应的连接推送</li>
+<li>用户上线的时候<br>在redis中存储一份用户与连接的关系；如果有组的情况，同时以Hash形式存储组、连接Id、用户Id</li>
+<li>用户再开一个浏览器tab页<br>在redis中该用户对应的连接中增加新的连接Id；如果有组的情况，同时以Hash形式存储组、连接Id、用户Id(因为是一连接Id为name的，然而连接Id是不重复的，所以是可以存着同一个组、同一个用户不同连接这种情况的)</li>
+<li>用户退出页面<br>在redis中找到该用户，从redis中删除改用户的找个连接Id，组的情况同样处理</li>
+<li>给某个用户的某个连接Id推送<br>比如:用户点击打包下载，服务器端后台线程进行打包、压缩，完成后推送给指定的连接Id，前端界面再进行处理下载</li>
+</ul>
+</li>
+</ul>
+<p>至此，业务分析完毕，更多内容请通过快速导航查看下一篇</p>
+<h2 id="快速导航"><a href="#快速导航" class="headerlink" title="快速导航"></a>快速导航</h2><table>
+<thead>
+<tr>
+<th style="text-align:left">标题</th>
+<th style="text-align:left">内容 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">索引</td>
+<td style="text-align:left"><a href="/2019/09/20/dotnetcore/signalr/00-introduct/">.net core 3.0 Signalr - 实现一个业务推送系统</a> </td>
+</tr>
+<tr>
+<td style="text-align:left">上一篇</td>
+<td style="text-align:left"><a href="/2019/10/02/dotnetcore/signalr/05-jwt/">.net core 3.0 Signalr - 05 使用jwt将用户跟signalr关联</a> </td>
+</tr>
+<tr>
+<td style="text-align:left">下一篇</td>
+<td style="text-align:left"><a href="/2019/10/04/dotnetcore/signalr/07-self-manager/">.net core 3.0 Signalr - 07 业务实现-服务端 自定义管理组、用户、连接</a>  </td>
+</tr>
+<tr>
+<td style="text-align:left">源码地址</td>
+<td style="text-align:left"><a href="https://github.com/xiexingen/CTS.Signalr" target="_blank" rel="noopener">源码</a> </td>
+</tr>
+<tr>
+<td style="text-align:left">官方文档</td>
+<td style="text-align:left"><a href="https://docs.microsoft.com/zh-CN/aspnet/core/?view=aspnetcore-3.0" target="_blank" rel="noopener">官方文档</a> </td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+            <hr/>
+            
+
+    <style>
+        #page-weixin>img{
+            width:100%;
+        }
+    </style>
+<div id="page-weixin">
+    <img src="http://qiniu.xxgtalk.cn/wechat/codefront/qrcode.gif" />
+</div>
+
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/images/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/images/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<script src="/libs/share/js/social-share.min.js"></script>
+
+            
+
+
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="../../../../04/dotnetcore/signalr/07-self-manager/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/14.jpg" class="responsive-img" alt=".net core 3.0 Signalr - 07 业务实现-服务端 自定义管理组、用户、连接">
+                        
+                        <span class="card-title">.net core 3.0 Signalr - 07 业务实现-服务端 自定义管理组、用户、连接</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            .net core 3.0 Signalr - 07 业务实现-服务端 自定义管理组、用户、连接
+Hub的管理
+重写OnConnectedAsync从连接信息中获取UserId、Groups,ConnectId，并实现这三者的关系，存放于r
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-04
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="../../../../../../categories/NetCore/" class="post-category" target="_blank">
+                                    .NetCore
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="../../../../../../tags/Signalr/" target="_blank">
+                        <span class="chip bg-color">Signalr</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="../../../../02/dotnetcore/signalr/05-jwt/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/14.jpg" class="responsive-img" alt=".net core 3.0 Signalr - 05 使用jwt将用户跟signalr关联">
+                        
+                        <span class="card-title">.net core 3.0 Signalr - 05 使用jwt将用户跟signalr关联</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            .net core 3.0 Signalr - 05 使用jwt将用户跟signalr关联Signalr是以Group、Connect为核心来进行推送，比如，给某个组、某个连接来推送，但实际场景中，核心应该是某个组、某个人；然而一个人可以对
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-02
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="../../../../../../categories/NetCore/" class="post-category" target="_blank">
+                                    .NetCore
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="../../../../../../tags/Signalr/" target="_blank">
+                        <span class="chip bg-color">Signalr</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+
+    
+
+</main>
+
+
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            本站由&copy;<a href="https://blog.xxgtalk.cn" target="_blank">程序有Bug</a>基于
+            <a href="https://hexo.io/" target="_blank">Hexo</a>搭建.
+
+            
+
+            
+			
+                <br>
+                
+                <span id="busuanzi_container_site_pv">
+                    <i class="fa fa-heart-o"></i>
+                    本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+                </span>
+                
+                
+                <span id="busuanzi_container_site_uv">
+                    <i class="fa fa-users"></i>
+                    次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+                </span>
+                
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/xiexingen" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1002275364@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1002275364" class="tooltipped" data-tooltip="QQ联系我: 1002275364" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+    <a href="../../../../../../atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+<!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+<!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+<script src="/libs/materialize/materialize.min.js"></script>
+<script src="/libs/masonry/masonry.pkgd.min.js"></script>
+<script src="/libs/aos/aos.js"></script>
+<script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+<script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+<script src="/js/matery.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+
+    <script src="/libs/others/clicklove.js"></script>
+
+
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+
+
+</body>
+</html>
