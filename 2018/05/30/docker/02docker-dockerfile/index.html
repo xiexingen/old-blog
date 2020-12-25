@@ -46,6 +46,7 @@ MAINTAINER The CentOS Pro">
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -364,7 +365,7 @@ MAINTAINER The CentOS Pro">
 <tr>
 <td style="text-align:left">MAINTAINER</td>
 <td style="text-align:left">镜像维护着的项目和邮箱地址</td>
-<td style="text-align:left">MAINTAINER The CentOS Project <a href="mailto:&#x78;&#120;&#120;&#120;&#64;&#x63;&#101;&#110;&#x74;&#111;&#115;&#46;&#x6f;&#x72;&#x67;" target="_blank" rel="noopener">&#x78;&#120;&#120;&#120;&#64;&#x63;&#101;&#110;&#x74;&#111;&#115;&#46;&#x6f;&#x72;&#x67;</a></td>
+<td style="text-align:left">MAINTAINER The CentOS Project <a href="mailto:&#x78;&#x78;&#x78;&#x78;&#64;&#99;&#101;&#x6e;&#x74;&#111;&#115;&#46;&#x6f;&#114;&#x67;">&#x78;&#x78;&#x78;&#x78;&#64;&#99;&#101;&#x6e;&#x74;&#111;&#115;&#46;&#x6f;&#114;&#x67;</a></td>
 </tr>
 <tr>
 <td style="text-align:left">RUN</td>
@@ -602,29 +603,32 @@ CMD /bin/bash
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="../../../../06/01/docker/03docker-mongodb/">
+                <a href="../01docker-config/">
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/6.jpg" class="responsive-img" alt="Docker安装mongodb">
+                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/7.jpg" class="responsive-img" alt="Docker安装及配置加速镜像">
                         
-                        <span class="card-title">Docker安装mongodb</span>
+                        <span class="card-title">Docker安装及配置加速镜像</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Docker安装mongodb
-通过docker-compose安装version: "3.3"
-services:
-  commonmongo:
-    container_name: "mongo"
-    image: mongo:l
+                            Docker安装及配置加速镜像
+
+
+
+个人阿里云加速镜像个人地址&nbsp; https://noe4mlw6.mirror.aliyuncs.com
+
+
+CentOS 7 (使用yum进行安装)如果之前安装过】先卸载依赖  
+  sudo
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-06-01
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-05-30
                         </span>
                         <span class="publish-author">
                             
@@ -656,30 +660,47 @@ services:
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="../01docker-config/">
+                <a href="../../../28/docker/00command/">
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/7.jpg" class="responsive-img" alt="Docker安装及配置加速镜像">
+                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/23.jpg" class="responsive-img" alt="Docker常用命令">
                         
-                        <span class="card-title">Docker安装及配置加速镜像</span>
+                        <span class="card-title">Docker常用命令</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Docker安装及配置加速镜像
-
-个人阿里云加速镜像个人地址&nbsp; https://noe4mlw6.mirror.aliyuncs.com
+                            Docker常用命令
 
 
-CentOS 7 (使用yum进行安装)如果之前安装过】先卸载依赖  
-    sudo
+
+命令
+说明
+参数
+
+
+
+
+docker –version
+查看当前docker版本
+
+
+docker ps
+查看当前正在运行的容器
+
+
+docker images
+查看本地所有镜像
+
+
+docker pull [
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-05-30
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-05-28
                             </span>
                         <span class="publish-author">
                             

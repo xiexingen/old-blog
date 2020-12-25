@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <meta name="keywords" content="使用docker-compose, 程序有Bug">
     <meta name="description" content="使用docker-compose按照webapi&amp;amp;mysql
+
+
 接Docker制作WebApi&amp;amp;MySql
 
 创建docker-compose.yml文件  
@@ -13,7 +15,7 @@ version &#39;1&#39;
 
 services:
  db:
-     ">
+   ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -36,6 +38,7 @@ services:
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -332,7 +335,9 @@ services:
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>使用docker-compose按照webapi&amp;mysql<br><a id="more"></a></p>
+                <p>使用docker-compose按照webapi&amp;mysql</p>
+<a id="more"></a>
+
 <p><a href="./05docker-webapi-mysql.html">接Docker制作WebApi&amp;MySql</a></p>
 <ol>
 <li><p>创建docker-compose.yml文件  </p>
@@ -358,14 +363,14 @@ services<span class="token punctuation">:</span>
      ports<span class="token punctuation">:</span>
        <span class="token punctuation">-</span><span class="token string">'5000:80'</span>
      depends_on<span class="token punctuation">:</span>
-       <span class="token punctuation">-</span> db
-</code></pre>
+       <span class="token punctuation">-</span> db</code></pre>
 <blockquote>
-<p>【注意】<br>由于db需要初始化用户角色 所以在资料卷中指定目录下放入sql 内容<br>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘sa‘@’%’ WITH GRANT OPTION;  </p>
+<p>【注意】<br>由于db需要初始化用户角色 所以在资料卷中指定目录下放入sql 内容<br>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘sa’@’%’ WITH GRANT OPTION;  </p>
 </blockquote>
 </li>
-<li>执行命令<br>docker-compose build<br>docker up    //docker down 与docker up相反  <blockquote>
-<p><a href="http://qiniu.xxgtalk.cn/blog/files/docker/mysql-docker-compose.yml" target="_blank" rel="noopener">docker-compose文件</a>  </p>
+<li><p>执行命令<br>docker-compose build<br>docker up    //docker down 与docker up相反  </p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://qiniu.xxgtalk.cn/blog/files/docker/mysql-docker-compose.yml">docker-compose文件</a>  </p>
 </blockquote>
 </li>
 </ol>
@@ -558,13 +563,15 @@ services<span class="token punctuation">:</span>
                         
                             Docker下安装GitLab
 
+
+
 前置条件 安装好docker  
+
 
 docker运行gitlab(由于22端口被ssh占用 改用23)  
 
 
-在/docker/gitlab 目录下分别创建data、config、logs三个文件夹  
-
+在/docker/gitlab 目录下分别创建data、config、logs三个文件夹
                         
                     </div>
                     <div class="publish-info">
@@ -616,10 +623,12 @@ docker运行gitlab(由于22端口被ssh占用 改用23)
                             Docker制作WebApi&amp;MySql 直接上图
 
 
+
+
 docker文件  
- FROM microsoft/aspnetcore-build as build-env
- WORKDIR /code
- COPY *.csproj .
+FROM microsoft/aspnetcore-build as build-env
+WORKDIR /code
+COPY *.csproj ./
                         
                     </div>
                     <div class="publish-info">

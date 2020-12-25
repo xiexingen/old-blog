@@ -6,10 +6,11 @@
     <meta charset="utf-8">
     <meta name="keywords" content="使用travis自动部署到github, 程序有Bug">
     <meta name="description" content="使用github+travis+ant-design-pro-site打造自己公司的前端开发文档站点
+
 开篇
 插播一条小广告，我们公司招人.net、前端(react栈) ；有求职意向可以私我内推(qq:1002275364)
 
-目前公司的系统">
+目前公司的系">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -32,6 +33,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -292,7 +294,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="../../../../../tags/工具/" target="_blank">
+                            <a href="../../../../../tags/%E5%B7%A5%E5%85%B7/" target="_blank">
                                 <span class="chip bg-color">工具</span>
                             </a>
                         
@@ -304,7 +306,7 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="../../../../../categories/工具/" class="post-category" target="_blank">
+                            <a href="../../../../../categories/%E5%B7%A5%E5%85%B7/" class="post-category" target="_blank">
                                 工具
                             </a>
                         
@@ -333,6 +335,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h4 id="使用github-travis-ant-design-pro-site打造自己公司的前端开发文档站点"><a href="#使用github-travis-ant-design-pro-site打造自己公司的前端开发文档站点" class="headerlink" title="使用github+travis+ant-design-pro-site打造自己公司的前端开发文档站点"></a>使用github+travis+ant-design-pro-site打造自己公司的前端开发文档站点</h4><a id="more"></a>
+
 <h4 id="开篇"><a href="#开篇" class="headerlink" title="开篇"></a>开篇</h4><blockquote>
 <p>插播一条小广告，我们公司招人.net、前端(react栈) ；有求职意向可以私我内推(qq:1002275364)</p>
 </blockquote>
@@ -341,23 +344,24 @@
 <li>为什么用.net core<br>其实吧，我跟后端是有很大的渊源的，做了好几年后端吧，发现.net后端其实蛮苦逼的，不仅得写后端api还得写前端页面(没办法，你让美工去写razor页面感觉有点过分)，这也是为什么要前后端分离的原因之一(虽然分离之后前端页面还是后端开发人员兼职写^_^)；<br>.net core 天生为了跨平台、高性能、微服务、云而生；作为一个后端黑带6道的我，中小型项目里面玩的还是蛮顺手的(像什么abp、DI、dapper、ef、NPOI、itextsharp、quartznet、CAP、SignalR、Polly、DotnetSpider等还是玩过一些些的，只要别跟我扯什么动不动就双十一的场景，还是可以聊的下去的)<br>其次，.net core生态圈目前虽然不如java等，但是还是可以看到一直在进步；像什么桌面应用、Xamarin、ML.NET、爬虫、Xamarin、区块链、IoT、Unity3D、等都有涉及到;微服务方向，有Ocelot、Consul、Polly 等等等等等等等等等等等等等…  </li>
 <li>为啥用react+antd+dva+umi【+ts】栈<br>目前开发人员以后端人员为主力，对jquery栈比较熟悉；切换到react后需要比较大的转变，需要接触很多新知识，比如es6的析构赋值、rest、箭头函数、Generate、Promise、模板字符串;再比如 react的生命周期、redux的数据流等 这些都是新的东西；考虑到各方面，最终打算数据量方案使用dva(简单明了以model为单位集reducers、effects、subscribe等)，至于antd不用过多介绍，业界公认前端ui库</li>
 </ol>
-<p>好像有点跑题了<del>~</del></p>
+<p>好像有点跑题了~~~~~</p>
 <h4 id="工作准备"><a href="#工作准备" class="headerlink" title="工作准备"></a>工作准备</h4><ol>
-<li>注册账号<a href="https://github.com" target="_blank" rel="noopener">github</a>、<a href="https://travis-ci.org" target="_blank" rel="noopener">travis</a></li>
+<li>注册账号<a target="_blank" rel="noopener" href="https://github.com/">github</a>、<a target="_blank" rel="noopener" href="https://travis-ci.org/">travis</a></li>
 <li>github上创建仓库(wetrial-site)</li>
 <li>github上生成一个token(记得保存下来)，用于travis推送代码到gh-pages分支<br><img src="http://qiniu.xxgtalk.cn/blog/images/tools/travis_github_generate_token.jpg" alt="生成token"><br>记得将tokens保存下来，稍后要用到，仓库权限选择第一项 repo即可  </li>
 <li>travis设置<br>点击头像、然后选择项目，默认是用户，如果你的项目是组织项目的，需要切换到组织，如图所示<br><img src="http://qiniu.xxgtalk.cn/blog/images/tools/travis_project_list.jpg" alt="travis项目选择"> </li>
 <li>进入项目配置页面，如图<br><img src="http://qiniu.xxgtalk.cn/blog/images/tools/travis_project_setting.jpg" alt="travis项目选择"><br>添加环境变量相关东西，包括域名、token等<br><img src="http://qiniu.xxgtalk.cn/blog/images/tools/travis_environment.jpg" alt="配置">   </li>
 <li>回到实际的项目<br>从ant-design-pro-site拉取代码，然后根据自己的实际情况做修改；比如我去掉了尾栏的一些东西，增加了css相关的大栏(这里不具体介绍)  </li>
-<li>在根目录下添加travis的配置文件.travis.yml 内容如下所示<br><code>`</code> yml<br>language: node_js</li>
+<li>在根目录下添加travis的配置文件.travis.yml 内容如下所示<pre class=" language-yml"><code class="language-yml">language: node_js
+</code></pre>
+</li>
 </ol>
 <p>node_js:</p>
 <ul>
 <li>“8”</li>
 </ul>
-<h1 id="缓存依赖"><a href="#缓存依赖" class="headerlink" title="缓存依赖"></a>缓存依赖</h1><p>cache:<br>  directories:</p>
-<pre><code>- node_modules
-</code></pre><p>before_install:</p>
+<h1 id="缓存依赖"><a href="#缓存依赖" class="headerlink" title="缓存依赖"></a>缓存依赖</h1><p>cache:<br>  directories:<br>    - node_modules</p>
+<p>before_install:</p>
 <ul>
 <li>export TZ=’Asia/Shanghai’ # 更改时区</li>
 </ul>
@@ -369,16 +373,21 @@
 <ul>
 <li>npm run build-site</li>
 </ul>
-<h1 id="分支白名单"><a href="#分支白名单" class="headerlink" title="分支白名单"></a>分支白名单</h1><p>branches:<br>  only:</p>
-<pre><code>- master # 只对 master 分支进行构建
-</code></pre><h1 id="GitHub-Pages-部署"><a href="#GitHub-Pages-部署" class="headerlink" title="GitHub Pages 部署"></a>GitHub Pages 部署</h1><p>deploy:</p>
+<h1 id="分支白名单"><a href="#分支白名单" class="headerlink" title="分支白名单"></a>分支白名单</h1><p>branches:<br>  only:<br>    - master # 只对 master 分支进行构建</p>
+<h1 id="GitHub-Pages-部署"><a href="#GitHub-Pages-部署" class="headerlink" title="GitHub Pages 部署"></a>GitHub Pages 部署</h1><p>deploy:</p>
 <ul>
-<li>provider: pages<br>skip_cleanup: true<h1 id="在项目仪表盘的-Settings-gt-Environment-Variables-中配置"><a href="#在项目仪表盘的-Settings-gt-Environment-Variables-中配置" class="headerlink" title="在项目仪表盘的 Settings -&gt; Environment Variables 中配置"></a>在项目仪表盘的 Settings -&gt; Environment Variables 中配置</h1>github_token: $GITHUB_TOKEN<h1 id="将-build-目录下的内容推送到默认的-gh-pages-分支上，并不会连带-build-目录一起"><a href="#将-build-目录下的内容推送到默认的-gh-pages-分支上，并不会连带-build-目录一起" class="headerlink" title="将 build 目录下的内容推送到默认的 gh-pages 分支上，并不会连带 build 目录一起"></a>将 build 目录下的内容推送到默认的 gh-pages 分支上，并不会连带 build 目录一起</h1>local_dir: _site<h1 id="绑定自定义域名，根据自己的情况来"><a href="#绑定自定义域名，根据自己的情况来" class="headerlink" title="绑定自定义域名，根据自己的情况来"></a>绑定自定义域名，根据自己的情况来</h1>fqdn: $CUSTOM_DOMAIN<br>name: $GIT_NAME<br>email: $GIT_EMAIL<br><code>`</code><br>然后提交并同步到github,回到travis将会看到如下一幕<br><img src="http://qiniu.xxgtalk.cn/blog/images/tools/travis_log.jpg" alt="配置"><br>你也可以从日志里面看到具体的执行过程，等待执行完成后回到github中将会看到里面多了一个gh-pages分支，没错 这个分支就是travis中的deploy推送过去的，里面就是编译后的代码，再回到setting里面，将会看到已经默认配置好站点地址了，这里我们改改 使用自己的域名，如图所示:<br><img src="http://qiniu.xxgtalk.cn/blog/images/tools/travis_github_config.jpg" alt><br>最后，去域名管理页，将自己的这个子域名一定一个类型为CNAME的，地址为:wetrial.github.io</li>
+<li>provider: pages<br>skip_cleanup: true<h1 id="在项目仪表盘的-Settings-gt-Environment-Variables-中配置"><a href="#在项目仪表盘的-Settings-gt-Environment-Variables-中配置" class="headerlink" title="在项目仪表盘的 Settings -&gt; Environment Variables 中配置"></a>在项目仪表盘的 Settings -&gt; Environment Variables 中配置</h1>github_token: $GITHUB_TOKEN<h1 id="将-build-目录下的内容推送到默认的-gh-pages-分支上，并不会连带-build-目录一起"><a href="#将-build-目录下的内容推送到默认的-gh-pages-分支上，并不会连带-build-目录一起" class="headerlink" title="将 build 目录下的内容推送到默认的 gh-pages 分支上，并不会连带 build 目录一起"></a>将 build 目录下的内容推送到默认的 gh-pages 分支上，并不会连带 build 目录一起</h1>local_dir: _site<h1 id="绑定自定义域名，根据自己的情况来"><a href="#绑定自定义域名，根据自己的情况来" class="headerlink" title="绑定自定义域名，根据自己的情况来"></a>绑定自定义域名，根据自己的情况来</h1>fqdn: $CUSTOM_DOMAIN<br>name: $GIT_NAME<br>email: $GIT_EMAIL<pre><code>然后提交并同步到github,回到travis将会看到如下一幕  
+![配置](http://qiniu.xxgtalk.cn/blog/images/tools/travis_log.jpg)    
+你也可以从日志里面看到具体的执行过程，等待执行完成后回到github中将会看到里面多了一个gh-pages分支，没错 这个分支就是travis中的deploy推送过去的，里面就是编译后的代码，再回到setting里面，将会看到已经默认配置好站点地址了，这里我们改改 使用自己的域名，如图所示:  
+![](http://qiniu.xxgtalk.cn/blog/images/tools/travis_github_config.jpg) 
+最后，去域名管理页，将自己的这个子域名一定一个类型为CNAME的，地址为:wetrial.github.io
+</code></pre>
+</li>
 </ul>
-<h4 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h4><p>访问刚配置的地址:<a href="http://ant.xxgtalk.cn" target="_blank" rel="noopener">http://ant.xxgtalk.cn</a> 可以看到部署好的文档</p>
+<h4 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h4><p>访问刚配置的地址:<a target="_blank" rel="noopener" href="http://ant.xxgtalk.cn/">http://ant.xxgtalk.cn</a> 可以看到部署好的文档</p>
 <p><img src="http://qiniu.xxgtalk.cn/blog/images/tools/wetrial-site.jpg" alt="wetrial示例"> </p>
 <blockquote>
-<p>此外,打算写一篇这块的手册，<a href="https://www.yuque.com/wetrial/front-end/xuyan" target="_blank" rel="noopener">地址:https://www.yuque.com/wetrial/front-end/xuyan</a> 欢迎 <a href="https://www.yuque.com/wetrial/front-end/xuyan" target="_blank" rel="noopener">FORK</a></p>
+<p>此外,打算写一篇这块的手册，<a target="_blank" rel="noopener" href="https://www.yuque.com/wetrial/front-end/xuyan">地址:https://www.yuque.com/wetrial/front-end/xuyan</a> 欢迎 <a target="_blank" rel="noopener" href="https://www.yuque.com/wetrial/front-end/xuyan">FORK</a></p>
 </blockquote>
 
             </div>
@@ -568,7 +577,9 @@
                     <div class="summary block-with-text">
                         
                             通过umi-library将自己的组件打包成各种类型的包…
-文件格式说明esm 用途es6语法格式(也叫AMD)，主要用在浏览器中 export default …；可以做 tree-shaking(打包成一个文件，但是项目中使用时只引入需
+
+
+文件格式说明esm 用途es6语法格式(也叫AMD)，主要用在浏览器中 export default …；可以做 tree-shaking(打包成一个文件，但是项目中使用时只引
                         
                     </div>
                     <div class="publish-info">
@@ -590,7 +601,7 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../../tags/前端/" target="_blank">
+                    <a href="../../../../../tags/%E5%89%8D%E7%AB%AF/" target="_blank">
                         <span class="chip bg-color">前端</span>
                     </a>
                     
@@ -636,7 +647,7 @@
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../../../../../categories/工具/" class="post-category" target="_blank">
+                            <a href="../../../../../categories/%E5%B7%A5%E5%85%B7/" class="post-category" target="_blank">
                                     工具
                                 </a>
                             
@@ -647,7 +658,7 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../../tags/工具/" target="_blank">
+                    <a href="../../../../../tags/%E5%B7%A5%E5%85%B7/" target="_blank">
                         <span class="chip bg-color">工具</span>
                     </a>
                     

@@ -51,6 +51,7 @@ docker pull [">
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -451,40 +452,23 @@ docker pull [">
 </blockquote>
 </li>
 </ul>
-<p>::: warning 温馨提示</p>
+<p>warning 温馨提示</p>
 <ul>
-<li><p>docker run -p 8001:80   &nbsp;&nbsp; –运行 指定端口 8001外部端口  80表示内部端口</p>
+<li>docker run -p 8001:80   &nbsp;&nbsp;–运行 指定端口 8001外部端口  80表示内部端口</li>
+<li>docker run -d             &nbsp;&nbsp;–detach 还可以继续操作 不会阻塞</li>
+<li>docker run –name        &nbsp;&nbsp;–运行的docker镜像的名称</li>
+<li>docker run -p 8001:80 &nbsp;&nbsp;–name myapi helloapi:latest<br>表示运行docker中名为helloapi的容器 版本为latest docker的端口为80 本机的端口8001 名字为myapi</li>
+<li>docker ps -a            &nbsp;&nbsp;–查看所有容器 不管有没运行</li>
+<li>过滤查询<br>docker images –filter “before=image1” 查询image1之后的<br>docker images –filter “since=image3”  查询image3之前的<br>docker images “wechat:v1.3.<em>“  查询wechat:1.3.x的<br>docker rmi -f $(docker images “wechat:v1.2.</em>“ -q) 移除wechat:v1.2.*版本的</li>
+<li><p>docker logs查看日志<br>docker logs -f gitlab 查看gitlab容器所有日志<br>docker logs –tail 20 -f gitlab 查看gitlab最近20条的日志<br>docker logs –since 30s -f gitlab 查看gitlab最近30s的日志</p>
 </li>
-<li><p>docker run -d             &nbsp;&nbsp; –detach 还可以继续操作 不会阻塞</p>
-</li>
-<li><p>docker run –name        &nbsp;&nbsp; –运行的docker镜像的名称</p>
-</li>
-<li><p>docker run -p 8001:80 &nbsp;&nbsp; –name myapi helloapi:latest<br>表示运行docker中名为helloapi的容器 版本为latest docker的端口为80 本机的端口8001 名字为myapi</p>
-</li>
-<li><p>docker ps -a            &nbsp;&nbsp; –查看所有容器 不管有没运行</p>
-</li>
-<li><p>过滤查询  </p>
-<pre class=" language-bash"><code class="language-bash">docker images --filter <span class="token string">"before=image1"</span> 查询image1之后的  
-docker images --filter <span class="token string">"since=image3"</span>  查询image3之前的  
-docker images <span class="token string">"wechat:v1.3.*"</span>  查询wechat:1.3.x的  
-docker rmi -f <span class="token punctuation">$(</span>docker images <span class="token string">"wechat:v1.2.*"</span> -q<span class="token punctuation">)</span> 移除wechat:v1.2.*版本的
+<li><p>docker inspect 查看日志文件位置  </p>
+<pre class=" language-bash"><code class="language-bash">docker inspect --format<span class="token operator">=</span><span class="token string">'&amp;#123;&amp;#123;.LogPath&amp;#125;&amp;#125;'</span> mysql  
 </code></pre>
 </li>
-<li><p>docker logs查看日志</p>
-<pre class=" language-bash"><code class="language-bash">docker logs -f gitlab 查看gitlab容器所有日志
-docker logs --tail 20 -f gitlab 查看gitlab最近20条的日志
-docker logs --since 30s -f gitlab 查看gitlab最近30s的日志
-</code></pre>
-</li>
-<li><p>查看日志文件位置 </p>
-<pre class=" language-bash"><code class="language-bash">docker inspect --format<span class="token operator">=</span><span class="token string">'{{.LogPath}}'</span> <span class="token operator">&lt;</span>容器ID<span class="token operator">></span> 查看日志文件位置 
-docker inspect --format<span class="token operator">=</span><span class="token string">'{{.LogPath}}'</span> mysql  
-</code></pre>
-</li>
-<li><p>清空docker实例的日志内容  </p>
-</li>
+<li>清空docker实例的日志内容  </li>
 </ul>
-<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">$(</span>docker inspect --format<span class="token operator">=</span><span class="token string">'{{.LogPath}}'</span> <span class="token operator">&lt;</span>容器ID<span class="token operator">></span><span class="token punctuation">)</span>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">$(</span>docker inspect --format<span class="token operator">=</span><span class="token string">'&amp;#123;&amp;#123;.LogPath&amp;#125;&amp;#125;'</span> <span class="token operator">&lt;</span>容器ID<span class="token operator">></span><span class="token punctuation">)</span>
 </code></pre>
 <ul>
 <li>退出 -it<br>exit 或者ctrl+p+q<br>:::</li>
@@ -664,25 +648,37 @@ docker inspect --format<span class="token operator">=</span><span class="token s
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="../../../30/docker/01docker-config/">
+                <a href="../../../30/docker/02docker-dockerfile/">
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/7.jpg" class="responsive-img" alt="Docker安装及配置加速镜像">
+                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/17.jpg" class="responsive-img" alt="Dockerfile解析">
                         
-                        <span class="card-title">Docker安装及配置加速镜像</span>
+                        <span class="card-title">Dockerfile解析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Docker安装及配置加速镜像
-
-个人阿里云加速镜像个人地址&nbsp; https://noe4mlw6.mirror.aliyuncs.com
+                            Dockerfile解说
 
 
-CentOS 7 (使用yum进行安装)如果之前安装过】先卸载依赖  
-    sudo
+
+关键字
+说明
+例子
+
+
+
+
+FROM
+以此为基础来构建
+FROM debian:buster-slim
+
+
+MAINTAINER
+镜像维护着的项目和邮箱地址
+MAINTAINER The CentOS Pro
                         
                     </div>
                     <div class="publish-info">
@@ -732,9 +728,11 @@ CentOS 7 (使用yum进行安装)如果之前安装过】先卸载依赖
                     <div class="summary block-with-text">
                         
                             window技巧-长期更新
+
 一、技巧篇
 查看占用端口netstat -aon    [|findstr “1005”]      查找1005端口被那个占用  
-windows下删除多层级文件夹：安装rimraf包：npm install 
+
+windows下删除多层级文件夹：安装rimraf包：npm instal
                         
                     </div>
                     <div class="publish-info">
@@ -745,7 +743,7 @@ windows下删除多层级文件夹：安装rimraf包：npm install
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../../../../../categories/工具/" class="post-category" target="_blank">
+                            <a href="../../../../../categories/%E5%B7%A5%E5%85%B7/" class="post-category" target="_blank">
                                     工具
                                 </a>
                             
@@ -756,7 +754,7 @@ windows下删除多层级文件夹：安装rimraf包：npm install
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../../tags/工具/" target="_blank">
+                    <a href="../../../../../tags/%E5%B7%A5%E5%85%B7/" target="_blank">
                         <span class="chip bg-color">工具</span>
                     </a>
                     

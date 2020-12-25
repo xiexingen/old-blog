@@ -6,9 +6,11 @@
     <meta charset="utf-8">
     <meta name="keywords" content="IdentityServer4-使用密码授权模式, 程序有Bug">
     <meta name="description" content="IdentityServer4-使用密码授权模式
+
+
 一、IdentityServer 也叫服务端
 新建.netcore web项目 设置启动端口为60000 并通过Nuget引用IdentityServer4
-添加ApiResource和Cl">
+添加ApiResource和">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -31,6 +33,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -335,21 +338,23 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>IdentityServer4-使用密码授权模式<br><a id="more"></a></p>
+                <p>IdentityServer4-使用密码授权模式</p>
+<a id="more"></a>
+
 <h5 id="一、IdentityServer-也叫服务端"><a href="#一、IdentityServer-也叫服务端" class="headerlink" title="一、IdentityServer 也叫服务端"></a>一、IdentityServer 也叫服务端</h5><ol>
 <li>新建.netcore web项目 设置启动端口为60000 并通过Nuget引用IdentityServer4</li>
-<li>添加ApiResource和Client(此处方便测试固定了一些数据)<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/1-0201.png" alt></li>
-<li>使用IdentityServer<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/1-0301.png" alt><br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/1-0302.png" alt></li>
-<li>启动项目 <a href="http://localhost:60000/.well-known/openid-configuration" target="_blank" rel="noopener">http://localhost:60000/.well-known/openid-configuration</a> 可以看到相关json数据<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/1-0401.png" alt><h5 id="二、Api端-与clientCredentials模式完全一致"><a href="#二、Api端-与clientCredentials模式完全一致" class="headerlink" title="二、Api端 (与clientCredentials模式完全一致)"></a>二、Api端 (与clientCredentials模式完全一致)</h5></li>
+<li>添加ApiResource和Client(此处方便测试固定了一些数据)<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/1-0201.png"></li>
+<li>使用IdentityServer<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/1-0301.png"><br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/1-0302.png"></li>
+<li>启动项目 <a target="_blank" rel="noopener" href="http://localhost:60000/.well-known/openid-configuration">http://localhost:60000/.well-known/openid-configuration</a> 可以看到相关json数据<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/1-0401.png"><h5 id="二、Api端-与clientCredentials模式完全一致"><a href="#二、Api端-与clientCredentials模式完全一致" class="headerlink" title="二、Api端 (与clientCredentials模式完全一致)"></a>二、Api端 (与clientCredentials模式完全一致)</h5></li>
 <li>新建.netcore web项目 设置启动端口为60001<br>通过Nuget引用IdentityServer4.AccessTokenValidation 此处只需要验证所以不需要引用IdentityServer4</li>
-<li>配置<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/2-0201.png" alt></li>
+<li>配置<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/2-0201.png"></li>
 <li>在controller上贴上属性[Authorize] 表示只允许登录用户访问</li>
-<li>通过postman获取token(注意请求body中的参数)<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/2-0401.png" alt></li>
-<li>请求需要登录的api 此处为api/values<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/2-0501.png" alt><h5 id="三、client-客户端也叫ThirPart【选修】"><a href="#三、client-客户端也叫ThirPart【选修】" class="headerlink" title="三、client 客户端也叫ThirPart【选修】"></a>三、client 客户端也叫ThirPart【选修】</h5><blockquote>
+<li>通过postman获取token(注意请求body中的参数)<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/2-0401.png"></li>
+<li>请求需要登录的api 此处为api/values<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/2-0501.png"><h5 id="三、client-客户端也叫ThirPart【选修】"><a href="#三、client-客户端也叫ThirPart【选修】" class="headerlink" title="三、client 客户端也叫ThirPart【选修】"></a>三、client 客户端也叫ThirPart【选修】</h5><blockquote>
 <p>定义一个控制台程序 访问api获取数据</p>
 </blockquote>
 </li>
-<li>创建.net core控制台程序 通过Nuget引用包IdentityModel<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/3-0101.png" alt></li>
+<li>创建.net core控制台程序 通过Nuget引用包IdentityModel<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/3-0101.png"></li>
 </ol>
 
             </div>
@@ -540,10 +545,13 @@
                         
                             使用Openssl生成免费证书
 
+
+
 官网地址 openssl的windows官网: https://slproweb.com/products/Win32OpenSSL.html  
 
+
 下载安装
-在自己目录下运行  openssl req -
+在自己目录下运行 openssl req
                         
                     </div>
                     <div class="publish-info">
@@ -554,7 +562,7 @@
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../../../../../../categories/工具/" class="post-category" target="_blank">
+                            <a href="../../../../../../categories/%E5%B7%A5%E5%85%B7/" class="post-category" target="_blank">
                                     工具
                                 </a>
                             
@@ -565,7 +573,7 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../../../tags/工具/" target="_blank">
+                    <a href="../../../../../../tags/%E5%B7%A5%E5%85%B7/" target="_blank">
                         <span class="chip bg-color">工具</span>
                     </a>
                     
@@ -593,9 +601,12 @@
                     <div class="summary block-with-text">
                         
                             IdentityServer4-ClientCredentials模式
+
+
 一、IdentityServer端 也叫服务端
 新建.netcore web项目 设置启动端口为60000 并通过Nuget引用IdentityServer4
-添加Ap
+
+添
                         
                     </div>
                     <div class="publish-info">

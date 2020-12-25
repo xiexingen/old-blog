@@ -7,7 +7,9 @@
     <meta name="keywords" content="umi文件拆分, 程序有Bug">
     <meta name="description" content="umi文件拆分
 
-前言 在umi群里有群友在问umi打包后umi.js文件有1M多甚至更多，那么网站加载的时候会等待这个文件加载完成 可能需要好些时间 这个是比较难忍受的,其实umi有提供代码拆分的功能 只是文档不是很全 这里写了个片博客 ">
+
+
+前言 在umi群里有群友在问umi打包后umi.js文件有1M多甚至更多，那么网站加载的时候会等待这个文件加载完成 可能需要好些时间 这个是比较难忍受的,其实umi有提供代码拆分的功能 只是文档不是很全 这里写了个片博">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -30,6 +32,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -290,7 +293,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="../../../../../../tags/前端/" target="_blank">
+                            <a href="../../../../../../tags/%E5%89%8D%E7%AB%AF/" target="_blank">
                                 <span class="chip bg-color">前端</span>
                             </a>
                         
@@ -338,7 +341,9 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>umi文件拆分<br><a id="more"></a></p>
+                <p>umi文件拆分</p>
+<a id="more"></a>
+
 <blockquote>
 <p>前言 在umi群里有群友在问umi打包后umi.js文件有1M多甚至更多，那么网站加载的时候会等待这个文件加载完成 可能需要好些时间 这个是比较难忍受的,其实umi有提供代码拆分的功能 只是文档不是很全 这里写了个片博客 谈谈怎么拆分的</p>
 </blockquote>
@@ -348,38 +353,35 @@
 </blockquote>
 </li>
 </ol>
-<p><img src="http://qiniu.xxgtalk.cn/blog/images/front/reactumi-split-pre.jpg" alt><br>如图所示，目前umi文件比较大，现在来做拆分，比如这：把@ant-design和antd这两个拆分为antdesigns文件、把react|react-dom|react-router|react-router-dom|lodash|lodash-decorators|redux-saga|re-select|dva|moment这些拆分为wendors文件</p>
-<ol start="2">
-<li>编写拆分规则 在umi.js||config.js文件的chainWebpack 中加入<pre class=" language-bash"><code class="language-bash">config.optimization.splitChunks<span class="token punctuation">(</span><span class="token punctuation">{</span>
- chunks: <span class="token string">'async'</span>,
- minSize: 30000,
- maxSize: 0,
- minChunks: 1,
- maxAsyncRequests: 5,
- maxInitialRequests: 3,
- automaticNameDelimiter: <span class="token string">'~'</span>,
- name: true,
- cacheGroups: <span class="token punctuation">{</span>
-   vendors: <span class="token punctuation">{</span>
-     name: <span class="token string">'vendors'</span>,
-     chunks: <span class="token string">'all'</span>,
-     test: /<span class="token punctuation">[</span>\\/<span class="token punctuation">]</span>node_modules<span class="token punctuation">[</span>\\/<span class="token punctuation">]</span><span class="token punctuation">(</span>react<span class="token operator">|</span>react-dom<span class="token operator">|</span>react-router<span class="token operator">|</span>react-router-dom<span class="token operator">|</span>lodash<span class="token operator">|</span>lodash-decorators<span class="token operator">|</span>redux-saga<span class="token operator">|</span>re-select<span class="token operator">|</span>dva<span class="token operator">|</span>moment<span class="token punctuation">)</span><span class="token punctuation">[</span>\\/<span class="token punctuation">]</span>/,
-     priority: -10,
-   <span class="token punctuation">}</span>,
-   antdesigns: <span class="token punctuation">{</span>
-     name: <span class="token string">'antdesigns'</span>,
-     chunks: <span class="token string">'all'</span>,
-     test: /<span class="token punctuation">[</span>\\/<span class="token punctuation">]</span>node_modules<span class="token punctuation">[</span>\\/<span class="token punctuation">]</span><span class="token punctuation">(</span>@ant-design<span class="token operator">|</span>antd<span class="token punctuation">)</span><span class="token punctuation">[</span>\\/<span class="token punctuation">]</span>/,
-     priority: -11,
-   <span class="token punctuation">}</span>
- <span class="token punctuation">}</span>,
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-</code></pre>
+<p><img src="http://qiniu.xxgtalk.cn/blog/images/front/reactumi-split-pre.jpg"><br>如图所示，目前umi文件比较大，现在来做拆分，比如这：把@ant-design和antd这两个拆分为antdesigns文件、把react|react-dom|react-router|react-router-dom|lodash|lodash-decorators|redux-saga|re-select|dva|moment这些拆分为wendors文件<br>2. 编写拆分规则 在umi.js||config.js文件的chainWebpack 中加入</p>
+<pre class=" language-bash"><code class="language-bash">config.optimization.splitChunks<span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    chunks: <span class="token string">'async'</span>,
+    minSize: 30000,
+    maxSize: 0,
+    minChunks: 1,
+    maxAsyncRequests: 5,
+    maxInitialRequests: 3,
+    automaticNameDelimiter: <span class="token string">'~'</span>,
+    name: true,
+    cacheGroups: <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+      vendors: <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        name: <span class="token string">'vendors'</span>,
+        chunks: <span class="token string">'all'</span>,
+        test: /<span class="token punctuation">[</span>\\/<span class="token punctuation">]</span>node_modules<span class="token punctuation">[</span>\\/<span class="token punctuation">]</span><span class="token punctuation">(</span>react<span class="token operator">|</span>react-dom<span class="token operator">|</span>react-router<span class="token operator">|</span>react-router-dom<span class="token operator">|</span>lodash<span class="token operator">|</span>lodash-decorators<span class="token operator">|</span>redux-saga<span class="token operator">|</span>re-select<span class="token operator">|</span>dva<span class="token operator">|</span>moment<span class="token punctuation">)</span><span class="token punctuation">[</span>\\/<span class="token punctuation">]</span>/,
+        priority: -10,
+      <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;,</span>
+      antdesigns: <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        name: <span class="token string">'antdesigns'</span>,
+        chunks: <span class="token string">'all'</span>,
+        test: /<span class="token punctuation">[</span>\\/<span class="token punctuation">]</span>node_modules<span class="token punctuation">[</span>\\/<span class="token punctuation">]</span><span class="token punctuation">(</span>@ant-design<span class="token operator">|</span>antd<span class="token punctuation">)</span><span class="token punctuation">[</span>\\/<span class="token punctuation">]</span>/,
+        priority: -11,
+      <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;,</span>
+  <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;);</span></code></pre>
+<ol start="3">
+<li>在umi.js或者config.js 的umi-plugin-react中的chunks属性中配置配置如下<pre class=" language-bash"><code class="language-bash">chunks: <span class="token punctuation">[</span><span class="token string">'vendors'</span>,<span class="token string">'antdesigns'</span>, <span class="token string">'umi'</span><span class="token punctuation">]</span></code></pre>
 </li>
-<li>在umi.js或者config.js 的umi-plugin-react中的chunks属性中配置配置如下<pre class=" language-bash"><code class="language-bash">chunks: <span class="token punctuation">[</span><span class="token string">'vendors'</span>,<span class="token string">'antdesigns'</span>, <span class="token string">'umi'</span><span class="token punctuation">]</span>
-</code></pre>
-</li>
-<li>重新执行 yarn run analyze 查看拆分后的情况，如图<br><img src="http://qiniu.xxgtalk.cn/blog/images/front/reactumi-split-next.jpg" alt></li>
+<li>重新执行 yarn run analyze 查看拆分后的情况，如图<br><img src="http://qiniu.xxgtalk.cn/blog/images/front/reactumi-split-next.jpg"></li>
 </ol>
 <p>致次 拆分完成</p>
 
@@ -648,7 +650,7 @@ redis-cli -h [host] -p [port] -a [password]
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../../../../../../categories/前端-其他/" class="post-category" target="_blank">
+                            <a href="../../../../../../categories/%E5%89%8D%E7%AB%AF-%E5%85%B6%E4%BB%96/" class="post-category" target="_blank">
                                     前端-其他
                                 </a>
                             
@@ -659,7 +661,7 @@ redis-cli -h [host] -p [port] -a [password]
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../../../tags/前端-其他/" target="_blank">
+                    <a href="../../../../../../tags/%E5%89%8D%E7%AB%AF-%E5%85%B6%E4%BB%96/" target="_blank">
                         <span class="chip bg-color">前端-其他</span>
                     </a>
                     

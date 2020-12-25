@@ -7,9 +7,11 @@
     <meta name="keywords" content="Docker安装MsSqlserver, 程序有Bug">
     <meta name="description" content="Docker安装MsSqlserver
 
+
 未成功
 
-执行命令` sqldocker run -e ‘ACCEPT_EULA=Y’ -e ‘MSSQL_SA_PASSWORD=Abcd1234’ -v=/docker/mssql:/var/o">
+
+执行命令``` sqldocker run -e ‘ACCEPT_EULA=Y’ -e ‘MSSQL_SA_PASSWORD=Abcd1234’ -v=/docker/mssql:/v">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -32,6 +34,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -332,11 +335,13 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Docker安装MsSqlserver<br><a id="more"></a></p>
+                <p>Docker安装MsSqlserver</p>
+<a id="more"></a>
 <blockquote>
 <p>未成功</p>
+</blockquote>
 <ol>
-<li>执行命令<br><code>`</code> sql<br>docker run -e ‘ACCEPT_EULA=Y’ -e ‘MSSQL_SA_PASSWORD=Abcd1234’ -v=/docker/mssql:/var/opt/mssql  -p 1433:1433 –name sqlserver  -d microsoft/mssql-server-linux:2017-latest  </li>
+<li>执行命令<br>``` sql<br>docker run -e ‘ACCEPT_EULA=Y’ -e ‘MSSQL_SA_PASSWORD=Abcd1234’ -v=/docker/mssql:/var/opt/mssql  -p 1433:1433 –name sqlserver  -d microsoft/mssql-server-linux:2017-latest  </li>
 </ol>
 <ul>
 <li><ul>
@@ -347,7 +352,7 @@
 <li><ul>
 <li><ul>
 <li><ul>
-<li>备注 <em> </em> <em> </em> <em> </em> <em> </em> *<br>docker run -e ‘ACCEPT_EULA=Y’  –是否接受协议<br>-e ‘MSSQL_SA_PASSWORD=&lt;YourStrong!Passw0rd&gt;’ –设置密码<br>-p 1433:1433    –端口<br>–name sqlserver       –用户<br>-d microsoft/mssql-server-linux:2017-latest –2017latest版本<br><code>`</code></li>
+<li>备注 * * * * * * * * *<br>docker run -e ‘ACCEPT_EULA=Y’  –是否接受协议</li>
 </ul>
 </li>
 </ul>
@@ -361,11 +366,11 @@
 </ul>
 </li>
 </ul>
+-e ‘MSSQL_SA_PASSWORD=&lt;YourStrong!Passw0rd&gt;’ –设置密码<br>-p 1433:1433    –端口<br>–name sqlserver       –用户</li>
+</ul>
+ -d microsoft/mssql-server-linux:2017-latest –2017latest版本<pre><code></code></pre>
 </li>
 </ul>
-</li>
-</ul>
-</blockquote>
 
             </div>
             <hr/>
@@ -556,10 +561,12 @@
                             Docker制作WebApi&amp;MySql 直接上图
 
 
+
+
 docker文件  
- FROM microsoft/aspnetcore-build as build-env
- WORKDIR /code
- COPY *.csproj .
+FROM microsoft/aspnetcore-build as build-env
+WORKDIR /code
+COPY *.csproj ./
                         
                     </div>
                     <div class="publish-info">

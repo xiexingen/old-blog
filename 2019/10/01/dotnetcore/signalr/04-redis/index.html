@@ -5,7 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content=".net core 3.0 Signalr - 04 使用Redis做底板来支持横向扩展, 程序有Bug">
-    <meta name="description" content=".net core 3.0 Signalr - 04 使用Redis做底板来支持横向扩展在实际的系统中，可能需要多台机器部署;然而，Signalr的连接信息是跟站点走的，举个例子推送系统部署了A、B两个服务器，张三访问A服务器，李四访问B服">
+    <meta name="description" content=".net core 3.0 Signalr - 04 使用Redis做底板来支持横向扩展
+
+在实际的系统中，可能需要多台机器部署;然而，Signalr的连接信息是跟站点走的，举个例子推送系统部署了A、B两个服务器，张三访问A服务器，李四访问">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -28,6 +30,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -328,9 +331,12 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>.net core 3.0 Signalr - 04 使用Redis做底板来支持横向扩展<br><a id="more"></a><br>在实际的系统中，可能需要多台机器部署;然而，Signalr的连接信息是跟站点走的，举个例子<br>推送系统部署了A、B两个服务器，张三访问A服务器，李四访问B服务器，当张三通过A服务器向李四推送的时候，A服务器上是找不到李四的连接信息的，自然也就推送不过了，这个时候就需要有一个统一协调的玩意，signalr支持多种，Azure、Redis等，本节以Redis作为底板，介绍如何在Signalr中使用Redis作为底板来支持横向扩展。</p>
+                <p>.net core 3.0 Signalr - 04 使用Redis做底板来支持横向扩展</p>
+<a id="more"></a>
+<p>在实际的系统中，可能需要多台机器部署;然而，Signalr的连接信息是跟站点走的，举个例子<br>推送系统部署了A、B两个服务器，张三访问A服务器，李四访问B服务器，当张三通过A服务器向李四推送的时候，A服务器上是找不到李四的连接信息的，自然也就推送不过了，这个时候就需要有一个统一协调的玩意，signalr支持多种，Azure、Redis等，本节以Redis作为底板，介绍如何在Signalr中使用Redis作为底板来支持横向扩展。</p>
 <h2 id="引入Redis"><a href="#引入Redis" class="headerlink" title="引入Redis"></a>引入Redis</h2><ul>
-<li>先引入NuGet包<br>Microsoft.AspNetCore.SignalR.StackExchangeRedis</li>
+<li><p>先引入NuGet包<br>Microsoft.AspNetCore.SignalR.StackExchangeRedis</p>
+</li>
 <li><p>修改Startup中的ConfigureServices方法</p>
 <pre class=" language-C#"><code class="language-C#">var appSection = Configuration.GetSection("App");
 services.Configure<AppSetting>(option => appSection.Bind(option));
@@ -338,115 +344,112 @@ var appSetting = appSection.Get<AppSetting>();
 
 // 添加Signalr
 services.AddSignalR(config =>
-{
+&#123;
     if (_webEnv.IsDevelopment())
-    {
+    &#123;
         config.EnableDetailedErrors = true;
-    }
-})
+    &#125;
+&#125;)
 // 支持MessagePack
 .AddMessagePackProtocol()
 // 使用redis做底板 支持横向扩展 Scale-out
 .AddStackExchangeRedis(o =>
-  {
+  &#123;
       o.ConnectionFactory = async writer =>
-      {
+      &#123;
           var config = new ConfigurationOptions
-          {
+          &#123;
               AbortOnConnectFail = false,
               ChannelPrefix = "__signalr_",
-          };
+          &#125;;
           config.DefaultDatabase = appSetting.SignalrRedisCache.DatabaseId;
           var connection = await ConnectionMultiplexer.ConnectAsync(appSetting.SignalrRedisCache.ConnectionString, writer);
           connection.ConnectionFailed += (_, e) =>
-          {
+          &#123;
               Console.WriteLine("Connection to Redis failed.");
-          };
+          &#125;;
 
           if (connection.IsConnected)
-          {
+          &#123;
               Console.WriteLine("connected to Redis.");
-          }
+          &#125;
           else
-          {
+          &#123;
               Console.WriteLine("Did not connect to Redis");
-          }
+          &#125;
 
           return connection;
-      };
-  });
-</code></pre>
+      &#125;;
+  &#125;);</code></pre>
 <p>可以自定义Redis相关配置，此处的appSetting为已经定义好的配置实体，包括了，主要配置、CROS配置、Jwt配置、redis配置等详情如下</p>
 <pre class=" language-C#"><code class="language-C#">/// <summary>
 /// 对应appsettings中的App节点的配置信息
 /// </summary>
 public class AppSetting
-{
-    public JwtSetting JwtSetting { set;get;}
-    public RedisCache RedisCache { set;get;}
-    public RedisCache SignalrRedisCache { set; get; }
-    public string CORS { set;get;}
+&#123;
+    public JwtSetting JwtSetting &#123; set;get;&#125;
+    public RedisCache RedisCache &#123; set;get;&#125;
+    public RedisCache SignalrRedisCache &#123; set; get; &#125;
+    public string CORS &#123; set;get;&#125;
     /// <summary>
     /// 是否主站点(用于运行清理任务等)
     /// </summary>
-    public bool MainSite { set;get;}
-}
+    public bool MainSite &#123; set;get;&#125;
+&#125;
 
 /// <summary>
 /// JWT设置
 /// </summary>
 public class JwtSetting
-{
+&#123;
     /// <summary>
     /// 发行者 表示token是谁颁发的
     /// </summary>
-    public string Issuer { set; get; }
+    public string Issuer &#123; set; get; &#125;
     /// <summary>
     /// 表示哪些客户端可以使用这个token
     /// </summary>
-    public string Audience { set; get; }
+    public string Audience &#123; set; get; &#125;
     /// <summary>
     /// 加密的Key 必须大于16位
     /// </summary>
-    public string SecretKey { set; get; }
-}
+    public string SecretKey &#123; set; get; &#125;
+&#125;
 
 public class RedisCache
-{
-    public string ConnectionString { set;get;}
-    public int DatabaseId { set; get; }
-}
-</code></pre>
+&#123;
+    public string ConnectionString &#123; set;get;&#125;
+    public int DatabaseId &#123; set; get; &#125;
+&#125;</code></pre>
 <p>对应的配置文件如下</p>
-<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
-<span class="token property">"Logging"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-  <span class="token property">"LogLevel"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+<pre class=" language-json"><code class="language-json">&amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token property">"Logging"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token property">"LogLevel"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token property">"Default"</span><span class="token operator">:</span> <span class="token string">"Debug"</span><span class="token punctuation">,</span>
     <span class="token property">"System"</span><span class="token operator">:</span> <span class="token string">"Information"</span><span class="token punctuation">,</span>
     <span class="token property">"Microsoft"</span><span class="token operator">:</span> <span class="token string">"Information"</span><span class="token punctuation">,</span>
     <span class="token property">"Microsoft.AspNetCore.SignalR"</span><span class="token operator">:</span> <span class="token string">"Trace"</span><span class="token punctuation">,</span>
     <span class="token property">"Microsoft.AspNetCore.Http.Connections"</span><span class="token operator">:</span> <span class="token string">"Trace"</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span>
-<span class="token property">"App"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-  <span class="token property">"RedisCache"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+&amp;#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+<span class="token property">"App"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token property">"RedisCache"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token property">"ConnectionString"</span><span class="token operator">:</span> <span class="token string">"127.0.0.1:6379,password=#####,ssl=false,abortConnect=true,connectTimeout=5000"</span><span class="token punctuation">,</span>
     <span class="token property">"DatabaseId"</span><span class="token operator">:</span> <span class="token number">10</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token property">"SignalrRedisCache"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  &amp;#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+  <span class="token property">"SignalrRedisCache"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token property">"ConnectionString"</span><span class="token operator">:</span> <span class="token string">"127.0.0.1:6379,password=#####,ssl=false,abortConnect=true,connectTimeout=5000"</span><span class="token punctuation">,</span>
     <span class="token property">"DatabaseId"</span><span class="token operator">:</span> <span class="token number">10</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  &amp;#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
   <span class="token property">"CORS"</span><span class="token operator">:</span> <span class="token string">"https://localhost:60000,http://localhost:60001"</span><span class="token punctuation">,</span>
   <span class="token property">"MainSite"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-  <span class="token property">"JwtSetting"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token property">"JwtSetting"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
     <span class="token property">"Issuer"</span><span class="token operator">:</span> <span class="token string">"http://localhost:50000"</span><span class="token punctuation">,</span> //颁发者
     <span class="token property">"Audience"</span><span class="token operator">:</span> <span class="token string">"http://localhost:50000"</span><span class="token punctuation">,</span> //使用者
     <span class="token property">"SecretKey"</span><span class="token operator">:</span> <span class="token string">"Wetrial20196666666"</span> // key 大于<span class="token number">16</span>位
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
+  &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+&amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+&amp;#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
 <p>首先，将配置文件跟实体对象映射，下次在其他地方使用的时候可以直接通过DI注入，然后通过AddStackExchangeRedis配置使用redis作为底板</p>
 </li>
 </ul>
@@ -454,33 +457,31 @@ public class RedisCache
 <h2 id="快速导航"><a href="#快速导航" class="headerlink" title="快速导航"></a>快速导航</h2><table>
 <thead>
 <tr>
-<th style="text-align:left">标题</th>
-<th style="text-align:left">内容 </th>
+<th align="left">标题</th>
+<th align="left">内容</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">索引</td>
-<td style="text-align:left"><a href="/2019/09/20/dotnetcore/signalr/00-introduct/">.net core 3.0 Signalr - 实现一个业务推送系统</a> </td>
+<tbody><tr>
+<td align="left">索引</td>
+<td align="left"><a href="/2019/09/20/dotnetcore/signalr/00-introduct/">.net core 3.0 Signalr - 实现一个业务推送系统</a></td>
 </tr>
 <tr>
-<td style="text-align:left">上一篇</td>
-<td style="text-align:left"><a href="/2019/09/29/dotnetcore/signalr/03-message-pack/">.net core 3.0 Signalr - 03 使用MessagePack压缩传输内容</a> </td>
+<td align="left">上一篇</td>
+<td align="left"><a href="/2019/09/29/dotnetcore/signalr/03-message-pack/">.net core 3.0 Signalr - 03 使用MessagePack压缩传输内容</a></td>
 </tr>
 <tr>
-<td style="text-align:left">下一篇</td>
-<td style="text-align:left"><a href="/2019/10/02/dotnetcore/signalr/05-jwt/">.net core 3.0 Signalr - 05 使用jwt将用户跟signalr关联</a> </td>
+<td align="left">下一篇</td>
+<td align="left"><a href="/2019/10/02/dotnetcore/signalr/05-jwt/">.net core 3.0 Signalr - 05 使用jwt将用户跟signalr关联</a></td>
 </tr>
 <tr>
-<td style="text-align:left">源码地址</td>
-<td style="text-align:left"><a href="https://github.com/xiexingen/CTS.Signalr" target="_blank" rel="noopener">源码</a> </td>
+<td align="left">源码地址</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://github.com/xiexingen/CTS.Signalr">源码</a></td>
 </tr>
 <tr>
-<td style="text-align:left">官方文档</td>
-<td style="text-align:left"><a href="https://docs.microsoft.com/zh-CN/aspnet/core/signalr/redis-backplane?view=aspnetcore-3.0" target="_blank" rel="noopener">官方文档</a> </td>
+<td align="left">官方文档</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-CN/aspnet/core/signalr/redis-backplane?view=aspnetcore-3.0">官方文档</a></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 
             </div>
             <hr/>
@@ -668,7 +669,9 @@ public class RedisCache
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            .net core 3.0 Signalr - 05 使用jwt将用户跟signalr关联Signalr是以Group、Connect为核心来进行推送，比如，给某个组、某个连接来推送，但实际场景中，核心应该是某个组、某个人；然而一个人可以对
+                            .net core 3.0 Signalr - 05 使用jwt将用户跟signalr关联
+
+Signalr是以Group、Connect为核心来进行推送，比如，给某个组、某个连接来推送，但实际场景中，核心应该是某个组、某个人；然而一个人可
                         
                     </div>
                     <div class="publish-info">
@@ -718,7 +721,9 @@ public class RedisCache
                     <div class="summary block-with-text">
                         
                             .net core 3.0 Signalr - 03 使用MessagePack压缩传输内容
-MessagePack基础介绍Signalr默认使用的是json形式传递数据，但是signalr提供了灵活的扩展，支持MessagePack形式序
+
+
+MessagePack基础介绍Signalr默认使用的是json形式传递数据，但是signalr提供了灵活的扩展，支持MessagePack形
                         
                     </div>
                     <div class="publish-info">

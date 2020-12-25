@@ -6,9 +6,11 @@
     <meta charset="utf-8">
     <meta name="keywords" content="windows使用相关, 程序有Bug">
     <meta name="description" content="window技巧-长期更新
+
 一、技巧篇
 查看占用端口netstat -aon    [|findstr “1005”]      查找1005端口被那个占用  
-windows下删除多层级文件夹：安装rimraf包：npm install ">
+
+windows下删除多层级文件夹：安装rimraf包：npm instal">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -31,6 +33,7 @@ windows下删除多层级文件夹：安装rimraf包：npm install ">
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -291,7 +294,7 @@ windows下删除多层级文件夹：安装rimraf包：npm install ">
                     
                     <div class="article-tag">
                         
-                            <a href="../../../../../tags/工具/" target="_blank">
+                            <a href="../../../../../tags/%E5%B7%A5%E5%85%B7/" target="_blank">
                                 <span class="chip bg-color">工具</span>
                             </a>
                         
@@ -303,7 +306,7 @@ windows下删除多层级文件夹：安装rimraf包：npm install ">
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="../../../../../categories/工具/" class="post-category" target="_blank">
+                            <a href="../../../../../categories/%E5%B7%A5%E5%85%B7/" class="post-category" target="_blank">
                                 工具
                             </a>
                         
@@ -332,188 +335,366 @@ windows下删除多层级文件夹：安装rimraf包：npm install ">
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h4 id="window技巧-长期更新"><a href="#window技巧-长期更新" class="headerlink" title="window技巧-长期更新"></a>window技巧-长期更新</h4><a id="more"></a>
+
 <h5 id="一、技巧篇"><a href="#一、技巧篇" class="headerlink" title="一、技巧篇"></a>一、技巧篇</h5><ul>
-<li>查看占用端口<br>netstat -aon    [|findstr “1005”]      查找1005端口被那个占用  </li>
-<li>windows下删除多层级文件夹：<br>安装rimraf包：npm install -g rimraf<br>然后通过：rimraf &lt;目录名称&gt; 来删除  </li>
-<li>*#06#:查看IphoneCMD</li>
-<li>如何下载到本地，而不是边下载边更新：<br>创建一个快捷方式，在快捷方式的后面加 “-layout” 双击后就是下载到本地 而不是安装</li>
-<li>打开本地连接：ncpa.cpl</li>
-<li>查看系统支持的最大内存：wmic memphysical get maxcapacity</li>
-<li>修改hosts文件后刷新 ipconfig -flushdns<h5 id="二、快捷键"><a href="#二、快捷键" class="headerlink" title="二、快捷键"></a>二、快捷键</h5></li>
-<li>comexp.msc:打开window组件服务，可以查看事务  </li>
-<li>netplwiz   :修改用户组相关  </li>
-<li>inetmgr:打开IIS  </li>
-<li>ssms:SQLServer数据库</li>
-<li>SQLServerManager11.msc 数据库管理工具</li>
-<li>devenv:VS</li>
-<li>mstsc:远程</li>
-<li>Alt+Enter 显示所选项的属性</li>
-<li>Alt+Esc 以项目打开的顺序循环切换项目</li>
-<li>Alt+向上键 在 Windows 资源管理器中查看上一级文件夹</li>
-<li>Win + M：最小化所有窗口</li>
-<li>Windows 徽标键 + 加号或减号 放大或缩小</li>
-<li>Windows 徽标键 输入mspaint 打开画图</li>
-<li>Windows 徽标键 输入psr打开系统视频录制</li>
-<li>Windows 徽标键  snippingtool  win7自带截图工具</li>
-<li>notepad 打开记事本</li>
-<li>write———-写字板</li>
-<li>perfmon.msc—-计算机性能监测程序</li>
-<li>services.msc 服务</li>
-<li>f10或alt键 激活当前程序的菜单栏</li>
-<li>osk————打开屏幕键盘 </li>
-<li>结束进程：cmd—taskkill /im`notepad.exe /t</li>
-<li>cdm常用命令：具体参考（<a href="http://www.51xue8.com/e/DownSys/play/?classid=31&amp;id=1001&amp;pathid=4&amp;jishu=26）" target="_blank" rel="noopener">http://www.51xue8.com/e/DownSys/play/?classid=31&amp;id=1001&amp;pathid=4&amp;jishu=26）</a></li>
-<li>ver====显示系统版本······ver/? =帮助</li>
-<li>dir====显示驱动版本 · ·······dir/? =帮助</li>
-<li>copy（用法4，全部复制）如：copy c:\新建文件夹*.* ()d:\txt</li>
-<li>chkdsk/?=====查看磁盘文件报告</li>
-<li>chkdsk===检查磁盘</li>
-<li>dir====C盘文件夹目录（详细，时间，大小··）</li>
-<li>dir/w =====显示C盘文件夹 （不显示时间，大小）</li>
-<li>dir/l 显示子文件夹</li>
-<li>dir/p======屏幕显示不完时加p</li>
-<li>format====格式化磁盘（慎用）如：format g:</li>
-<li>format/?====格式化帮助</li>
-<li>del=====删除文件 如：del c:\···</li>
-<li>del/?===删除帮助</li>
-<li>md====创建文件夹</li>
-<li>ipconfig ====查看ip等信息</li>
-<li>ren=====文件重命名</li>
-<li>nslookup======ip地址查询</li>
-<li>exit=====退出</li>
-<li>rd======删除目录</li>
-<li>tasklist =====显示进程</li>
-<li>type=======显示文本内容</li>
-<li>tree=======显示所有文件名····显示D盘则tree d:\</li>
-<li>ping=======检测网络···如ping（必须空格）-f</li>
-<li>net user=========更改用户</li>
-<li>net share====== 查看共享文件</li>
-<li>help==============显示所有命令</li>
-<li>gpedit.msc—–组策略</li>
-<li>sndrec32——-录音机</li>
-<li>Nslookup——-IP地址侦测器</li>
-<li>explorer——-打开资源管理器</li>
-<li>logoff———注销命令</li>
-<li>tsshutdn——-60秒倒计时关机命令</li>
-<li>lusrmgr.msc—-本机用户和组</li>
-<li>services.msc—本地服务设置</li>
-<li>oobe/msoobe /a—-检查XP是否激活</li>
-<li>cleanmgr——-垃圾整理</li>
-<li>net start messenger—-开始信使服务</li>
-<li>compmgmt.msc—计算机管理</li>
-<li>net stop messenger—–停止信使服务</li>
-<li>conf———–启动netmeeting</li>
-<li>dvdplay——–DVD播放器</li>
-<li>charmap——–启动字符映射表</li>
-<li>diskmgmt.msc—磁盘管理实用程序</li>
-<li>calc———–启动计算器</li>
-<li>dfrg.msc——-磁盘碎片整理程序</li>
-<li>chkdsk.exe—–Chkdsk磁盘检查</li>
-<li>devmgmt.msc— 设备管理器</li>
-<li>regsvr32 /u *.dll—-停止dll文件运行</li>
-<li>drwtsn32—— 系统医生</li>
-<li>rononce -p —-15秒关机</li>
-<li>dxdiag———检查DirectX信息</li>
-<li>regedt32——-注册表编辑器</li>
-<li>Msconfig.exe—系统配置实用程序</li>
-<li>rsop.msc——-组策略结果集</li>
-<li>mem.exe——–显示内存使用情况</li>
-<li>regedit.exe—-注册表</li>
-<li>winchat——–XP自带局域网聊天</li>
-<li>progman——–程序管理器</li>
-<li>winmsd———系统信息</li>
-<li>perfmon.msc—-计算机性能监测程序</li>
-<li>winver———检查Windows版本</li>
-<li>sfc /scannow—–扫描错误并复原</li>
-<li>taskmgr—–任务管理器（2000／xp／2003</li>
-<li>winver———检查Windows版本</li>
-<li>wmimgmt.msc—-打开windows管理体系结构(WMI)</li>
-<li>wupdmgr——–windows更新程序</li>
-<li>wscript——–windows脚本宿主设置</li>
-<li>write———-写字板</li>
-<li>winmsd———系统信息</li>
-<li>wiaacmgr——-扫描仪和照相机向导</li>
-<li>winchat——–XP自带局域网聊天</li>
-<li>mem.exe——–显示内存使用情况</li>
-<li>Msconfig.exe—系统配置实用程序</li>
-<li>mplayer2——-简易widnows media player</li>
-<li>mspaint——–画图板</li>
-<li>mstsc———-远程桌面连接</li>
-<li>mplayer2——-媒体播放机</li>
-<li>magnify——–放大镜实用程序</li>
-<li>mmc————打开控制台</li>
-<li>mobsync——–同步命令</li>
-<li>dxdiag———检查DirectX信息</li>
-<li>drwtsn32—— 系统医生</li>
-<li>devmgmt.msc— 设备管理器</li>
-<li>dfrg.msc——-磁盘碎片整理程序</li>
-<li>diskmgmt.msc—磁盘管理实用程序</li>
-<li>dcomcnfg——-打开系统组件服务</li>
-<li>ddeshare——-打开DDE共享设置</li>
-<li>dvdplay——–DVD播放器</li>
-<li>net stop messenger—–停止信使服务</li>
-<li>net start messenger—-开始信使服务</li>
-<li>notepad——–打开记事本</li>
-<li>nslookup——-网络管理的工具向导</li>
-<li>ntbackup——-系统备份和还原</li>
-<li>narrator——-屏幕“讲述人”</li>
-<li>ntmsmgr.msc—-移动存储管理器</li>
-<li>ntmsoprq.msc—移动存储管理员操作请求</li>
-<li>netstat -an—-(TC)命令检查接口</li>
-<li>syncapp——–创建一个公文包</li>
-<li>sysedit——–系统配置编辑器</li>
-<li>sigverif——-文件签名验证程序</li>
-<li>sndrec32——-录音机</li>
-<li>shrpubw——–创建共享文件夹</li>
-<li>secpol.msc—–本地安全策略</li>
-<li>syskey———系统加密，一旦加密就不能解开，保护windows xp系统的双重密码</li>
-<li>services.msc—本地服务设置</li>
-<li>Sndvol32——-音量控制程序</li>
-<li>sfc.exe——–系统文件检查器</li>
-<li>sfc /scannow—windows文件保护</li>
-<li>tsshutdn——-60秒倒计时关机命令</li>
-<li>tourstart——xp简介（安装完成后出现的漫游xp程序）</li>
-<li>taskmgr——–任务管理器</li>
-<li>eventvwr——-事件查看器</li>
-<li>eudcedit——-造字程序</li>
-<li>explorer——-打开资源管理器</li>
-<li>packager——-对象包装程序</li>
-<li>perfmon.msc—-计算机性能监测程序</li>
-<li>progman——–程序管理器</li>
-<li>regedit.exe—-注册表</li>
-<li>rsop.msc——-组策略结果集</li>
-<li>regedt32——-注册表编辑器</li>
-<li>rononce -p —-15秒关机</li>
-<li>regsvr32 /u *.dll—-停止dll文件运行</li>
-<li>regsvr32 /u zipfldr.dll——取消ZIP支持</li>
-<li>cmd.exe——–CMD命令提示符</li>
-<li>chkdsk.exe—–Chkdsk磁盘检查</li>
-<li>certmgr.msc—-证书管理实用程序</li>
-<li>calc———–启动计算器</li>
-<li>charmap——–启动字符映射表</li>
-<li>cliconfg——-SQL SERVER 客户端网络实用程序</li>
-<li>Clipbrd——–剪贴板查看器</li>
-<li>conf———–启动netmeeting</li>
-<li>compmgmt.msc—计算机管理</li>
-<li>cleanmgr——-垃圾整理</li>
-<li>ciadv.msc——索引服务程序</li>
-<li>osk————打开屏幕键盘</li>
-<li>odbcad32——-ODBC数据源管理器</li>
-<li>oobe/msoobe /a—-检查XP是否激活</li>
-<li>lusrmgr.msc—-本机用户和组</li>
-<li>logoff———注销命令</li>
-<li>iexpress——-木马捆绑工具，系统自带</li>
-<li>Nslookup——-IP地址侦测器</li>
-<li>fsmgmt.msc—–共享文件夹管理器</li>
-<li>utilman——–辅助工具管理器</li>
+<li><p>查看占用端口<br>netstat -aon    [|findstr “1005”]      查找1005端口被那个占用  </p>
+</li>
+<li><p>windows下删除多层级文件夹：<br>安装rimraf包：npm install -g rimraf<br>然后通过：rimraf &lt;目录名称&gt; 来删除  </p>
+</li>
+<li><p>*#06#:查看IphoneCMD</p>
+</li>
+<li><p> 如何下载到本地，而不是边下载边更新：<br>创建一个快捷方式，在快捷方式的后面加 “-layout” 双击后就是下载到本地 而不是安装</p>
+</li>
+<li><p>打开本地连接：ncpa.cpl</p>
+</li>
+<li><p>查看系统支持的最大内存：wmic memphysical get maxcapacity</p>
+</li>
+<li><p>修改hosts文件后刷新 ipconfig -flushdns</p>
+<h5 id="二、快捷键"><a href="#二、快捷键" class="headerlink" title="二、快捷键"></a>二、快捷键</h5></li>
+<li><p>comexp.msc:打开window组件服务，可以查看事务  </p>
+</li>
+<li><p>netplwiz   :修改用户组相关  </p>
+</li>
+<li><p>inetmgr:打开IIS  </p>
+</li>
+<li><p>ssms:SQLServer数据库</p>
+</li>
+<li><p>SQLServerManager11.msc 数据库管理工具</p>
+</li>
+<li><p>devenv:VS</p>
+</li>
+<li><p>mstsc:远程</p>
+</li>
+<li><p>Alt+Enter 显示所选项的属性</p>
+</li>
+<li><p>Alt+Esc 以项目打开的顺序循环切换项目</p>
+</li>
+<li><p>Alt+向上键 在 Windows 资源管理器中查看上一级文件夹</p>
+</li>
+<li><p>Win + M：最小化所有窗口</p>
+</li>
+<li><p>Windows 徽标键 + 加号或减号 放大或缩小</p>
+</li>
+<li><p>Windows 徽标键 输入mspaint 打开画图</p>
+</li>
+<li><p>Windows 徽标键 输入psr打开系统视频录制</p>
+</li>
+<li><p>Windows 徽标键  snippingtool  win7自带截图工具</p>
+</li>
+<li><p>notepad 打开记事本</p>
+</li>
+<li><p>write———-写字板</p>
+</li>
+<li><p>perfmon.msc—-计算机性能监测程序</p>
+</li>
+<li><p>services.msc 服务</p>
+</li>
+<li><p>f10或alt键 激活当前程序的菜单栏</p>
+</li>
+<li><p>osk————打开屏幕键盘 </p>
+</li>
+<li><p>结束进程：cmd—taskkill /im`notepad.exe /t</p>
+</li>
+<li><p>cdm常用命令：具体参考（<a target="_blank" rel="noopener" href="http://www.51xue8.com/e/DownSys/play/?classid=31&amp;id=1001&amp;pathid=4&amp;jishu=26%EF%BC%89">http://www.51xue8.com/e/DownSys/play/?classid=31&amp;id=1001&amp;pathid=4&amp;jishu=26）</a></p>
+</li>
+<li><p>ver====显示系统版本······ver/? =帮助</p>
+</li>
+<li><p>dir====显示驱动版本 · ·······dir/? =帮助</p>
+</li>
+<li><p>copy（用法4，全部复制）如：copy c:\新建文件夹*.* ()d:\txt</p>
+</li>
+<li><p>chkdsk/?=====查看磁盘文件报告</p>
+</li>
+<li><p>chkdsk===检查磁盘</p>
+</li>
+<li><p>dir====C盘文件夹目录（详细，时间，大小··）</p>
+</li>
+<li><p>dir/w =====显示C盘文件夹 （不显示时间，大小）</p>
+</li>
+<li><p>dir/l 显示子文件夹</p>
+</li>
+<li><p>dir/p======屏幕显示不完时加p</p>
+</li>
+<li><p>format====格式化磁盘（慎用）如：format g:</p>
+</li>
+<li><p>format/?====格式化帮助</p>
+</li>
+<li><p>del=====删除文件 如：del c:\···</p>
+</li>
+<li><p>del/?===删除帮助</p>
+</li>
+<li><p>md====创建文件夹</p>
+</li>
+<li><p>ipconfig ====查看ip等信息</p>
+</li>
+<li><p>ren=====文件重命名</p>
+</li>
+<li><p>nslookup======ip地址查询</p>
+</li>
+<li><p>exit=====退出</p>
+</li>
+<li><p>rd======删除目录</p>
+</li>
+<li><p>tasklist =====显示进程</p>
+</li>
+<li><p>type=======显示文本内容</p>
+</li>
+<li><p>tree=======显示所有文件名····显示D盘则tree d:\</p>
+</li>
+<li><p>ping=======检测网络···如ping（必须空格）-f</p>
+</li>
+<li><p>net user=========更改用户</p>
+</li>
+<li><p>net share====== 查看共享文件</p>
+</li>
+<li><p>help==============显示所有命令</p>
+</li>
+<li><p>gpedit.msc—–组策略</p>
+</li>
+<li><p>sndrec32——-录音机</p>
+</li>
+<li><p>Nslookup——-IP地址侦测器</p>
+</li>
+<li><p>explorer——-打开资源管理器</p>
+</li>
+<li><p>logoff———注销命令</p>
+</li>
+<li><p>tsshutdn——-60秒倒计时关机命令</p>
+</li>
+<li><p>lusrmgr.msc—-本机用户和组</p>
+</li>
+<li><p>services.msc—本地服务设置</p>
+</li>
+<li><p>oobe/msoobe /a—-检查XP是否激活</p>
+</li>
+<li><p>cleanmgr——-垃圾整理</p>
+</li>
+<li><p>net start messenger—-开始信使服务</p>
+</li>
+<li><p>compmgmt.msc—计算机管理</p>
+</li>
+<li><p>net stop messenger—–停止信使服务</p>
+</li>
+<li><p>conf———–启动netmeeting</p>
+</li>
+<li><p>dvdplay——–DVD播放器</p>
+</li>
+<li><p>charmap——–启动字符映射表</p>
+</li>
+<li><p>diskmgmt.msc—磁盘管理实用程序</p>
+</li>
+<li><p>calc———–启动计算器</p>
+</li>
+<li><p>dfrg.msc——-磁盘碎片整理程序</p>
+</li>
+<li><p>chkdsk.exe—–Chkdsk磁盘检查</p>
+</li>
+<li><p>devmgmt.msc— 设备管理器</p>
+</li>
+<li><p>regsvr32 /u *.dll—-停止dll文件运行</p>
+</li>
+<li><p>drwtsn32—— 系统医生</p>
+</li>
+<li><p>rononce -p —-15秒关机</p>
+</li>
+<li><p>dxdiag———检查DirectX信息</p>
+</li>
+<li><p>regedt32——-注册表编辑器</p>
+</li>
+<li><p>Msconfig.exe—系统配置实用程序</p>
+</li>
+<li><p>rsop.msc——-组策略结果集</p>
+</li>
+<li><p>mem.exe——–显示内存使用情况</p>
+</li>
+<li><p>regedit.exe—-注册表</p>
+</li>
+<li><p>winchat——–XP自带局域网聊天</p>
+</li>
+<li><p>progman——–程序管理器</p>
+</li>
+<li><p>winmsd———系统信息</p>
+</li>
+<li><p>perfmon.msc—-计算机性能监测程序</p>
+</li>
+<li><p>winver———检查Windows版本</p>
+</li>
+<li><p>sfc /scannow—–扫描错误并复原</p>
+</li>
+<li><p>taskmgr—–任务管理器（2000／xp／2003</p>
+</li>
+<li><p>winver———检查Windows版本</p>
+</li>
+<li><p>wmimgmt.msc—-打开windows管理体系结构(WMI)</p>
+</li>
+<li><p>wupdmgr——–windows更新程序</p>
+</li>
+<li><p>wscript——–windows脚本宿主设置</p>
+</li>
+<li><p>write———-写字板</p>
+</li>
+<li><p>winmsd———系统信息</p>
+</li>
+<li><p>wiaacmgr——-扫描仪和照相机向导</p>
+</li>
+<li><p>winchat——–XP自带局域网聊天</p>
+</li>
+<li><p>mem.exe——–显示内存使用情况</p>
+</li>
+<li><p>Msconfig.exe—系统配置实用程序</p>
+</li>
+<li><p>mplayer2——-简易widnows media player</p>
+</li>
+<li><p>mspaint——–画图板</p>
+</li>
+<li><p>mstsc———-远程桌面连接</p>
+</li>
+<li><p>mplayer2——-媒体播放机</p>
+</li>
+<li><p>magnify——–放大镜实用程序</p>
+</li>
+<li><p>mmc————打开控制台</p>
+</li>
+<li><p>mobsync——–同步命令</p>
+</li>
+<li><p>dxdiag———检查DirectX信息</p>
+</li>
+<li><p>drwtsn32—— 系统医生</p>
+</li>
+<li><p>devmgmt.msc— 设备管理器</p>
+</li>
+<li><p>dfrg.msc——-磁盘碎片整理程序</p>
+</li>
+<li><p>diskmgmt.msc—磁盘管理实用程序</p>
+</li>
+<li><p>dcomcnfg——-打开系统组件服务</p>
+</li>
+<li><p>ddeshare——-打开DDE共享设置</p>
+</li>
+<li><p>dvdplay——–DVD播放器</p>
+</li>
+<li><p>net stop messenger—–停止信使服务</p>
+</li>
+<li><p>net start messenger—-开始信使服务</p>
+</li>
+<li><p>notepad——–打开记事本</p>
+</li>
+<li><p>nslookup——-网络管理的工具向导</p>
+</li>
+<li><p>ntbackup——-系统备份和还原</p>
+</li>
+<li><p>narrator——-屏幕“讲述人”</p>
+</li>
+<li><p>ntmsmgr.msc—-移动存储管理器</p>
+</li>
+<li><p>ntmsoprq.msc—移动存储管理员操作请求</p>
+</li>
+<li><p>netstat -an—-(TC)命令检查接口</p>
+</li>
+<li><p>syncapp——–创建一个公文包</p>
+</li>
+<li><p>sysedit——–系统配置编辑器</p>
+</li>
+<li><p>sigverif——-文件签名验证程序</p>
+</li>
+<li><p>sndrec32——-录音机</p>
+</li>
+<li><p>shrpubw——–创建共享文件夹</p>
+</li>
+<li><p>secpol.msc—–本地安全策略</p>
+</li>
+<li><p>syskey———系统加密，一旦加密就不能解开，保护windows xp系统的双重密码</p>
+</li>
+<li><p>services.msc—本地服务设置</p>
+</li>
+<li><p>Sndvol32——-音量控制程序</p>
+</li>
+<li><p>sfc.exe——–系统文件检查器</p>
+</li>
+<li><p>sfc /scannow—windows文件保护</p>
+</li>
+<li><p>tsshutdn——-60秒倒计时关机命令</p>
+</li>
+<li><p>tourstart——xp简介（安装完成后出现的漫游xp程序）</p>
+</li>
+<li><p>taskmgr——–任务管理器</p>
+</li>
+<li><p>eventvwr——-事件查看器</p>
+</li>
+<li><p>eudcedit——-造字程序</p>
+</li>
+<li><p>explorer——-打开资源管理器</p>
+</li>
+<li><p>packager——-对象包装程序</p>
+</li>
+<li><p>perfmon.msc—-计算机性能监测程序</p>
+</li>
+<li><p>progman——–程序管理器</p>
+</li>
+<li><p>regedit.exe—-注册表</p>
+</li>
+<li><p>rsop.msc——-组策略结果集</p>
+</li>
+<li><p>regedt32——-注册表编辑器</p>
+</li>
+<li><p>rononce -p —-15秒关机</p>
+</li>
+<li><p>regsvr32 /u *.dll—-停止dll文件运行</p>
+</li>
+<li><p>regsvr32 /u zipfldr.dll——取消ZIP支持</p>
+</li>
+<li><p>cmd.exe——–CMD命令提示符</p>
+</li>
+<li><p>chkdsk.exe—–Chkdsk磁盘检查</p>
+</li>
+<li><p>certmgr.msc—-证书管理实用程序</p>
+</li>
+<li><p>calc———–启动计算器</p>
+</li>
+<li><p>charmap——–启动字符映射表</p>
+</li>
+<li><p>cliconfg——-SQL SERVER 客户端网络实用程序</p>
+</li>
+<li><p>Clipbrd——–剪贴板查看器</p>
+</li>
+<li><p>conf———–启动netmeeting</p>
+</li>
+<li><p>compmgmt.msc—计算机管理</p>
+</li>
+<li><p>cleanmgr——-垃圾整理</p>
+</li>
+<li><p>ciadv.msc——索引服务程序</p>
+</li>
+<li><p>osk————打开屏幕键盘</p>
+</li>
+<li><p>odbcad32——-ODBC数据源管理器</p>
+</li>
+<li><p>oobe/msoobe /a—-检查XP是否激活</p>
+</li>
+<li><p>lusrmgr.msc—-本机用户和组</p>
+</li>
+<li><p>logoff———注销命令</p>
+</li>
+<li><p>iexpress——-木马捆绑工具，系统自带</p>
+</li>
+<li><p>Nslookup——-IP地址侦测器</p>
+</li>
+<li><p>fsmgmt.msc—–共享文件夹管理器</p>
+</li>
+<li><p>utilman——–辅助工具管理器</p>
+</li>
 <li><p>系统查看=========systeminfo</p>
 </li>
 <li><p>轻松访问键盘快捷方式<br>　　按住右Shift 八秒钟： 启用和关闭筛选键<br>　　按左 Alt+左 Shift+PrtScn(或 PrtScn)：启用或关闭高对比度<br>　　按左 Alt+左 Shift+Num Lock ：启用或关闭鼠标键<br>　　按 Shift 五次： 启用或关闭粘滞键<br>　　按住 Num Lock 五秒钟：启用或关闭切换键<br>　　Windows 徽标键 + U ： 打开轻松访问中心</p>
 </li>
-<li>常规键盘快捷方式<br>　　F1 显示帮助<br>　　Ctrl+C  复制选择的项目<br>　　Ctrl+X  剪切选择的项目<br>　　Ctrl+V  粘贴选择的项目<br>　　Ctrl+Z  撤消操作<br>　　Ctrl+Y  重新执行某项操作<br>　　F2 重命名选定项目<br>　　Ctrl+向右键 将光标移动到下一个字词的起始处<br>　　Ctrl+向左键 将光标移动到上一个字词的起始处<br>　　Ctrl+向下键 将光标移动到下一个段落的起始处<br>　　Ctrl+向上键 将光标移动到上一个段落的起始处<br>　　Ctrl+Shift 加某个箭头键 选择一块文本<br>　　Shift 加任意箭头键 在窗口中或桌面上选择多个项目，或者在文档中选择文本<br>　　Ctrl 加任意箭头键+空格键 选择窗口中或桌面上的多个单个项目<br>　　Ctrl+A 选择文档或窗口中的所有项目<br>　　F3 搜索文件或文件夹<br>　　Alt+Enter 显示所选项的属性<br>　　Alt+F4 关闭活动项目或者退出活动程序<br>　　Alt+空格键 为活动窗口打开快捷方式菜单<br>　　Ctrl+F4 关闭活动文档(在允许同时打开多个文档的程序中)<br>　　Alt+Tab 在打开的项目之间切换<br>　　Ctrl+Alt+Tab 使用箭头键在打开的项目之间切换<br>　　Ctrl+鼠标滚轮 更改桌面上的图标大小<br>　　Windows 徽标键 + Tab 使用 Aero Flip 3-D 循环切换任务栏上的程序<br>　　Ctrl + Windows 徽标键 + Tab 通过 Aero Flip 3-D 使用箭头键循环切换任务栏上的程序<br>　　Alt+Esc 以项目打开的顺序循环切换项目<br>　　F6 在窗口中或桌面上循环切换屏幕元素<br>　　F4 在 Windows 资源管理器中显示地址栏列表<br>　　Shift+F10 显示选定项目的快捷菜单<br>　　Ctrl+Esc 打开「开始」菜单<br>　　Alt+加下划线的字母 显示相应的菜单<br>　　Alt+加下划线的字母 执行菜单命令(或其他有下划线的命令)<br>　　F10 激活活动程序中的菜单栏<br>　　向右键 打开右侧的下一个菜单或者打开子菜单<br>　　向左键 打开左侧的下一个菜单或者关闭子菜单<br>　　F5 刷新活动窗口<br>　　Alt+向上键 在 Windows 资源管理器中查看上一级文件夹<br>　　Esc 取消当前任务<br>　　Ctrl+Shift+Esc 打开任务管理器<br>　　插入 CD 时按住 Shift 阻止 CD 自动播放  </li>
-<li>对话框键盘快捷方式<br>　　Ctrl+Tab  在选项卡上向前移动<br>　　Ctrl+Shift+Tab  在选项卡上向后移动<br>　　Tab  在选项上向前移动<br>　　Shift+Tab  在选项上向后移动<br>　　Alt+加下划线的字母  执行与该字母匹配的命令(或选择选项)<br>　　Enter  对于许多选定命令代替单击鼠标<br>　　空格键 如果活动选项是复选框，则选中或清除该复选框<br>　　箭头键 如果活动选项是一组选项按钮，则选择某个按钮<br>　　F1 显示帮助<br>　　F4 显示活动列表中的项目<br>　　Backspace 如果在“另存为”或“打开”对话框中选中了某个文件夹，则打开上一级文件夹  </li>
-<li>Windows 徽标键相关的快捷键<br>　　Windows徽标键就是显示为Windows旗帜，或标有文字Win或Windows的按键，以下简称Win键。XP时代有4个经典的 Win 键组合：R/E/F/L。到了 Win7，花样更多了。<br>　　Win：打开或关闭开始菜单<br>　　Win + Pause：显示系统属性对话框<br>　　Win + D：显示桌面<br>　　Win + M：最小化所有窗口<br>　　Win + SHIFT + M：还原最小化窗口到桌面上<br>　　Win + E：打开我的电脑<br>　　Win + F：搜索文件或文件夹<br>　　Ctrl + Win + F：搜索计算机(如果您在网络上)<br>　　Win + L：锁定您的计算机或切换用户<br>　　Win + R：打开运行对话框<br>　　Win + T：切换任务栏上的程序(感觉是和alt+ESC 一样 )<br>　　Win + 数字：让位于任务栏指定位置(按下的数字作为序号)的程序，新开一个实例。(感觉这个比较新颖，貌似快速启动。) Shift + Windows logo key +number：Start a new instance of the program pinned to the taskbar in the position indicated by the number<br>　　Ctrl + Win + 数字：让位于任务栏指定位置(按下的数字作为序号)的程序，切换到上一次的活动窗口。 Ctrl+Windows logo key +number：Switch to the last active window of the program pinned to the taskbar in the position indicated by the number<br>　　ALT + Win + 数字：让位于任务栏指定位置(按下的数字作为序号)的程序，显示跳转清单。 Alt+Windows logo key +number： Open the Jump List for the program pinned to the taskbar in the position indicated by the number<br>　　Win + TAB：循环切换任务栏上的程序并使用的Aero三维效果<br>　　Ctrl + Win + TAB：使用方向键来循环循环切换任务栏上的程序，并使用的Aero三维效果<br>　　按Ctrl + Win + B：切换到在通知区域中显示信息的程序<br>　　Win + 空格：预览桌面<br>　　Win + ↑：最大化窗口<br>　　Win + ↓：最小化窗口<br>　　Win + ←：最大化到窗口左侧的屏幕上<br>　　Win + →：最大化窗口到右侧的屏幕上<br>　　Win + Home：最小化所有窗口，除了当前激活窗口<br>　　Win+ SHIFT + ↑：拉伸窗口的到屏幕的顶部和底部<br>　　Win+ SHIFT + →/←：移动一个窗口，从一个显示器到另一个<br>　　Win + P：选择一个演示文稿显示模式<br>　　Win + G：循环切换侧边栏的小工具<br>　　Win + U：打开轻松访问中心<br>　　Win + x：打开Windows移动中心  </li>
-<li>Windows Explorer相关快捷键<br>　　Ctrl+N 打开新窗口<br>　　Ctrl+Shift+N 新建文件夹</li>
+<li><p>常规键盘快捷方式<br>　　F1 显示帮助<br>　　Ctrl+C  复制选择的项目<br>　　Ctrl+X  剪切选择的项目<br>　　Ctrl+V  粘贴选择的项目<br>　　Ctrl+Z  撤消操作<br>　　Ctrl+Y  重新执行某项操作<br>　　F2 重命名选定项目<br>　　Ctrl+向右键 将光标移动到下一个字词的起始处<br>　　Ctrl+向左键 将光标移动到上一个字词的起始处<br>　　Ctrl+向下键 将光标移动到下一个段落的起始处<br>　　Ctrl+向上键 将光标移动到上一个段落的起始处<br>　　Ctrl+Shift 加某个箭头键 选择一块文本<br>　　Shift 加任意箭头键 在窗口中或桌面上选择多个项目，或者在文档中选择文本<br>　　Ctrl 加任意箭头键+空格键 选择窗口中或桌面上的多个单个项目<br>　　Ctrl+A 选择文档或窗口中的所有项目<br>　　F3 搜索文件或文件夹<br>　　Alt+Enter 显示所选项的属性<br>　　Alt+F4 关闭活动项目或者退出活动程序<br>　　Alt+空格键 为活动窗口打开快捷方式菜单<br>　　Ctrl+F4 关闭活动文档(在允许同时打开多个文档的程序中)<br>　　Alt+Tab 在打开的项目之间切换<br>　　Ctrl+Alt+Tab 使用箭头键在打开的项目之间切换<br>　　Ctrl+鼠标滚轮 更改桌面上的图标大小<br>　　Windows 徽标键 + Tab 使用 Aero Flip 3-D 循环切换任务栏上的程序<br>　　Ctrl + Windows 徽标键 + Tab 通过 Aero Flip 3-D 使用箭头键循环切换任务栏上的程序<br>　　Alt+Esc 以项目打开的顺序循环切换项目<br>　　F6 在窗口中或桌面上循环切换屏幕元素<br>　　F4 在 Windows 资源管理器中显示地址栏列表<br>　　Shift+F10 显示选定项目的快捷菜单<br>　　Ctrl+Esc 打开「开始」菜单<br>　　Alt+加下划线的字母 显示相应的菜单<br>　　Alt+加下划线的字母 执行菜单命令(或其他有下划线的命令)<br>　　F10 激活活动程序中的菜单栏<br>　　向右键 打开右侧的下一个菜单或者打开子菜单<br>　　向左键 打开左侧的下一个菜单或者关闭子菜单<br>　　F5 刷新活动窗口<br>　　Alt+向上键 在 Windows 资源管理器中查看上一级文件夹<br>　　Esc 取消当前任务<br>　　Ctrl+Shift+Esc 打开任务管理器<br>　　插入 CD 时按住 Shift 阻止 CD 自动播放  </p>
+</li>
+<li><p>对话框键盘快捷方式<br>　　Ctrl+Tab  在选项卡上向前移动<br>　　Ctrl+Shift+Tab  在选项卡上向后移动<br>　　Tab  在选项上向前移动<br>　　Shift+Tab  在选项上向后移动<br>　　Alt+加下划线的字母  执行与该字母匹配的命令(或选择选项)<br>　　Enter  对于许多选定命令代替单击鼠标<br>　　空格键 如果活动选项是复选框，则选中或清除该复选框<br>　　箭头键 如果活动选项是一组选项按钮，则选择某个按钮<br>　　F1 显示帮助<br>　　F4 显示活动列表中的项目<br>　　Backspace 如果在“另存为”或“打开”对话框中选中了某个文件夹，则打开上一级文件夹  </p>
+</li>
+<li><p>Windows 徽标键相关的快捷键<br>　　Windows徽标键就是显示为Windows旗帜，或标有文字Win或Windows的按键，以下简称Win键。XP时代有4个经典的 Win 键组合：R/E/F/L。到了 Win7，花样更多了。<br>　　Win：打开或关闭开始菜单<br>　　Win + Pause：显示系统属性对话框<br>　　Win + D：显示桌面<br>　　Win + M：最小化所有窗口<br>　　Win + SHIFT + M：还原最小化窗口到桌面上<br>　　Win + E：打开我的电脑<br>　　Win + F：搜索文件或文件夹<br>　　Ctrl + Win + F：搜索计算机(如果您在网络上)<br>　　Win + L：锁定您的计算机或切换用户<br>　　Win + R：打开运行对话框<br>　　Win + T：切换任务栏上的程序(感觉是和alt+ESC 一样 )<br>　　Win + 数字：让位于任务栏指定位置(按下的数字作为序号)的程序，新开一个实例。(感觉这个比较新颖，貌似快速启动。) Shift + Windows logo key +number：Start a new instance of the program pinned to the taskbar in the position indicated by the number<br>　　Ctrl + Win + 数字：让位于任务栏指定位置(按下的数字作为序号)的程序，切换到上一次的活动窗口。 Ctrl+Windows logo key +number：Switch to the last active window of the program pinned to the taskbar in the position indicated by the number<br>　　ALT + Win + 数字：让位于任务栏指定位置(按下的数字作为序号)的程序，显示跳转清单。 Alt+Windows logo key +number： Open the Jump List for the program pinned to the taskbar in the position indicated by the number<br>　　Win + TAB：循环切换任务栏上的程序并使用的Aero三维效果<br>　　Ctrl + Win + TAB：使用方向键来循环循环切换任务栏上的程序，并使用的Aero三维效果<br>　　按Ctrl + Win + B：切换到在通知区域中显示信息的程序<br>　　Win + 空格：预览桌面<br>　　Win + ↑：最大化窗口<br>　　Win + ↓：最小化窗口<br>　　Win + ←：最大化到窗口左侧的屏幕上<br>　　Win + →：最大化窗口到右侧的屏幕上<br>　　Win + Home：最小化所有窗口，除了当前激活窗口<br>　　Win+ SHIFT + ↑：拉伸窗口的到屏幕的顶部和底部<br>　　Win+ SHIFT + →/←：移动一个窗口，从一个显示器到另一个<br>　　Win + P：选择一个演示文稿显示模式<br>　　Win + G：循环切换侧边栏的小工具<br>　　Win + U：打开轻松访问中心<br>　　Win + x：打开Windows移动中心  </p>
+</li>
+<li><p>Windows Explorer相关快捷键<br>　　Ctrl+N 打开新窗口<br>　　Ctrl+Shift+N 新建文件夹</p>
+</li>
 </ul>
 
             </div>
@@ -775,9 +956,11 @@ docker pull [
                     <div class="summary block-with-text">
                         
                             通过dotnet命令上传自己的nuget包
+
+
 通过dotnet命令上传自己的nuget包
 编辑项目属性 在打包选项中设置各种东西 勾选’在版本中生成Nuget包’、设置其他东西 如包Id、版本等  
-通过vs发布该包 我生成的为:XXG.Au
+通过vs发布该包 我生成的为:XXG.
                         
                     </div>
                     <div class="publish-info">
@@ -788,7 +971,7 @@ docker pull [
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../../../../../categories/工具/" class="post-category" target="_blank">
+                            <a href="../../../../../categories/%E5%B7%A5%E5%85%B7/" class="post-category" target="_blank">
                                     工具
                                 </a>
                             
@@ -799,7 +982,7 @@ docker pull [
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../../tags/工具/" target="_blank">
+                    <a href="../../../../../tags/%E5%B7%A5%E5%85%B7/" target="_blank">
                         <span class="chip bg-color">工具</span>
                     </a>
                     

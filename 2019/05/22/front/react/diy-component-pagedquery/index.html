@@ -6,8 +6,10 @@
     <meta charset="utf-8">
     <meta name="keywords" content="DIY一个集搜索、排序、分页功能的列表组件, 程序有Bug">
     <meta name="description" content="DIY一个集搜索、排序、分页功能的列表组件
-源码地址: https://github.com/wetrial/wetrial-template效果
-背景在中控台系统中经常需要带条件过滤、分页、排序等的列表页面，antd提供了表格、排序、分页">
+
+
+源码地址: https://github.com/wetrial/wetrial-template效果
+背景在中控台系统中经常需要带条件过滤、分页、排序等的列表页面，antd提供了表格、排序、">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -30,6 +32,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -290,7 +293,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="../../../../../../tags/前端/" target="_blank">
+                            <a href="../../../../../../tags/%E5%89%8D%E7%AB%AF/" target="_blank">
                                 <span class="chip bg-color">前端</span>
                             </a>
                         
@@ -334,39 +337,45 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>DIY一个集搜索、排序、分页功能的列表组件<br><a id="more"></a></p>
-<p><a href="https://github.com/wetrial/wetrial-template" target="_blank" rel="noopener">源码地址</a>: <a href="https://github.com/wetrial/wetrial-template" target="_blank" rel="noopener">https://github.com/wetrial/wetrial-template</a><br>效果<br><img src="https://cdn.nlark.com/yuque/0/2019/gif/173421/1558523693173-c0265a6e-5263-4317-bf76-99b17c86ec1c.gif#align=left&amp;display=inline&amp;height=513&amp;name=test.gif&amp;originHeight=1508&amp;originWidth=2193&amp;size=4252316&amp;status=done&amp;width=746" alt="test.gif"><br><a name="UKzZ5"></a></p>
+                <p>DIY一个集搜索、排序、分页功能的列表组件</p>
+<a id="more"></a>
+
+<p><a target="_blank" rel="noopener" href="https://github.com/wetrial/wetrial-template">源码地址</a>: <a target="_blank" rel="noopener" href="https://github.com/wetrial/wetrial-template">https://github.com/wetrial/wetrial-template</a><br />效果<br /><img src="https://cdn.nlark.com/yuque/0/2019/gif/173421/1558523693173-c0265a6e-5263-4317-bf76-99b17c86ec1c.gif#align=left&display=inline&height=513&name=test.gif&originHeight=1508&originWidth=2193&size=4252316&status=done&width=746" alt="test.gif"><br><a name="UKzZ5"></a></p>
 <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>在中控台系统中经常需要带条件过滤、分页、排序等的列表页面，antd提供了表格、排序、分页等，多个页面中使用会发现里面其实有很多重复的代码，自己捣腾下最后有了这个组件，<br><a name="pfCYQ"></a></p>
 <h1 id="使用说明"><a href="#使用说明" class="headerlink" title="使用说明"></a>使用说明</h1><p><a name="7qJ13"></a></p>
-<h2 id="列表使用"><a href="#列表使用" class="headerlink" title="列表使用"></a>列表使用</h2><p>如图所示:<br><img src="https://cdn.nlark.com/yuque/0/2019/png/173421/1558524295889-fe6fce9b-1d53-4849-898c-39a7decf52ec.png#align=left&amp;display=inline&amp;height=1323&amp;name=image.png&amp;originHeight=1985&amp;originWidth=2000&amp;size=270488&amp;status=done&amp;width=1333.3333333333333" alt="image.png"></p>
+<h2 id="列表使用"><a href="#列表使用" class="headerlink" title="列表使用"></a>列表使用</h2><p>如图所示:<br /><img src="https://cdn.nlark.com/yuque/0/2019/png/173421/1558524295889-fe6fce9b-1d53-4849-898c-39a7decf52ec.png#align=left&display=inline&height=1323&name=image.png&originHeight=1985&originWidth=2000&size=270488&status=done&width=1333.3333333333333" alt="image.png"></p>
 <ol>
-<li>引入高阶组件pagedQuery</li>
-<li>引入封装的TableList 基本上跟Antd table组件用法一致，只是初始化了许多默认参数</li>
+<li><p>引入高阶组件pagedQuery</p>
+</li>
+<li><p>引入封装的TableList 基本上跟Antd table组件用法一致，只是初始化了许多默认参数</p>
+</li>
 <li><p>用高阶组件包裹组件，并传参</p>
 <pre class=" language-jsx"><code class="language-jsx"><span class="token comment" spellcheck="true">// type为必须参数，一般对应dva中model的effects</span>
-<span class="token punctuation">{</span>
+<span class="token entity" title="&#123;">&amp;#123;</span>
 type<span class="token punctuation">:</span> string<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 类型 一般指获取数据源的action</span>
 page<span class="token operator">?</span><span class="token punctuation">:</span> number<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 当前页 从1开始</span>
 defaultPageSize<span class="token operator">?</span><span class="token punctuation">:</span>number<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 每页默认显示的条数</span>
 pageSize<span class="token operator">?</span><span class="token punctuation">:</span> number<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 每页显示数量</span>
 record<span class="token operator">?</span><span class="token punctuation">:</span> boolean<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 是否记录搜索状态</span>
-<span class="token punctuation">}</span>
-</code></pre>
+<span class="token entity" title="&#125;">&amp;#125;</span></code></pre>
 </li>
 <li><p>请求附带的基础参数，通过<em>getQueryParams返回一个对象，用于一些特殊场景，一般为空</em></p>
 </li>
-<li>处理搜索按钮的点击事件，将搜索表单中的值收集并传递给onSearchData方法</li>
-<li>处理重置按钮，将重置按钮的点击事件绑定来源于高阶组件给组件的onResetData</li>
+<li><p>处理搜索按钮的点击事件，将搜索表单中的值收集并传递给onSearchData方法</p>
+</li>
+<li><p>处理重置按钮，将重置按钮的点击事件绑定来源于高阶组件给组件的onResetData</p>
+</li>
 <li><p>获取数据源并给到table<br><a name="AiF39"></a></p>
-<h2 id="详情页面"><a href="#详情页面" class="headerlink" title="详情页面"></a>详情页面</h2><p>回退到列表页面有两种形式，<br>1.通过浏览器上的回退按钮<br>2.详情页面放置一个回退按钮，代码层面实现路由跳转到列表页<br>一般情况都使用第二种方式，因为如果编辑页面比较负责，可能里面有子页面，子页面又可以进入这一通过浏览器上的回退按钮需要点击N多次，再者，浏览器的回退有数量限制<br>同样，如图所示：<br><img src="https://cdn.nlark.com/yuque/0/2019/png/173421/1558524894480-261376dd-c130-40e0-b993-23812add160f.png#align=left&amp;display=inline&amp;height=877&amp;name=image.png&amp;originHeight=1316&amp;originWidth=1714&amp;size=188537&amp;status=done&amp;width=1142.6666666666667" alt="image.png"></p>
+<h2 id="详情页面"><a href="#详情页面" class="headerlink" title="详情页面"></a>详情页面</h2><p>回退到列表页面有两种形式，<br />1.通过浏览器上的回退按钮<br />2.详情页面放置一个回退按钮，代码层面实现路由跳转到列表页<br />一般情况都使用第二种方式，因为如果编辑页面比较负责，可能里面有子页面，子页面又可以进入这一通过浏览器上的回退按钮需要点击N多次，再者，浏览器的回退有数量限制<br />同样，如图所示：<br /><img src="https://cdn.nlark.com/yuque/0/2019/png/173421/1558524894480-261376dd-c130-40e0-b993-23812add160f.png#align=left&display=inline&height=877&name=image.png&originHeight=1316&originWidth=1714&size=188537&status=done&width=1142.6666666666667" alt="image.png"></p>
 </li>
 <li><p>引入方法backRouter</p>
 </li>
-<li>在需要跳转路由的地方调用一下backRoute方法，并将路由传递给方法，该方法会返回之前记录的列表路由<br><a name="VNgB5"></a><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1></li>
+<li><p>在需要跳转路由的地方调用一下backRoute方法，并将路由传递给方法，该方法会返回之前记录的列表路由<br><a name="VNgB5"></a></p>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1></li>
 </ol>
-<p>实现思路，通过高阶组件实现，<a href="https://github.com/wetrial/wetrial/blob/master/src/components/PagedQuery/index.tsx" target="_blank" rel="noopener">代码</a>  、  <a href="https://github.com/wetrial/wetrial/blob/master/src/components/PagedQuery/index.zh-CN.md" target="_blank" rel="noopener">api文档</a>  <br>记录搜索状态，通过sessionStorage来实现，考虑到sessionStore的一个优势，关闭当前tab页就失效了 省去还得去手动清除记录状态的麻烦(比如放到localStorage)，再者 这种查询状态不需要持久记录  <br>回退方法backRouter，由于高阶组件中会在组件的componentWillUnmount方法中记录搜索状态，以location的pathname为key，以location的search为值存放，所以通过backRouter方法匹配的时候会从sessionStorage中查询，如果有则带上查询串，以此来达到记录页面状态的效果</p>
+<p>实现思路，通过高阶组件实现，<a target="_blank" rel="noopener" href="https://github.com/wetrial/wetrial/blob/master/src/components/PagedQuery/index.tsx">代码</a>  、  <a target="_blank" rel="noopener" href="https://github.com/wetrial/wetrial/blob/master/src/components/PagedQuery/index.zh-CN.md">api文档</a>  <br />记录搜索状态，通过sessionStorage来实现，考虑到sessionStore的一个优势，关闭当前tab页就失效了 省去还得去手动清除记录状态的麻烦(比如放到localStorage)，再者 这种查询状态不需要持久记录  <br />回退方法backRouter，由于高阶组件中会在组件的componentWillUnmount方法中记录搜索状态，以location的pathname为key，以location的search为值存放，所以通过backRouter方法匹配的时候会从sessionStorage中查询，如果有则带上查询串，以此来达到记录页面状态的效果</p>
 <blockquote>
-<p>更多请参观：<a href="https://www.yuque.com/wetrial/front-end/" target="_blank" rel="noopener">https://www.yuque.com/wetrial/front-end/</a></p>
+<p>更多请参观：<a target="_blank" rel="noopener" href="https://www.yuque.com/wetrial/front-end/">https://www.yuque.com/wetrial/front-end/</a></p>
 </blockquote>
 
             </div>
@@ -556,6 +565,8 @@ record<span class="token operator">?</span><span class="token punctuation">:</sp
                     <div class="summary block-with-text">
                         
                             vscode下使用 PicGo自动上传图片
+
+
 前言
 PicGo github地址PicGo 文档地址 
 
@@ -568,10 +579,9 @@ PicGo github地址PicGo 文档地址
 
 
 
-
 站内
 1.图片自定义命名 2.方便管理迁移
-1.增加博客服务器压力(一般都是比较弱的机器) 2
+1.增加博客服务器压力(一般都是比较弱的机器) 
                         
                     </div>
                     <div class="publish-info">
@@ -582,7 +592,7 @@ PicGo github地址PicGo 文档地址
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../../../../../../categories/其他/" class="post-category" target="_blank">
+                            <a href="../../../../../../categories/%E5%85%B6%E4%BB%96/" class="post-category" target="_blank">
                                     其他
                                 </a>
                             
@@ -593,7 +603,7 @@ PicGo github地址PicGo 文档地址
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../../../tags/其他/" target="_blank">
+                    <a href="../../../../../../tags/%E5%85%B6%E4%BB%96/" target="_blank">
                         <span class="chip bg-color">其他</span>
                     </a>
                     
@@ -621,13 +631,16 @@ PicGo github地址PicGo 文档地址
                     <div class="summary block-with-text">
                         
                             各大优质文章收集(持续更新中…)
+
+
+
 前端可能是最全的前端动效库汇总
 常用前端库
 awesome-tools
 前端工程化-5:你所需要的npm知识储备都在这了
 正则相关
 flex布局-语法篇、flex布局-实战篇ES6
-Chrome插件开发ch
+Chrome插件开
                         
                     </div>
                     <div class="publish-info">
@@ -638,7 +651,7 @@ Chrome插件开发ch
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../../../../../../categories/工具/" class="post-category" target="_blank">
+                            <a href="../../../../../../categories/%E5%B7%A5%E5%85%B7/" class="post-category" target="_blank">
                                     工具
                                 </a>
                             
@@ -649,7 +662,7 @@ Chrome插件开发ch
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../../../tags/工具/" target="_blank">
+                    <a href="../../../../../../tags/%E5%B7%A5%E5%85%B7/" target="_blank">
                         <span class="chip bg-color">工具</span>
                     </a>
                     

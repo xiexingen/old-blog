@@ -7,9 +7,12 @@
     <meta name="keywords" content="基于CookieBase认证的模式, 程序有Bug">
     <meta name="description" content="基于CookieBase认证的模式
 
+
+
 说明 通过vs2017新建的.net core项目默认没有添加身份认证与授权以及路由等  
 
-在StartUp.ConfigureServices中addMvc之前添加AddAuthentication">
+
+在StartUp.ConfigureServices中addMvc之前添加AddAuthenticat">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -32,6 +35,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -332,16 +336,18 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>基于CookieBase认证的模式<br><a id="more"></a></p>
+                <p>基于CookieBase认证的模式</p>
+<a id="more"></a>
+
 <blockquote>
 <p>说明 通过vs2017新建的.net core项目默认没有添加身份认证与授权以及路由等  </p>
+</blockquote>
 <ol>
-<li>在StartUp.ConfigureServices中addMvc之前添加AddAuthentication<br>using Microsoft.AspNetCore.Authentication.Cookies;<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/02/0101.png" alt></li>
-<li>在Configure方法中<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/02/0201.png" alt></li>
-<li>模拟登陆<br>using Microsoft.AspNetCore.Authentication;<br>using Microsoft.AspNetCore.Authentication.Cookies;<br>using System.Security.Claims;<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/02/0301.png" alt></li>
+<li>在StartUp.ConfigureServices中addMvc之前添加AddAuthentication<br>using Microsoft.AspNetCore.Authentication.Cookies;<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/02/0101.png"></li>
+<li>在Configure方法中<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/02/0201.png"></li>
+<li>模拟登陆<br>using Microsoft.AspNetCore.Authentication;<br>using Microsoft.AspNetCore.Authentication.Cookies;<br>using System.Security.Claims;<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/02/0301.png"></li>
 <li>在对应的Controller或者Action中贴上属性[Authorize]  </li>
 </ol>
-</blockquote>
 
             </div>
             <hr/>
@@ -532,11 +538,13 @@
                             基于JWT的认证模式
 
 
+
+
 在项目目录下定义一个JwtSetting实体类
 在appsettings.json中配置值
 在StartUp中设置验证方式
 在管道中加入认证
-登录JwtSecurityToken 需要添加包Microsoft.As
+登录JwtSecurityToken 需要添加包Microsoft.
                         
                     </div>
                     <div class="publish-info">
@@ -587,7 +595,9 @@
                         
                             .NetCore+centos环境搭建手摸手实战
 
-安装VMware Workstation下载地址:https://my.vmware.com/cn/web/vmware/info/slug/desktop_end_user_comput
+
+
+安装VMware Workstation下载地址:https://my.vmware.com/cn/web/vmware/info/slug/desktop_end_user_comp
                         
                     </div>
                     <div class="publish-info">

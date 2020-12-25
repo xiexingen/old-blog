@@ -36,6 +36,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -371,7 +372,7 @@ volumes:
 <h4 id="二、使用篇"><a href="#二、使用篇" class="headerlink" title="二、使用篇"></a>二、使用篇</h4><blockquote>
 <p>docker 操作mysql  </p>
 <ol>
-<li>连接mysql<br>docker exec -it mysql01 bash<br>mysql -u root -p [密码]     –密码可以待mysql容器启动后<br>通过docker logs mysql01 找到生成的随机密码 密码在一段类型：<br><img src="/images/docker/040101.png" alt></li>
+<li>连接mysql<br>docker exec -it mysql01 bash<br>mysql -u root -p [密码]     –密码可以待mysql容器启动后<br>通过docker logs mysql01 找到生成的随机密码 密码在一段类型：<br><img src="/images/docker/040101.png" alt=""></li>
 <li>设置mysql密码<br>SET PASSWORD FOR ‘root‘@’localhost’ = PASSWORD(‘Abcd1234’);    –用户名为root 密码为Abcd1234  </li>
 <li>实验一下    【–exit 退出当前】<br>use mysql;    –使用数据库查询<br>select user,host from user;    –查询用户信息<br>show variables like ‘%char%’;        –查看当前使用的字符集<br>在mysql中创建网络用户 这样可以非本机访问<br>mysql&gt; CREATE USER ‘sa‘@’%’ IDENTIFIED BY ‘Abcd1234’;<br>mysql&gt; GRANT ALL PRIVILEGES ON <em>.</em> TO ‘sa‘@’%’;<br>docker run -d -p 3306:3306 -e”MYSQL_USER=Zarc” -e”MYSQL_PASSWORD=pwd123456” -e”MYSQL_ROOT_PASSWORD=password123” -e”MYSQL_RANDOM_ROOT_PASSWORD=true” –name mysql01 mysql/mysql-server –character-set-server=utf8 –collation-server=utf8_general_ci<br>备注： : When this is true (which is its default state, unless MYSQL_ROOT_PASSWORD is set or MYSQL_ALLOW_EMPTY_PASSWORD is set to true), a random password for the server’s root user is generated when the Docker container is started 当这个MYSQL_RANDOM_ROOT_PASSWORD 为true 时 为root用户设置密码是没有作用的还是会生成随机的密码，设置为false 或者不加这个环境变量  </li>
 </ol>
@@ -565,9 +566,11 @@ volumes:
                         
                             Docker安装MsSqlserver
 
+
 未成功
 
-执行命令` sqldocker run -e ‘ACCEPT_EULA=Y’ -e ‘MSSQL_SA_PASSWORD=Abcd1234’ -v=/docker/mssql:/var/o
+
+执行命令``` sqldocker run -e ‘ACCEPT_EULA=Y’ -e ‘MSSQL_SA_PASSWORD=Abcd1234’ -v=/docker/mssql:/v
                         
                     </div>
                     <div class="publish-info">
@@ -617,11 +620,13 @@ volumes:
                     <div class="summary block-with-text">
                         
                             Docker安装mongodb
-通过docker-compose安装version: "3.3"
-services:
-  commonmongo:
-    container_name: "mongo"
-    image: mongo:l
+
+
+
+配置好docker的加速镜像[参考02Docker安装及配置]  
+docker pull mongo 拉去mongo镜像  
+启动docker实例  
+方式一docker run -d -p 2701
                         
                     </div>
                     <div class="publish-info">

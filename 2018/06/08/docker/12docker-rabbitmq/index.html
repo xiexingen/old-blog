@@ -7,9 +7,12 @@
     <meta name="keywords" content="Docker安装RabbitMQ, 程序有Bug">
     <meta name="description" content="Docker安装RabbitMQ
 
+
+
 参考地址:https://hub.docker.com/_/rabbitmq/
 
-运行命令     docker run -d -p 8092:15672 -p 5672:5672  --restart ">
+
+运行命令   docker run -d -p 8092:15672 -p 5672:5672  --restart">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -32,6 +35,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -332,15 +336,21 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Docker安装RabbitMQ<br><a id="more"></a></p>
+                <p>Docker安装RabbitMQ</p>
+<a id="more"></a>
+
 <blockquote>
-<p>参考地址:<a href="https://hub.docker.com/_/rabbitmq/" target="_blank" rel="noopener">https://hub.docker.com/_/rabbitmq/</a></p>
-<ul>
-<li>运行命令   <pre class=" language-docker"><code class="language-docker">  docker run <span class="token punctuation">-</span>d <span class="token punctuation">-</span>p 8092<span class="token punctuation">:</span>15672 <span class="token punctuation">-</span>p 5672<span class="token punctuation">:</span>5672  <span class="token punctuation">-</span><span class="token punctuation">-</span>restart always <span class="token punctuation">-</span><span class="token punctuation">-</span>hostname my<span class="token punctuation">-</span>rabbit <span class="token punctuation">-</span><span class="token punctuation">-</span>name rabbit <span class="token punctuation">-</span>e RABBITMQ_DEFAULT_USER=xxg <span class="token punctuation">-</span>e RABBITMQ_DEFAULT_PASS=Abcd1234  rabbitmq<span class="token punctuation">:</span>3<span class="token punctuation">-</span>management
-</code></pre>
-说明<br>-e RABBITMQ_DEFAULT_USER=xxg    –默认用户名<br>-e RABBITMQ_DEFAULT_PASS=Abcd1234   –默认密码<br>rabbitmq:3-management       –表示使用带插件版本的(可以通过<a href="http://host-ip:8092" target="_blank" rel="noopener">http://host-ip:8092</a> 访问管理控制台)<br>4369/tcp    服务器 需要开放这个端口<br>5671/tcp    服务器 需要开放这个端口  </li>
-</ul>
+<p>参考地址:<a target="_blank" rel="noopener" href="https://hub.docker.com/_/rabbitmq/">https://hub.docker.com/_/rabbitmq/</a></p>
 </blockquote>
+<ul>
+<li>运行命令   <pre class=" language-docker"><code class="language-docker">docker run <span class="token punctuation">-</span>d <span class="token punctuation">-</span>p 8092<span class="token punctuation">:</span>15672 <span class="token punctuation">-</span>p 5672<span class="token punctuation">:</span>5672  <span class="token punctuation">-</span><span class="token punctuation">-</span>restart always <span class="token punctuation">-</span><span class="token punctuation">-</span>hostname my<span class="token punctuation">-</span>rabbit <span class="token punctuation">-</span><span class="token punctuation">-</span>name rabbit <span class="token punctuation">-</span>e RABBITMQ_DEFAULT_USER=xxg <span class="token punctuation">-</span>e RABBITMQ_DEFAULT_PASS=Abcd1234  rabbitmq<span class="token punctuation">:</span>3<span class="token punctuation">-</span>management</code></pre>
+<blockquote>
+<p>说明  </p>
+</blockquote>
+</li>
+<li>e RABBITMQ_DEFAULT_USER=xxg    –默认用户名  </li>
+<li>e RABBITMQ_DEFAULT_PASS=Abcd1234   –默认密码<br>rabbitmq:3-management       –表示使用带插件版本的(可以通过<a target="_blank" rel="noopener" href="http://host-ip:8092/">http://host-ip:8092</a> 访问管理控制台)<br>4369/tcp    服务器 需要开放这个端口<br>5671/tcp    服务器 需要开放这个端口  </li>
+</ul>
 
             </div>
             <hr/>
@@ -529,9 +539,11 @@
                     <div class="summary block-with-text">
                         
                             React资料收集
+
+
 开发工具vscode、Rekit
 ESLinteslint-config-airbnb  最最最完整的javascript eslint规则
-Prettier代码格式化工具,vscode支持 安装插件 添加.pretti
+Prettier代码格式化工具,vscode支持 安装插件 添加.pret
                         
                     </div>
                     <div class="publish-info">
@@ -553,7 +565,7 @@ Prettier代码格式化工具,vscode支持 安装插件 添加.pretti
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../../tags/前端/" target="_blank">
+                    <a href="../../../../../tags/%E5%89%8D%E7%AB%AF/" target="_blank">
                         <span class="chip bg-color">前端</span>
                     </a>
                     
@@ -586,9 +598,11 @@ Prettier代码格式化工具,vscode支持 安装插件 添加.pretti
                         
                             Docker下安装redis
 
+
+
 创建网络docker network create net_redis
-创建redis配置文件(/docker/redis/config/redis.conf)   #redis的databases数量
- d
+创建redis配置文件(/docker/redis/config/redis.conf)  #redis的databases数量
+d
                         
                     </div>
                     <div class="publish-info">

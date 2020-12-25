@@ -5,7 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content=".net core 3.0 Signalr - 05 使用jwt将用户跟signalr关联, 程序有Bug">
-    <meta name="description" content=".net core 3.0 Signalr - 05 使用jwt将用户跟signalr关联Signalr是以Group、Connect为核心来进行推送，比如，给某个组、某个连接来推送，但实际场景中，核心应该是某个组、某个人；然而一个人可以对">
+    <meta name="description" content=".net core 3.0 Signalr - 05 使用jwt将用户跟signalr关联
+
+Signalr是以Group、Connect为核心来进行推送，比如，给某个组、某个连接来推送，但实际场景中，核心应该是某个组、某个人；然而一个人可">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -28,6 +30,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -328,11 +331,13 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>.net core 3.0 Signalr - 05 使用jwt将用户跟signalr关联<br><a id="more"></a><br>Signalr是以Group、Connect为核心来进行推送，比如，给某个组、某个连接来推送，但实际场景中，核心应该是某个组、某个人；然而一个人可以对应多个连接(浏览器多个tab页)；本节就来介绍下自行管理人、组、连接这些关系<br>由于signalr连接的时候不那么方便附带header和cookie(因为推送独立成一个子系统了)，实际实现中采用以url query的形式附带上token，然后服务器端自定义解析token得到用户信息；</p>
+                <p>.net core 3.0 Signalr - 05 使用jwt将用户跟signalr关联</p>
+<a id="more"></a>
+<p>Signalr是以Group、Connect为核心来进行推送，比如，给某个组、某个连接来推送，但实际场景中，核心应该是某个组、某个人；然而一个人可以对应多个连接(浏览器多个tab页)；本节就来介绍下自行管理人、组、连接这些关系<br>由于signalr连接的时候不那么方便附带header和cookie(因为推送独立成一个子系统了)，实际实现中采用以url query的形式附带上token，然后服务器端自定义解析token得到用户信息；</p>
 <h2 id="服务器端实现"><a href="#服务器端实现" class="headerlink" title="服务器端实现"></a>服务器端实现</h2><ul>
 <li><p>ConfigureServices中添加服务相关方法，代码如下,完整代码</p>
 <pre class=" language-C#"><code class="language-C#">public void ConfigureServices(IServiceCollection services)
-{
+&#123;
     var appSection = Configuration.GetSection("App");
     services.Configure<AppSetting>(option => appSection.Bind(option));
     var appSetting = appSection.Get<AppSetting>();
@@ -342,32 +347,32 @@
     // services.AddHostedService<ClearBackGroundService>();
 
     services.AddAuthentication(options =>
-    {
+    &#123;
         options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
         options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
         options.DefaultForbidScheme = JwtBearerDefaults.AuthenticationScheme;
-    })
+    &#125;)
     .AddJwtBearer(option =>
-    {
+    &#123;
         option.SecurityTokenValidators.Clear();
         option.SecurityTokenValidators.Add(new UserTokenValidation()); ;
 
         option.Events = new JwtBearerEvents()
-        {
+        &#123;
             OnMessageReceived = context =>
-            {
+            &#123;
                 var userId = context.Request.Query["userId"].FirstOrDefault();
                 if (!string.IsNullOrWhiteSpace(userId))
-                {
+                &#123;
                     context.Token = userId;
-                }
+                &#125;
                 return Task.CompletedTask;
-            }
-        };
-    });
+            &#125;
+        &#125;;
+    &#125;);
 
     services.AddCors(options => options.AddPolicy(corsPolicy, builder =>
-    {
+    &#123;
         builder
               .SetIsOriginAllowedToAllowWildcardSubdomains()
               .WithOrigins(appSetting.CORS.Split(","))
@@ -375,68 +380,67 @@
               .AllowCredentials()
               .AllowAnyHeader()
               .Build();
-    }));
+    &#125;));
 
     services.AddControllers()
         .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver())
         .ConfigureApiBehaviorOptions(options =>
-        {
+        &#123;
             options.InvalidModelStateResponseFactory = context =>
-            {
+            &#123;
                 var result = new BadRequestObjectResult(context.ModelState);
                 result.ContentTypes.Add(MediaTypeNames.Application.Json);
                 // result.ContentTypes.Add(MediaTypeNames.Application.Xml);
 
                 return result;
-            };
-        })
+            &#125;;
+        &#125;)
         .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
     // 添加Signalr
     services.AddSignalR(config =>
-    {
+    &#123;
         if (_webEnv.IsDevelopment())
-        {
+        &#123;
             config.EnableDetailedErrors = true;
-        }
-    })
+        &#125;
+    &#125;)
     // 支持MessagePack
     .AddMessagePackProtocol()
     // 使用redis做底板 支持横向扩展 Scale-out
     .AddStackExchangeRedis(o =>
-      {
+      &#123;
           o.ConnectionFactory = async writer =>
-          {
+          &#123;
               var config = new ConfigurationOptions
-              {
+              &#123;
                   AbortOnConnectFail = false,
                   // Password = "changeme",
                   ChannelPrefix = "__signalr_",
-              };
+              &#125;;
               //config.EndPoints.Add(IPAddress.Loopback, 0);
               //config.SetDefaultPorts();
               config.DefaultDatabase = appSetting.SignalrRedisCache.DatabaseId;
               var connection = await ConnectionMultiplexer.ConnectAsync(appSetting.SignalrRedisCache.ConnectionString, writer);
               connection.ConnectionFailed += (_, e) =>
-              {
+              &#123;
                   Console.WriteLine("Connection to Redis failed.");
-              };
+              &#125;;
 
               if (connection.IsConnected)
-              {
+              &#123;
                   Console.WriteLine("connected to Redis.");
-              }
+              &#125;
               else
-              {
+              &#123;
                   Console.WriteLine("Did not connect to Redis");
-              }
+              &#125;
 
               return connection;
-          };
-      });
-}
-</code></pre>
-<p>其中，SignalrRedisHelper 为redis辅助方法，<a href="https://github.com/xiexingen/CTS.Signalr/blob/master/Core.Signalr.Template.Web/Cores/SignalrRedisHelper.cs" target="_blank" rel="noopener">详情请参见</a><br>UserTokenValidation 为自定义token解析方法，<a href="https://github.com/xiexingen/CTS.Signalr/blob/master/Core.Signalr.Template.Web/Cores/UserTokenValidation.cs" target="_blank" rel="noopener">详情请参见</a>,由于历史遗留问题，此处直接使用了userId，建议的做法是传递jwttoken，然后服务器端解析jwt token得到用户信息    </p>
+          &#125;;
+      &#125;);
+&#125;</code></pre>
+<p>其中，SignalrRedisHelper 为redis辅助方法，<a target="_blank" rel="noopener" href="https://github.com/xiexingen/CTS.Signalr/blob/master/Core.Signalr.Template.Web/Cores/SignalrRedisHelper.cs">详情请参见</a><br>UserTokenValidation 为自定义token解析方法，<a target="_blank" rel="noopener" href="https://github.com/xiexingen/CTS.Signalr/blob/master/Core.Signalr.Template.Web/Cores/UserTokenValidation.cs">详情请参见</a>,由于历史遗留问题，此处直接使用了userId，建议的做法是传递jwttoken，然后服务器端解析jwt token得到用户信息    </p>
 </li>
 </ul>
 <h2 id="Hub中跟用户关联"><a href="#Hub中跟用户关联" class="headerlink" title="Hub中跟用户关联"></a>Hub中跟用户关联</h2><p>在Hub中通过Context.User.Identity.Name可以获取到解析的值，通过这种关系来跟用户关联上，当然，也可以自定义修改使用其他信息，比如Email或其他自定义的名称，具体请google</p>
@@ -444,33 +448,31 @@
 <h2 id="快速导航"><a href="#快速导航" class="headerlink" title="快速导航"></a>快速导航</h2><table>
 <thead>
 <tr>
-<th style="text-align:left">标题</th>
-<th style="text-align:left">内容 </th>
+<th align="left">标题</th>
+<th align="left">内容</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">索引</td>
-<td style="text-align:left"><a href="/2019/09/20/dotnetcore/signalr/00-introduct/">.net core 3.0 Signalr - 实现一个业务推送系统</a> </td>
+<tbody><tr>
+<td align="left">索引</td>
+<td align="left"><a href="/2019/09/20/dotnetcore/signalr/00-introduct/">.net core 3.0 Signalr - 实现一个业务推送系统</a></td>
 </tr>
 <tr>
-<td style="text-align:left">上一篇</td>
-<td style="text-align:left"><a href="/2019/10/01/dotnetcore/signalr/04-redis/">.net core 3.0 Signalr - 04 使用Redis做底板来支持横向扩展</a> </td>
+<td align="left">上一篇</td>
+<td align="left"><a href="/2019/10/01/dotnetcore/signalr/04-redis/">.net core 3.0 Signalr - 04 使用Redis做底板来支持横向扩展</a></td>
 </tr>
 <tr>
-<td style="text-align:left">下一篇</td>
-<td style="text-align:left"><a href="/2019/10/03/dotnetcore/signalr/06-analysis/">.net core 3.0 Signalr - 06 业务实现-业务分析</a> </td>
+<td align="left">下一篇</td>
+<td align="left"><a href="/2019/10/03/dotnetcore/signalr/06-analysis/">.net core 3.0 Signalr - 06 业务实现-业务分析</a></td>
 </tr>
 <tr>
-<td style="text-align:left">源码地址</td>
-<td style="text-align:left"><a href="https://github.com/xiexingen/CTS.Signalr" target="_blank" rel="noopener">源码</a> </td>
+<td align="left">源码地址</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://github.com/xiexingen/CTS.Signalr">源码</a></td>
 </tr>
 <tr>
-<td style="text-align:left">官方文档</td>
-<td style="text-align:left"><a href="https://docs.microsoft.com/zh-CN/aspnet/core/?view=aspnetcore-3.0" target="_blank" rel="noopener">官方文档</a> </td>
+<td align="left">官方文档</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-CN/aspnet/core/?view=aspnetcore-3.0">官方文档</a></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 
             </div>
             <hr/>
@@ -659,9 +661,11 @@
                     <div class="summary block-with-text">
                         
                             .net core 3.0 Signalr - 06 业务实现-业务分析
+
+
 业务需求
 人-项目关系一个人可以属于多个项目，一个项目可以有多个人加入，通知的时候，可以通知项目内的所有人，也可以通知部分人或者某个责任人。
-登录互斥同一个人不允许登
+登录互斥同一个人不允
                         
                     </div>
                     <div class="publish-info">
@@ -710,7 +714,9 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            .net core 3.0 Signalr - 04 使用Redis做底板来支持横向扩展在实际的系统中，可能需要多台机器部署;然而，Signalr的连接信息是跟站点走的，举个例子推送系统部署了A、B两个服务器，张三访问A服务器，李四访问B服
+                            .net core 3.0 Signalr - 04 使用Redis做底板来支持横向扩展
+
+在实际的系统中，可能需要多台机器部署;然而，Signalr的连接信息是跟站点走的，举个例子推送系统部署了A、B两个服务器，张三访问A服务器，李四访问
                         
                     </div>
                     <div class="publish-info">

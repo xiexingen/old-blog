@@ -6,8 +6,10 @@
     <meta charset="utf-8">
     <meta name="keywords" content=".net core 3.0 Signalr - 01 基础篇, 程序有Bug">
     <meta name="description" content=".net core 3.0 Signalr - 01 基础篇 以最简洁的方式介绍如何创建一个可连接的hub
+
+
 因为将signalr作为单独的站点，此处需要建立两个项目，一个专门用于signalr作为推送项目，一个客户端(实际的业务项目)
-基础">
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -30,6 +32,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -330,130 +333,125 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>.net core 3.0 Signalr - 01 基础篇 以最简洁的方式介绍如何创建一个可连接的hub<br><a id="more"></a></p>
+                <p>.net core 3.0 Signalr - 01 基础篇 以最简洁的方式介绍如何创建一个可连接的hub</p>
+<a id="more"></a>
+
 <p>因为将signalr作为单独的站点，此处需要建立两个项目，一个专门用于signalr作为推送项目，一个客户端(实际的业务项目)</p>
 <h2 id="基础知识速览"><a href="#基础知识速览" class="headerlink" title="基础知识速览"></a>基础知识速览</h2><h3 id="Clients对象属性"><a href="#Clients对象属性" class="headerlink" title="Clients对象属性"></a>Clients对象属性</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">属性</th>
-<th style="text-align:left">描述 </th>
+<th align="left">属性</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">All</td>
-<td style="text-align:left">在所有连接的客户端上调用方法</td>
+<tbody><tr>
+<td align="left">All</td>
+<td align="left">在所有连接的客户端上调用方法</td>
 </tr>
 <tr>
-<td style="text-align:left">Caller</td>
-<td style="text-align:left">在调用集线器方法的客户端上调用方法</td>
+<td align="left">Caller</td>
+<td align="left">在调用集线器方法的客户端上调用方法</td>
 </tr>
 <tr>
-<td style="text-align:left">Others</td>
-<td style="text-align:left">除当前连接外的所有连接</td>
+<td align="left">Others</td>
+<td align="left">除当前连接外的所有连接</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="Clients对象方法"><a href="#Clients对象方法" class="headerlink" title="Clients对象方法"></a>Clients对象方法</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">方法</th>
-<th style="text-align:left">描述 </th>
+<th align="left">方法</th>
+<th align="left">描述</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">AllExcept</td>
-<td style="text-align:left">在所有连接的客户端（指定的连接除外）上调用方法</td>
+<tbody><tr>
+<td align="left">AllExcept</td>
+<td align="left">在所有连接的客户端（指定的连接除外）上调用方法</td>
 </tr>
 <tr>
-<td style="text-align:left">Client</td>
-<td style="text-align:left">在特定连接的客户端上调用方法(单个)</td>
+<td align="left">Client</td>
+<td align="left">在特定连接的客户端上调用方法(单个)</td>
 </tr>
 <tr>
-<td style="text-align:left">Clients</td>
-<td style="text-align:left">在特定连接的客户端上调用方法(多个)</td>
+<td align="left">Clients</td>
+<td align="left">在特定连接的客户端上调用方法(多个)</td>
 </tr>
 <tr>
-<td style="text-align:left">Group</td>
-<td style="text-align:left">对指定组中的所有连接调用方法</td>
+<td align="left">Group</td>
+<td align="left">对指定组中的所有连接调用方法</td>
 </tr>
 <tr>
-<td style="text-align:left">GroupExcept</td>
-<td style="text-align:left">对指定组中的所有连接调用方法，指定的连接除外</td>
+<td align="left">GroupExcept</td>
+<td align="left">对指定组中的所有连接调用方法，指定的连接除外</td>
 </tr>
 <tr>
-<td style="text-align:left">Groups</td>
-<td style="text-align:left">在多组连接上调用方法</td>
+<td align="left">Groups</td>
+<td align="left">在多组连接上调用方法</td>
 </tr>
 <tr>
-<td style="text-align:left">OthersInGroup</td>
-<td style="text-align:left">对一组连接调用方法，而不包括调用该集线器方法的客户端</td>
+<td align="left">OthersInGroup</td>
+<td align="left">对一组连接调用方法，而不包括调用该集线器方法的客户端</td>
 </tr>
 <tr>
-<td style="text-align:left">User</td>
-<td style="text-align:left">对与特定用户关联的所有连接调用方法</td>
+<td align="left">User</td>
+<td align="left">对与特定用户关联的所有连接调用方法</td>
 </tr>
 <tr>
-<td style="text-align:left">Users</td>
-<td style="text-align:left">对与指定用户相关联的所有连接调用方法</td>
+<td align="left">Users</td>
+<td align="left">对与指定用户相关联的所有连接调用方法</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h2 id="Signalr推送端"><a href="#Signalr推送端" class="headerlink" title="Signalr推送端"></a>Signalr推送端</h2><ul>
-<li>通过命令行或者vs 2019新建.netcore web项目，选择.net core 3.0、webapi  </li>
+<li><p>通过命令行或者vs 2019新建.netcore web项目，选择.net core 3.0、webapi  </p>
+</li>
 <li><p>建立一个Hub</p>
-<pre class=" language-C#"><code class="language-C#">  public class NotifyHub : Hub
-  {
+<pre class=" language-C#"><code class="language-C#">public class NotifyHub : Hub
+&#123;
 
-  }
-</code></pre>
+&#125;</code></pre>
 </li>
 <li><p>修改Startup中的ConfigServices方法，注册对应的服务</p>
-<pre class=" language-C#"><code class="language-C#">  // 添加Signalr
-  services.AddSignalR(config =>
-  {
-      // _webEnv为通过依赖注入在Startup的构造函数中注入的 IWebHostEnvironment
-      if (_webEnv.IsDevelopment())
-      {
-          config.EnableDetailedErrors = true;
-      }
-  });
-</code></pre>
+<pre class=" language-C#"><code class="language-C#">// 添加Signalr
+services.AddSignalR(config =>
+&#123;
+    // _webEnv为通过依赖注入在Startup的构造函数中注入的 IWebHostEnvironment
+    if (_webEnv.IsDevelopment())
+    &#123;
+        config.EnableDetailedErrors = true;
+    &#125;
+&#125;);</code></pre>
 </li>
 <li><p>修改Configure配置HTTP请求的管道</p>
-<pre class=" language-C#"><code class="language-C#">  ...
-  app.UseRouting();
-  app.UseEndpoints(endpoints =>{
-      endpoints.MapHub<NotifyHub>("/notify-hub");
-  });
-
+<pre class=" language-C#"><code class="language-C#">...
+app.UseRouting();
+app.UseEndpoints(endpoints =>&#123;
+    endpoints.MapHub<NotifyHub>("/notify-hub");
+&#125;);
 </code></pre>
-<h2 id="业务端"><a href="#业务端" class="headerlink" title="业务端"></a>业务端</h2><p><a href="https://docs.microsoft.com/zh-CN/aspnet/core/tutorials/signalr?view=aspnetcore-3.0&amp;tabs=visual-studio" target="_blank" rel="noopener">相关文档</a></p>
+<h2 id="业务端"><a href="#业务端" class="headerlink" title="业务端"></a>业务端</h2><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-CN/aspnet/core/tutorials/signalr?view=aspnetcore-3.0&tabs=visual-studio">相关文档</a></p>
 </li>
 <li><p>创建连接对象</p>
-<pre class=" language-js"><code class="language-js">  <span class="token keyword">var</span> connection<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">signalR<span class="token punctuation">.</span>HubConnectionBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token punctuation">.</span><span class="token function">configureLogging</span><span class="token punctuation">(</span>signalR<span class="token punctuation">.</span>LogLevel<span class="token punctuation">.</span>Error<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 前端控制台的日志级别，根据需要配置</span>
-  <span class="token punctuation">.</span><span class="token function">withUrl</span><span class="token punctuation">(</span><span class="token string">'http://localhost:50001/notify-hub'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 连接地址,这个地址是signalr项目的地址</span>
-  <span class="token punctuation">.</span><span class="token function">withAutomaticReconnect</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">,</span> <span class="token number">5000</span><span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">,</span> <span class="token number">20000</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 配置重连的时间</span>
-  <span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">var</span> connection<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">signalR<span class="token punctuation">.</span>HubConnectionBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">configureLogging</span><span class="token punctuation">(</span>signalR<span class="token punctuation">.</span>LogLevel<span class="token punctuation">.</span>Error<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 前端控制台的日志级别，根据需要配置</span>
+<span class="token punctuation">.</span><span class="token function">withUrl</span><span class="token punctuation">(</span><span class="token string">'http://localhost:50001/notify-hub'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 连接地址,这个地址是signalr项目的地址</span>
+<span class="token punctuation">.</span><span class="token function">withAutomaticReconnect</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2000</span><span class="token punctuation">,</span> <span class="token number">5000</span><span class="token punctuation">,</span> <span class="token number">10000</span><span class="token punctuation">,</span> <span class="token number">20000</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 配置重连的时间</span>
+<span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token comment" spellcheck="true">// 重连的时候触发</span>
-  connection<span class="token punctuation">.</span><span class="token function">onreconnecting</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>info<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'----------------------------------signalr-- onreconnecting'</span><span class="token punctuation">,</span> info<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 重连的时候触发</span>
+connection<span class="token punctuation">.</span><span class="token function">onreconnecting</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>info<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'----------------------------------signalr-- onreconnecting'</span><span class="token punctuation">,</span> info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  <span class="token comment" spellcheck="true">//连接关闭的回调</span>
-  connection<span class="token punctuation">.</span><span class="token function">onclose</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'--------------------------------signalr-- onclose'</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//连接关闭的回调</span>
+connection<span class="token punctuation">.</span><span class="token function">onclose</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'--------------------------------signalr-- onclose'</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-  connection<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'已成功连接到signalr服务器'</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
+connection<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'已成功连接到signalr服务器'</span><span class="token punctuation">)</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span>error<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 </li>
 </ul>
@@ -461,29 +459,27 @@
 <h2 id="快速导航"><a href="#快速导航" class="headerlink" title="快速导航"></a>快速导航</h2><table>
 <thead>
 <tr>
-<th style="text-align:left">标题</th>
-<th style="text-align:left">内容 </th>
+<th align="left">标题</th>
+<th align="left">内容</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">索引</td>
-<td style="text-align:left"><a href="/2019/09/20/dotnetcore/signalr/00-introduct/">.net core 3.0 Signalr - 实现一个业务推送系统</a> </td>
+<tbody><tr>
+<td align="left">索引</td>
+<td align="left"><a href="/2019/09/20/dotnetcore/signalr/00-introduct/">.net core 3.0 Signalr - 实现一个业务推送系统</a></td>
 </tr>
 <tr>
-<td style="text-align:left">下一篇</td>
-<td style="text-align:left"><a href="/2019/09/22/dotnetcore/signalr/02-type-hub/">.net core 3.0 Signalr - 02 使用强类型的Hub</a> </td>
+<td align="left">下一篇</td>
+<td align="left"><a href="/2019/09/22/dotnetcore/signalr/02-type-hub/">.net core 3.0 Signalr - 02 使用强类型的Hub</a></td>
 </tr>
 <tr>
-<td style="text-align:left">源码地址</td>
-<td style="text-align:left"><a href="https://github.com/xiexingen/CTS.Signalr" target="_blank" rel="noopener">源码</a> </td>
+<td align="left">源码地址</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://github.com/xiexingen/CTS.Signalr">源码</a></td>
 </tr>
 <tr>
-<td style="text-align:left">官方文档</td>
-<td style="text-align:left"><a href="https://docs.microsoft.com/zh-CN/aspnet/core/?view=aspnetcore-3.0" target="_blank" rel="noopener">官方文档</a> </td>
+<td align="left">官方文档</td>
+<td align="left"><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-CN/aspnet/core/?view=aspnetcore-3.0">官方文档</a></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 
             </div>
             <hr/>
@@ -672,12 +668,14 @@
                     <div class="summary block-with-text">
                         
                             .net core 3.0 Signalr - 02 使用强类型的Hub
+
+
 强类型的优缺点
 优点强类型的Hub可以避免魔法函数名，相比弱类型更容易维护和发现问题，直接上代码
 缺点特么的得多些好几行代码
 
-代码接口定义    /// 
-    
+代码接口定义  /// 
+  //
                         
                     </div>
                     <div class="publish-info">

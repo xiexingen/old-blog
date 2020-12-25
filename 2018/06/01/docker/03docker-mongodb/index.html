@@ -6,11 +6,13 @@
     <meta charset="utf-8">
     <meta name="keywords" content="Docker安装mongodb, 程序有Bug">
     <meta name="description" content="Docker安装mongodb
-通过docker-compose安装version: &#34;3.3&#34;
-services:
-  commonmongo:
-    container_name: &#34;mongo&#34;
-    image: mongo:l">
+
+
+
+配置好docker的加速镜像[参考02Docker安装及配置]  
+docker pull mongo 拉去mongo镜像  
+启动docker实例  
+方式一docker run -d -p 2701">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -33,6 +35,7 @@ services:
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -333,37 +336,19 @@ services:
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Docker安装mongodb<br><a id="more"></a></p>
-<h2 id="通过docker-compose安装"><a href="#通过docker-compose安装" class="headerlink" title="通过docker-compose安装"></a>通过docker-compose安装</h2><pre class=" language-bash"><code class="language-bash">version: <span class="token string">"3.3"</span>
-services:
-  commonmongo:
-    container_name: <span class="token string">"mongo"</span>
-    image: mongo:latest
-    restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: Abcd1234<span class="token comment" spellcheck="true">#</span>
-    volumes:
-      - <span class="token string">"/docker/data/mongo:/data/db"</span> <span class="token comment" spellcheck="true"># make data persistent 持久化</span>
-    ports:
-      - <span class="token string">"27017:27017"</span> <span class="token comment" spellcheck="true"># expose port to host machine 暴露接口到宿主机</span>
-</code></pre>
+                <p>Docker安装mongodb</p>
+<a id="more"></a>
+
 <ol>
-<li>将上述文件另存为,如路径：/docker/compose/compose-mongo.yml</li>
-<li>通过docker-compose执行<pre class=" language-bash"><code class="language-bash">docker-compose -f /docker/compose/compose-mongo.yml up -d
-</code></pre>
-</li>
-</ol>
-<h2 id="通过docker安装"><a href="#通过docker安装" class="headerlink" title="通过docker安装"></a>通过docker安装</h2><ol>
 <li>配置好docker的加速镜像[参考02Docker安装及配置]  </li>
 <li>docker pull mongo 拉去mongo镜像  </li>
 <li>启动docker实例  <blockquote>
-<p>方式一<br>docker run -d -p 27017:27017 –name mongodb mongo<br>方式二 将容器的文件挂在到Host Volume<br>–首先创建文件夹  /docker/mongo/config  以及/docker/mongo/data 用于与docker中mongo实例链接  然后运行命令</p>
-<pre class=" language-bash"><code class="language-bash">docker run -d -p 27017:27017 --name mongo01 -v /docker/mongo/config:/data/configdb -v<span class="token operator">=</span>/docker/mongo/data:/data/db mongo
-</code></pre>
+<p>方式一<br>docker run -d -p 27017:27017 –name mongodb mongo<br>方式二 将容器的文件挂在到Host Volume  </p>
 </blockquote>
 </li>
 </ol>
+<p>–首先创建文件夹  /docker/mongo/config  以及/docker/mongo/data 用于与docker中mongo实例链接  然后运行命令</p>
+<pre class=" language-bash"><code class="language-bash">docker run -d -p 27017:27017 --name mongo01 -v /docker/mongo/config:/data/configdb -v<span class="token operator">=</span>/docker/mongo/data:/data/db mongo</code></pre>
 
             </div>
             <hr/>
@@ -596,37 +581,27 @@ services:
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="../../../../05/30/docker/02docker-dockerfile/">
+                <a href="../../../../05/30/docker/01docker-config/">
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/17.jpg" class="responsive-img" alt="Dockerfile解析">
+                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/7.jpg" class="responsive-img" alt="Docker安装及配置加速镜像">
                         
-                        <span class="card-title">Dockerfile解析</span>
+                        <span class="card-title">Docker安装及配置加速镜像</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Dockerfile解说
+                            Docker安装及配置加速镜像
 
 
 
-关键字
-说明
-例子
+个人阿里云加速镜像个人地址&nbsp; https://noe4mlw6.mirror.aliyuncs.com
 
 
-
-
-FROM
-以此为基础来构建
-FROM debian:buster-slim
-
-
-MAINTAINER
-镜像维护着的项目和邮箱地址
-MAINTAINER The CentOS Pro
+CentOS 7 (使用yum进行安装)如果之前安装过】先卸载依赖  
+  sudo
                         
                     </div>
                     <div class="publish-info">

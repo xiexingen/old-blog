@@ -31,6 +31,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -291,7 +292,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="../../../../../../tags/前端-其他/" target="_blank">
+                            <a href="../../../../../../tags/%E5%89%8D%E7%AB%AF-%E5%85%B6%E4%BB%96/" target="_blank">
                                 <span class="chip bg-color">前端-其他</span>
                             </a>
                         
@@ -303,7 +304,7 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="../../../../../../categories/前端-其他/" class="post-category" target="_blank">
+                            <a href="../../../../../../categories/%E5%89%8D%E7%AB%AF-%E5%85%B6%E4%BB%96/" class="post-category" target="_blank">
                                 前端-其他
                             </a>
                         
@@ -338,13 +339,13 @@
 yarn add -d babel-preset-stage-1 //支持babel-preset-stage-1
 //yarn add -d babel-preset-react //如果需要支持react
 //yarn add -d babel-plugin-transform-object-assign //适用于Object.assign()
-//yarn add -d babel-plugin-transform-object-rest-spread //适用于展开运算符
-</code></pre></li>
-<li>在package.json文件夹中添加一个scripts 如下所示:<pre><code>scripts: {
+//yarn add -d babel-plugin-transform-object-rest-spread //适用于展开运算符</code></pre>
+</li>
+<li>在package.json文件夹中添加一个scripts 如下所示:<pre><code>scripts: &#123;
  &quot;build&quot;: &quot;babel src --watch --source-maps --presets=es2015,stage-1 --out-dir dist&quot; //切记 --source-maps一定要加上
-}
-</code></pre></li>
-<li>跟目录下添加.babelrc 内容如下<pre><code>{
+&#125;</code></pre>
+</li>
+<li>跟目录下添加.babelrc 内容如下<pre><code>&#123;
  &quot;presets&quot;: [
      &quot;es2015&quot;
      //,&quot;react&quot; //如果有使用react
@@ -354,27 +355,27 @@ yarn add -d babel-preset-stage-1 //支持babel-preset-stage-1
  //    &quot;transform-object-assign&quot;, //适用于Object.assign()
  //    &quot;transform-object-rest-spread&quot; //适用于展开运算符 ...
  //]
-}
-</code></pre></li>
+&#125;</code></pre>
+</li>
 <li>编写自己的代码，整体项目结构如下<br>|-src<br>&emsp;|–cores<br>&emsp;&emsp;|–math.js  –被引用的js文件<br>&emsp;|–index.js   –主入口js文件<br>|.babelrc<br>|.package.json  </li>
-<li>切到vscode左侧的调试窗口，点击添加配置<br>这个时候会生成一个launch.json文件，修改内容如下<pre><code>{
+<li>切到vscode左侧的调试窗口，点击添加配置<br>这个时候会生成一个launch.json文件，修改内容如下<pre><code>&#123;
  // 使用 IntelliSense 了解相关属性。 
  // 悬停以查看现有属性的描述。
  // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
  &quot;version&quot;: &quot;0.2.0&quot;,
  &quot;configurations&quot;: [
-     {
+     &#123;
          &quot;type&quot;: &quot;node&quot;,
          &quot;request&quot;: &quot;launch&quot;,
          &quot;name&quot;: &quot;Launch App.js&quot;,
-         &quot;program&quot;: &quot;${workspaceRoot}/src/index.js&quot;,
+         &quot;program&quot;: &quot;$&#123;workspaceRoot&#125;/src/index.js&quot;,
          &quot;outFiles&quot;: [
-             &quot;${workspaceRoot}/dist/**/*.js&quot;
+             &quot;$&#123;workspaceRoot&#125;/dist/**/*.js&quot;
          ]
-     }
+     &#125;
  ]
-}
-</code></pre></li>
+&#125;</code></pre>
+</li>
 <li>先生成在运行调试<br>npm run build会生成一个dist目录，然后点击调试上的运行按钮 执行调试</li>
 </ol>
 
@@ -566,7 +567,9 @@ yarn add -d babel-preset-stage-1 //支持babel-preset-stage-1
                         
                             umi文件拆分
 
-前言 在umi群里有群友在问umi打包后umi.js文件有1M多甚至更多，那么网站加载的时候会等待这个文件加载完成 可能需要好些时间 这个是比较难忍受的,其实umi有提供代码拆分的功能 只是文档不是很全 这里写了个片博客 
+
+
+前言 在umi群里有群友在问umi打包后umi.js文件有1M多甚至更多，那么网站加载的时候会等待这个文件加载完成 可能需要好些时间 这个是比较难忍受的,其实umi有提供代码拆分的功能 只是文档不是很全 这里写了个片博
                         
                     </div>
                     <div class="publish-info">
@@ -588,7 +591,7 @@ yarn add -d babel-preset-stage-1 //支持babel-preset-stage-1
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../../../tags/前端/" target="_blank">
+                    <a href="../../../../../../tags/%E5%89%8D%E7%AB%AF/" target="_blank">
                         <span class="chip bg-color">前端</span>
                     </a>
                     
@@ -624,12 +627,14 @@ yarn add -d babel-preset-stage-1 //支持babel-preset-stage-1
                     <div class="summary block-with-text">
                         
                             各大组件、工具收藏夹(持续更新中…)
+
+
+
 后端
 
 
 类型
 推荐组件
-
 
 
 
@@ -642,7 +647,7 @@ HslCommunication
 
 
 斗地主
-FightLa
+Fight
                         
                     </div>
                     <div class="publish-info">
@@ -653,7 +658,7 @@ FightLa
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../../../../../../categories/工具/" class="post-category" target="_blank">
+                            <a href="../../../../../../categories/%E5%B7%A5%E5%85%B7/" class="post-category" target="_blank">
                                     工具
                                 </a>
                             
@@ -664,7 +669,7 @@ FightLa
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../../../tags/工具/" target="_blank">
+                    <a href="../../../../../../tags/%E5%B7%A5%E5%85%B7/" target="_blank">
                         <span class="chip bg-color">工具</span>
                     </a>
                     

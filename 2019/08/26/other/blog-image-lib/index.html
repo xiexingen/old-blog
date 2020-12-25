@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <meta name="keywords" content="写博客的神器-图床篇, 程序有Bug">
     <meta name="description" content="vscode下使用 PicGo自动上传图片
+
+
 前言
 PicGo github地址PicGo 文档地址 
 
@@ -18,10 +20,9 @@ PicGo github地址PicGo 文档地址
 
 
 
-
 站内
 1.图片自定义命名 2.方便管理迁移
-1.增加博客服务器压力(一般都是比较弱的机器) 2">
+1.增加博客服务器压力(一般都是比较弱的机器) ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -44,6 +45,7 @@ PicGo github地址PicGo 文档地址
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -304,7 +306,7 @@ PicGo github地址PicGo 文档地址
                     
                     <div class="article-tag">
                         
-                            <a href="../../../../../tags/其他/" target="_blank">
+                            <a href="../../../../../tags/%E5%85%B6%E4%BB%96/" target="_blank">
                                 <span class="chip bg-color">其他</span>
                             </a>
                         
@@ -316,7 +318,7 @@ PicGo github地址PicGo 文档地址
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="../../../../../categories/其他/" class="post-category" target="_blank">
+                            <a href="../../../../../categories/%E5%85%B6%E4%BB%96/" class="post-category" target="_blank">
                                 其他
                             </a>
                         
@@ -344,32 +346,32 @@ PicGo github地址PicGo 文档地址
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>vscode下使用 PicGo自动上传图片<br><a id="more"></a></p>
+                <p>vscode下使用 PicGo自动上传图片</p>
+<a id="more"></a>
+
 <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p><a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">PicGo github地址</a><br><a href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html" target="_blank" rel="noopener">PicGo 文档地址</a> </p>
+<p><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo">PicGo github地址</a><br><a target="_blank" rel="noopener" href="https://picgo.github.io/PicGo-Doc/zh/guide/config.html">PicGo 文档地址</a> </p>
 </blockquote>
 <h3 id="纯手工时代"><a href="#纯手工时代" class="headerlink" title="纯手工时代"></a>纯手工时代</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">类型</th>
-<th style="text-align:left">优点</th>
-<th style="text-align:left">缺点</th>
+<th align="left">类型</th>
+<th align="left">优点</th>
+<th align="left">缺点</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">站内</td>
-<td style="text-align:left">1.图片自定义命名<br> 2.方便管理迁移</td>
-<td style="text-align:left">1.增加博客服务器压力(一般都是比较弱的机器)<br> 2. 操作麻烦</td>
+<tbody><tr>
+<td align="left">站内</td>
+<td align="left">1.图片自定义命名<br/> 2.方便管理迁移</td>
+<td align="left">1.增加博客服务器压力(一般都是比较弱的机器)<br/> 2. 操作麻烦</td>
 </tr>
 <tr>
-<td style="text-align:left">外部资源服务器<br>比如(七牛、微博、腾讯云、阿里云等)</td>
-<td style="text-align:left">1. 减轻服务器压力<br></td>
-<td style="text-align:left">1.操作麻烦，不好管理图片</td>
+<td align="left">外部资源服务器<br/>比如(七牛、微博、腾讯云、阿里云等)</td>
+<td align="left">1. 减轻服务器压力<br/></td>
+<td align="left">1.操作麻烦，不好管理图片</td>
 </tr>
-</tbody>
-</table>
-<h3 id="工业1-0时代"><a href="#工业1-0时代" class="headerlink" title="工业1.0时代"></a>工业1.0时代</h3><p>今天的重点是，vscode下的<a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">PicGo</a>插件,通过简单的配置可以实现切换 七牛、微博、腾讯云COS、又拍云、github、阿里云oss、imgur等，与vscode很方便的集成，综合对比了下 腾讯云、阿里云皆收费，github国内又有点慢，最后选择了七牛，每个月10G 博客应该够用，配置如下:<br><img src="http://qiniu.xxgtalk.cn/blog/images/20190807085943.png" alt></p>
+</tbody></table>
+<h3 id="工业1-0时代"><a href="#工业1-0时代" class="headerlink" title="工业1.0时代"></a>工业1.0时代</h3><p>今天的重点是，vscode下的<a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo">PicGo</a>插件,通过简单的配置可以实现切换 七牛、微博、腾讯云COS、又拍云、github、阿里云oss、imgur等，与vscode很方便的集成，综合对比了下 腾讯云、阿里云皆收费，github国内又有点慢，最后选择了七牛，每个月10G 博客应该够用，配置如下:<br><img src="http://qiniu.xxgtalk.cn/blog/images/20190807085943.png"></p>
 
             </div>
             <hr/>
@@ -558,12 +560,14 @@ PicGo github地址PicGo 文档地址
                     <div class="summary block-with-text">
                         
                             Flutter-01 环境搭建
+
+
 文档地址 https://developer.android.google.cn/studio/intro
 Window10环境搭建Flutter开发环境前置条件
 磁盘空间足够
 git 2.x
 
-安装Andr
+安装An
                         
                     </div>
                     <div class="publish-info">
@@ -613,8 +617,10 @@ git 2.x
                     <div class="summary block-with-text">
                         
                             DIY一个集搜索、排序、分页功能的列表组件
-源码地址: https://github.com/wetrial/wetrial-template效果
-背景在中控台系统中经常需要带条件过滤、分页、排序等的列表页面，antd提供了表格、排序、分页
+
+
+源码地址: https://github.com/wetrial/wetrial-template效果
+背景在中控台系统中经常需要带条件过滤、分页、排序等的列表页面，antd提供了表格、排序、
                         
                     </div>
                     <div class="publish-info">
@@ -636,7 +642,7 @@ git 2.x
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../../tags/前端/" target="_blank">
+                    <a href="../../../../../tags/%E5%89%8D%E7%AB%AF/" target="_blank">
                         <span class="chip bg-color">前端</span>
                     </a>
                     

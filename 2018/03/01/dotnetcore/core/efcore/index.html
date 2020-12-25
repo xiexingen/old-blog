@@ -7,7 +7,11 @@
     <meta name="keywords" content="EFCore相关资料, 程序有Bug">
     <meta name="description" content="EFCore相关资料
 
-命令行CMD形式 | VS中Package Manager形式—- | —dotnet ef migrations add InitCreate    [-o 路径] | Add-Migration InitCrea">
+
+
+命令行CMD形式 | VS中Package Manager形式
+
+—- | —dotnet ef migrations add InitCreate    [-o 路径] | Add-Migration Init">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -30,6 +34,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -330,13 +335,17 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>EFCore相关资料<br><a id="more"></a></p>
+                <p>EFCore相关资料</p>
+<a id="more"></a>
+
 <ol>
-<li>命令行<br>CMD形式 | VS中Package Manager形式<br>—- | —<br>dotnet ef migrations add InitCreate    [-o 路径] | Add-Migration InitCreate<br>dotnet ef database update   | Update-Database<br>dotnet ef migrations remove | Remove-Migrations<br>donet ef database update [LastGoodMigration] | Update-Database LastGoodMigration<br>dotnet ef migrations script [-o 路径] | Script-Migration<blockquote>
-<p>生成 migrationName1 到 -migrationName2的脚本<br>dotnet ef migrations script migrationName1 migrationName2<br>不能使用dotnet ef命令行解决方式 在项目文件csproj文件中添加<br><code>`</code></p>
-</blockquote>
-<dotnetclitoolreference include="Microsoft.EntityFrameworkCore.Tools.DotNet" version="2.0.1"><br><code>`</code></dotnetclitoolreference></li>
+<li>命令行<br>CMD形式 | VS中Package Manager形式</li>
 </ol>
+<p>—- | —<br>dotnet ef migrations add InitCreate    [-o 路径] | Add-Migration InitCreate<br>dotnet ef database update   | Update-Database<br>dotnet ef migrations remove | Remove-Migrations<br>donet ef database update [LastGoodMigration] | Update-Database LastGoodMigration<br>dotnet ef migrations script [-o 路径] | Script-Migration</p>
+<blockquote>
+<p>生成 migrationName1 到 -migrationName2的脚本<br>dotnet ef migrations script migrationName1 migrationName2<br>不能使用dotnet ef命令行解决方式 在项目文件csproj文件中添加  </p>
+</blockquote>
+<pre><code>&lt;DotNetCliToolReference Include=&quot;Microsoft.EntityFrameworkCore.Tools.DotNet&quot; Version=&quot;2.0.1&quot; /&gt;</code></pre>
 
             </div>
             <hr/>
@@ -526,7 +535,9 @@
                         
                             .NetCore+centos环境搭建手摸手实战
 
-安装VMware Workstation下载地址:https://my.vmware.com/cn/web/vmware/info/slug/desktop_end_user_comput
+
+
+安装VMware Workstation下载地址:https://my.vmware.com/cn/web/vmware/info/slug/desktop_end_user_comp
                         
                     </div>
                     <div class="publish-info">
@@ -576,8 +587,10 @@
                     <div class="summary block-with-text">
                         
                             DotNetCore 备忘录
+
+
 常用备忘录
-docker run -d -p 8081:80 –name wechat -v /docker/wechat/App_Data/:/app/App_Data/ –restart always re
+docker run -d -p 8081:80 –name wechat -v /docker/wechat/App_Data/:/app/App_Data/ –restart always 
                         
                     </div>
                     <div class="publish-info">

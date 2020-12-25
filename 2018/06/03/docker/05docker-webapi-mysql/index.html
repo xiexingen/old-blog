@@ -8,10 +8,12 @@
     <meta name="description" content="Docker制作WebApi&amp;amp;MySql 直接上图
 
 
+
+
 docker文件  
- FROM microsoft/aspnetcore-build as build-env
- WORKDIR /code
- COPY *.csproj .">
+FROM microsoft/aspnetcore-build as build-env
+WORKDIR /code
+COPY *.csproj ./">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -34,6 +36,7 @@ docker文件
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -334,30 +337,32 @@ docker文件
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Docker制作WebApi&amp;MySql 直接上图<br><a id="more"></a></p>
-<p><img src="http://qiniu.xxgtalk.cn/blog/images/docker/050a01.png" alt></p>
+                <p>Docker制作WebApi&amp;MySql 直接上图</p>
+<a id="more"></a>
+
+<p><img src="http://qiniu.xxgtalk.cn/blog/images/docker/050a01.png"></p>
 <ol>
 <li><p>docker文件  </p>
-<pre class=" language-docker"><code class="language-docker"> <span class="token keyword">FROM</span> microsoft/aspnetcore<span class="token punctuation">-</span>build as build<span class="token punctuation">-</span>env
- <span class="token keyword">WORKDIR</span> /code
- <span class="token keyword">COPY</span> *.csproj ./
- <span class="token keyword">RUN</span> dotnet restore
+<pre class=" language-docker"><code class="language-docker"><span class="token keyword">FROM</span> microsoft/aspnetcore<span class="token punctuation">-</span>build as build<span class="token punctuation">-</span>env
+<span class="token keyword">WORKDIR</span> /code
+<span class="token keyword">COPY</span> *.csproj ./
+<span class="token keyword">RUN</span> dotnet restore
 
- <span class="token keyword">COPY</span> . ./
- <span class="token keyword">RUN</span> dotnet publish <span class="token punctuation">-</span>c Release <span class="token punctuation">-</span>o out
+<span class="token keyword">COPY</span> . ./
+<span class="token keyword">RUN</span> dotnet publish <span class="token punctuation">-</span>c Release <span class="token punctuation">-</span>o out
 
- <span class="token keyword">FROM</span> microsoft/aspnetcore
- <span class="token keyword">WORKDIR</span> /app
- <span class="token keyword">COPY</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>from=build<span class="token punctuation">-</span>env /code/out ./
+<span class="token keyword">FROM</span> microsoft/aspnetcore
+<span class="token keyword">WORKDIR</span> /app
+<span class="token keyword">COPY</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>from=build<span class="token punctuation">-</span>env /code/out ./
 
- <span class="token keyword">EXPOSE</span> 50000
- <span class="token keyword">ENTRYPOINT</span> <span class="token punctuation">[</span><span class="token string">"dotnet"</span><span class="token punctuation">,</span><span class="token string">"WebApiDocker.dll"</span><span class="token punctuation">]</span>
-</code></pre>
+<span class="token keyword">EXPOSE</span> 50000
+<span class="token keyword">ENTRYPOINT</span> <span class="token punctuation">[</span><span class="token string">"dotnet"</span><span class="token punctuation">,</span><span class="token string">"WebApiDocker.dll"</span><span class="token punctuation">]</span></code></pre>
 </li>
-<li>编译docker文件  <pre class=" language-docker"><code class="language-docker"> docker build <span class="token punctuation">-</span>t  xxg/aspnetcore<span class="token punctuation">:</span>1.0 .
-</code></pre>
+<li><p>编译docker文件  </p>
+<pre class=" language-docker"><code class="language-docker">docker build <span class="token punctuation">-</span>t  xxg/aspnetcore<span class="token punctuation">:</span>1.0 .</code></pre>
 </li>
-<li>使用该镜像启动一个容器<br>a. docker run -d -p 5000:80  –name api01 –link mysql01:db xxg/aspnetcore:1.0<br>b. 使用bridge形式<br>docker network create -d bridge mybridge        //创建一个网络<br>docker run -d -p 5000:5000 –net mybridge –name api1 xxg/aspnetcore:1.0<br>docker network connect mysql01  mybridge    //表示将mysql01跟mybridge网络连接起来  <blockquote>
+<li><p>使用该镜像启动一个容器<br>a. docker run -d -p 5000:80  –name api01 –link mysql01:db xxg/aspnetcore:1.0<br>b. 使用bridge形式<br>docker network create -d bridge mybridge        //创建一个网络<br>docker run -d -p 5000:5000 –net mybridge –name api1 xxg/aspnetcore:1.0<br>docker network connect mysql01  mybridge    //表示将mysql01跟mybridge网络连接起来  </p>
+<blockquote>
 <p>–link mysql01:db        –表示将mysql01取个别名db并连接到当前容器<br>–net mybridge        –表示使用指定网络</p>
 </blockquote>
 </li>
@@ -550,6 +555,8 @@ docker文件
                     <div class="summary block-with-text">
                         
                             使用docker-compose按照webapi&amp;mysql
+
+
 接Docker制作WebApi&amp;MySql
 
 创建docker-compose.yml文件  
@@ -557,7 +564,7 @@ version '1'
 
 services:
  db:
-     
+   
                         
                     </div>
                     <div class="publish-info">
@@ -600,9 +607,11 @@ services:
                         
                             Docker安装MsSqlserver
 
+
 未成功
 
-执行命令` sqldocker run -e ‘ACCEPT_EULA=Y’ -e ‘MSSQL_SA_PASSWORD=Abcd1234’ -v=/docker/mssql:/var/o
+
+执行命令``` sqldocker run -e ‘ACCEPT_EULA=Y’ -e ‘MSSQL_SA_PASSWORD=Abcd1234’ -v=/docker/mssql:/v
                         
                     </div>
                     <div class="publish-info">

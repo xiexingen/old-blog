@@ -6,12 +6,14 @@
     <meta charset="utf-8">
     <meta name="keywords" content="Flutter-01 环境搭建, 程序有Bug">
     <meta name="description" content="Flutter-01 环境搭建
+
+
 文档地址 https://developer.android.google.cn/studio/intro
 Window10环境搭建Flutter开发环境前置条件
 磁盘空间足够
 git 2.x
 
-安装Andr">
+安装An">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -34,6 +36,7 @@ git 2.x
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -334,8 +337,10 @@ git 2.x
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Flutter-01 环境搭建<br><a id="more"></a></p>
-<p>文档地址 <a href="https://developer.android.google.cn/studio/intro" target="_blank" rel="noopener">https://developer.android.google.cn/studio/intro</a></p>
+                <p>Flutter-01 环境搭建</p>
+<a id="more"></a>
+
+<p>文档地址 <a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio/intro">https://developer.android.google.cn/studio/intro</a></p>
 <h1 id="Window10环境搭建Flutter开发环境"><a href="#Window10环境搭建Flutter开发环境" class="headerlink" title="Window10环境搭建Flutter开发环境"></a>Window10环境搭建Flutter开发环境</h1><h2 id="前置条件"><a href="#前置条件" class="headerlink" title="前置条件"></a>前置条件</h2><ul>
 <li>磁盘空间足够</li>
 <li>git 2.x</li>
@@ -344,8 +349,8 @@ git 2.x
 <li>下载</li>
 </ol>
 <ul>
-<li><a href="https://developer.android.google.com/studio(需要翻墙)" target="_blank" rel="noopener">https://developer.android.google.com/studio(需要翻墙)</a></li>
-<li><a href="https://developer.android.google.cn/studio" target="_blank" rel="noopener">https://developer.android.google.cn/studio</a><br>如果过程提示是否安装一些东西，点同意即可,会自动安装java jdk</li>
+<li><a target="_blank" rel="noopener" href="https://developer.android.google.com/studio(%E9%9C%80%E8%A6%81%E7%BF%BB%E5%A2%99)">https://developer.android.google.com/studio(需要翻墙)</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio">https://developer.android.google.cn/studio</a><br>如果过程提示是否安装一些东西，点同意即可,会自动安装java jdk</li>
 </ul>
 <ol start="2">
 <li>为Android Studio安装Flutter和Dart插件<br>File-&gt;Settings-&gt;Plugins 然后搜索Flutter点击安装，这个时候会提示安装Dart插件，点安装 然后重启Android Studio<br>如图<br><img src="http://qiniu.xxgtalk.cn/blog/images/20190909203319.png" alt="20190909203319.png"></li>
@@ -355,8 +360,7 @@ git 2.x
 <pre class=" language-bash"><code class="language-bash">// 增加如下变量到用户环境变量中
 PUB_HOSTED_URL<span class="token operator">=</span>https://pub.flutter-io.cn  
 FLUTTER_STORAGE_BASE_URL<span class="token operator">=</span>https://storage.flutter-io.cn
-// 注:这些镜像为临时镜像，并不保证一直可用，可以从https://flutter.dev/community/china 查看最新的网址
-</code></pre>
+// 注:这些镜像为临时镜像，并不保证一直可用，可以从https://flutter.dev/community/china 查看最新的网址</code></pre>
 </li>
 <li><p>下载并安装</p>
 </li>
@@ -371,8 +375,7 @@ FLUTTER_STORAGE_BASE_URL<span class="token operator">=</span>https://storage.flu
 </ol>
 <ul>
 <li>添加系统环境变量<pre class=" language-bash"><code class="language-bash">// 键和值，其中目录为Android SDK的目录，可以通过android studio菜单File-<span class="token operator">></span>Settings 然后搜索SDK 可查看SDK的安装目录
-ANDROID_HOME:C:\Users\xiexingen\AppData\Local\Android\Sdk
-</code></pre>
+ANDROID_HOME:C:\Users\xiexingen\AppData\Local\Android\Sdk</code></pre>
 </li>
 <li>在系统环境变量中的Path中添加%ANDROID_HOME%\emulator</li>
 <li>在系统环境变量中的Path中添加%ANDROID_HOME%\platform-tools</li>
@@ -408,8 +411,7 @@ ANDROID_HOME:C:\Users\xiexingen\AppData\Local\Android\Sdk
 <li>由于国内访问Flutter可能受限，Flutter官方为中国地区待见了临时镜像，可添加如下环境变量到用户的环境变量中<pre class=" language-bash"><code class="language-bash">// Macintosh HD-<span class="token operator">></span>Users-<span class="token operator">></span>用户名-<span class="token operator">></span>.bash_profile
 <span class="token function">export</span> PUB_HOSTED_URL<span class="token operator">=</span>https://pub.flutter-io.cn
 <span class="token function">export</span> FLUTTER_STORAGE_BASE_URL<span class="token operator">=</span>https://storage.flutter-io.cn
-// 注:这些镜像为临时镜像，并不保证一直可用，可以从https://flutter.dev/community/china 查看最新的网址
-</code></pre>
+// 注:这些镜像为临时镜像，并不保证一直可用，可以从https://flutter.dev/community/china 查看最新的网址</code></pre>
 </li>
 </ul>
 <h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><h3 id="Flutter-SDK-1"><a href="#Flutter-SDK-1" class="headerlink" title="Flutter SDK"></a>Flutter SDK</h3><ol start="2">
@@ -423,8 +425,7 @@ ANDROID_HOME:C:\Users\xiexingen\AppData\Local\Android\Sdk
 <pre class=" language-bash"><code class="language-bash"><span class="token function">cd</span> ~
 vim .bash_profile
 // 然后添加下面行,<span class="token punctuation">;</span>wq 保存，然后重启bash
-<span class="token function">export</span> PATH<span class="token operator">=</span>/Users/xiexingen/flutter/bin:<span class="token variable">$PATH</span>
-</code></pre>
+<span class="token function">export</span> PATH<span class="token operator">=</span>/Users/xiexingen/flutter/bin:<span class="token variable">$PATH</span></code></pre>
 </li>
 <li><p>运行flutter doctor来检查flutter<br>会有很多xx 比如xcode，android相关的工具</p>
 </li>
@@ -433,8 +434,8 @@ vim .bash_profile
 <li>下载</li>
 </ol>
 <ul>
-<li><a href="https://developer.android.google.com/studio(需要翻墙)" target="_blank" rel="noopener">https://developer.android.google.com/studio(需要翻墙)</a></li>
-<li><a href="https://developer.android.google.cn/studio" target="_blank" rel="noopener">https://developer.android.google.cn/studio</a><br>如果过程提示是否安装一些东西，点同意即可,会自动安装java jdk</li>
+<li><a target="_blank" rel="noopener" href="https://developer.android.google.com/studio(%E9%9C%80%E8%A6%81%E7%BF%BB%E5%A2%99)">https://developer.android.google.com/studio(需要翻墙)</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio">https://developer.android.google.cn/studio</a><br>如果过程提示是否安装一些东西，点同意即可,会自动安装java jdk</li>
 </ul>
 <ol start="2">
 <li>为Android Studio安装Flutter和Dart插件<br>File-&gt;Settings-&gt;Plugins 然后搜索Flutter点击安装，这个时候会提示安装Dart插件，点安装 然后重启Android Studio<br>如图<br><img src="http://qiniu.xxgtalk.cn/blog/images/20190909203319.png" alt="20190909203319.png"></li>
@@ -444,19 +445,18 @@ vim .bash_profile
 <span class="token comment" spellcheck="true"># Android 环境变量 xiexingen为我的用户名</span>
 <span class="token function">export</span> ANDROID_HOME<span class="token operator">=</span>/Users/xiexingen/Library/Android/sdk
 <span class="token comment" spellcheck="true"># Android 模拟器路径</span>
-<span class="token function">export</span> PATH<span class="token operator">=</span><span class="token variable">${PATH}</span><span class="token keyword">:</span><span class="token variable">${ANDROID_HOME}</span>/emulator
+<span class="token function">export</span> PATH<span class="token operator">=</span>$<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;PATH&amp;#125;:$&amp;#123;ANDROID_HOME&amp;#125;/emulator</span>
 <span class="token comment" spellcheck="true"># Android tools 路径</span>
-<span class="token function">export</span> PATH<span class="token operator">=</span><span class="token variable">${PATH}</span><span class="token keyword">:</span><span class="token variable">${ANDROID_HOME}</span>/tools
+<span class="token function">export</span> PATH<span class="token operator">=</span>$<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;PATH&amp;#125;:$&amp;#123;ANDROID_HOME&amp;#125;/tools</span>
 <span class="token comment" spellcheck="true"># Android 平台工具路径</span>
-<span class="token function">export</span> PATH<span class="token operator">=</span><span class="token variable">${PATH}</span><span class="token keyword">:</span><span class="token variable">${ANDROID_HOME}</span>/platform-tools
+<span class="token function">export</span> PATH<span class="token operator">=</span>$<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;PATH&amp;#125;:$&amp;#123;ANDROID_HOME&amp;#125;/platform-tools</span>
 <span class="token comment" spellcheck="true"># Android NDK路径</span>
 ANDROID_NDK_HOME<span class="token operator">=</span>/Users/xiexingen/Library/Android/ndk/android-ndk-r10e
 <span class="token comment" spellcheck="true"># Flutter镜像</span>
 <span class="token function">export</span> PUB_HOSTED_URL<span class="token operator">=</span>https://pub.flutter-io.cn
 <span class="token function">export</span> FLUTTER_STORAGE_BASE_URL<span class="token operator">=</span>https://storage.flutter-io.cn
 <span class="token comment" spellcheck="true"># Flutter 环境变量</span>
-<span class="token function">export</span> PATH<span class="token operator">=</span>/Users/xiexingen/flutter/bin:<span class="token variable">$PATH</span>
-</code></pre>
+<span class="token function">export</span> PATH<span class="token operator">=</span>/Users/xiexingen/flutter/bin:<span class="token variable">$PATH</span></code></pre>
 </li>
 </ul>
 <blockquote>
@@ -464,35 +464,34 @@ ANDROID_NDK_HOME<span class="token operator">=</span>/Users/xiexingen/Library/An
 </blockquote>
 <h3 id="安装Xcode"><a href="#安装Xcode" class="headerlink" title="安装Xcode"></a>安装Xcode</h3><ol>
 <li>通过苹果应用商店安装</li>
-<li>配置Xcode命令行工具以使用最新安装的Xcode版本<pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> xcode-select --switch /Applications/Xcode.app/Contents/Developer
-</code></pre>
+<li>配置Xcode命令行工具以使用最新安装的Xcode版本<pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> xcode-select --switch /Applications/Xcode.app/Contents/Developer</code></pre>
 </li>
 </ol>
 <h3 id="设置IOS模拟器"><a href="#设置IOS模拟器" class="headerlink" title="设置IOS模拟器"></a>设置IOS模拟器</h3><ol>
-<li>在终端输入如下命令行打开一个ios模拟器<pre class=" language-bash"><code class="language-bash"><span class="token function">open</span> -a Simulator
-</code></pre>
+<li>在终端输入如下命令行打开一个ios模拟器<pre class=" language-bash"><code class="language-bash"><span class="token function">open</span> -a Simulator</code></pre>
 </li>
 <li>通过模拟器菜单的 <em>硬件-&gt;设备</em>,确保是64位的iphone5s或更新的模拟器</li>
 </ol>
 <h3 id="如何将Flutter安装到IOS真机上"><a href="#如何将Flutter安装到IOS真机上" class="headerlink" title="如何将Flutter安装到IOS真机上"></a>如何将Flutter安装到IOS真机上</h3><p>要通过<em>flutter run</em> 将Flutter应用安装到ios整机设备，需要一些额外的工具和一个Apple账号，还需要在Xcode中进行设置：</p>
 <blockquote>
 <p>当然，用XCode来讲Flutter运行在真机上更简单，只需要点 <em>run</em>按钮即可，可以根据需要进行两种不同的运行方式；  </p>
+</blockquote>
 <ol>
-<li>安装 <a href="https://brew.sh" target="_blank" rel="noopener">Homebrew</a></li>
-<li>确保homebrew最新<pre class=" language-bash"><code class="language-bash">brew update
-</code></pre>
+<li><p>安装 <a target="_blank" rel="noopener" href="https://brew.sh/">Homebrew</a></p>
 </li>
-<li>打开终端并运行如下命令来安装用于将Flutter应用安装到IOS设备的工具<pre class=" language-bash"><code class="language-bash">brew <span class="token function">install</span> --HEAD usbmuxd
+<li><p>确保homebrew最新</p>
+<pre class=" language-bash"><code class="language-bash">brew update</code></pre>
+</li>
+<li><p>打开终端并运行如下命令来安装用于将Flutter应用安装到IOS设备的工具</p>
+<pre class=" language-bash"><code class="language-bash">brew <span class="token function">install</span> --HEAD usbmuxd
 brew <span class="token function">link</span> usbmuxd
 brew <span class="token function">install</span> --HEAd libimobiledevice
 brew <span class="token function">install</span> ideviceinstaller ios-deploy cocoapods
-pod setup
-</code></pre>
-如果这些命令中的任何一个失败并出现错误，可运行<em>brew doctor</em>并按照说明来解决问题</li>
-</ol>
-</blockquote>
-<ol start="4">
-<li>遵循Xcode前面流程来配置项目</li>
+pod setup</code></pre>
+<p>如果这些命令中的任何一个失败并出现错误，可运行<em>brew doctor</em>并按照说明来解决问题</p>
+</li>
+<li><p>遵循Xcode前面流程来配置项目</p>
+</li>
 </ol>
 <ul>
 <li>在你Flutter项目目录中通过<em>open ios/Runner.xcworkspace</em>打开默认的Xcode workspace</li>
@@ -508,8 +507,7 @@ pod setup
 </li>
 </ul>
 <ol start="5">
-<li>通过flutter run 运行启动项目<pre class=" language-bash"><code class="language-bash">flutter run
-</code></pre>
+<li>通过flutter run 运行启动项目<pre class=" language-bash"><code class="language-bash">flutter run</code></pre>
 </li>
 </ol>
 <h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><ul>
@@ -533,8 +531,7 @@ pod setup
 </li>
 <li><p>命令行运行android模拟器</p>
 <pre class=" language-bash"><code class="language-bash">// hw1 表示模拟器的名称
-emulator -avd hw1
-</code></pre>
+emulator -avd hw1</code></pre>
 </li>
 <li><p>命令行 flutter run<br>前置条件，需要一个已经启动的android模拟器或者连接到电脑的android设备</p>
 </li>
@@ -778,6 +775,8 @@ emulator -avd hw1
                     <div class="summary block-with-text">
                         
                             vscode下使用 PicGo自动上传图片
+
+
 前言
 PicGo github地址PicGo 文档地址 
 
@@ -790,10 +789,9 @@ PicGo github地址PicGo 文档地址
 
 
 
-
 站内
 1.图片自定义命名 2.方便管理迁移
-1.增加博客服务器压力(一般都是比较弱的机器) 2
+1.增加博客服务器压力(一般都是比较弱的机器) 
                         
                     </div>
                     <div class="publish-info">
@@ -804,7 +802,7 @@ PicGo github地址PicGo 文档地址
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../../../../../categories/其他/" class="post-category" target="_blank">
+                            <a href="../../../../../categories/%E5%85%B6%E4%BB%96/" class="post-category" target="_blank">
                                     其他
                                 </a>
                             
@@ -815,7 +813,7 @@ PicGo github地址PicGo 文档地址
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../../tags/其他/" target="_blank">
+                    <a href="../../../../../tags/%E5%85%B6%E4%BB%96/" target="_blank">
                         <span class="chip bg-color">其他</span>
                     </a>
                     

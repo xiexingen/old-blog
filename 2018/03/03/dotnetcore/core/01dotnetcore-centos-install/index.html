@@ -7,7 +7,9 @@
     <meta name="keywords" content=".NetCore+centos环境搭建手摸手实战, 程序有Bug">
     <meta name="description" content=".NetCore+centos环境搭建手摸手实战
 
-安装VMware Workstation下载地址:https://my.vmware.com/cn/web/vmware/info/slug/desktop_end_user_comput">
+
+
+安装VMware Workstation下载地址:https://my.vmware.com/cn/web/vmware/info/slug/desktop_end_user_comp">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -30,6 +32,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -330,29 +333,30 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>.NetCore+centos环境搭建手摸手实战<br><a id="more"></a></p>
+                <p>.NetCore+centos环境搭建手摸手实战</p>
+<a id="more"></a>
+
 <ol>
-<li>安装VMware Workstation<br>下载地址:<a href="https://my.vmware.com/cn/web/vmware/info/slug/desktop_end_user_computing/vmware_workstation_pro/14_0" target="_blank" rel="noopener">https://my.vmware.com/cn/web/vmware/info/slug/desktop_end_user_computing/vmware_workstation_pro/14_0</a>  下载安装 </li>
-<li>安装CentOS7<br>安装好后发现不能使用网络 参考资料<br><a href="http://blog.csdn.net/wanz2/article/details/52820876" target="_blank" rel="noopener">http://blog.csdn.net/wanz2/article/details/52820876</a></li>
-<li>安装.net core<br>参考官网步骤:<a href="https://www.microsoft.com/net/learn/get-started/linuxcentos" target="_blank" rel="noopener">https://www.microsoft.com/net/learn/get-started/linuxcentos</a></li>
-<li>安装nginx<br>同样参考官网步骤:<a href="https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7" target="_blank" rel="noopener">https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7</a></li>
+<li>安装VMware Workstation<br>下载地址:<a target="_blank" rel="noopener" href="https://my.vmware.com/cn/web/vmware/info/slug/desktop_end_user_computing/vmware_workstation_pro/14_0">https://my.vmware.com/cn/web/vmware/info/slug/desktop_end_user_computing/vmware_workstation_pro/14_0</a>  下载安装 </li>
+<li>安装CentOS7<br>安装好后发现不能使用网络 参考资料<br><a target="_blank" rel="noopener" href="http://blog.csdn.net/wanz2/article/details/52820876">http://blog.csdn.net/wanz2/article/details/52820876</a></li>
+<li>安装.net core<br>参考官网步骤:<a target="_blank" rel="noopener" href="https://www.microsoft.com/net/learn/get-started/linuxcentos">https://www.microsoft.com/net/learn/get-started/linuxcentos</a></li>
+<li>安装nginx<br>同样参考官网步骤:<a target="_blank" rel="noopener" href="https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7">https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7</a></li>
 <li>vs2017新建项目发布成本地文件夹<br>新建项目，使用mvc模板发布到本地文件夹</li>
-<li>通过Xftp上传到centos<br>通过Xftp将打包的文件直接粘贴到centos中(我是在root目录下建了个web文件夹专门用于存放部署的站点)<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0601.png" alt></li>
-<li>将dotnetcore站点运行起来<br>在Xftp中点击新建终端打开XsHell 将路径定位到站点文件夹 cd /root/web/mvc  执行 dotnet HelloWord.dll  看到如下信息 表示你已经成功了<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0701.png" alt><br>这个时候你在外面访问是访问不了的 因为防火墙没有启用5000端口<br>如果一定想看看 可以再开一个终端 输入如图<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0702.png" alt></li>
-<li>配置nginx将80端口指向dotnetcore站点<br>这一步就是通过nginx将80请求转到上面的localhost:5000<br>先找着nginx中的配置<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0801.png" alt><br>打开后会发现里面有个<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0802.png" alt><br>在如下目录中新建一个文件 输入配置   <pre class=" language-nginx"><code class="language-nginx">     <span class="token keyword">server</span> <span class="token punctuation">{</span>
-         <span class="token keyword">listen</span> <span class="token number">80</span><span class="token punctuation">;</span>
-         <span class="token keyword">location</span> <span class="token operator">/</span> <span class="token punctuation">{</span>
-             <span class="token keyword">proxy_pass</span> <span class="token keyword">http</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>localhost<span class="token punctuation">:</span><span class="token number">5000</span><span class="token punctuation">;</span>
-             <span class="token keyword">proxy_http_version</span> <span class="token number">1.1</span><span class="token punctuation">;</span>
-             <span class="token keyword">proxy_set_header</span> Upgrade <span class="token variable">$http_upgrade</span><span class="token punctuation">;</span>
-             <span class="token keyword">proxy_set_header</span> Connection keep<span class="token operator">-</span>alive<span class="token punctuation">;</span>
-             <span class="token keyword">proxy_set_header</span> Host <span class="token variable">$host</span><span class="token punctuation">;</span>
-             <span class="token keyword">proxy_cache_bypass</span> <span class="token variable">$http_upgrade</span><span class="token punctuation">;</span>
-         <span class="token punctuation">}</span>
-     <span class="token punctuation">}</span>
-</code></pre>
- <img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0803.png" alt><br>然后重启nginx ==》sudo nginx -s reload  </li>
-<li>查看成果<br>在浏览器中输入192.168.2.105  如图<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0901.png" alt></li>
+<li>通过Xftp上传到centos<br>通过Xftp将打包的文件直接粘贴到centos中(我是在root目录下建了个web文件夹专门用于存放部署的站点)<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0601.png"></li>
+<li>将dotnetcore站点运行起来<br>在Xftp中点击新建终端打开XsHell 将路径定位到站点文件夹 cd /root/web/mvc  执行 dotnet HelloWord.dll  看到如下信息 表示你已经成功了<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0701.png"><br>这个时候你在外面访问是访问不了的 因为防火墙没有启用5000端口<br>如果一定想看看 可以再开一个终端 输入如图<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0702.png"></li>
+<li>配置nginx将80端口指向dotnetcore站点<br>这一步就是通过nginx将80请求转到上面的localhost:5000<br>先找着nginx中的配置<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0801.png"><br>打开后会发现里面有个<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0802.png"><br>在如下目录中新建一个文件 输入配置   <pre class=" language-nginx"><code class="language-nginx">    <span class="token keyword">server</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        <span class="token keyword">listen</span> <span class="token number">80</span><span class="token punctuation">;</span>
+        <span class="token keyword">location</span> <span class="token operator">/</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            <span class="token keyword">proxy_pass</span> <span class="token keyword">http</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>localhost<span class="token punctuation">:</span><span class="token number">5000</span><span class="token punctuation">;</span>
+            <span class="token keyword">proxy_http_version</span> <span class="token number">1.1</span><span class="token punctuation">;</span>
+            <span class="token keyword">proxy_set_header</span> Upgrade <span class="token variable">$http_upgrade</span><span class="token punctuation">;</span>
+            <span class="token keyword">proxy_set_header</span> Connection keep<span class="token operator">-</span>alive<span class="token punctuation">;</span>
+            <span class="token keyword">proxy_set_header</span> Host <span class="token variable">$host</span><span class="token punctuation">;</span>
+            <span class="token keyword">proxy_cache_bypass</span> <span class="token variable">$http_upgrade</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span></code></pre>
+ <img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0803.png"><br>然后重启nginx ==》sudo nginx -s reload  </li>
+<li>查看成果<br>在浏览器中输入192.168.2.105  如图<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0901.png"></li>
 </ol>
 <blockquote>
 <p>总结:<br>过程中遇到一些问题，比如虚拟机中的centos系统中使用不了网络 这个折腾了劳资一个上午(如有碰到，第2点中有参考资料)</p>
@@ -546,9 +550,12 @@
                         
                             基于CookieBase认证的模式
 
+
+
 说明 通过vs2017新建的.net core项目默认没有添加身份认证与授权以及路由等  
 
-在StartUp.ConfigureServices中addMvc之前添加AddAuthentication
+
+在StartUp.ConfigureServices中addMvc之前添加AddAuthenticat
                         
                     </div>
                     <div class="publish-info">
@@ -599,7 +606,11 @@
                         
                             EFCore相关资料
 
-命令行CMD形式 | VS中Package Manager形式—- | —dotnet ef migrations add InitCreate    [-o 路径] | Add-Migration InitCrea
+
+
+命令行CMD形式 | VS中Package Manager形式
+
+—- | —dotnet ef migrations add InitCreate    [-o 路径] | Add-Migration Init
                         
                     </div>
                     <div class="publish-info">

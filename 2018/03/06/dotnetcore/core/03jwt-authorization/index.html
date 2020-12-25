@@ -8,11 +8,13 @@
     <meta name="description" content="基于JWT的认证模式
 
 
+
+
 在项目目录下定义一个JwtSetting实体类
 在appsettings.json中配置值
 在StartUp中设置验证方式
 在管道中加入认证
-登录JwtSecurityToken 需要添加包Microsoft.As">
+登录JwtSecurityToken 需要添加包Microsoft.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -35,6 +37,7 @@
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -335,23 +338,25 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>基于JWT的认证模式<br><a id="more"></a></p>
-<p><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/0001.png" alt></p>
+                <p>基于JWT的认证模式</p>
+<a id="more"></a>
+
+<p><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/0001.png"></p>
 <ol>
-<li>在项目目录下定义一个JwtSetting实体类<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/0101.png" alt></li>
-<li>在appsettings.json中配置值<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/0201.png" alt></li>
-<li>在StartUp中设置验证方式<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/0301.png" alt></li>
-<li>在管道中加入认证<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/0401.png" alt></li>
-<li>登录<br>JwtSecurityToken 需要添加包Microsoft.AspNetCore.Authentication.JwtBearer<br>using Microsoft.IdentityModel.Tokens;<br>using System.IdentityModel.Tokens.Jwt;<br>using System.Security.Claims;<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/0501.png" alt>  </li>
-<li>通过postman模拟登录获取token<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/0601.png" alt></li>
-<li>将token以请求头形式放到请求中发送请求<br>[注] 键:Authorization      token值记得加”bearer “<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/0701.png" alt> </li>
+<li>在项目目录下定义一个JwtSetting实体类<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/0101.png"></li>
+<li>在appsettings.json中配置值<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/0201.png"></li>
+<li>在StartUp中设置验证方式<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/0301.png"></li>
+<li>在管道中加入认证<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/0401.png"></li>
+<li>登录<br>JwtSecurityToken 需要添加包Microsoft.AspNetCore.Authentication.JwtBearer<br>using Microsoft.IdentityModel.Tokens;<br>using System.IdentityModel.Tokens.Jwt;<br>using System.Security.Claims;<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/0501.png">  </li>
+<li>通过postman模拟登录获取token<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/0601.png"></li>
+<li>将token以请求头形式放到请求中发送请求<br>[注] 键:Authorization      token值记得加”bearer “<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/0701.png"> </li>
 </ol>
 <hr>
 <p>扩展  </p>
 <ol>
-<li>使用自定义验证以及自定义头部token<br>定义MyTokenValidation 实现接口ISecurityTokenValidator<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/e0101.png" alt> </li>
-<li>在ConfigureServices方法中<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/e0201.png" alt> </li>
-<li>运行效果<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/e0301.png" alt> </li>
+<li>使用自定义验证以及自定义头部token<br>定义MyTokenValidation 实现接口ISecurityTokenValidator<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/e0101.png"> </li>
+<li>在ConfigureServices方法中<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/e0201.png"> </li>
+<li>运行效果<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/03/e0301.png"> </li>
 </ol>
 
             </div>
@@ -542,9 +547,11 @@
                         
                             IdentityServer4 资料收集
 
+
+
 IdentityServer4  endPoint查看地址：http://localhost:5000/.well-known/openId-configuration
 
-博客推荐 http://
+博客推荐 http:
                         
                     </div>
                     <div class="publish-info">
@@ -599,9 +606,12 @@ IdentityServer4  endPoint查看地址：http://localhost:5000/.well-known/openId
                         
                             基于CookieBase认证的模式
 
+
+
 说明 通过vs2017新建的.net core项目默认没有添加身份认证与授权以及路由等  
 
-在StartUp.ConfigureServices中addMvc之前添加AddAuthentication
+
+在StartUp.ConfigureServices中addMvc之前添加AddAuthenticat
                         
                     </div>
                     <div class="publish-info">
