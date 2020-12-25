@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       - run: npm i
-      - run: npm run generate
+      - run: npm run build
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
