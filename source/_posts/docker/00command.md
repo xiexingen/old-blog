@@ -1,8 +1,11 @@
 ---
 title: Docker常用命令
-date: 2018-05-28 09:10:10 
-categories: ['Docker']
-tags: ['Docker']
+categories:
+  - Docker
+tags:
+  - Docker
+abbrlink: 7569
+date: 2018-05-28 09:10:10
 ---
 
 Docker常用命令
@@ -39,7 +42,7 @@ docker run -it -v /docker/data:/config [--privileged=true] 表示将宿主机中
 --volumns-form containerId|name  表示容器数据卷从name容器同步  
 > docker run -it --name xxg2 --volumns-from xxg1 nginx
 
-::: warning 温馨提示
+warning 温馨提示
 * docker run -p 8001:80   &nbsp;&nbsp;--运行 指定端口 8001外部端口  80表示内部端口
 * docker run -d     		&nbsp;&nbsp;--detach 还可以继续操作 不会阻塞
 * docker run --name		&nbsp;&nbsp;--运行的docker镜像的名称
@@ -56,10 +59,15 @@ docker run -it -v /docker/data:/config [--privileged=true] 表示将宿主机中
  docker logs --tail 20 -f gitlab 查看gitlab最近20条的日志
  docker logs --since 30s -f gitlab 查看gitlab最近30s的日志
 
-* docker inspect --format='{{.LogPath}}' <容器ID> 查看日志文件位置  
+* docker inspect 查看日志文件位置  
+``` bash
 docker inspect --format='{{.LogPath}}' mysql  
+```
 * 清空docker实例的日志内容  
+
+``` bash
 $(docker inspect --format='{{.LogPath}}' <容器ID>)
+```
 
 * 退出 -it  
 exit 或者ctrl+p+q

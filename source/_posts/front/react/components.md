@@ -1,8 +1,12 @@
 ---
 title: React社区精选组件
-date: 2018-12-10 09:10:10 
-categories: ['React']
-tags: ['前端','React']
+categories:
+  - React
+tags:
+  - 前端
+  - React
+abbrlink: 4184
+date: 2018-12-10 09:10:10
 ---
 
 ReactReact社区精选组件

@@ -1,8 +1,11 @@
 ---
 title: Docker 安装MySql
-date: 2018-06-02 09:20:10 
-categories: ['Docker']
-tags: ['Docker']
+categories:
+  - Docker
+tags:
+  - Docker
+abbrlink: 63262
+date: 2018-06-02 09:20:10
 ---
 
 Docker 安装MySql
