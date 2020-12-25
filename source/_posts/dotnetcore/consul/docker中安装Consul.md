@@ -1,8 +1,12 @@
 ---
 title: Docker中安装Consul
-date: 2018-09-04 21:48:20 
-categories: ['.NetCore']
-tags: ['Consul','.NetCore微服务']
+categories:
+  - .NetCore
+tags:
+  - Consul
+  - .NetCore
+abbrlink: 48510
+date: 2018-09-04 21:48:20
 ---
 
 Docker中安装Consul
