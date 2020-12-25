@@ -1,25 +1,23 @@
-name: Deploy CI
+name: Publish
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - 'v*'
 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@master
       - run: npm i
-      # - run: yarn run tsc
+      - run: npm run generate
       - name: Build and Deploy
-        uses: JamesIves/github-pages-deploy-action@master
-        env:
-          CI: true
-          PROGRESS: none
-          GIT_CONFIG_NAME: xiexingen
-          GIT_CONFIG_EMAIL: 1002275364@qq.com
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: 'docs'
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: docs # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
