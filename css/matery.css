@@ -1078,7 +1078,7 @@ table tr:nth-child(2n), thead {
     padding: 0 14px;
     display: inline-block;
     height: 38px;
-    min-width: 80px;
+    min-width: 120px;
     line-height: 39px;
     font-size: 1rem;
     font-weight: 500;
