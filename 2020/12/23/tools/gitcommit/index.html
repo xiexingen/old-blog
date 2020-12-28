@@ -4,20 +4,19 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Nginx开篇, 程序有Bug">
-    <meta name="description" content="Docker基础开篇
-centos 7安装nginx
-更新yum
-yum -y update  
+    <meta name="keywords" content="git提交规范, 程序有Bug">
+    <meta name="description" content="git提交规范
 
 
-通过yum安装
-yum install epel-release
-yum install nginx 
+Commit Message 格式&amp;lt;type&gt;(&amp;lt;scope&gt;): &amp;lt;subject&gt;
+&amp;lt;空一行&gt;
+&amp;lt;body&gt;
+&amp;lt;空一行&gt;
+&amp;lt;footer&gt;
 
+&amp;lt;type&amp;gt;
 
-配置nginx自动启动
-sys">
+fe">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -25,7 +24,7 @@ sys">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Nginx开篇 | 程序有Bug技术栈</title>
+    <title>git提交规范 | 程序有Bug技术栈</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -273,13 +272,13 @@ sys">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://qiniu.xxgtalk.cn/blog/images/background/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('http://qiniu.xxgtalk.cn/blog/images/background/featureimages/13.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Nginx开篇
+                        git提交规范
                     </div>
                 </div>
             </div>
@@ -301,8 +300,8 @@ sys">
                     
                     <div class="article-tag">
                         
-                            <a href="../../../../../tags/Nginx/" target="_blank">
-                                <span class="chip bg-color">Nginx</span>
+                            <a href="../../../../../tags/%E5%B7%A5%E5%85%B7/" target="_blank">
+                                <span class="chip bg-color">工具</span>
                             </a>
                         
                     </div>
@@ -313,8 +312,8 @@ sys">
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="../../../../../categories/Nginx/" class="post-category" target="_blank">
-                                Nginx
+                            <a href="../../../../../categories/%E5%B7%A5%E5%85%B7/" class="post-category" target="_blank">
+                                工具
                             </a>
                         
                     </div>
@@ -325,7 +324,7 @@ sys">
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-11-30
+                    2020-12-23
                 </div>
 
                 
@@ -341,102 +340,118 @@ sys">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Docker基础开篇<br><a id="more"></a></p>
-<h2 id="centos-7安装nginx"><a href="#centos-7安装nginx" class="headerlink" title="centos 7安装nginx"></a>centos 7安装nginx</h2><ul>
-<li><p>更新yum</p>
-<pre class=" language-bash"><code class="language-bash">yum -y update  
-</code></pre>
+                <p>git提交规范</p>
+<a id="more"></a>
+
+<h1 id="Commit-Message-格式"><a href="#Commit-Message-格式" class="headerlink" title="Commit Message 格式"></a>Commit Message 格式</h1><pre class=" language-bash"><code class="language-bash"><span class="token operator">&lt;</span>type<span class="token operator">></span><span class="token punctuation">(</span><span class="token operator">&lt;</span>scope<span class="token operator">></span><span class="token punctuation">)</span>: <span class="token operator">&lt;</span>subject<span class="token operator">></span>
+<span class="token operator">&lt;</span>空一行<span class="token operator">></span>
+<span class="token operator">&lt;</span>body<span class="token operator">></span>
+<span class="token operator">&lt;</span>空一行<span class="token operator">></span>
+<span class="token operator">&lt;</span>footer<span class="token operator">></span></code></pre>
+<ul>
+<li><p><code>&lt;type&gt;</code></p>
+<ul>
+<li>feat: 新功能（feature）</li>
+<li>fix: 修补bug</li>
+<li>docs: 文档（documentation）</li>
+<li>style: 格式（不影响代码运行的变动）</li>
+<li>refactor: 重构（即不是新增功能，也不是修改bug的代码变动）</li>
+<li>perf: 更改代码以提高性能</li>
+<li>test: 添加测试</li>
+<li>chore: 构建过程或辅助工具的变动</li>
+</ul>
 </li>
-<li><p>通过yum安装</p>
-<pre class=" language-bash"><code class="language-bash">yum <span class="token function">install</span> epel-release
-yum <span class="token function">install</span> nginx 
-</code></pre>
+<li><p><code>&lt;scope&gt;</code> 选填项，用来说明本次提交的影响的范围，如 $location, $browser。当更改影响的范围不止一个时，可以使用 *</p>
 </li>
-<li><p>配置nginx自动启动</p>
-<pre class=" language-bash"><code class="language-bash">systemctl start nginx
-systemctl <span class="token function">enable</span> nginx
-systemctl status nginx
-</code></pre>
+<li><p><code>&lt;subject&gt;</code>: 用来简要描述本次改动，尽量遵循:</p>
+<ul>
+<li>以动词开头，使用第一人称现在时，比如change，而不是changed或changes</li>
+<li>首字母不要大写</li>
+<li>结尾不用句号 .</li>
+</ul>
 </li>
-<li><p>配置防火墙<br><code>bash
-firewall-cmd --zone=public --permanent --add-service=http
-firewall-cmd --zone=public --permanent --add-service=https
-firewall-cmd --reload</code> bash</p>
+<li><p><code>&lt;body&gt;</code> : 对 <code>&lt;subject&gt;</code> 的描述</p>
+</li>
+<li><p><code>&lt;footer&gt;</code>: 主要放置不兼容变更和关闭Issue的信息</p>
+<ul>
+<li>不兼容变更: 以 BREAKING CHANGE: 开头，描述变动、变动理由和迁移方法。</li>
+<li>关闭Issue: 如close #666</li>
+</ul>
 </li>
 </ul>
-<h2 id="nginx-配置文件"><a href="#nginx-配置文件" class="headerlink" title="nginx 配置文件"></a>nginx 配置文件</h2><ul>
-<li><p>worker_processer<br>配置支持的并发数量</p>
+<h2 id="特殊格式"><a href="#特殊格式" class="headerlink" title="特殊格式"></a>特殊格式</h2><ul>
+<li>Revert: 此外如果需要撤销之前的Commit，那么本次Commit Message中必须以 revert： 开头，后面紧跟前面描述的Header部分，格式不变。并且，<body>部分的格式也是固定的，必须要记录撤销前Commit的SHA值。</li>
+</ul>
+<h1 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h1><ul>
+<li><p>feat</p>
+<pre class=" language-bash"><code class="language-bash">feat<span class="token punctuation">(</span><span class="token variable">$browser</span><span class="token punctuation">)</span>: onUrlChange event <span class="token punctuation">(</span>popstate/hashchange/polling<span class="token punctuation">)</span>
+
+Added new event to <span class="token variable">$browser</span><span class="token keyword">:</span>
+- forward popstate event <span class="token keyword">if</span> available
+- forward hashchange event <span class="token keyword">if</span> popstate not available
+- <span class="token keyword">do</span> polling when neither popstate nor hashchange available
+
+Breaks <span class="token variable">$browser</span>.onHashChange, <span class="token function">which</span> was removed <span class="token punctuation">(</span>use onUrlChange instead<span class="token punctuation">)</span></code></pre>
+<pre class=" language-bash"><code class="language-bash">feat<span class="token punctuation">(</span>directive<span class="token punctuation">)</span>: ng:disabled, ng:checked, ng:multiple, ng:readonly, ng:selected
+
+New directives <span class="token keyword">for</span> proper binding these attributes <span class="token keyword">in</span> older browsers <span class="token punctuation">(</span>IE<span class="token punctuation">)</span>.
+Added coresponding description, live examples and e2e tests.
+
+Closes <span class="token comment" spellcheck="true">#351</span></code></pre>
 </li>
-<li><p>events</p>
-<pre class=" language-bash"><code class="language-bash">配置网络连接数量
-events:<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-  worker_connections:1024 
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-</code></pre>
-</li>
-<li><p>http</p>
+<li><p>fix</p>
+<pre class=" language-bash"><code class="language-bash">fix<span class="token punctuation">(</span><span class="token variable">$compile</span><span class="token punctuation">)</span>: couple of unit tests <span class="token keyword">for</span> IE9
+
+Older IEs serialize html uppercased, but IE9 does not<span class="token punctuation">..</span>.
+Would be better to <span class="token function">expect</span> <span class="token keyword">case</span> insensitive, unfortunately jasmine does
+not allow to user regexps <span class="token keyword">for</span> throw expectations.
+
+Closes <span class="token comment" spellcheck="true">#392</span>
+Breaks foo.bar api, foo.baz should be used instead</code></pre>
 </li>
 </ul>
-<h2 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h2><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 基础案例</span>
-server <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-    listen 80<span class="token punctuation">;</span>
-    server_name test.xxgtalk.cn<span class="token punctuation">;</span>
+<ul>
+<li><p>docs</p>
+<pre class=" language-bash"><code class="language-bash">docs<span class="token punctuation">(</span>guide<span class="token punctuation">)</span>: updated fixed docs from Google Docs
 
-    <span class="token comment" spellcheck="true"># listen [::]:80 ipv6only=on;</span>
-    <span class="token comment" spellcheck="true"># root /var/www/mywebsite2;</span>
-    <span class="token comment" spellcheck="true"># index index.html index.htm;</span>
+Couple of typos fixed:
+- indentation
+- batchLogbatchLog -<span class="token operator">></span> batchLog
+- start periodic checking
+- missing brace</code></pre>
+<pre class=" language-bash"><code class="language-bash">docs: fix grammar
+docs: corrections and further clarifications 
+docs: update broken <span class="token function">link</span>
+docs<span class="token punctuation">(</span>README<span class="token punctuation">)</span>: update version number
+docs<span class="token punctuation">(</span>README<span class="token punctuation">)</span>: place badge
+docs<span class="token punctuation">(</span>inputs<span class="token punctuation">)</span>: remove redundant defaults</code></pre>
+</li>
+<li><p>style</p>
+<pre class=" language-bash"><code class="language-bash">style: fix table indentation
+style<span class="token punctuation">(</span><span class="token variable">$location</span><span class="token punctuation">)</span>: add couple of missing semi colons</code></pre>
+</li>
+<li><p>refactor</p>
+<pre class=" language-bash"><code class="language-bash">refactor: remove unnecessary object destructuring
+refactor: use <span class="token variable"><span class="token variable">`</span>Object.entries<span class="token variable">`</span></span> rather than <span class="token variable"><span class="token variable">`</span>Object.keys<span class="token variable">`</span></span></code></pre>
+</li>
+<li><p>perf</p>
+<pre class=" language-bash"><code class="language-bash">perf<span class="token punctuation">(</span>*<span class="token punctuation">)</span>: Update network configuration</code></pre>
+</li>
+<li><p>test</p>
+<pre class=" language-bash"><code class="language-bash">test: clarify variables name
+test<span class="token punctuation">(</span>testRelease<span class="token punctuation">)</span>: <span class="token keyword">set</span> schedule <span class="token function">test</span></code></pre>
+</li>
+<li><p>chore</p>
+<pre class=" language-bash"><code class="language-bash">chore<span class="token punctuation">(</span>package<span class="token punctuation">)</span>: update xo to version 0.25.0
+chore<span class="token punctuation">(</span>package<span class="token punctuation">)</span>: remove commitizen from our dependencies
+chore<span class="token punctuation">(</span>*<span class="token punctuation">)</span>: transfer repo to cycjimmy</code></pre>
+</li>
+<li><p>revert</p>
+<pre class=" language-bash"><code class="language-bash">revert: <span class="token string">"fix: do not convert ssh <span class="token variable"><span class="token variable">`</span>repositoryUrl<span class="token variable">`</span></span> to https"</span>
 
-    location / <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-        proxy_pass http://localhost:9001<span class="token punctuation">;</span>
-        proxy_http_version 1.1<span class="token punctuation">;</span>
-        proxy_set_header Upgrade <span class="token variable">$http_upgrade</span><span class="token punctuation">;</span>
-        proxy_set_header Connection <span class="token string">'upgrade'</span><span class="token punctuation">;</span>
-        proxy_set_header Host <span class="token variable">$host</span><span class="token punctuation">;</span>
-        proxy_cache_bypass <span class="token variable">$http_upgrade</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-    <span class="token comment" spellcheck="true"># error_page 404 /404.html;</span>
-    <span class="token comment" spellcheck="true"># error_page 500 502 503 504 /50x.html;</span>
-    <span class="token comment" spellcheck="true"># location = /50x.html &amp;#123;</span>
-    <span class="token comment" spellcheck="true">#     root /var/www/mywebsite1;</span>
-    <span class="token comment" spellcheck="true"># &amp;#125;</span>
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; </span>
-
-</code></pre>
-<h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 负载均衡案例</span>
-upstream myserver <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
- server 192.168.20.23:8080<span class="token punctuation">;</span>
- server 192.168.20.23:8081<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-server <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-    listen 80<span class="token punctuation">;</span>
-    server_name test.xxgtalk.cn<span class="token punctuation">;</span>
-
-    <span class="token comment" spellcheck="true"># listen [::]:80 ipv6only=on;</span>
-    <span class="token comment" spellcheck="true"># root /var/www/mywebsite2;</span>
-    <span class="token comment" spellcheck="true"># index index.html index.htm;</span>
-
-    location / <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
-        proxy_pass http://myserver<span class="token punctuation">;</span>
-        proxy_http_version 1.1<span class="token punctuation">;</span>
-        proxy_set_header Upgrade <span class="token variable">$http_upgrade</span><span class="token punctuation">;</span>
-        proxy_set_header Connection <span class="token string">'upgrade'</span><span class="token punctuation">;</span>
-        proxy_set_header Host <span class="token variable">$host</span><span class="token punctuation">;</span>
-        proxy_cache_bypass <span class="token variable">$http_upgrade</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-    <span class="token comment" spellcheck="true"># error_page 404 /404.html;</span>
-    <span class="token comment" spellcheck="true"># error_page 500 502 503 504 /50x.html;</span>
-    <span class="token comment" spellcheck="true"># location = /50x.html &amp;#123;</span>
-    <span class="token comment" spellcheck="true">#     root /var/www/mywebsite1;</span>
-    <span class="token comment" spellcheck="true"># &amp;#125;</span>
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; </span>
-</code></pre>
-<h2 id="动静分离-跟基础类似"><a href="#动静分离-跟基础类似" class="headerlink" title="动静分离(跟基础类似)"></a>动静分离(跟基础类似)</h2><h2 id="高可用"><a href="#高可用" class="headerlink" title="高可用"></a>高可用</h2><p><img src="http://qiniu.xxgtalk.cn/blog/images/20191130225646.png" alt="20191130225646.png"></p>
-<ol>
-<li>需要在轮胎服务器安装nginx</li>
-<li>需要再两台服务器上安装keepalived<br><code>`</code> bash<br>yum install keepalived -y</li>
-</ol>
-<h2 id="修改每台机器上的keepalived配置文件"><a href="#修改每台机器上的keepalived配置文件" class="headerlink" title="修改每台机器上的keepalived配置文件"></a>修改每台机器上的keepalived配置文件</h2><h2 id="检测是否安装成功"><a href="#检测是否安装成功" class="headerlink" title="检测是否安装成功"></a>检测是否安装成功</h2><p>rpm -q -q keepalived</p>
-<h2 id="目录位置"><a href="#目录位置" class="headerlink" title="目录位置"></a>目录位置</h2><p>/etc/keepalived<br><code>`</code></p>
+This reverts commit b895231.</code></pre>
+</li>
+</ul>
 
             </div>
             <hr/>
@@ -608,11 +623,12 @@ server <span class="token operator">&amp;</span><span class="token comment" spel
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6 overflow-policy" data-aos="fade-up">
+        <div class="article col s12 m6 overflow-policy" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="../../../../../2020/12/23/tools/gitcommit/">
+                <a href="">
                     <div class="card-image">
                         
                         
@@ -639,9 +655,9 @@ fe
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-12-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-12-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -654,6 +670,7 @@ fe
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -672,34 +689,43 @@ fe
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="../../../../10/05/dotnetcore/signalr/09-todo/">
+                <a href="../../../../../2019/11/30/nginx/01-introduct/">
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/9.jpg" class="responsive-img" alt=".net core 3.0 Signalr - 09 待改进&交流">
+                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/23.jpg" class="responsive-img" alt="Nginx开篇">
                         
-                        <span class="card-title">.net core 3.0 Signalr - 09 待改进&交流</span>
+                        <span class="card-title">Nginx开篇</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            .net core 3.0 Signalr - 09 待改进&amp;交流
+                            Docker基础开篇
+centos 7安装nginx
+更新yum
+yum -y update  
 
 
-个人心得写博客真的比写代码累，膜拜那些坚持写博客的大佬！有时候零散的片段比较多，没写之前感觉有千千万万要写的东西，实际写的时候发现， 好像这个没啥说的，然后就帖
+通过yum安装
+yum install epel-release
+yum install nginx 
+
+
+配置nginx自动启动
+sys
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-10-05
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-11-30
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../../../../../categories/NetCore/" class="post-category" target="_blank">
-                                    .NetCore
+                            <a href="../../../../../categories/Nginx/" class="post-category" target="_blank">
+                                    Nginx
                                 </a>
                             
                             
@@ -709,8 +735,8 @@ fe
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../../../../../tags/Signalr/" target="_blank">
-                        <span class="chip bg-color">Signalr</span>
+                    <a href="../../../../../tags/Nginx/" target="_blank">
+                        <span class="chip bg-color">Nginx</span>
                     </a>
                     
                 </div>
