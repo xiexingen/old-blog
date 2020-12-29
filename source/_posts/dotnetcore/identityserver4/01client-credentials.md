@@ -1,9 +1,13 @@
 ---
 title: IdentityServer4-ClientCredentials模式
-date: 2018-03-10 21:01:01
 author: 谢新根
-categories: ['.NetCore']
-tags: ['.NetCore','IdentityServer4']
+categories:
+  - .NetCore
+tags:
+  - .NetCore
+  - IdentityServer4
+abbrlink: 27943
+date: 2018-03-10 21:01:01
 ---
 
 IdentityServer4-ClientCredentials模式

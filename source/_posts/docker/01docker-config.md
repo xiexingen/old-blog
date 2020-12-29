@@ -1,8 +1,11 @@
 ---
 title: Docker安装及配置加速镜像
-date: 2018-05-30 09:15:08 
-categories: ['Docker']
-tags: ['Docker']
+categories:
+  - Docker
+tags:
+  - Docker
+abbrlink: 20794
+date: 2018-05-30 09:15:08
 ---
 
 Docker安装及配置加速镜像

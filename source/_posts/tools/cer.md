@@ -1,8 +1,11 @@
 ---
 title: Openssl生成免费证书
-date: 2018-05-16 09:10:10 
-categories: ['工具']
-tags: ['工具']
+categories:
+  - 工具
+tags:
+  - 工具
+abbrlink: 31096
+date: 2018-05-16 09:10:10
 ---
 
 使用Openssl生成免费证书

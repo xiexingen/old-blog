@@ -1,9 +1,12 @@
 ---
 title: 基于JWT的认证模式
-date: 2018-03-06 21:01:01
 author: 谢新根
-categories: ['.NetCore']
-tags: ['.NetCore']
+categories:
+  - .NetCore
+tags:
+  - .NetCore
+abbrlink: 51645
+date: 2018-03-06 21:01:01
 ---
 
 基于JWT的认证模式

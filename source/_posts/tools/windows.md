@@ -1,8 +1,11 @@
 ---
 title: windows使用相关
+categories:
+  - 工具
+tags:
+  - 工具
+abbrlink: 41253
 date: 2018-05-20 09:10:15
-categories: ['工具']
-tags: ['工具']
 ---
 
 #### window技巧-长期更新

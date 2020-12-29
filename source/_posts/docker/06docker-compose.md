@@ -1,7 +1,9 @@
 ---
 title: 使用docker-compose
-date: 2018-06-04 10:01:10 
-categories: ['Docker']
+categories:
+  - Docker
+abbrlink: 4668
+date: 2018-06-04 10:01:10
 img:
 ---
 

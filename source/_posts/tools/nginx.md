@@ -1,8 +1,11 @@
 ---
 title: nginx笔记
-date: 2018-05-16 09:10:12 
-categories: ['工具']
-tags: ['工具']
+categories:
+  - 工具
+tags:
+  - 工具
+abbrlink: 25491
+date: 2018-05-16 09:10:12
 ---
 
 linux安装nginx

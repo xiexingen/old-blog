@@ -1,8 +1,11 @@
 ---
 title: Docker安装RabbitMQ
-date: 2018-06-08 11:30:10 
-categories: ['Docker']
-tags: ['Docker']
+categories:
+  - Docker
+tags:
+  - Docker
+abbrlink: 11659
+date: 2018-06-08 11:30:10
 ---
 
 Docker安装RabbitMQ

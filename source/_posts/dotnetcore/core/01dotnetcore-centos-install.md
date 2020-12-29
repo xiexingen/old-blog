@@ -1,9 +1,12 @@
 ---
 title: .NetCore+centos环境搭建手摸手实战
-date: 2018-03-03 21:01:01
 author: 谢新根
-categories: ['.NetCore']
-tags: ['.NetCore']
+categories:
+  - .NetCore
+tags:
+  - .NetCore
+abbrlink: 36628
+date: 2018-03-03 21:01:01
 ---
 
 .NetCore+centos环境搭建手摸手实战

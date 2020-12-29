@@ -1,8 +1,11 @@
 ---
 title: office笔记
+categories:
+  - 工具
+tags:
+  - 工具
+abbrlink: 51824
 date: 2018-05-16 09:10:13
-categories: ['工具']
-tags: ['工具']
 ---
 
 office笔记-长期更新

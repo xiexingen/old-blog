@@ -1,9 +1,9 @@
 ---
 title: vscode下调试es6编写的npm包
 categories:
-  - 前端-其他
+  - 前端
 tags:
-  - 前端-其他
+  - 前端
 comments: false
 abbrlink: 100
 date: 2018-09-22 21:10:10

@@ -1,8 +1,11 @@
 ---
 title: 使用travis自动部署到github
+categories:
+  - 工具
+tags:
+  - 工具
+abbrlink: 207
 date: 2019-03-16 09:10:15
-categories: ['工具']
-tags: ['工具']
 ---
 
 

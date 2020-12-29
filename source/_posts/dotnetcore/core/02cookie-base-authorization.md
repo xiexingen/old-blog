@@ -1,9 +1,12 @@
 ---
 title: 基于CookieBase认证的模式
-date: 2018-03-05 21:01:01
 author: 谢新根
-categories: ['.NetCore']
-tags: ['.NetCore']
+categories:
+  - .NetCore
+tags:
+  - .NetCore
+abbrlink: 31048
+date: 2018-03-05 21:01:01
 ---
 
 基于CookieBase认证的模式

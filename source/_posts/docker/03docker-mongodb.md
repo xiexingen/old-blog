@@ -1,8 +1,11 @@
 ---
 title: Docker安装mongodb
-date: 2018-06-01 09:15:10 
-categories: ['Docker']
-tags: ['Docker']
+categories:
+  - Docker
+tags:
+  - Docker
+abbrlink: 30287
+date: 2018-06-01 09:15:10
 ---
 
 Docker安装mongodb

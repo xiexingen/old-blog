@@ -1,9 +1,12 @@
 ---
 title: DotNetCore 备忘录
-date: 2018-03-01 19:01:01
 author: 谢新根
-categories: ['.NetCore']
-tags: ['.NetCore']
+categories:
+  - .NetCore
+tags:
+  - .NetCore
+abbrlink: 13728
+date: 2018-03-01 19:01:01
 ---
 
 DotNetCore 备忘录

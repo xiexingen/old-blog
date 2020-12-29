@@ -1,9 +1,13 @@
 ---
 title: IdentityServer4-使用密码授权模式
-date: 2018-03-11 21:01:01
 author: 谢新根
-categories: ['.NetCore']
-tags: ['.NetCore','IdentityServer4']
+categories:
+  - .NetCore
+tags:
+  - .NetCore
+  - IdentityServer4
+abbrlink: 60051
+date: 2018-03-11 21:01:01
 ---
 
 IdentityServer4-使用密码授权模式

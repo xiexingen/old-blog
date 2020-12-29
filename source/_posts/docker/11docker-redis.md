@@ -1,8 +1,11 @@
 ---
 title: Docker安装redis
-date: 2018-06-06 11:15:10 
-categories: ['Docker']
-tags: ['Docker']
+categories:
+  - Docker
+tags:
+  - Docker
+abbrlink: 25795
+date: 2018-06-06 11:15:10
 ---
 
 Docker下安装redis

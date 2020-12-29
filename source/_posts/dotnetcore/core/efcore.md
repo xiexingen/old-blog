@@ -1,9 +1,12 @@
 ---
 title: EFCore相关资料
-date: 2018-03-01 21:01:01
 author: 谢新根
-categories: ['.NetCore']
-tags: ['.NetCore']
+categories:
+  - .NetCore
+tags:
+  - .NetCore
+abbrlink: 18207
+date: 2018-03-01 21:01:01
 ---
 EFCore相关资料
 <!-- more -->

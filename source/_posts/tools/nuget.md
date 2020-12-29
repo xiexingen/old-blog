@@ -1,8 +1,11 @@
 ---
 title: 通过dotnet命令上传自己的nuget包
+categories:
+  - 工具
+tags:
+  - 工具
+abbrlink: 20038
 date: 2018-05-16 09:10:13
-categories: ['工具']
-tags: ['工具']
 ---
 
 通过dotnet命令上传自己的nuget包

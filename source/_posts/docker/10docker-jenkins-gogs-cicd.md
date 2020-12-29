@@ -1,8 +1,11 @@
 ---
 title: ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成
-date: 2018-06-06 11:01:10 
-categories: ['Docker']
-tags: ['Docker']
+categories:
+  - Docker
+tags:
+  - Docker
+abbrlink: 52714
+date: 2018-06-06 11:01:10
 ---
 
 ASP.NET Core + Docker + Jenkins + gogs + CentOS 从零开始搭建持续集成

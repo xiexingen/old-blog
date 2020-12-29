@@ -1,9 +1,12 @@
 ---
 title: NetCore相关框架收集
-date: 2018-02-27 21:01:01
 author: 谢新根
-categories: ['.NetCore']
-tags: ['.NetCore']
+categories:
+  - .NetCore
+tags:
+  - .NetCore
+abbrlink: 4879
+date: 2018-02-27 21:01:01
 ---
 
 .NetCore相关框架收集

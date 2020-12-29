@@ -1,7 +1,8 @@
 ---
 title: 开通自己的博客
-date: 2016-04-01 08:01:01
 author: 谢新根
+abbrlink: 36502
+date: 2016-04-01 08:01:01
 ---
 
 从hexo切换到vuepress又切回hexo啦！！！

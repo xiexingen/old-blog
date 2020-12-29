@@ -5,6 +5,7 @@ categories:
   - .NetCore
 tags:
   - Signalr
+  - .NetCore
 abbrlink: 34744
 ---
 

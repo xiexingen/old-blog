@@ -1,8 +1,13 @@
 ---
 title: umi文件拆分
-date: 2018-11-11 11:35:10 
-categories: ['React']
-tags: ['前端','React','umi']
+categories:
+  - React
+tags:
+  - 前端
+  - React
+  - umi
+abbrlink: 41361
+date: 2018-11-11 11:35:10
 ---
 
 umi文件拆分

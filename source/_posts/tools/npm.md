@@ -1,8 +1,11 @@
 ---
 title: npm前端项目
-date: 2018-05-16 09:10:12 
-categories: ['工具']
-tags: ['工具']
+categories:
+  - 工具
+tags:
+  - 工具
+abbrlink: 15805
+date: 2018-05-16 09:10:12
 ---
 
 npm相关前端操作
