@@ -9,10 +9,11 @@
 
 
 
+
+
 关键字
 说明
 例子
-
 
 
 
@@ -23,7 +24,7 @@ FROM debian:buster-slim
 
 MAINTAINER
 镜像维护着的项目和邮箱地址
-MAINTAINER The CentOS Pro">
+MAINTAINER The CentOS Pr">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -347,73 +348,78 @@ MAINTAINER The CentOS Pro">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Dockerfile解说<br><a id="more"></a></p>
+                <p>Dockerfile解说</p>
+<a id="more"></a>
+
 <table>
 <thead>
 <tr>
-<th style="text-align:left">关键字</th>
-<th style="text-align:left">说明</th>
-<th style="text-align:left">例子</th>
+<th align="left">关键字</th>
+<th align="left">说明</th>
+<th align="left">例子</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">FROM</td>
-<td style="text-align:left">以此为基础来构建</td>
-<td style="text-align:left">FROM debian:buster-slim</td>
+<tbody><tr>
+<td align="left">FROM</td>
+<td align="left">以此为基础来构建</td>
+<td align="left">FROM debian:buster-slim</td>
 </tr>
 <tr>
-<td style="text-align:left">MAINTAINER</td>
-<td style="text-align:left">镜像维护着的项目和邮箱地址</td>
-<td style="text-align:left">MAINTAINER The CentOS Project <a href="mailto:&#x78;&#x78;&#x78;&#x78;&#64;&#99;&#101;&#x6e;&#x74;&#111;&#115;&#46;&#x6f;&#114;&#x67;">&#x78;&#x78;&#x78;&#x78;&#64;&#99;&#101;&#x6e;&#x74;&#111;&#115;&#46;&#x6f;&#114;&#x67;</a></td>
+<td align="left">MAINTAINER</td>
+<td align="left">镜像维护着的项目和邮箱地址</td>
+<td align="left">MAINTAINER The CentOS Project <a href="mailto:&#120;&#120;&#120;&#x78;&#64;&#99;&#101;&#110;&#x74;&#111;&#115;&#x2e;&#111;&#114;&#103;">&#120;&#120;&#120;&#x78;&#64;&#99;&#101;&#110;&#x74;&#111;&#115;&#x2e;&#111;&#114;&#103;</a></td>
 </tr>
 <tr>
-<td style="text-align:left">RUN</td>
-<td style="text-align:left">容器构建时运行的命令</td>
+<td align="left">RUN</td>
+<td align="left">容器构建时运行的命令</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">EXPOSE</td>
-<td style="text-align:left">当前容器对外暴露的端口</td>
+<td align="left">EXPOSE</td>
+<td align="left">当前容器对外暴露的端口</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">WORKDIR</td>
-<td style="text-align:left">指定容器创建后，终端默认进来的工作目录</td>
+<td align="left">WORKDIR</td>
+<td align="left">指定容器创建后，终端默认进来的工作目录</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">ENV</td>
-<td style="text-align:left">用来在构建镜像过程中设置环境变量</td>
+<td align="left">ENV</td>
+<td align="left">用来在构建镜像过程中设置环境变量</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">ADD</td>
-<td style="text-align:left">将宿主机目录下的文件拷贝到镜像且ADD命令会自动处理URL和解压tar压缩包</td>
-<td style="text-align:left">ADD c48-docker.tar.xz /</td>
+<td align="left">ADD</td>
+<td align="left">将宿主机目录下的文件拷贝到镜像且ADD命令会自动处理URL和解压tar压缩包</td>
+<td align="left">ADD c48-docker.tar.xz /</td>
 </tr>
 <tr>
-<td style="text-align:left">COPY</td>
-<td style="text-align:left">跟ADD类似，但是不会解压</td>
-<td style="text-align:left">copy src desc、copy [“src”,”desc”]</td>
+<td align="left">COPY</td>
+<td align="left">跟ADD类似，但是不会解压</td>
+<td align="left">copy src desc、copy [“src”,”desc”]</td>
 </tr>
 <tr>
-<td style="text-align:left">VOLUME</td>
-<td style="text-align:left">容器数据卷，用于数据保存和持久化工作</td>
-<td style="text-align:left">VOLUME [“/xxg-data1”,”/xxg-data2”]</td>
+<td align="left">VOLUME</td>
+<td align="left">容器数据卷，用于数据保存和持久化工作</td>
+<td align="left">VOLUME [“/xxg-data1”,”/xxg-data2”]</td>
 </tr>
 <tr>
-<td style="text-align:left">CMD</td>
-<td style="text-align:left">指定一个容器启动时要运行的命令，Dockerfile中可以有多个CMD指令，<strong><em>但只有最后一个生效</em></strong>，CMD会被docker run之后的参数替换</td>
-<td style="text-align:left">CMD /bin/bash </td>
+<td align="left">CMD</td>
+<td align="left">指定一个容器启动时要运行的命令，Dockerfile中可以有多个CMD指令，**<em>但只有最后一个生效**</em>，CMD会被docker run之后的参数替换</td>
+<td align="left">CMD /bin/bash</td>
 </tr>
 <tr>
-<td style="text-align:left">ENTRYPOINT</td>
-<td style="text-align:left">指定一个容器启动时要运行的命令，和CMD一样，都是指定容器启动程序及参数</td>
-<td style="text-align:left">ENTRYPOINT netcore.dll</td>
+<td align="left">ENTRYPOINT</td>
+<td align="left">指定一个容器启动时要运行的命令，和CMD一样，都是指定容器启动程序及参数</td>
+<td align="left">ENTRYPOINT netcore.dll</td>
 </tr>
 <tr>
-<td style="text-align:left">ONBUILD</td>
-<td style="text-align:left">当构建一个被继承的Dockerfile时运行命令，父镜像在被子继承后父镜像的onbuild被触发</td>
+<td align="left">ONBUILD</td>
+<td align="left">当构建一个被继承的Dockerfile时运行命令，父镜像在被子继承后父镜像的onbuild被触发</td>
+<td align="left"></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <pre class=" language-Dockerfile"><code class="language-Dockerfile"># 案例一  构建一个自己的centos系统
 
 FROM centos
@@ -426,8 +432,7 @@ RUN yum -y install net-tools
 
 EXPORT 80
 
-CMD /bin/bash 
-</code></pre>
+CMD /bin/bash </code></pre>
 
             </div>
             <hr/>
@@ -603,32 +608,31 @@ CMD /bin/bash
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="../01docker-config/">
+                <a href="../../../../06/01/docker/03docker-mongodb/">
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/7.jpg" class="responsive-img" alt="Docker安装及配置加速镜像">
+                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/6.jpg" class="responsive-img" alt="Docker安装mongodb">
                         
-                        <span class="card-title">Docker安装及配置加速镜像</span>
+                        <span class="card-title">Docker安装mongodb</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Docker安装及配置加速镜像
+                            Docker安装mongodb
 
 
 
-个人阿里云加速镜像个人地址&nbsp; https://noe4mlw6.mirror.aliyuncs.com
-
-
-CentOS 7 (使用yum进行安装)如果之前安装过】先卸载依赖  
-  sudo
+配置好docker的加速镜像[参考02Docker安装及配置]  
+docker pull mongo 拉去mongo镜像  
+启动docker实例  
+方式一docker run -d -p 2701
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-05-30
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-06-01
                         </span>
                         <span class="publish-author">
                             
@@ -660,47 +664,32 @@ CentOS 7 (使用yum进行安装)如果之前安装过】先卸载依赖
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="../../../28/docker/00command/">
+                <a href="../01docker-config/">
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/23.jpg" class="responsive-img" alt="Docker常用命令">
+                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/7.jpg" class="responsive-img" alt="Docker安装及配置加速镜像">
                         
-                        <span class="card-title">Docker常用命令</span>
+                        <span class="card-title">Docker安装及配置加速镜像</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Docker常用命令
+                            Docker安装及配置加速镜像
 
 
 
-命令
-说明
-参数
+个人阿里云加速镜像个人地址&nbsp; https://noe4mlw6.mirror.aliyuncs.com
 
 
-
-
-docker –version
-查看当前docker版本
-
-
-docker ps
-查看当前正在运行的容器
-
-
-docker images
-查看本地所有镜像
-
-
-docker pull [
+CentOS 7 (使用yum进行安装)如果之前安装过】先卸载依赖  
+  sudo
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-05-28
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-05-30
                             </span>
                         <span class="publish-author">
                             

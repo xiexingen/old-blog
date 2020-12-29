@@ -538,13 +538,15 @@ docker pull mongo 拉去mongo镜像
                         
                             Docker 安装MySql
 
+
+
 将docker容器中的实例中的文件跟物理文件链接起来 即使删掉容器 数据还在 再创建容器的时候 任然可以对应上之前的数据  
 
 一、安装篇
 使用docker-compose安装  
 
 
-[1.1] 在目录/d
+[1.1] 在目录
                         
                     </div>
                     <div class="publish-info">
@@ -581,27 +583,38 @@ docker pull mongo 拉去mongo镜像
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="../../../../05/30/docker/01docker-config/">
+                <a href="../../../../05/30/docker/02docker-dockerfile/">
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/7.jpg" class="responsive-img" alt="Docker安装及配置加速镜像">
+                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/17.jpg" class="responsive-img" alt="Dockerfile解析">
                         
-                        <span class="card-title">Docker安装及配置加速镜像</span>
+                        <span class="card-title">Dockerfile解析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Docker安装及配置加速镜像
+                            Dockerfile解说
 
 
 
-个人阿里云加速镜像个人地址&nbsp; https://noe4mlw6.mirror.aliyuncs.com
 
 
-CentOS 7 (使用yum进行安装)如果之前安装过】先卸载依赖  
-  sudo
+关键字
+说明
+例子
+
+
+
+FROM
+以此为基础来构建
+FROM debian:buster-slim
+
+
+MAINTAINER
+镜像维护着的项目和邮箱地址
+MAINTAINER The CentOS Pr
                         
                     </div>
                     <div class="publish-info">

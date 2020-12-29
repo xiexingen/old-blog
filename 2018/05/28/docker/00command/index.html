@@ -9,10 +9,11 @@
 
 
 
+
+
 命令
 说明
 参数
-
 
 
 
@@ -20,15 +21,18 @@ docker –version
 查看当前docker版本
 
 
+
 docker ps
 查看当前正在运行的容器
+
 
 
 docker images
 查看本地所有镜像
 
 
-docker pull [">
+
+docker pu">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -352,124 +356,150 @@ docker pull [">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Docker常用命令<br><a id="more"></a></p>
+                <p>Docker常用命令</p>
+<a id="more"></a>
+
 <table>
 <thead>
 <tr>
-<th style="text-align:left">命令</th>
-<th style="text-align:left">说明</th>
-<th style="text-align:left">参数</th>
+<th align="left">命令</th>
+<th align="left">说明</th>
+<th align="left">参数</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">docker –version</td>
-<td style="text-align:left">查看当前docker版本</td>
+<tbody><tr>
+<td align="left">docker –version</td>
+<td align="left">查看当前docker版本</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">docker ps</td>
-<td style="text-align:left">查看当前正在运行的容器</td>
+<td align="left">docker ps</td>
+<td align="left">查看当前正在运行的容器</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">docker images</td>
-<td style="text-align:left">查看本地所有镜像</td>
+<td align="left">docker images</td>
+<td align="left">查看本地所有镜像</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">docker pull [镜像名称]</td>
-<td style="text-align:left">拉取一个镜像到本地</td>
+<td align="left">docker pull [镜像名称]</td>
+<td align="left">拉取一个镜像到本地</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">docker run [容器名称]</td>
-<td style="text-align:left">运行一个容器</td>
+<td align="left">docker run [容器名称]</td>
+<td align="left">运行一个容器</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">docker rm [容器名称]</td>
-<td style="text-align:left">删除本地使用过的容器</td>
+<td align="left">docker rm [容器名称]</td>
+<td align="left">删除本地使用过的容器</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">docker start [Name]</td>
-<td style="text-align:left">启动指定容器</td>
+<td align="left">docker start [Name]</td>
+<td align="left">启动指定容器</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">docker stop [Name]</td>
-<td style="text-align:left">关闭指定容器</td>
+<td align="left">docker stop [Name]</td>
+<td align="left">关闭指定容器</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">docker kill [Name]</td>
-<td style="text-align:left">强制关闭指定容器</td>
+<td align="left">docker kill [Name]</td>
+<td align="left">强制关闭指定容器</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">docker pause [Name]</td>
-<td style="text-align:left">暂停指定容器</td>
+<td align="left">docker pause [Name]</td>
+<td align="left">暂停指定容器</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">docker unpause [Name]</td>
-<td style="text-align:left">恢复指定容器</td>
+<td align="left">docker unpause [Name]</td>
+<td align="left">恢复指定容器</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">docker rmi -f $(docker images -a -q)</td>
-<td style="text-align:left">移除所有images</td>
+<td align="left">docker rmi -f $(docker images -a -q)</td>
+<td align="left">移除所有images</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">docker rmi $(docker images -f ‘dangling=true’ -q)</td>
-<td style="text-align:left">移除none的images  </td>
+<td align="left">docker rmi $(docker images -f ‘dangling=true’ -q)</td>
+<td align="left">移除none的images</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">docker inspect [容器名称]</td>
-<td style="text-align:left">查看容器的信息</td>
+<td align="left">docker inspect [容器名称]</td>
+<td align="left">查看容器的信息</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">docker exec -it [容器名称] bash</td>
-<td style="text-align:left">在容器内执行bash 比如执行后可以执行ls查看目录 也可以创建文件等</td>
+<td align="left">docker exec -it [容器名称] bash</td>
+<td align="left">在容器内执行bash 比如执行后可以执行ls查看目录 也可以创建文件等</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">docker rm -fv [容器Id]</td>
-<td style="text-align:left">停止、删除容器、清除数据</td>
+<td align="left">docker rm -fv [容器Id]</td>
+<td align="left">停止、删除容器、清除数据</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">docker images -f [option]</td>
-<td style="text-align:left">过滤查询</td>
+<td align="left">docker images -f [option]</td>
+<td align="left">过滤查询</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">docker logs -f [container-name]</td>
-<td style="text-align:left">查看日志</td>
+<td align="left">docker logs -f [container-name]</td>
+<td align="left">查看日志</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">docker history [container-name]</td>
-<td style="text-align:left">查看镜像的构建历史</td>
+<td align="left">docker history [container-name]</td>
+<td align="left">查看镜像的构建历史</td>
+<td align="left"></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <ul>
-<li><p>数据卷<br>-v 主机目录:容器目录<br>docker run -it -v /docker/data:/config [–privileged=true] 表示将宿主机中的/docker目录跟容器中的/config目录做一个映射，如果没有将自动创建  </p>
+<li>数据卷</li>
+</ul>
+<p>-v 主机目录:容器目录<br>docker run -it -v /docker/data:/config [–privileged=true] 表示将宿主机中的/docker目录跟容器中的/config目录做一个映射，如果没有将自动创建  </p>
 <blockquote>
 <p>如果遇到数据卷没权限访问，则在后面增加 –privileged=true即可</p>
 </blockquote>
-</li>
-<li><p>数据卷容器<br>–volumns-form containerId|name  表示容器数据卷从name容器同步  </p>
+<ul>
+<li>数据卷容器</li>
+</ul>
+<p>–volumns-form containerId|name  表示容器数据卷从name容器同步  </p>
 <blockquote>
 <p>docker run -it –name xxg2 –volumns-from xxg1 nginx</p>
 </blockquote>
-</li>
-</ul>
 <p>warning 温馨提示</p>
 <ul>
-<li>docker run -p 8001:80   &nbsp;&nbsp;–运行 指定端口 8001外部端口  80表示内部端口</li>
-<li>docker run -d             &nbsp;&nbsp;–detach 还可以继续操作 不会阻塞</li>
-<li>docker run –name        &nbsp;&nbsp;–运行的docker镜像的名称</li>
-<li>docker run -p 8001:80 &nbsp;&nbsp;–name myapi helloapi:latest<br>表示运行docker中名为helloapi的容器 版本为latest docker的端口为80 本机的端口8001 名字为myapi</li>
-<li>docker ps -a            &nbsp;&nbsp;–查看所有容器 不管有没运行</li>
-<li>过滤查询<br>docker images –filter “before=image1” 查询image1之后的<br>docker images –filter “since=image3”  查询image3之前的<br>docker images “wechat:v1.3.<em>“  查询wechat:1.3.x的<br>docker rmi -f $(docker images “wechat:v1.2.</em>“ -q) 移除wechat:v1.2.*版本的</li>
+<li><p>docker run -p 8001:80   &nbsp;&nbsp;–运行 指定端口 8001外部端口  80表示内部端口</p>
+</li>
+<li><p>docker run -d             &nbsp;&nbsp;–detach 还可以继续操作 不会阻塞</p>
+</li>
+<li><p>docker run –name        &nbsp;&nbsp;–运行的docker镜像的名称</p>
+</li>
+<li><p>docker run -p 8001:80 &nbsp;&nbsp;–name myapi helloapi:latest<br>表示运行docker中名为helloapi的容器 版本为latest docker的端口为80 本机的端口8001 名字为myapi</p>
+</li>
+<li><p>docker ps -a            &nbsp;&nbsp;–查看所有容器 不管有没运行</p>
+</li>
+<li><p>过滤查询<br>docker images –filter “before=image1” 查询image1之后的<br>docker images –filter “since=image3”  查询image3之前的<br>docker images “wechat:v1.3.<em>“  查询wechat:1.3.x的<br>docker rmi -f $(docker images “wechat:v1.2.</em>“ -q) 移除wechat:v1.2.*版本的</p>
+</li>
 <li><p>docker logs查看日志<br>docker logs -f gitlab 查看gitlab容器所有日志<br>docker logs –tail 20 -f gitlab 查看gitlab最近20条的日志<br>docker logs –since 30s -f gitlab 查看gitlab最近30s的日志</p>
 </li>
 <li><p>docker inspect 查看日志文件位置  </p>
-<pre class=" language-bash"><code class="language-bash">docker inspect --format<span class="token operator">=</span><span class="token string">'&amp;#123;&amp;#123;.LogPath&amp;#125;&amp;#125;'</span> mysql  
-</code></pre>
+<pre class=" language-bash"><code class="language-bash">docker inspect --format<span class="token operator">=</span><span class="token string">'&amp;#123;&amp;#123;.LogPath&amp;#125;&amp;#125;'</span> mysql  </code></pre>
 </li>
-<li>清空docker实例的日志内容  </li>
+<li><p>清空docker实例的日志内容  </p>
+</li>
 </ul>
-<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">$(</span>docker inspect --format<span class="token operator">=</span><span class="token string">'&amp;#123;&amp;#123;.LogPath&amp;#125;&amp;#125;'</span> <span class="token operator">&lt;</span>容器ID<span class="token operator">></span><span class="token punctuation">)</span>
-</code></pre>
+<pre class=" language-bash"><code class="language-bash"><span class="token punctuation">$(</span>docker inspect --format<span class="token operator">=</span><span class="token string">'&amp;#123;&amp;#123;.LogPath&amp;#125;&amp;#125;'</span> <span class="token operator">&lt;</span>容器ID<span class="token operator">></span><span class="token punctuation">)</span></code></pre>
 <ul>
 <li>退出 -it<br>exit 或者ctrl+p+q<br>:::</li>
 </ul>
@@ -648,37 +678,27 @@ docker pull [">
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="../../../30/docker/02docker-dockerfile/">
+                <a href="../../../30/docker/01docker-config/">
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/17.jpg" class="responsive-img" alt="Dockerfile解析">
+                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/7.jpg" class="responsive-img" alt="Docker安装及配置加速镜像">
                         
-                        <span class="card-title">Dockerfile解析</span>
+                        <span class="card-title">Docker安装及配置加速镜像</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Dockerfile解说
+                            Docker安装及配置加速镜像
 
 
 
-关键字
-说明
-例子
+个人阿里云加速镜像个人地址&nbsp; https://noe4mlw6.mirror.aliyuncs.com
 
 
-
-
-FROM
-以此为基础来构建
-FROM debian:buster-slim
-
-
-MAINTAINER
-镜像维护着的项目和邮箱地址
-MAINTAINER The CentOS Pro
+CentOS 7 (使用yum进行安装)如果之前安装过】先卸载依赖  
+  sudo
                         
                     </div>
                     <div class="publish-info">

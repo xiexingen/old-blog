@@ -7,13 +7,15 @@
     <meta name="keywords" content="Docker 安装MySql, 程序有Bug">
     <meta name="description" content="Docker 安装MySql
 
+
+
 将docker容器中的实例中的文件跟物理文件链接起来 即使删掉容器 数据还在 再创建容器的时候 任然可以对应上之前的数据  
 
 一、安装篇
 使用docker-compose安装  
 
 
-[1.1] 在目录/d">
+[1.1] 在目录">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -337,7 +339,9 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Docker 安装MySql<br><a id="more"></a></p>
+                <p>Docker 安装MySql</p>
+<a id="more"></a>
+
 <blockquote>
 <p>将docker容器中的实例中的文件跟物理文件链接起来 即使删掉容器 数据还在 再创建容器的时候 任然可以对应上之前的数据  </p>
 </blockquote>
@@ -347,36 +351,41 @@
 <ul>
 <li>[1.1] 在目录/docker/data/mysql/mysql-init下创建init-user.sql文件 内容如下  <pre><code>use mysql;
 CREATE USER &#39;sa&#39;@&#39;%&#39; IDENTIFIED BY &#39;Abcd1234&#39;;
-GRANT ALL PRIVILEGES ON *.* TO &#39;sa&#39;@&#39;%&#39;;
-</code></pre></li>
-<li>[1.2]<br>docker-compose -f mysql-compose.yml up -d<br>对应的mysql-compose.yml文件<br><code>`</code> yml<br>version: ‘2.3’</li>
+GRANT ALL PRIVILEGES ON *.* TO &#39;sa&#39;@&#39;%&#39;;</code></pre>
+</li>
+<li>[1.2]<br>docker-compose -f mysql-compose.yml up -d<br>对应的mysql-compose.yml文件<pre class=" language-yml"><code class="language-yml">version: '2.3'
+</code></pre>
+</li>
 </ul>
-<p>services:<br>  db:<br>    image: mysql/mysql-server<br>    container_name: mysql01<br>    restart: always<br>    command: mysqld –character-set-server=utf8 –collation-server=utf8_general_ci<br>    ports:</p>
-<pre><code>  - 3306:3306
-</code></pre><h1 id="networks"><a href="#networks" class="headerlink" title="networks:"></a>networks:</h1><h1 id="net-mysql"><a href="#net-mysql" class="headerlink" title="- net_mysql"></a>- net_mysql</h1><pre><code>environment:
+<p>services:<br>  db:<br>    image: mysql/mysql-server<br>    container_name: mysql01<br>    restart: always<br>    command: mysqld –character-set-server=utf8 –collation-server=utf8_general_ci<br>    ports:<br>      - 3306:3306</p>
+<h1 id="networks"><a href="#networks" class="headerlink" title="networks:"></a>networks:</h1><h1 id="net-mysql"><a href="#net-mysql" class="headerlink" title="- net_mysql"></a>- net_mysql</h1><pre><code>environment:
   MYSQL_ROOT_PASSWORD: Abcd1234
 volumes:
   - /docker/data/mysql/mysql-init:/docker-entrypoint-initdb.d
-  - /docker/data/mysql/data:/var/lib/mysql
-</code></pre><h1 id="volumes"><a href="#volumes" class="headerlink" title="volumes:"></a>volumes:</h1><h1 id="mysql-data"><a href="#mysql-data" class="headerlink" title="mysql-data:"></a>mysql-data:</h1><h1 id="external-true"><a href="#external-true" class="headerlink" title="external: true"></a>external: true</h1><h1 id="networks-1"><a href="#networks-1" class="headerlink" title="networks:"></a>networks:</h1><h1 id="net-mysql-1"><a href="#net-mysql-1" class="headerlink" title="net_mysql:"></a>net_mysql:</h1><h1 id="external-true-1"><a href="#external-true-1" class="headerlink" title="external: true"></a>external: true</h1><pre><code>
-2. mount【推荐使用】  
-</code></pre><p>docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Abcd1234 –name mysql01 –restart always –mount type=bind,src=/docker/mysql/config/my.cnf,dst=/etc/my.cnf –mount type=bind,src=/docker/mysql/data,dst=/var/lib/mysql mysql</p>
-<pre><code>&gt; /docker/mysql/config/my.cnf    &amp;nbsp;&amp;nbsp;对应物理磁盘位置 需要新建my.cnf 内容如下
-</code></pre><p>[mysqld]<br>user=root<br>character-set-server=utf8<br>[client]<br>default-character-set=utf8<br>[mysql]<br>default-character-set=utf8</p>
+  - /docker/data/mysql/data:/var/lib/mysql</code></pre>
+<h1 id="volumes"><a href="#volumes" class="headerlink" title="volumes:"></a>volumes:</h1><h1 id="mysql-data"><a href="#mysql-data" class="headerlink" title="mysql-data:"></a>mysql-data:</h1><h1 id="external-true"><a href="#external-true" class="headerlink" title="external: true"></a>external: true</h1><h1 id="networks-1"><a href="#networks-1" class="headerlink" title="networks:"></a>networks:</h1><h1 id="net-mysql-1"><a href="#net-mysql-1" class="headerlink" title="net_mysql:"></a>net_mysql:</h1><h1 id="external-true-1"><a href="#external-true-1" class="headerlink" title="external: true"></a>external: true</h1><pre><code>
+2. mount【推荐使用】  </code></pre>
+<p>docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Abcd1234 –name mysql01 –restart always –mount type=bind,src=/docker/mysql/config/my.cnf,dst=/etc/my.cnf –mount type=bind,src=/docker/mysql/data,dst=/var/lib/mysql mysql</p>
+<pre><code>&gt; /docker/mysql/config/my.cnf    &amp;nbsp;&amp;nbsp;对应物理磁盘位置 需要新建my.cnf 内容如下</code></pre>
+<p>[mysqld]<br>user=root<br>character-set-server=utf8<br>[client]<br>default-character-set=utf8<br>[mysql]<br>default-character-set=utf8</p>
 <pre><code>&gt; /etc/my.cnf    --docker创建mysql后该mysql容器对应的配置文件  
 /docker/mysql/data    --对应物理磁盘位置 表示docker中数据映射到的物理文件位置  
 /var/lib/mysql mysql/mysql-server &amp;nbsp;&amp;nbsp;对应docker中mysql实例容器的文件位置  
 -e  MYSQL_ROOT_PASSWORD=Abcd1234 &amp;nbsp;设置初始密码  
-1. volume[后期废用]  推荐使用mount形式  
-</code></pre><p>docker run -d -p 3306:3306 –name mysql01 -v=/docker/mysql/config/my.cnf:/etc/my.cnf -v=/docker/mysql/data:/var/lib/mysql mysql/mysql-server<br><code>`</code></p>
+1. volume[后期废用]  推荐使用mount形式  </code></pre>
+<p>docker run -d -p 3306:3306 –name mysql01 -v=/docker/mysql/config/my.cnf:/etc/my.cnf -v=/docker/mysql/data:/var/lib/mysql mysql/mysql-server</p>
+<p>```</p>
 <h4 id="二、使用篇"><a href="#二、使用篇" class="headerlink" title="二、使用篇"></a>二、使用篇</h4><blockquote>
 <p>docker 操作mysql  </p>
-<ol>
-<li>连接mysql<br>docker exec -it mysql01 bash<br>mysql -u root -p [密码]     –密码可以待mysql容器启动后<br>通过docker logs mysql01 找到生成的随机密码 密码在一段类型：<br><img src="/images/docker/040101.png" alt=""></li>
-<li>设置mysql密码<br>SET PASSWORD FOR ‘root‘@’localhost’ = PASSWORD(‘Abcd1234’);    –用户名为root 密码为Abcd1234  </li>
-<li>实验一下    【–exit 退出当前】<br>use mysql;    –使用数据库查询<br>select user,host from user;    –查询用户信息<br>show variables like ‘%char%’;        –查看当前使用的字符集<br>在mysql中创建网络用户 这样可以非本机访问<br>mysql&gt; CREATE USER ‘sa‘@’%’ IDENTIFIED BY ‘Abcd1234’;<br>mysql&gt; GRANT ALL PRIVILEGES ON <em>.</em> TO ‘sa‘@’%’;<br>docker run -d -p 3306:3306 -e”MYSQL_USER=Zarc” -e”MYSQL_PASSWORD=pwd123456” -e”MYSQL_ROOT_PASSWORD=password123” -e”MYSQL_RANDOM_ROOT_PASSWORD=true” –name mysql01 mysql/mysql-server –character-set-server=utf8 –collation-server=utf8_general_ci<br>备注： : When this is true (which is its default state, unless MYSQL_ROOT_PASSWORD is set or MYSQL_ALLOW_EMPTY_PASSWORD is set to true), a random password for the server’s root user is generated when the Docker container is started 当这个MYSQL_RANDOM_ROOT_PASSWORD 为true 时 为root用户设置密码是没有作用的还是会生成随机的密码，设置为false 或者不加这个环境变量  </li>
-</ol>
 </blockquote>
+<ol>
+<li>连接mysql<br>docker exec -it mysql01 bash<br>mysql -u root -p [密码]     –密码可以待mysql容器启动后<br>通过docker logs mysql01 找到生成的随机密码 密码在一段类型：<br><img src="/images/docker/040101.png"></li>
+<li>设置mysql密码<br>SET PASSWORD FOR ‘root’@’localhost’ = PASSWORD(‘Abcd1234’);    –用户名为root 密码为Abcd1234  </li>
+<li>实验一下    【–exit 退出当前】<br>use mysql;    –使用数据库查询<br>select user,host from user;    –查询用户信息<br>show variables like ‘%char%’;        –查看当前使用的字符集<br>在mysql中创建网络用户 这样可以非本机访问<br>mysql&gt; CREATE USER ‘sa’@’%’ IDENTIFIED BY ‘Abcd1234’;<br>mysql&gt; GRANT ALL PRIVILEGES ON <em>.</em> TO ‘sa’@’%’;<blockquote>
+<p>docker run -d -p 3306:3306 -e”MYSQL_USER=Zarc” -e”MYSQL_PASSWORD=pwd123456” -e”MYSQL_ROOT_PASSWORD=password123” -e”MYSQL_RANDOM_ROOT_PASSWORD=true” –name mysql01 mysql/mysql-server –character-set-server=utf8 –collation-server=utf8_general_ci<br>备注： : When this is true (which is its default state, unless MYSQL_ROOT_PASSWORD is set or MYSQL_ALLOW_EMPTY_PASSWORD is set to true), a random password for the server’s root user is generated when the Docker container is started 当这个MYSQL_RANDOM_ROOT_PASSWORD 为true 时 为root用户设置密码是没有作用的还是会生成随机的密码，设置为false 或者不加这个环境变量  </p>
+</blockquote>
+</li>
+</ol>
 
             </div>
             <hr/>

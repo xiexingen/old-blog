@@ -7,6 +7,8 @@
     <meta name="keywords" content="redis-cli基础, 程序有Bug">
     <meta name="description" content="redis-cli基础
 
+
+
 参考文档:http://redisdoc.com/
 
 
@@ -19,9 +21,8 @@
 
 
 
-
 redis-cli -h [host] -p [port] -a [password]
-通过redis-cli连接re">
+通过redis-cli连接r">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -345,100 +346,106 @@ redis-cli -h [host] -p [port] -a [password]
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>redis-cli基础<br><a id="more"></a></p>
+                <p>redis-cli基础</p>
+<a id="more"></a>
+
 <ul>
 <li>参考文档:<a target="_blank" rel="noopener" href="http://redisdoc.com/">http://redisdoc.com/</a></li>
 </ul>
 <table>
 <thead>
 <tr>
-<th style="text-align:left">命令</th>
-<th style="text-align:left">说明</th>
-<th style="text-align:left">参数说明</th>
-<th style="text-align:left">案例</th>
+<th align="left">命令</th>
+<th align="left">说明</th>
+<th align="left">参数说明</th>
+<th align="left">案例</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:left">redis-cli -h [host] -p [port] -a [password]</td>
-<td style="text-align:left">通过redis-cli连接redis</td>
-<td style="text-align:left">host:地址<br>port:端口号,默认为6379<br> password:密码</td>
-<td style="text-align:left">redis-cli -h localhost -p 7379 -a test</td>
+<tbody><tr>
+<td align="left">redis-cli -h [host] -p [port] -a [password]</td>
+<td align="left">通过redis-cli连接redis</td>
+<td align="left">host:地址<br>port:端口号,默认为6379<br> password:密码</td>
+<td align="left">redis-cli -h localhost -p 7379 -a test</td>
 </tr>
 <tr>
-<td style="text-align:left">ping</td>
-<td style="text-align:left">测试是否通</td>
-<td style="text-align:left">如果返回pong，表示通了</td>
+<td align="left">ping</td>
+<td align="left">测试是否通</td>
+<td align="left">如果返回pong，表示通了</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">FLUSHALL</td>
-<td style="text-align:left">清空所有db</td>
-<td style="text-align:left"></td>
+<td align="left">FLUSHALL</td>
+<td align="left">清空所有db</td>
+<td align="left"></td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">FLUSHDB</td>
-<td style="text-align:left">清空当前db</td>
-<td style="text-align:left"></td>
+<td align="left">FLUSHDB</td>
+<td align="left">清空当前db</td>
+<td align="left"></td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">select [index]</td>
-<td style="text-align:left">切换到第几个db</td>
-<td style="text-align:left">index：从0开始的db下标</td>
-<td style="text-align:left">select 0</td>
+<td align="left">select [index]</td>
+<td align="left">切换到第几个db</td>
+<td align="left">index：从0开始的db下标</td>
+<td align="left">select 0</td>
 </tr>
 <tr>
-<td style="text-align:left">DBSIZE</td>
-<td style="text-align:left">显示当前db中的key个数</td>
-<td style="text-align:left"></td>
+<td align="left">DBSIZE</td>
+<td align="left">显示当前db中的key个数</td>
+<td align="left"></td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">keys [pattern]</td>
-<td style="text-align:left">显示当前db中的所有key</td>
-<td style="text-align:left">pattern：匹配符(如：？)</td>
-<td style="text-align:left">keys *</td>
+<td align="left">keys [pattern]</td>
+<td align="left">显示当前db中的所有key</td>
+<td align="left">pattern：匹配符(如：？)</td>
+<td align="left">keys *</td>
 </tr>
 <tr>
-<td style="text-align:left">get [key]</td>
-<td style="text-align:left">查询指定key的值</td>
-<td style="text-align:left">key:键名</td>
-<td style="text-align:left">get name</td>
+<td align="left">get [key]</td>
+<td align="left">查询指定key的值</td>
+<td align="left">key:键名</td>
+<td align="left">get name</td>
 </tr>
 <tr>
-<td style="text-align:left">del [key]</td>
-<td style="text-align:left">删除指定key的值</td>
-<td style="text-align:left">key:键名</td>
-<td style="text-align:left">del name</td>
+<td align="left">del [key]</td>
+<td align="left">删除指定key的值</td>
+<td align="left">key:键名</td>
+<td align="left">del name</td>
 </tr>
 <tr>
-<td style="text-align:left">EXISTS [key]</td>
-<td style="text-align:left">判断是否存在指定的key</td>
-<td style="text-align:left">key:键名</td>
-<td style="text-align:left">EXISTS name</td>
+<td align="left">EXISTS [key]</td>
+<td align="left">判断是否存在指定的key</td>
+<td align="left">key:键名</td>
+<td align="left">EXISTS name</td>
 </tr>
 <tr>
-<td style="text-align:left">move [key] [db]</td>
-<td style="text-align:left">移动指定的key到指定的db</td>
-<td style="text-align:left">key:键名<br> db:db下标</td>
+<td align="left">move [key] [db]</td>
+<td align="left">移动指定的key到指定的db</td>
+<td align="left">key:键名<br> db:db下标</td>
+<td align="left"></td>
 </tr>
 <tr>
-<td style="text-align:left">ttl [key]</td>
-<td style="text-align:left">查看过期时间</td>
-<td style="text-align:left">key:键名,返回值(-1:永不过期 -2:已过期，会移除)</td>
-<td style="text-align:left">ttl name</td>
+<td align="left">ttl [key]</td>
+<td align="left">查看过期时间</td>
+<td align="left">key:键名,返回值(-1:永不过期 -2:已过期，会移除)</td>
+<td align="left">ttl name</td>
 </tr>
 <tr>
-<td style="text-align:left">EXPIRE [key] [time]</td>
-<td style="text-align:left">设置带过期时间的键值</td>
-<td style="text-align:left">key:键名<br>time:过期时间(秒)<br></td>
-<td style="text-align:left">EXPIRE name 10</td>
+<td align="left">EXPIRE [key] [time]</td>
+<td align="left">设置带过期时间的键值</td>
+<td align="left">key:键名<br>time:过期时间(秒)<br></td>
+<td align="left">EXPIRE name 10</td>
 </tr>
 <tr>
-<td style="text-align:left">type [key]</td>
-<td style="text-align:left">查看指定key的数据类型</td>
-<td style="text-align:left">key:键名</td>
+<td align="left">type [key]</td>
+<td align="left">查看指定key的数据类型</td>
+<td align="left">key:键名</td>
+<td align="left"></td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h1 id="String"><a href="#String" class="headerlink" title="String"></a>String</h1><ul>
 <li><p>append [key]:追加   </p>
 </li>
@@ -725,12 +732,14 @@ redis-cli -h [host] -p [port] -a [password]
                         
                             redis-config常用点介绍
 
+
+
 参考文档:http://redisdoc.com/
 
 
 是否以守护进程方式运行，redis默认不是守护进程方式运行，可以修改该配置项来使用守护进程方式运行daemonizo:yes
 
-pidfile 指
+pidfile
                         
                     </div>
                     <div class="publish-info">

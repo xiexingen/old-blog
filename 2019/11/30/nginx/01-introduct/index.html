@@ -6,15 +6,15 @@
     <meta charset="utf-8">
     <meta name="keywords" content="Nginx开篇, 程序有Bug">
     <meta name="description" content="Docker基础开篇
+
+
 centos 7安装nginx
 更新yum
 yum -y update  
 
-
 通过yum安装
 yum install epel-release
 yum install nginx 
-
 
 配置nginx自动启动
 sys">
@@ -341,27 +341,28 @@ sys">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Docker基础开篇<br><a id="more"></a></p>
+                <p>Docker基础开篇</p>
+<a id="more"></a>
+
 <h2 id="centos-7安装nginx"><a href="#centos-7安装nginx" class="headerlink" title="centos 7安装nginx"></a>centos 7安装nginx</h2><ul>
 <li><p>更新yum</p>
-<pre class=" language-bash"><code class="language-bash">yum -y update  
-</code></pre>
+<pre class=" language-bash"><code class="language-bash">yum -y update  </code></pre>
 </li>
 <li><p>通过yum安装</p>
 <pre class=" language-bash"><code class="language-bash">yum <span class="token function">install</span> epel-release
-yum <span class="token function">install</span> nginx 
-</code></pre>
+yum <span class="token function">install</span> nginx </code></pre>
 </li>
 <li><p>配置nginx自动启动</p>
 <pre class=" language-bash"><code class="language-bash">systemctl start nginx
 systemctl <span class="token function">enable</span> nginx
-systemctl status nginx
-</code></pre>
+systemctl status nginx</code></pre>
 </li>
-<li><p>配置防火墙<br><code>bash
-firewall-cmd --zone=public --permanent --add-service=http
-firewall-cmd --zone=public --permanent --add-service=https
-firewall-cmd --reload</code> bash</p>
+<li><p>配置防火墙</p>
+<pre class=" language-bash"><code class="language-bash">firewall-cmd --zone<span class="token operator">=</span>public --permanent --add-service<span class="token operator">=</span>http
+firewall-cmd --zone<span class="token operator">=</span>public --permanent --add-service<span class="token operator">=</span>https
+firewall-cmd --reload
+``` <span class="token function">bash</span>
+</code></pre>
 </li>
 </ul>
 <h2 id="nginx-配置文件"><a href="#nginx-配置文件" class="headerlink" title="nginx 配置文件"></a>nginx 配置文件</h2><ul>
@@ -371,8 +372,7 @@ firewall-cmd --reload</code> bash</p>
 <pre class=" language-bash"><code class="language-bash">配置网络连接数量
 events:<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
   worker_connections:1024 
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
-</code></pre>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span></code></pre>
 </li>
 <li><p>http</p>
 </li>
@@ -400,7 +400,6 @@ server <span class="token operator">&amp;</span><span class="token comment" spel
     <span class="token comment" spellcheck="true">#     root /var/www/mywebsite1;</span>
     <span class="token comment" spellcheck="true"># &amp;#125;</span>
 <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; </span>
-
 </code></pre>
 <h2 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h2><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 负载均衡案例</span>
 upstream myserver <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
@@ -428,15 +427,17 @@ server <span class="token operator">&amp;</span><span class="token comment" spel
     <span class="token comment" spellcheck="true"># location = /50x.html &amp;#123;</span>
     <span class="token comment" spellcheck="true">#     root /var/www/mywebsite1;</span>
     <span class="token comment" spellcheck="true"># &amp;#125;</span>
-<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; </span>
-</code></pre>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125; </span></code></pre>
 <h2 id="动静分离-跟基础类似"><a href="#动静分离-跟基础类似" class="headerlink" title="动静分离(跟基础类似)"></a>动静分离(跟基础类似)</h2><h2 id="高可用"><a href="#高可用" class="headerlink" title="高可用"></a>高可用</h2><p><img src="http://qiniu.xxgtalk.cn/blog/images/20191130225646.png" alt="20191130225646.png"></p>
 <ol>
 <li>需要在轮胎服务器安装nginx</li>
-<li>需要再两台服务器上安装keepalived<br><code>`</code> bash<br>yum install keepalived -y</li>
+<li>需要再两台服务器上安装keepalived<pre class=" language-bash"><code class="language-bash">yum <span class="token function">install</span> keepalived -y
+</code></pre>
+</li>
 </ol>
 <h2 id="修改每台机器上的keepalived配置文件"><a href="#修改每台机器上的keepalived配置文件" class="headerlink" title="修改每台机器上的keepalived配置文件"></a>修改每台机器上的keepalived配置文件</h2><h2 id="检测是否安装成功"><a href="#检测是否安装成功" class="headerlink" title="检测是否安装成功"></a>检测是否安装成功</h2><p>rpm -q -q keepalived</p>
-<h2 id="目录位置"><a href="#目录位置" class="headerlink" title="目录位置"></a>目录位置</h2><p>/etc/keepalived<br><code>`</code></p>
+<h2 id="目录位置"><a href="#目录位置" class="headerlink" title="目录位置"></a>目录位置</h2><p>/etc/keepalived</p>
+<pre><code></code></pre>
 
             </div>
             <hr/>
@@ -672,22 +673,22 @@ fe
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="../../../../10/05/dotnetcore/signalr/09-todo/">
+                <a href="../../../../10/05/dotnetcore/signalr/08-clientdemo/">
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/9.jpg" class="responsive-img" alt=".net core 3.0 Signalr - 09 待改进&交流">
+                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/5.jpg" class="responsive-img" alt=".net core 3.0 Signalr - 08 业务实现-客户端demo">
                         
-                        <span class="card-title">.net core 3.0 Signalr - 09 待改进&交流</span>
+                        <span class="card-title">.net core 3.0 Signalr - 08 业务实现-客户端demo</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            .net core 3.0 Signalr - 09 待改进&amp;交流
+                            .net core 3.0 Signalr - 08 业务实现-客户端demo
 
-
-个人心得写博客真的比写代码累，膜拜那些坚持写博客的大佬！有时候零散的片段比较多，没写之前感觉有千千万万要写的东西，实际写的时候发现， 好像这个没啥说的，然后就帖
+由于signalr作为一个单独的推送系统，跟业务系统是分离开的，所以此处模拟一个业务系统，新建一个.net core app项目
+模拟实现一个登录功能我们的登
                         
                     </div>
                     <div class="publish-info">
@@ -708,6 +709,10 @@ fe
                 </div>
                 
                 <div class="card-action article-tags">
+                    
+                    <a href="../../../../../tags/NetCore/" target="_blank">
+                        <span class="chip bg-color">.NetCore</span>
+                    </a>
                     
                     <a href="../../../../../tags/Signalr/" target="_blank">
                         <span class="chip bg-color">Signalr</span>
