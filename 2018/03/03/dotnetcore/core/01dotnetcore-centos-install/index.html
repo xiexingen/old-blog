@@ -265,7 +265,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://qiniu.xxgtalk.cn/blog/images/background/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/14.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -342,9 +342,9 @@
 <li>安装.net core<br>参考官网步骤:<a target="_blank" rel="noopener" href="https://www.microsoft.com/net/learn/get-started/linuxcentos">https://www.microsoft.com/net/learn/get-started/linuxcentos</a></li>
 <li>安装nginx<br>同样参考官网步骤:<a target="_blank" rel="noopener" href="https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7">https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7</a></li>
 <li>vs2017新建项目发布成本地文件夹<br>新建项目，使用mvc模板发布到本地文件夹</li>
-<li>通过Xftp上传到centos<br>通过Xftp将打包的文件直接粘贴到centos中(我是在root目录下建了个web文件夹专门用于存放部署的站点)<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0601.png"></li>
-<li>将dotnetcore站点运行起来<br>在Xftp中点击新建终端打开XsHell 将路径定位到站点文件夹 cd /root/web/mvc  执行 dotnet HelloWord.dll  看到如下信息 表示你已经成功了<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0701.png"><br>这个时候你在外面访问是访问不了的 因为防火墙没有启用5000端口<br>如果一定想看看 可以再开一个终端 输入如图<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0702.png"></li>
-<li>配置nginx将80端口指向dotnetcore站点<br>这一步就是通过nginx将80请求转到上面的localhost:5000<br>先找着nginx中的配置<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0801.png"><br>打开后会发现里面有个<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0802.png"><br>在如下目录中新建一个文件 输入配置   <pre class=" language-nginx"><code class="language-nginx">    <span class="token keyword">server</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+<li>通过Xftp上传到centos<br>通过Xftp将打包的文件直接粘贴到centos中(我是在root目录下建了个web文件夹专门用于存放部署的站点)<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/dotnetcore/core/01/0601.png"></li>
+<li>将dotnetcore站点运行起来<br>在Xftp中点击新建终端打开XsHell 将路径定位到站点文件夹 cd /root/web/mvc  执行 dotnet HelloWord.dll  看到如下信息 表示你已经成功了<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/dotnetcore/core/01/0701.png"><br>这个时候你在外面访问是访问不了的 因为防火墙没有启用5000端口<br>如果一定想看看 可以再开一个终端 输入如图<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/dotnetcore/core/01/0702.png"></li>
+<li>配置nginx将80端口指向dotnetcore站点<br>这一步就是通过nginx将80请求转到上面的localhost:5000<br>先找着nginx中的配置<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/dotnetcore/core/01/0801.png"><br>打开后会发现里面有个<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/dotnetcore/core/01/0802.png"><br>在如下目录中新建一个文件 输入配置   <pre class=" language-nginx"><code class="language-nginx">    <span class="token keyword">server</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
         <span class="token keyword">listen</span> <span class="token number">80</span><span class="token punctuation">;</span>
         <span class="token keyword">location</span> <span class="token operator">/</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
             <span class="token keyword">proxy_pass</span> <span class="token keyword">http</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>localhost<span class="token punctuation">:</span><span class="token number">5000</span><span class="token punctuation">;</span>
@@ -355,8 +355,8 @@
             <span class="token keyword">proxy_cache_bypass</span> <span class="token variable">$http_upgrade</span><span class="token punctuation">;</span>
         <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
     <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span></code></pre>
- <img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0803.png"><br>然后重启nginx ==》sudo nginx -s reload  </li>
-<li>查看成果<br>在浏览器中输入192.168.2.105  如图<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/core/01/0901.png"></li>
+ <img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/dotnetcore/core/01/0803.png"><br>然后重启nginx ==》sudo nginx -s reload  </li>
+<li>查看成果<br>在浏览器中输入192.168.2.105  如图<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/dotnetcore/core/01/0901.png"></li>
 </ol>
 <blockquote>
 <p>总结:<br>过程中遇到一些问题，比如虚拟机中的centos系统中使用不了网络 这个折腾了劳资一个上午(如有碰到，第2点中有参考资料)</p>
@@ -372,7 +372,7 @@
         }
     </style>
 <div id="page-weixin">
-    <img src="http://qiniu.xxgtalk.cn/wechat/codefront/qrcode.gif" />
+    <img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/wechat/qrcode.gif" />
 </div>
 
 
@@ -540,7 +540,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/4.jpg" class="responsive-img" alt="基于CookieBase认证的模式">
+                        <img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/4.jpg" class="responsive-img" alt="基于CookieBase认证的模式">
                         
                         <span class="card-title">基于CookieBase认证的模式</span>
                     </div>
@@ -596,7 +596,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/8.jpg" class="responsive-img" alt="EFCore相关资料">
+                        <img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/8.jpg" class="responsive-img" alt="EFCore相关资料">
                         
                         <span class="card-title">EFCore相关资料</span>
                     </div>

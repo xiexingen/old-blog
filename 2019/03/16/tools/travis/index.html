@@ -266,7 +266,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://qiniu.xxgtalk.cn/blog/images/background/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/11.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -348,9 +348,9 @@
 <h4 id="工作准备"><a href="#工作准备" class="headerlink" title="工作准备"></a>工作准备</h4><ol>
 <li>注册账号<a target="_blank" rel="noopener" href="https://github.com/">github</a>、<a target="_blank" rel="noopener" href="https://travis-ci.org/">travis</a></li>
 <li>github上创建仓库(wetrial-site)</li>
-<li>github上生成一个token(记得保存下来)，用于travis推送代码到gh-pages分支<br><img src="http://qiniu.xxgtalk.cn/blog/images/tools/travis_github_generate_token.jpg" alt="生成token"><br>记得将tokens保存下来，稍后要用到，仓库权限选择第一项 repo即可  </li>
-<li>travis设置<br>点击头像、然后选择项目，默认是用户，如果你的项目是组织项目的，需要切换到组织，如图所示<br><img src="http://qiniu.xxgtalk.cn/blog/images/tools/travis_project_list.jpg" alt="travis项目选择"> </li>
-<li>进入项目配置页面，如图<br><img src="http://qiniu.xxgtalk.cn/blog/images/tools/travis_project_setting.jpg" alt="travis项目选择"><br>添加环境变量相关东西，包括域名、token等<br><img src="http://qiniu.xxgtalk.cn/blog/images/tools/travis_environment.jpg" alt="配置">   </li>
+<li>github上生成一个token(记得保存下来)，用于travis推送代码到gh-pages分支<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/tools/travis_github_generate_token.jpg" alt="生成token"><br>记得将tokens保存下来，稍后要用到，仓库权限选择第一项 repo即可  </li>
+<li>travis设置<br>点击头像、然后选择项目，默认是用户，如果你的项目是组织项目的，需要切换到组织，如图所示<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/tools/travis_project_list.jpg" alt="travis项目选择"> </li>
+<li>进入项目配置页面，如图<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/tools/travis_project_setting.jpg" alt="travis项目选择"><br>添加环境变量相关东西，包括域名、token等<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/tools/travis_environment.jpg" alt="配置">   </li>
 <li>回到实际的项目<br>从ant-design-pro-site拉取代码，然后根据自己的实际情况做修改；比如我去掉了尾栏的一些东西，增加了css相关的大栏(这里不具体介绍)  </li>
 <li>在根目录下添加travis的配置文件.travis.yml 内容如下所示<pre class=" language-yml"><code class="language-yml">language: node_js
 </code></pre>
@@ -377,15 +377,15 @@
 <h1 id="GitHub-Pages-部署"><a href="#GitHub-Pages-部署" class="headerlink" title="GitHub Pages 部署"></a>GitHub Pages 部署</h1><p>deploy:</p>
 <ul>
 <li>provider: pages<br>skip_cleanup: true<h1 id="在项目仪表盘的-Settings-gt-Environment-Variables-中配置"><a href="#在项目仪表盘的-Settings-gt-Environment-Variables-中配置" class="headerlink" title="在项目仪表盘的 Settings -&gt; Environment Variables 中配置"></a>在项目仪表盘的 Settings -&gt; Environment Variables 中配置</h1>github_token: $GITHUB_TOKEN<h1 id="将-build-目录下的内容推送到默认的-gh-pages-分支上，并不会连带-build-目录一起"><a href="#将-build-目录下的内容推送到默认的-gh-pages-分支上，并不会连带-build-目录一起" class="headerlink" title="将 build 目录下的内容推送到默认的 gh-pages 分支上，并不会连带 build 目录一起"></a>将 build 目录下的内容推送到默认的 gh-pages 分支上，并不会连带 build 目录一起</h1>local_dir: _site<h1 id="绑定自定义域名，根据自己的情况来"><a href="#绑定自定义域名，根据自己的情况来" class="headerlink" title="绑定自定义域名，根据自己的情况来"></a>绑定自定义域名，根据自己的情况来</h1>fqdn: $CUSTOM_DOMAIN<br>name: $GIT_NAME<br>email: $GIT_EMAIL<pre><code>然后提交并同步到github,回到travis将会看到如下一幕  
-![配置](http://qiniu.xxgtalk.cn/blog/images/tools/travis_log.jpg)    
+![配置](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/tools/travis_log.jpg)    
 你也可以从日志里面看到具体的执行过程，等待执行完成后回到github中将会看到里面多了一个gh-pages分支，没错 这个分支就是travis中的deploy推送过去的，里面就是编译后的代码，再回到setting里面，将会看到已经默认配置好站点地址了，这里我们改改 使用自己的域名，如图所示:  
-![](http://qiniu.xxgtalk.cn/blog/images/tools/travis_github_config.jpg) 
+![](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/tools/travis_github_config.jpg) 
 最后，去域名管理页，将自己的这个子域名一定一个类型为CNAME的，地址为:wetrial.github.io
 </code></pre>
 </li>
 </ul>
 <h4 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h4><p>访问刚配置的地址:<a target="_blank" rel="noopener" href="http://ant.xxgtalk.cn/">http://ant.xxgtalk.cn</a> 可以看到部署好的文档</p>
-<p><img src="http://qiniu.xxgtalk.cn/blog/images/tools/wetrial-site.jpg" alt="wetrial示例"> </p>
+<p><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/tools/wetrial-site.jpg" alt="wetrial示例"> </p>
 <blockquote>
 <p>此外,打算写一篇这块的手册，<a target="_blank" rel="noopener" href="https://www.yuque.com/wetrial/front-end/xuyan">地址:https://www.yuque.com/wetrial/front-end/xuyan</a> 欢迎 <a target="_blank" rel="noopener" href="https://www.yuque.com/wetrial/front-end/xuyan">FORK</a></p>
 </blockquote>
@@ -400,7 +400,7 @@
         }
     </style>
 <div id="page-weixin">
-    <img src="http://qiniu.xxgtalk.cn/wechat/codefront/qrcode.gif" />
+    <img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/wechat/qrcode.gif" />
 </div>
 
 
@@ -568,7 +568,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/3.jpg" class="responsive-img" alt="使用umi-library来打包组件">
+                        <img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/3.jpg" class="responsive-img" alt="使用umi-library来打包组件">
                         
                         <span class="card-title">使用umi-library来打包组件</span>
                     </div>
@@ -628,7 +628,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/7.jpg" class="responsive-img" alt="利用ngrok来做内网穿透">
+                        <img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/7.jpg" class="responsive-img" alt="利用ngrok来做内网穿透">
                         
                         <span class="card-title">利用ngrok来做内网穿透</span>
                     </div>

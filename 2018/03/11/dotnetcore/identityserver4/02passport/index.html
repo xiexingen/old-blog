@@ -266,7 +266,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://qiniu.xxgtalk.cn/blog/images/background/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/1.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -343,18 +343,18 @@
 
 <h5 id="一、IdentityServer-也叫服务端"><a href="#一、IdentityServer-也叫服务端" class="headerlink" title="一、IdentityServer 也叫服务端"></a>一、IdentityServer 也叫服务端</h5><ol>
 <li>新建.netcore web项目 设置启动端口为60000 并通过Nuget引用IdentityServer4</li>
-<li>添加ApiResource和Client(此处方便测试固定了一些数据)<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/1-0201.png"></li>
-<li>使用IdentityServer<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/1-0301.png"><br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/1-0302.png"></li>
-<li>启动项目 <a target="_blank" rel="noopener" href="http://localhost:60000/.well-known/openid-configuration">http://localhost:60000/.well-known/openid-configuration</a> 可以看到相关json数据<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/1-0401.png"><h5 id="二、Api端-与clientCredentials模式完全一致"><a href="#二、Api端-与clientCredentials模式完全一致" class="headerlink" title="二、Api端 (与clientCredentials模式完全一致)"></a>二、Api端 (与clientCredentials模式完全一致)</h5></li>
+<li>添加ApiResource和Client(此处方便测试固定了一些数据)<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/dotnetcore/identityserver4/02/1-0201.png"></li>
+<li>使用IdentityServer<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/dotnetcore/identityserver4/02/1-0301.png"><br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/dotnetcore/identityserver4/02/1-0302.png"></li>
+<li>启动项目 <a target="_blank" rel="noopener" href="http://localhost:60000/.well-known/openid-configuration">http://localhost:60000/.well-known/openid-configuration</a> 可以看到相关json数据<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/dotnetcore/identityserver4/02/1-0401.png"><h5 id="二、Api端-与clientCredentials模式完全一致"><a href="#二、Api端-与clientCredentials模式完全一致" class="headerlink" title="二、Api端 (与clientCredentials模式完全一致)"></a>二、Api端 (与clientCredentials模式完全一致)</h5></li>
 <li>新建.netcore web项目 设置启动端口为60001<br>通过Nuget引用IdentityServer4.AccessTokenValidation 此处只需要验证所以不需要引用IdentityServer4</li>
-<li>配置<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/2-0201.png"></li>
+<li>配置<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/dotnetcore/identityserver4/02/2-0201.png"></li>
 <li>在controller上贴上属性[Authorize] 表示只允许登录用户访问</li>
-<li>通过postman获取token(注意请求body中的参数)<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/2-0401.png"></li>
-<li>请求需要登录的api 此处为api/values<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/2-0501.png"><h5 id="三、client-客户端也叫ThirPart【选修】"><a href="#三、client-客户端也叫ThirPart【选修】" class="headerlink" title="三、client 客户端也叫ThirPart【选修】"></a>三、client 客户端也叫ThirPart【选修】</h5><blockquote>
+<li>通过postman获取token(注意请求body中的参数)<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/dotnetcore/identityserver4/02/2-0401.png"></li>
+<li>请求需要登录的api 此处为api/values<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/dotnetcore/identityserver4/02/2-0501.png"><h5 id="三、client-客户端也叫ThirPart【选修】"><a href="#三、client-客户端也叫ThirPart【选修】" class="headerlink" title="三、client 客户端也叫ThirPart【选修】"></a>三、client 客户端也叫ThirPart【选修】</h5><blockquote>
 <p>定义一个控制台程序 访问api获取数据</p>
 </blockquote>
 </li>
-<li>创建.net core控制台程序 通过Nuget引用包IdentityModel<br><img src="http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/02/3-0101.png"></li>
+<li>创建.net core控制台程序 通过Nuget引用包IdentityModel<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/dotnetcore/identityserver4/02/3-0101.png"></li>
 </ol>
 
             </div>
@@ -367,7 +367,7 @@
         }
     </style>
 <div id="page-weixin">
-    <img src="http://qiniu.xxgtalk.cn/wechat/codefront/qrcode.gif" />
+    <img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/wechat/qrcode.gif" />
 </div>
 
 
@@ -535,7 +535,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/4.jpg" class="responsive-img" alt="Openssl生成免费证书">
+                        <img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/4.jpg" class="responsive-img" alt="Openssl生成免费证书">
                         
                         <span class="card-title">Openssl生成免费证书</span>
                     </div>
@@ -592,7 +592,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/21.jpg" class="responsive-img" alt="IdentityServer4-ClientCredentials模式">
+                        <img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/21.jpg" class="responsive-img" alt="IdentityServer4-ClientCredentials模式">
                         
                         <span class="card-title">IdentityServer4-ClientCredentials模式</span>
                     </div>

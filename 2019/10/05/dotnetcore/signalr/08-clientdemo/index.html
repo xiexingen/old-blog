@@ -264,7 +264,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://qiniu.xxgtalk.cn/blog/images/background/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/5.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -466,10 +466,10 @@ app.UseAuthorization();</code></pre>
 <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span></code></pre>
 <p>对应的推送解析代码 </p>
 <blockquote>
-<p>首先当有推送过来的时候，会首先进到onNotify方法，然后根据不同类型在分配到不同的js方法中<br><a target="_blank" rel="noopener" href="https://github.com/xiexingen/CTS.Signalr/blob/master/CTS.Signalr.Client/Views/Home/Index.cshtml#L268-L279">查看代码</a><br>效果图<br><img src="http://qiniu.xxgtalk.cn/blog/images/20190927212304.png" alt="20190927212304.png"></p>
+<p>首先当有推送过来的时候，会首先进到onNotify方法，然后根据不同类型在分配到不同的js方法中<br><a target="_blank" rel="noopener" href="https://github.com/xiexingen/CTS.Signalr/blob/master/CTS.Signalr.Client/Views/Home/Index.cshtml#L268-L279">查看代码</a><br>效果图<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/20190927212304.png" alt="20190927212304.png"></p>
 </blockquote>
 <h3 id="模拟发送消息"><a href="#模拟发送消息" class="headerlink" title="模拟发送消息"></a>模拟发送消息</h3><p>消息发送，可以选定组、人进行消息发送<br><a target="_blank" rel="noopener" href="https://github.com/xiexingen/CTS.Signalr/blob/master/CTS.Signalr.Client/Views/Home/Index.cshtml#L145-L157">发送端代码</a><br><a target="_blank" rel="noopener" href="https://github.com/xiexingen/CTS.Signalr/blob/master/CTS.Signalr.Client/Views/Home/Index.cshtml#L281-L290">解析端</a></p>
-<h3 id="登录互斥"><a href="#登录互斥" class="headerlink" title="登录互斥"></a>登录互斥</h3><p>登录互斥是指，当一个账号在A电脑登录，然后再在B电脑登录，最后的登录会排斥掉开始的登录，即，将A上的挤下线<br>首先用谷歌浏览器登录，输入用户名：xiexingen，然后连接<br>接着使用360急速浏览器登录，输入用户名:xiexingen 这个时候会发现谷歌浏览器中的登录已经退出，如图<br><img src="http://qiniu.xxgtalk.cn/blog/images/20190927213637.png" alt="20190927213637.png"></p>
+<h3 id="登录互斥"><a href="#登录互斥" class="headerlink" title="登录互斥"></a>登录互斥</h3><p>登录互斥是指，当一个账号在A电脑登录，然后再在B电脑登录，最后的登录会排斥掉开始的登录，即，将A上的挤下线<br>首先用谷歌浏览器登录，输入用户名：xiexingen，然后连接<br>接着使用360急速浏览器登录，输入用户名:xiexingen 这个时候会发现谷歌浏览器中的登录已经退出，如图<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/20190927213637.png" alt="20190927213637.png"></p>
 <blockquote>
 <p>必要条件: 不同浏览器、同一用户,比如:同一个浏览器，不同tab就不算(能共用cookie)</p>
 </blockquote>
@@ -478,7 +478,7 @@ app.UseAuthorization();</code></pre>
 <li>单连接推送<br>用户开了多个tab页，在其中一个上下载文件，如果后端推送的时候，直接给该用户推，显然不妥；正确的做法一个是只给操作的那个tab页推，这就需要，调用服务器端业务api的时候，需要把当前tab页对应的连接id发送到服务器端，服务器端处理完业务后，调用推送服务器，告诉推送服务器只推我给你的这个连接的客户端，这样就能指定连接推送。</li>
 <li>单用户排除某个连接的其他连接推送<br>这种情况比较少见，告诉推送服务器，给这个用户，除了某个连接外的其他所有连接推送</li>
 </ol>
-<p>模拟操作<br>点击第一个图中的”打包下载文件” 按钮，当前页面会受到文件下载的推送<br>在点击图二中的”推送当前用户其他页面更新操作”按钮，会发现出了当前tab页外，其他tab也都收到了推送消息，如下图<br><img src="http://qiniu.xxgtalk.cn/blog/images/20190927214530.png" alt="20190927214530.png"></p>
+<p>模拟操作<br>点击第一个图中的”打包下载文件” 按钮，当前页面会受到文件下载的推送<br>在点击图二中的”推送当前用户其他页面更新操作”按钮，会发现出了当前tab页外，其他tab也都收到了推送消息，如下图<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/20190927214530.png" alt="20190927214530.png"></p>
 <p>至此，signalr相关文章算是到此结束了，下一篇谈谈个人的一点心得以及里面存着的一些问题。</p>
 <h2 id="快速导航"><a href="#快速导航" class="headerlink" title="快速导航"></a>快速导航</h2><table>
 <thead>
@@ -519,7 +519,7 @@ app.UseAuthorization();</code></pre>
         }
     </style>
 <div id="page-weixin">
-    <img src="http://qiniu.xxgtalk.cn/wechat/codefront/qrcode.gif" />
+    <img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/wechat/qrcode.gif" />
 </div>
 
 
@@ -687,7 +687,7 @@ app.UseAuthorization();</code></pre>
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/23.jpg" class="responsive-img" alt="Nginx开篇">
+                        <img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/23.jpg" class="responsive-img" alt="Nginx开篇">
                         
                         <span class="card-title">Nginx开篇</span>
                     </div>
@@ -748,7 +748,7 @@ sys
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/9.jpg" class="responsive-img" alt=".net core 3.0 Signalr - 09 待改进&交流">
+                        <img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/9.jpg" class="responsive-img" alt=".net core 3.0 Signalr - 09 待改进&交流">
                         
                         <span class="card-title">.net core 3.0 Signalr - 09 待改进&交流</span>
                     </div>

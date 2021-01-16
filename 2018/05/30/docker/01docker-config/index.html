@@ -269,7 +269,7 @@ CentOS 7 (使用yum进行安装)如果之前安装过】先卸载依赖
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://qiniu.xxgtalk.cn/blog/images/background/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -384,7 +384,7 @@ sudo systemctl restart docker</code></pre>
         }
     </style>
 <div id="page-weixin">
-    <img src="http://qiniu.xxgtalk.cn/wechat/codefront/qrcode.gif" />
+    <img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/wechat/qrcode.gif" />
 </div>
 
 
@@ -548,43 +548,31 @@ sudo systemctl restart docker</code></pre>
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="../02docker-dockerfile/">
+                <a href="../../../../06/01/docker/03docker-mongodb/">
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/17.jpg" class="responsive-img" alt="Dockerfile解析">
+                        <img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/6.jpg" class="responsive-img" alt="Docker安装mongodb">
                         
-                        <span class="card-title">Dockerfile解析</span>
+                        <span class="card-title">Docker安装mongodb</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Dockerfile解说
+                            Docker安装mongodb
 
 
 
-
-
-关键字
-说明
-例子
-
-
-
-FROM
-以此为基础来构建
-FROM debian:buster-slim
-
-
-MAINTAINER
-镜像维护着的项目和邮箱地址
-MAINTAINER The CentOS Pr
+配置好docker的加速镜像[参考02Docker安装及配置]  
+docker pull mongo 拉去mongo镜像  
+启动docker实例  
+方式一docker run -d -p 2701
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-05-30
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2018-06-01
                         </span>
                         <span class="publish-author">
                             
@@ -616,51 +604,43 @@ MAINTAINER The CentOS Pr
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="../../../28/docker/00command/">
+                <a href="../02docker-dockerfile/">
                     <div class="card-image">
                         
                         
-                        <img src="http://qiniu.xxgtalk.cn/blog/images/background/featureimages/23.jpg" class="responsive-img" alt="Docker常用命令">
+                        <img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/17.jpg" class="responsive-img" alt="Dockerfile解析">
                         
-                        <span class="card-title">Docker常用命令</span>
+                        <span class="card-title">Dockerfile解析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Docker常用命令
+                            Dockerfile解说
 
 
 
 
 
-命令
+关键字
 说明
-参数
+例子
 
 
 
-docker –version
-查看当前docker版本
+FROM
+以此为基础来构建
+FROM debian:buster-slim
 
 
-
-docker ps
-查看当前正在运行的容器
-
-
-
-docker images
-查看本地所有镜像
-
-
-
-docker pu
+MAINTAINER
+镜像维护着的项目和邮箱地址
+MAINTAINER The CentOS Pr
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-05-28
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2018-05-30
                             </span>
                         <span class="publish-author">
                             
