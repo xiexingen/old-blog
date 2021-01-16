@@ -210,10 +210,10 @@ mySkills:
 myGallery:
   enable: true
   data:
-    - http://qiniu.xxgtalk.cn/blog/images/background/featureimages/0.jpg
-    - http://qiniu.xxgtalk.cn/blog/images/background/featureimages/1.jpg
-    - http://qiniu.xxgtalk.cn/blog/images/background/featureimages/2.jpg
-    - http://qiniu.xxgtalk.cn/blog/images/background/featureimages/3.jpg
+    - https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/0.jpg
+    - https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/1.jpg
+    - https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/2.jpg
+    - https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/3.jpg
 
 # Whether to display post-calender in the `archive` page
 # 设置在归档页面中是否显示'文章日历'控件
@@ -332,30 +332,30 @@ libs:
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
 featureImages: 
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/0.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/1.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/2.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/3.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/4.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/5.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/6.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/7.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/8.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/9.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/10.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/11.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/12.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/13.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/14.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/15.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/16.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/17.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/18.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/19.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/20.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/21.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/22.jpg
-- http://qiniu.xxgtalk.cn/blog/images/background/featureimages/23.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/0.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/1.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/2.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/3.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/4.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/5.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/6.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/7.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/8.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/9.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/10.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/11.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/12.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/13.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/14.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/15.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/16.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/17.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/18.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/19.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/20.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/21.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/22.jpg
+- https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/background/featureimages/23.jpg
 
   # default configs that the default policy for every articles/posts
   # default 配置文章的默认转载规则
@@ -380,5 +380,5 @@ reprint:
   enable: false # whether enable reprint section 是否启用“转载规则限定模块”
   default: cc_by
 
-# 公众配置 http://qiniu.xxgtalk.cn/wechat/wechat.gif
-weixin: http://qiniu.xxgtalk.cn/wechat/codefront/qrcode.gif
+# 公众配置 https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/wechat/qrcode.gif
+weixin: https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/wechat/qrcode.gif

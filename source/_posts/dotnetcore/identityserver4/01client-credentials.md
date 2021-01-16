@@ -69,7 +69,7 @@ IdentityServer4-ClientCredentials模式
     }
     ```
 4. 启动项目 http://localhost:60000/.well-known/openid-configuration 可以看到相关json数据
-![json](http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/01/1-0401.png)
+![json](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/dotnetcore/identityserver4/01/1-0401.png)
 
 #### 二、Api端
 1. 新建.netcore web项目 设置启动端口为60001 
@@ -120,9 +120,9 @@ IdentityServer4-ClientCredentials模式
     ```
 3. 在controller上贴上属性[Authorize] 表示只允许登录用户访问
 4. 通过postman获取token(注意请求body中的参数)
-![json](http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/01/2-0401.png)
+![json](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/dotnetcore/identityserver4/01/2-0401.png)
 5. 请求需要登录的api 此处为api/values
-![json](http://qiniu.xxgtalk.cn/blog/images/dotnetcore/identityserver4/01/2-0501.png)
+![json](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/dotnetcore/identityserver4/01/2-0501.png)
 
 #### 三、client 客户端也叫ThirPart【选修】
 定义一个控制台程序 访问api获取数据

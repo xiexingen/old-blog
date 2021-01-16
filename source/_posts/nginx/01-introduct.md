@@ -113,7 +113,7 @@ server {
 ## 动静分离(跟基础类似)
 
 ## 高可用
-![20191130225646.png](http://qiniu.xxgtalk.cn/blog/images/20191130225646.png)
+![20191130225646.png](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/20191130225646.png)
 1. 需要在轮胎服务器安装nginx
 2. 需要再两台服务器上安装keepalived
 ``` bash

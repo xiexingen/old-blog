@@ -24,4 +24,4 @@ vscode下使用 PicGo自动上传图片
 
 ### 工业1.0时代
 今天的重点是，vscode下的[PicGo](https://github.com/Molunerfinn/PicGo)插件,通过简单的配置可以实现切换 七牛、微博、腾讯云COS、又拍云、github、阿里云oss、imgur等，与vscode很方便的集成，综合对比了下 腾讯云、阿里云皆收费，github国内又有点慢，最后选择了七牛，每个月10G 博客应该够用，配置如下:
-![](http://qiniu.xxgtalk.cn/blog/images/20190807085943.png)
+![](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/20190807085943.png)

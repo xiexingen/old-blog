@@ -12,7 +12,7 @@ img:
 Docker制作WebApi&MySql 直接上图
 <!-- more -->
 
-![](http://qiniu.xxgtalk.cn/blog/images/docker/050a01.png)
+![](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/docker/050a01.png)
 1. docker文件  
     ``` docker
     FROM microsoft/aspnetcore-build as build-env

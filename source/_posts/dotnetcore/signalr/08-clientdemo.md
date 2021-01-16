@@ -162,7 +162,7 @@ assignTaskToUser: function () {
 > 首先当有推送过来的时候，会首先进到onNotify方法，然后根据不同类型在分配到不同的js方法中  
 [查看代码](https://github.com/xiexingen/CTS.Signalr/blob/master/CTS.Signalr.Client/Views/Home/Index.cshtml#L268-L279)   
 效果图  
-![20190927212304.png](http://qiniu.xxgtalk.cn/blog/images/20190927212304.png)
+![20190927212304.png](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/20190927212304.png)
 
 ### 模拟发送消息
 消息发送，可以选定组、人进行消息发送  
@@ -173,7 +173,7 @@ assignTaskToUser: function () {
 登录互斥是指，当一个账号在A电脑登录，然后再在B电脑登录，最后的登录会排斥掉开始的登录，即，将A上的挤下线  
 首先用谷歌浏览器登录，输入用户名：xiexingen，然后连接  
 接着使用360急速浏览器登录，输入用户名:xiexingen 这个时候会发现谷歌浏览器中的登录已经退出，如图
-![20190927213637.png](http://qiniu.xxgtalk.cn/blog/images/20190927213637.png)
+![20190927213637.png](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/20190927213637.png)
 > 必要条件: 不同浏览器、同一用户,比如:同一个浏览器，不同tab就不算(能共用cookie)
 
 ### 文件下载(指定连接推送)
@@ -187,7 +187,7 @@ assignTaskToUser: function () {
 模拟操作  
 点击第一个图中的"打包下载文件" 按钮，当前页面会受到文件下载的推送  
 在点击图二中的"推送当前用户其他页面更新操作"按钮，会发现出了当前tab页外，其他tab也都收到了推送消息，如下图
-![20190927214530.png](http://qiniu.xxgtalk.cn/blog/images/20190927214530.png)
+![20190927214530.png](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/20190927214530.png)
 
 至此，signalr相关文章算是到此结束了，下一篇谈谈个人的一点心得以及里面存着的一些问题。
 
