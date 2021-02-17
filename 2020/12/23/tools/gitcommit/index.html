@@ -14,9 +14,10 @@ Commit Message 格式&amp;lt;type&gt;(&amp;lt;scope&gt;): &amp;lt;subject&gt;
 &amp;lt;空一行&gt;
 &amp;lt;footer&gt;
 
+
 &amp;lt;type&amp;gt;
 
-fe">
+f">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -347,7 +348,8 @@ fe">
 <span class="token operator">&lt;</span>空一行<span class="token operator">></span>
 <span class="token operator">&lt;</span>body<span class="token operator">></span>
 <span class="token operator">&lt;</span>空一行<span class="token operator">></span>
-<span class="token operator">&lt;</span>footer<span class="token operator">></span></code></pre>
+<span class="token operator">&lt;</span>footer<span class="token operator">></span>
+</code></pre>
 <ul>
 <li><p><code>&lt;type&gt;</code></p>
 <ul>
@@ -391,13 +393,15 @@ Added new event to <span class="token variable">$browser</span><span class="toke
 - forward hashchange event <span class="token keyword">if</span> popstate not available
 - <span class="token keyword">do</span> polling when neither popstate nor hashchange available
 
-Breaks <span class="token variable">$browser</span>.onHashChange, <span class="token function">which</span> was removed <span class="token punctuation">(</span>use onUrlChange instead<span class="token punctuation">)</span></code></pre>
+Breaks <span class="token variable">$browser</span>.onHashChange, <span class="token function">which</span> was removed <span class="token punctuation">(</span>use onUrlChange instead<span class="token punctuation">)</span>
+</code></pre>
 <pre class=" language-bash"><code class="language-bash">feat<span class="token punctuation">(</span>directive<span class="token punctuation">)</span>: ng:disabled, ng:checked, ng:multiple, ng:readonly, ng:selected
 
 New directives <span class="token keyword">for</span> proper binding these attributes <span class="token keyword">in</span> older browsers <span class="token punctuation">(</span>IE<span class="token punctuation">)</span>.
 Added coresponding description, live examples and e2e tests.
 
-Closes <span class="token comment" spellcheck="true">#351</span></code></pre>
+Closes <span class="token comment" spellcheck="true">#351</span>
+</code></pre>
 </li>
 <li><p>fix</p>
 <pre class=" language-bash"><code class="language-bash">fix<span class="token punctuation">(</span><span class="token variable">$compile</span><span class="token punctuation">)</span>: couple of unit tests <span class="token keyword">for</span> IE9
@@ -407,7 +411,8 @@ Would be better to <span class="token function">expect</span> <span class="token
 not allow to user regexps <span class="token keyword">for</span> throw expectations.
 
 Closes <span class="token comment" spellcheck="true">#392</span>
-Breaks foo.bar api, foo.baz should be used instead</code></pre>
+Breaks foo.bar api, foo.baz should be used instead
+</code></pre>
 </li>
 </ul>
 <ul>
@@ -418,38 +423,46 @@ Couple of typos fixed:
 - indentation
 - batchLogbatchLog -<span class="token operator">></span> batchLog
 - start periodic checking
-- missing brace</code></pre>
+- missing brace
+</code></pre>
 <pre class=" language-bash"><code class="language-bash">docs: fix grammar
 docs: corrections and further clarifications 
 docs: update broken <span class="token function">link</span>
 docs<span class="token punctuation">(</span>README<span class="token punctuation">)</span>: update version number
 docs<span class="token punctuation">(</span>README<span class="token punctuation">)</span>: place badge
-docs<span class="token punctuation">(</span>inputs<span class="token punctuation">)</span>: remove redundant defaults</code></pre>
+docs<span class="token punctuation">(</span>inputs<span class="token punctuation">)</span>: remove redundant defaults
+</code></pre>
 </li>
 <li><p>style</p>
 <pre class=" language-bash"><code class="language-bash">style: fix table indentation
-style<span class="token punctuation">(</span><span class="token variable">$location</span><span class="token punctuation">)</span>: add couple of missing semi colons</code></pre>
+style<span class="token punctuation">(</span><span class="token variable">$location</span><span class="token punctuation">)</span>: add couple of missing semi colons
+</code></pre>
 </li>
 <li><p>refactor</p>
 <pre class=" language-bash"><code class="language-bash">refactor: remove unnecessary object destructuring
-refactor: use <span class="token variable"><span class="token variable">`</span>Object.entries<span class="token variable">`</span></span> rather than <span class="token variable"><span class="token variable">`</span>Object.keys<span class="token variable">`</span></span></code></pre>
+refactor: use <span class="token variable"><span class="token variable">`</span>Object.entries<span class="token variable">`</span></span> rather than <span class="token variable"><span class="token variable">`</span>Object.keys<span class="token variable">`</span></span>
+</code></pre>
 </li>
 <li><p>perf</p>
-<pre class=" language-bash"><code class="language-bash">perf<span class="token punctuation">(</span>*<span class="token punctuation">)</span>: Update network configuration</code></pre>
+<pre class=" language-bash"><code class="language-bash">perf<span class="token punctuation">(</span>*<span class="token punctuation">)</span>: Update network configuration
+</code></pre>
 </li>
 <li><p>test</p>
 <pre class=" language-bash"><code class="language-bash">test: clarify variables name
-test<span class="token punctuation">(</span>testRelease<span class="token punctuation">)</span>: <span class="token keyword">set</span> schedule <span class="token function">test</span></code></pre>
+test<span class="token punctuation">(</span>testRelease<span class="token punctuation">)</span>: <span class="token keyword">set</span> schedule <span class="token function">test</span>
+</code></pre>
 </li>
 <li><p>chore</p>
 <pre class=" language-bash"><code class="language-bash">chore<span class="token punctuation">(</span>package<span class="token punctuation">)</span>: update xo to version 0.25.0
 chore<span class="token punctuation">(</span>package<span class="token punctuation">)</span>: remove commitizen from our dependencies
-chore<span class="token punctuation">(</span>*<span class="token punctuation">)</span>: transfer repo to cycjimmy</code></pre>
+chore<span class="token punctuation">(</span>*<span class="token punctuation">)</span>: transfer repo to cycjimmy
+</code></pre>
 </li>
 <li><p>revert</p>
 <pre class=" language-bash"><code class="language-bash">revert: <span class="token string">"fix: do not convert ssh <span class="token variable"><span class="token variable">`</span>repositoryUrl<span class="token variable">`</span></span> to https"</span>
 
-This reverts commit b895231.</code></pre>
+This reverts commit b895231.
+</code></pre>
 </li>
 </ul>
 

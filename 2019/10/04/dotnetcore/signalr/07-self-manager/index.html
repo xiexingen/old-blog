@@ -485,7 +485,8 @@ namespace CTS.Signalr.Server.Hubs
               IsLast = userConnectCount == 0
           &#125;);
       &#125;
-  &#125;</code></pre>
+  &#125;
+</code></pre>
 <p>  }</p>
 <pre><code>
 ## 提供给业务系统调用的API
@@ -497,7 +498,8 @@ application/json形式 提交，数据格式如下
   UserIds:&#39;&#39;,// [可空] 用户id集合，多个用,隔开
   ExcludeUsers:boolean, // 是否排除用户列表中的用户
   NotifyObj:Object // 通知的对象，任意类型(总大小不要超过36k)
-&#125;</code></pre>
+&#125;
+</code></pre>
 <ul>
 <li><p>有GroupIds</p>
 <ul>
@@ -521,7 +523,8 @@ application/json形式 提交，数据格式如下
 <pre class=" language-json"><code class="language-json">&amp;#<span class="token number">123</span><span class="token punctuation">;</span>
   Connects<span class="token operator">:</span>''<span class="token punctuation">,</span> // 连接Id集合，多个用，隔开
   NotifyObj<span class="token operator">:</span>Object // 通知的对象，任意类型(总大小不要超过36k<span class="token punctuation">)</span>
-&amp;#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
+&amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+</code></pre>
 <ul>
 <li>有UserId<ul>
 <li>ExcludeConnectId=true<br>给改用户除指定的ConnectId外的所有连接端推送</li>
@@ -551,7 +554,8 @@ application/json形式 提交，数据格式如下
 
   loggerFactory.AddLog4Net();
   ...
-&#125;</code></pre>
+&#125;
+</code></pre>
 </li>
 <li><p>添加log4net配置文件<br>更多配置请自行查找log4net官方配置文档</p>
 <pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="utf-8" ?></span>
@@ -585,7 +589,8 @@ trace&lt;debug&lt;info&lt;warn&lt;error&lt;fatal --></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>level</span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>All<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appender-ref</span> <span class="token attr-name">ref</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ErrorRollingFileAppender<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>root</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>log4net</span><span class="token punctuation">></span></span></code></pre>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>log4net</span><span class="token punctuation">></span></span>
+</code></pre>
 <p>至此，log4net配置完毕</p>
 </li>
 </ul>

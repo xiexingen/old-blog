@@ -376,7 +376,8 @@ namespace Api
             &#125;;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 </li>
 <li><p>使用IdentityServe4</p>
 <pre class=" language-cs"><code class="language-cs">public void ConfigureServices(IServiceCollection services)
@@ -394,7 +395,8 @@ public void Configure(IApplicationBuilder app,IHostingEnvironment env)
         app.UseDeveloperExceptionPage();
     &#125;
     app.UseIdentityServer();
-&#125;</code></pre>
+&#125;
+</code></pre>
 </li>
 <li><p>启动项目 <a target="_blank" rel="noopener" href="http://localhost:60000/.well-known/openid-configuration">http://localhost:60000/.well-known/openid-configuration</a> 可以看到相关json数据<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/dotnetcore/identityserver4/01/1-0401.png" alt="json"></p>
 </li>
@@ -443,7 +445,8 @@ namespace Api
             app.UseMvc();
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 </li>
 <li><p>在controller上贴上属性[Authorize] 表示只允许登录用户访问</p>
 </li>
@@ -497,7 +500,8 @@ namespace Client
     &#125;
 &#125;
 
-```</code></pre>
+```
+</code></pre>
 
             </div>
             <hr/>

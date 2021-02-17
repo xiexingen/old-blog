@@ -356,10 +356,12 @@ COPY *.csproj ./">
 <span class="token keyword">COPY</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>from=build<span class="token punctuation">-</span>env /code/out ./
 
 <span class="token keyword">EXPOSE</span> 50000
-<span class="token keyword">ENTRYPOINT</span> <span class="token punctuation">[</span><span class="token string">"dotnet"</span><span class="token punctuation">,</span><span class="token string">"WebApiDocker.dll"</span><span class="token punctuation">]</span></code></pre>
+<span class="token keyword">ENTRYPOINT</span> <span class="token punctuation">[</span><span class="token string">"dotnet"</span><span class="token punctuation">,</span><span class="token string">"WebApiDocker.dll"</span><span class="token punctuation">]</span>
+</code></pre>
 </li>
 <li><p>编译docker文件  </p>
-<pre class=" language-docker"><code class="language-docker">docker build <span class="token punctuation">-</span>t  xxg/aspnetcore<span class="token punctuation">:</span>1.0 .</code></pre>
+<pre class=" language-docker"><code class="language-docker">docker build <span class="token punctuation">-</span>t  xxg/aspnetcore<span class="token punctuation">:</span>1.0 .
+</code></pre>
 </li>
 <li><p>使用该镜像启动一个容器<br>a. docker run -d -p 5000:80  –name api01 –link mysql01:db xxg/aspnetcore:1.0<br>b. 使用bridge形式<br>docker network create -d bridge mybridge        //创建一个网络<br>docker run -d -p 5000:5000 –net mybridge –name api1 xxg/aspnetcore:1.0<br>docker network connect mysql01  mybridge    //表示将mysql01跟mybridge网络连接起来  </p>
 <blockquote>

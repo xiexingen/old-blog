@@ -350,11 +350,13 @@ CentOS 7 (使用yum进行安装)如果之前安装过】先卸载依赖
   container-selinux \
   docker-selinux \
   docker-engine \
-  docker-engine-selinux</code></pre>
+  docker-engine-selinux
+</code></pre>
 <ol>
 <li>直接安装<br>curl -sSL <a target="_blank" rel="noopener" href="https://get.docker.com/">https://get.docker.com/</a> | sh</li>
 <li>启动 并设置开机启动  <pre><code>sudo systemctl start docker
-sudo systemctl enable docker</code></pre>
+sudo systemctl enable docker
+</code></pre>
 </li>
 </ol>
 <blockquote>
@@ -362,10 +364,12 @@ sudo systemctl enable docker</code></pre>
 </blockquote>
 <pre><code>&#123;
   &quot;registry-mirrors&quot;: [&quot;https://noe4mlw6.mirror.aliyuncs.com&quot;]
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>重启docker  </p>
 <pre><code>sudo systemctl daemon-reload
-sudo systemctl restart docker</code></pre>
+sudo systemctl restart docker
+</code></pre>
 <h3 id="安装docker-compose"><a href="#安装docker-compose" class="headerlink" title="安装docker-compose"></a>安装docker-compose</h3><ol>
 <li>sudo curl -L <a target="_blank" rel="noopener" href="https://github.com/docker/compose/releases/download/1.20.0/docker-compose-%60uname">https://github.com/docker/compose/releases/download/1.20.0/docker-compose-`uname</a> -s<code>-</code>uname -m` -o /usr/local/bin/docker-compose  </li>
 <li>sudo chmod a+x /usr/local/bin/docker-compose <blockquote>

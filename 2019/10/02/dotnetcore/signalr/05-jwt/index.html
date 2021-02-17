@@ -443,7 +443,8 @@ Signalr是以Group、Connect为核心来进行推送，比如，给某个组、�
               return connection;
           &#125;;
       &#125;);
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>其中，SignalrRedisHelper 为redis辅助方法，<a target="_blank" rel="noopener" href="https://github.com/xiexingen/CTS.Signalr/blob/master/Core.Signalr.Template.Web/Cores/SignalrRedisHelper.cs">详情请参见</a><br>UserTokenValidation 为自定义token解析方法，<a target="_blank" rel="noopener" href="https://github.com/xiexingen/CTS.Signalr/blob/master/Core.Signalr.Template.Web/Cores/UserTokenValidation.cs">详情请参见</a>,由于历史遗留问题，此处直接使用了userId，建议的做法是传递jwttoken，然后服务器端解析jwt token得到用户信息    </p>
 </li>
 </ul>

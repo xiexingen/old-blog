@@ -412,7 +412,8 @@
 <pre class=" language-C#"><code class="language-C#">public class NotifyHub : Hub
 &#123;
 
-&#125;</code></pre>
+&#125;
+</code></pre>
 </li>
 <li><p>修改Startup中的ConfigServices方法，注册对应的服务</p>
 <pre class=" language-C#"><code class="language-C#">// 添加Signalr
@@ -423,7 +424,8 @@ services.AddSignalR(config =>
     &#123;
         config.EnableDetailedErrors = true;
     &#125;
-&#125;);</code></pre>
+&#125;);
+</code></pre>
 </li>
 <li><p>修改Configure配置HTTP请求的管道</p>
 <pre class=" language-C#"><code class="language-C#">...

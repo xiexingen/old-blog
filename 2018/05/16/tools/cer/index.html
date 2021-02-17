@@ -345,9 +345,11 @@
 </blockquote>
 <ol>
 <li>下载安装</li>
-<li>在自己目录下运行 <pre class=" language-bash"><code class="language-bash">openssl req -newkey rsa:2048 -nodes -keyout socialnetwork.key -x509 -days 365 -out socialnetwork.cer</code></pre>
+<li>在自己目录下运行 <pre class=" language-bash"><code class="language-bash">openssl req -newkey rsa:2048 -nodes -keyout socialnetwork.key -x509 -days 365 -out socialnetwork.cer
+</code></pre>
 </li>
-<li>生成pfx文件命令<pre class=" language-bash"><code class="language-bash">openssl pkcs12 -export -in socialnetwork.cer -inkey socialnetwork.key -out socialnetwork.pfx</code></pre>
+<li>生成pfx文件命令<pre class=" language-bash"><code class="language-bash">openssl pkcs12 -export -in socialnetwork.cer -inkey socialnetwork.key -out socialnetwork.pfx
+</code></pre>
 </li>
 </ol>
 

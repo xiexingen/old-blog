@@ -360,7 +360,8 @@ git 2.x
 <pre class=" language-bash"><code class="language-bash">// 增加如下变量到用户环境变量中
 PUB_HOSTED_URL<span class="token operator">=</span>https://pub.flutter-io.cn  
 FLUTTER_STORAGE_BASE_URL<span class="token operator">=</span>https://storage.flutter-io.cn
-// 注:这些镜像为临时镜像，并不保证一直可用，可以从https://flutter.dev/community/china 查看最新的网址</code></pre>
+// 注:这些镜像为临时镜像，并不保证一直可用，可以从https://flutter.dev/community/china 查看最新的网址
+</code></pre>
 </li>
 <li><p>下载并安装</p>
 </li>
@@ -375,7 +376,8 @@ FLUTTER_STORAGE_BASE_URL<span class="token operator">=</span>https://storage.flu
 </ol>
 <ul>
 <li>添加系统环境变量<pre class=" language-bash"><code class="language-bash">// 键和值，其中目录为Android SDK的目录，可以通过android studio菜单File-<span class="token operator">></span>Settings 然后搜索SDK 可查看SDK的安装目录
-ANDROID_HOME:C:\Users\xiexingen\AppData\Local\Android\Sdk</code></pre>
+ANDROID_HOME:C:\Users\xiexingen\AppData\Local\Android\Sdk
+</code></pre>
 </li>
 <li>在系统环境变量中的Path中添加%ANDROID_HOME%\emulator</li>
 <li>在系统环境变量中的Path中添加%ANDROID_HOME%\platform-tools</li>
@@ -411,7 +413,8 @@ ANDROID_HOME:C:\Users\xiexingen\AppData\Local\Android\Sdk</code></pre>
 <li>由于国内访问Flutter可能受限，Flutter官方为中国地区待见了临时镜像，可添加如下环境变量到用户的环境变量中<pre class=" language-bash"><code class="language-bash">// Macintosh HD-<span class="token operator">></span>Users-<span class="token operator">></span>用户名-<span class="token operator">></span>.bash_profile
 <span class="token function">export</span> PUB_HOSTED_URL<span class="token operator">=</span>https://pub.flutter-io.cn
 <span class="token function">export</span> FLUTTER_STORAGE_BASE_URL<span class="token operator">=</span>https://storage.flutter-io.cn
-// 注:这些镜像为临时镜像，并不保证一直可用，可以从https://flutter.dev/community/china 查看最新的网址</code></pre>
+// 注:这些镜像为临时镜像，并不保证一直可用，可以从https://flutter.dev/community/china 查看最新的网址
+</code></pre>
 </li>
 </ul>
 <h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><h3 id="Flutter-SDK-1"><a href="#Flutter-SDK-1" class="headerlink" title="Flutter SDK"></a>Flutter SDK</h3><ol start="2">
@@ -425,7 +428,8 @@ ANDROID_HOME:C:\Users\xiexingen\AppData\Local\Android\Sdk</code></pre>
 <pre class=" language-bash"><code class="language-bash"><span class="token function">cd</span> ~
 vim .bash_profile
 // 然后添加下面行,<span class="token punctuation">;</span>wq 保存，然后重启bash
-<span class="token function">export</span> PATH<span class="token operator">=</span>/Users/xiexingen/flutter/bin:<span class="token variable">$PATH</span></code></pre>
+<span class="token function">export</span> PATH<span class="token operator">=</span>/Users/xiexingen/flutter/bin:<span class="token variable">$PATH</span>
+</code></pre>
 </li>
 <li><p>运行flutter doctor来检查flutter<br>会有很多xx 比如xcode，android相关的工具</p>
 </li>
@@ -456,7 +460,8 @@ ANDROID_NDK_HOME<span class="token operator">=</span>/Users/xiexingen/Library/An
 <span class="token function">export</span> PUB_HOSTED_URL<span class="token operator">=</span>https://pub.flutter-io.cn
 <span class="token function">export</span> FLUTTER_STORAGE_BASE_URL<span class="token operator">=</span>https://storage.flutter-io.cn
 <span class="token comment" spellcheck="true"># Flutter 环境变量</span>
-<span class="token function">export</span> PATH<span class="token operator">=</span>/Users/xiexingen/flutter/bin:<span class="token variable">$PATH</span></code></pre>
+<span class="token function">export</span> PATH<span class="token operator">=</span>/Users/xiexingen/flutter/bin:<span class="token variable">$PATH</span>
+</code></pre>
 </li>
 </ul>
 <blockquote>
@@ -464,11 +469,13 @@ ANDROID_NDK_HOME<span class="token operator">=</span>/Users/xiexingen/Library/An
 </blockquote>
 <h3 id="安装Xcode"><a href="#安装Xcode" class="headerlink" title="安装Xcode"></a>安装Xcode</h3><ol>
 <li>通过苹果应用商店安装</li>
-<li>配置Xcode命令行工具以使用最新安装的Xcode版本<pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> xcode-select --switch /Applications/Xcode.app/Contents/Developer</code></pre>
+<li>配置Xcode命令行工具以使用最新安装的Xcode版本<pre class=" language-bash"><code class="language-bash"><span class="token function">sudo</span> xcode-select --switch /Applications/Xcode.app/Contents/Developer
+</code></pre>
 </li>
 </ol>
 <h3 id="设置IOS模拟器"><a href="#设置IOS模拟器" class="headerlink" title="设置IOS模拟器"></a>设置IOS模拟器</h3><ol>
-<li>在终端输入如下命令行打开一个ios模拟器<pre class=" language-bash"><code class="language-bash"><span class="token function">open</span> -a Simulator</code></pre>
+<li>在终端输入如下命令行打开一个ios模拟器<pre class=" language-bash"><code class="language-bash"><span class="token function">open</span> -a Simulator
+</code></pre>
 </li>
 <li>通过模拟器菜单的 <em>硬件-&gt;设备</em>,确保是64位的iphone5s或更新的模拟器</li>
 </ol>
@@ -480,14 +487,16 @@ ANDROID_NDK_HOME<span class="token operator">=</span>/Users/xiexingen/Library/An
 <li><p>安装 <a target="_blank" rel="noopener" href="https://brew.sh/">Homebrew</a></p>
 </li>
 <li><p>确保homebrew最新</p>
-<pre class=" language-bash"><code class="language-bash">brew update</code></pre>
+<pre class=" language-bash"><code class="language-bash">brew update
+</code></pre>
 </li>
 <li><p>打开终端并运行如下命令来安装用于将Flutter应用安装到IOS设备的工具</p>
 <pre class=" language-bash"><code class="language-bash">brew <span class="token function">install</span> --HEAD usbmuxd
 brew <span class="token function">link</span> usbmuxd
 brew <span class="token function">install</span> --HEAd libimobiledevice
 brew <span class="token function">install</span> ideviceinstaller ios-deploy cocoapods
-pod setup</code></pre>
+pod setup
+</code></pre>
 <p>如果这些命令中的任何一个失败并出现错误，可运行<em>brew doctor</em>并按照说明来解决问题</p>
 </li>
 <li><p>遵循Xcode前面流程来配置项目</p>
@@ -507,7 +516,8 @@ pod setup</code></pre>
 </li>
 </ul>
 <ol start="5">
-<li>通过flutter run 运行启动项目<pre class=" language-bash"><code class="language-bash">flutter run</code></pre>
+<li>通过flutter run 运行启动项目<pre class=" language-bash"><code class="language-bash">flutter run
+</code></pre>
 </li>
 </ol>
 <h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><ul>
@@ -531,7 +541,8 @@ pod setup</code></pre>
 </li>
 <li><p>命令行运行android模拟器</p>
 <pre class=" language-bash"><code class="language-bash">// hw1 表示模拟器的名称
-emulator -avd hw1</code></pre>
+emulator -avd hw1
+</code></pre>
 </li>
 <li><p>命令行 flutter run<br>前置条件，需要一个已经启动的android模拟器或者连接到电脑的android设备</p>
 </li>

@@ -347,7 +347,8 @@
 <h3 id="cjs-用途"><a href="#cjs-用途" class="headerlink" title="cjs 用途"></a>cjs 用途</h3><p>es5的语法(也叫CommonJS)，目前主要给node用； module.exports=…</p>
 <h3 id="umd-用途"><a href="#umd-用途" class="headerlink" title="umd 用途"></a>umd 用途</h3><p>兼容esm和cjs，先判断是否支持node模块module.exports</p>
 <h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><ol>
-<li>安装umi-library  <pre class=" language-node"><code class="language-node">yarn add umi-library -D</code></pre>
+<li>安装umi-library  <pre class=" language-node"><code class="language-node">yarn add umi-library -D
+</code></pre>
 </li>
 <li>配置.umirc.library.js文件<pre class=" language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">// 使用babel方式打包 将按照源代码的文件目录进行打包，默认为rollup方式(将文件合并成一个)</span>
@@ -366,7 +367,8 @@ extraBabelPlugins<span class="token punctuation">:</span> <span class="token pun
     <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
     <span class="token punctuation">]</span><span class="token punctuation">,</span>
 <span class="token punctuation">]</span><span class="token punctuation">,</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span></code></pre>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+</code></pre>
 </li>
 <li>执行打包<br>可以参考github项目 <a target="_blank" rel="noopener" href="https://github.com/wetrial/wetrial">https://github.com/wetrial/wetrial</a></li>
 </ol>

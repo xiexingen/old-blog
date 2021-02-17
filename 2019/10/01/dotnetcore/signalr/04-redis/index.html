@@ -384,7 +384,8 @@ services.AddSignalR(config =>
 
           return connection;
       &#125;;
-  &#125;);</code></pre>
+  &#125;);
+</code></pre>
 <p>可以自定义Redis相关配置，此处的appSetting为已经定义好的配置实体，包括了，主要配置、CROS配置、Jwt配置、redis配置等详情如下</p>
 <pre class=" language-C#"><code class="language-C#">/// <summary>
 /// 对应appsettings中的App节点的配置信息
@@ -424,7 +425,8 @@ public class RedisCache
 &#123;
     public string ConnectionString &#123; set;get;&#125;
     public int DatabaseId &#123; set; get; &#125;
-&#125;</code></pre>
+&#125;
+</code></pre>
 <p>对应的配置文件如下</p>
 <pre class=" language-json"><code class="language-json">&amp;#<span class="token number">123</span><span class="token punctuation">;</span>
 <span class="token property">"Logging"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
@@ -453,7 +455,8 @@ public class RedisCache
     <span class="token property">"SecretKey"</span><span class="token operator">:</span> <span class="token string">"Wetrial20196666666"</span> // key 大于<span class="token number">16</span>位
   &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
 &amp;#<span class="token number">125</span><span class="token punctuation">;</span>
-&amp;#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
+&amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+</code></pre>
 <p>首先，将配置文件跟实体对象映射，下次在其他地方使用的时候可以直接通过DI注入，然后通过AddStackExchangeRedis配置使用redis作为底板</p>
 </li>
 </ul>

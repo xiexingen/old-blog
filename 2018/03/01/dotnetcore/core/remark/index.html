@@ -348,7 +348,8 @@ docker run -d -p 8081:80 –name wechat -v /docker/wechat/App_Data/:/app/App_Dat
 <!-- 使用dotnet ef ... -->
 <ItemGroup>
 <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1" />
-</ItemGroup>   </code></pre>
+</ItemGroup>   
+</code></pre>
 </li>
 <li><p>测试框架<br>Moq<br>fluentassertions</p>
 </li>
@@ -362,13 +363,15 @@ docker run -d -p 8081:80 –name wechat -v /docker/wechat/App_Data/:/app/App_Dat
         &#123;
             resolver.NamingStrategy = null;
         &#125;
-    &#125;);</code></pre>
+    &#125;);
+</code></pre>
 </li>
 <li><p>添加输出响应内容xml格式<br>.net core中默认只返回json格式需要xml的话需要修改Output formatter</p>
 <pre class=" language-c#"><code class="language-c#">services.AddMvc()
     .AddMvcOptions(options=> &#123;
         options.OutputFormatters.Add(new XmlDataContractSerializerOutputFormatter());
-    &#125;)</code></pre>
+    &#125;)
+</code></pre>
 </li>
 <li><p>全局异常  </p>
 </li>
@@ -441,7 +444,8 @@ docker run -d -p 8081:80 –name wechat -v /docker/wechat/App_Data/:/app/App_Dat
         //&#125;);
     &#125;
 &#125;
-```</code></pre>
+```
+</code></pre>
 <p>在ConfigureServices方法AddMvc中<br>    <code>c#      services.AddMvc(config=&gt; &#123;         config.Filters.Add(typeof(GlobalExceptionFilter));     &#125;)    </code></p>
 <ul>
 <li>[6.2] 在Configure方法中添加异常处理管道(注意在所有请求管道的最前面)<pre><code>app.UseExceptionHandler(options =&gt;
@@ -462,7 +466,8 @@ docker run -d -p 8081:80 –name wechat -v /docker/wechat/App_Data/:/app/App_Dat
             await context.Response.WriteAsync(JsonConvert.SerializeObject(response)).ConfigureAwait(false);
         &#125;
     &#125;);
-&#125;);</code></pre>
+&#125;);
+</code></pre>
 </li>
 </ul>
 

@@ -377,9 +377,11 @@
         priority: -11,
       <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
     <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;,</span>
-  <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;);</span></code></pre>
+  <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;);</span>
+</code></pre>
 <ol start="3">
-<li>在umi.js或者config.js 的umi-plugin-react中的chunks属性中配置配置如下<pre class=" language-bash"><code class="language-bash">chunks: <span class="token punctuation">[</span><span class="token string">'vendors'</span>,<span class="token string">'antdesigns'</span>, <span class="token string">'umi'</span><span class="token punctuation">]</span></code></pre>
+<li>在umi.js或者config.js 的umi-plugin-react中的chunks属性中配置配置如下<pre class=" language-bash"><code class="language-bash">chunks: <span class="token punctuation">[</span><span class="token string">'vendors'</span>,<span class="token string">'antdesigns'</span>, <span class="token string">'umi'</span><span class="token punctuation">]</span>
+</code></pre>
 </li>
 <li>重新执行 yarn run analyze 查看拆分后的情况，如图<br><img src="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/front/reactumi-split-next.jpg"></li>
 </ol>

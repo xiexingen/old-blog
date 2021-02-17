@@ -360,7 +360,8 @@ MessagePack基础介绍Signalr默认使用的是json形式传递数据，但是s
       public string Test &#123; set;get;&#125;
   &#125;
 
-  // 比如对象，new OffLineData()&#123;UserId="1000",ConnectionId="AZDEFASDFASDF",IsLast:true&#125;通过MessagePack序列化后应该会是&#123;UserId:"1000",ConnectionId:"AZDEFASDFASDF",IsLast:true&#125;,这个跟常用的json基本相同</code></pre>
+  // 比如对象，new OffLineData()&#123;UserId="1000",ConnectionId="AZDEFASDFASDF",IsLast:true&#125;通过MessagePack序列化后应该会是&#123;UserId:"1000",ConnectionId:"AZDEFASDFASDF",IsLast:true&#125;,这个跟常用的json基本相同
+</code></pre>
 <p>同时MessagePack还可以定义序列化成数组形式，代码如下</p>
 <pre class=" language-C#"><code class="language-C#">  [MessagePackObject]
   public class OffLineData
@@ -382,7 +383,8 @@ MessagePack基础介绍Signalr默认使用的是json形式传递数据，但是s
         public bool IsLast &#123; set; get; &#125;
     &#125;
 
-  // 比如对象，new OffLineData()&#123;UserId="1000",ConnectionId="AZDEFASDFASDF",IsLast:true&#125;通过MessagePack序列化后应该会是["10000","AZDEFASDFASDF",true]</code></pre>
+  // 比如对象，new OffLineData()&#123;UserId="1000",ConnectionId="AZDEFASDFASDF",IsLast:true&#125;通过MessagePack序列化后应该会是["10000","AZDEFASDFASDF",true]
+</code></pre>
 <p>更多MessagePack的内容可以自行结尾的文档，此处不再过多介绍.</p>
 <h2 id="为Signalr添加MessagePack支持"><a href="#为Signalr添加MessagePack支持" class="headerlink" title="为Signalr添加MessagePack支持"></a>为Signalr添加MessagePack支持</h2><ul>
 <li><p>引入需要的Nuget包<br>Microsoft.AspNetCore.SignalR.Protocols.MessagePack  </p>
@@ -397,14 +399,16 @@ MessagePack基础介绍Signalr默认使用的是json形式传递数据，但是s
       &#125;
   &#125;)
   // 支持MessagePack
-  .AddMessagePackProtocol();</code></pre>
+  .AddMessagePackProtocol();
+</code></pre>
 </li>
 <li><p>前端引入messagepack解析库<br>由于MessagePack传输是以二进制形式进行传输，降低了带宽，但是同时也增加到了代码的复杂度，原本直接获取数据就可以用的，现在需要先将二进制数据转换成正常数据，好在官方提供了对应的js库<em>msgpack5</em>、<em>signalr-protocol-msgpack</em><br>可以通过vs的包管理工具或者npm安装，然后拷贝需要的文件到项目的lib文件夹,比如我的结构是</p>
 <pre class=" language-bash"><code class="language-bash">  signalr-protocol-msgpack
   <span class="token operator">|</span>-msgpack5.js
   <span class="token operator">|</span>-msgpack5.min.js
   <span class="token operator">|</span>-signalr-protocol-msgpack.js
-  <span class="token operator">|</span>-signalr-protocol-msgpack.min.js</code></pre>
+  <span class="token operator">|</span>-signalr-protocol-msgpack.min.js
+</code></pre>
 <p>前端页面引入这两个js(注意顺序:signalr、msgpack5、signalr-protocol-msgpack)  </p>
 </li>
 <li><p>修改js连接对象，支持上MessagePack</p>

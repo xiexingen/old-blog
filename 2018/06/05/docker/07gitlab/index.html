@@ -360,7 +360,8 @@ sudo docker run <span class="token punctuation">-</span><span class="token punct
 <span class="token punctuation">-</span>v /docker/gitlab/config<span class="token punctuation">:</span>/etc/gitlab \ 配置文件映射到config文件夹
 <span class="token punctuation">-</span>v /docker/gitlab/logs<span class="token punctuation">:</span>/var/log/gitlab \
 <span class="token punctuation">-</span>v /docker/gitlab/data<span class="token punctuation">:</span>/var/opt/gitlab \
-gitlab/gitlab<span class="token punctuation">-</span>ce</code></pre>
+gitlab/gitlab<span class="token punctuation">-</span>ce
+</code></pre>
 ::: warning 注意</li>
 </ul>
 <ul>
@@ -376,7 +377,8 @@ gitlab/gitlab<span class="token punctuation">-</span>ce</code></pre>
 sudo docker run <span class="token punctuation">-</span>d <span class="token punctuation">-</span><span class="token punctuation">-</span>name gitlab<span class="token punctuation">-</span>runner <span class="token punctuation">-</span><span class="token punctuation">-</span>restart always \
 v /srv/gitlab<span class="token punctuation">-</span>runner/config<span class="token punctuation">:</span>/docker/gitlab<span class="token punctuation">-</span>runner/config \
 <span class="token punctuation">-</span>v /var/run/docker.sock<span class="token punctuation">:</span>/docker/gitlab<span class="token punctuation">-</span>runner/run/docker.sock \
-gitlab/gitlab<span class="token punctuation">-</span>runner<span class="token punctuation">:</span>latest</code></pre>
+gitlab/gitlab<span class="token punctuation">-</span>runner<span class="token punctuation">:</span>latest
+</code></pre>
 </li>
 <li>[2.2] 注册gitlab runner(官方建议跟gitlab不要放在同一个服务器上)【最后没有成功,改用<a href="/2018/06/05/docker/07gitlab01-runner/">07Gitlab01-runner</a> 】<br>参考地址:<a target="_blank" rel="noopener" href="https://docs.gitlab.com.cn/runner/register/index.html">https://docs.gitlab.com.cn/runner/register/index.html</a>  <ul>
 <li>运行下面命令启动注册程序<br>sudo docker exec -it gitlab-runner gitlab-ci-multi-runner register</li>
@@ -393,10 +395,11 @@ gitlab/gitlab<span class="token punctuation">-</span>runner<span class="token pu
 </ul>
 <hr>
 <h5 id="搭建私有仓库"><a href="#搭建私有仓库" class="headerlink" title="搭建私有仓库"></a>搭建私有仓库</h5><ol>
-<li>在docker中创建文件夹registry 用来存放仓库镜像，然后运行命令  <pre class=" language-docker"><code class="language-docker">docker run <span class="token punctuation">-</span>d <span class="token punctuation">-</span>v /docker/registry<span class="token punctuation">:</span>/var/lib/registry <span class="token punctuation">-</span>p 8091<span class="token punctuation">:</span>5000 <span class="token punctuation">-</span><span class="token punctuation">-</span>restart=always <span class="token punctuation">-</span><span class="token punctuation">-</span>name registry registry</code></pre>
+<li>在docker中创建文件夹registry 用来存放仓库镜像，然后运行命令  <pre class=" language-docker"><code class="language-docker">docker run <span class="token punctuation">-</span>d <span class="token punctuation">-</span>v /docker/registry<span class="token punctuation">:</span>/var/lib/registry <span class="token punctuation">-</span>p 8091<span class="token punctuation">:</span>5000 <span class="token punctuation">-</span><span class="token punctuation">-</span>restart=always <span class="token punctuation">-</span><span class="token punctuation">-</span>name registry registry
+</code></pre>
 </li>
 </ol>
-<h5 id="使用docker-compose安装"><a href="#使用docker-compose安装" class="headerlink" title="使用docker-compose安装"></a>使用docker-compose安装</h5><p>请查看<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/data/docker/gitlab-docker-compose.yml">docker-compose文件</a> </p>
+<h5 id="使用docker-compose安装"><a href="#使用docker-compose安装" class="headerlink" title="使用docker-compose安装"></a>使用docker-compose安装</h5><p>请查看<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/data/docker-composes/gitlab-docker-compose.yml">docker-compose文件</a> </p>
 
             </div>
             <hr/>

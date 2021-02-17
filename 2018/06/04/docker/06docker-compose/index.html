@@ -363,14 +363,15 @@ services<span class="token punctuation">:</span>
      ports<span class="token punctuation">:</span>
        <span class="token punctuation">-</span><span class="token string">'5000:80'</span>
      depends_on<span class="token punctuation">:</span>
-       <span class="token punctuation">-</span> db</code></pre>
+       <span class="token punctuation">-</span> db
+</code></pre>
 <blockquote>
 <p>【注意】<br>由于db需要初始化用户角色 所以在资料卷中指定目录下放入sql 内容<br>GRANT ALL PRIVILEGES ON <em>.</em> TO ‘sa’@’%’ WITH GRANT OPTION;  </p>
 </blockquote>
 </li>
 <li><p>执行命令<br>docker-compose build<br>docker up    //docker down 与docker up相反  </p>
 <blockquote>
-<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/data/docker/mysql-docker-compose.yml">docker-compose文件</a>  </p>
+<p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/data/docker-composes/mysql-docker-compose.yml">docker-compose文件</a>  </p>
 </blockquote>
 </li>
 </ol>

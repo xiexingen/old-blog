@@ -348,7 +348,8 @@ docker pull mongo 拉去mongo镜像
 </li>
 </ol>
 <p>–首先创建文件夹  /docker/mongo/config  以及/docker/mongo/data 用于与docker中mongo实例链接  然后运行命令</p>
-<pre class=" language-bash"><code class="language-bash">docker run -d -p 27017:27017 --name mongo01 -v /docker/mongo/config:/data/configdb -v<span class="token operator">=</span>/docker/mongo/data:/data/db mongo</code></pre>
+<pre class=" language-bash"><code class="language-bash">docker run -d -p 27017:27017 --name mongo01 -v /docker/mongo/config:/data/configdb -v<span class="token operator">=</span>/docker/mongo/data:/data/db mongo
+</code></pre>
 
             </div>
             <hr/>
