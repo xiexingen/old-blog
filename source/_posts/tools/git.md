@@ -167,3 +167,13 @@ git clone http://用户名:密码@gitlab.xxgtalk.cn/WT/StudyNetCore.git
 拉取上游代码:git fetch upstream
 合并代码:git merge upstream/master
 ```
+
+* 查看所有合并到master分支的分支
+``` js
+git branch --merged master
+```
+
+* 删除所有已经合并到master的分支
+``` js
+git branch --merged master |grep -v '^\*' | xargs git branch -d
+```
