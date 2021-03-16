@@ -30,15 +30,15 @@ date: 2019-03-16 09:10:15
 1. 注册账号[github](https://github.com)、[travis](https://travis-ci.org)
 2. github上创建仓库(wetrial-site)
 3. github上生成一个token(记得保存下来)，用于travis推送代码到gh-pages分支  
-![生成token](http://qiniu.xxgtalk.cn/blog/images/tools/travis_github_generate_token.jpg) 
+![生成token](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/tools/travis_github_generate_token.jpg) 
 记得将tokens保存下来，稍后要用到，仓库权限选择第一项 repo即可  
 4. travis设置  
 点击头像、然后选择项目，默认是用户，如果你的项目是组织项目的，需要切换到组织，如图所示  
-![travis项目选择](http://qiniu.xxgtalk.cn/blog/images/tools/travis_project_list.jpg) 
+![travis项目选择](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/tools/travis_project_list.jpg) 
 5. 进入项目配置页面，如图  
-![travis项目选择](http://qiniu.xxgtalk.cn/blog/images/tools/travis_project_setting.jpg) 
+![travis项目选择](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/tools/travis_project_setting.jpg) 
 添加环境变量相关东西，包括域名、token等
-![配置](http://qiniu.xxgtalk.cn/blog/images/tools/travis_environment.jpg)   
+![配置](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/tools/travis_environment.jpg)   
 6. 回到实际的项目
 从ant-design-pro-site拉取代码，然后根据自己的实际情况做修改；比如我去掉了尾栏的一些东西，增加了css相关的大栏(这里不具体介绍)  
 7. 在根目录下添加travis的配置文件.travis.yml 内容如下所示
@@ -83,14 +83,14 @@ deploy:
     email: $GIT_EMAIL
 ```
 然后提交并同步到github,回到travis将会看到如下一幕  
-![配置](http://qiniu.xxgtalk.cn/blog/images/tools/travis_log.jpg)    
+![配置](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/tools/travis_log.jpg)    
 你也可以从日志里面看到具体的执行过程，等待执行完成后回到github中将会看到里面多了一个gh-pages分支，没错 这个分支就是travis中的deploy推送过去的，里面就是编译后的代码，再回到setting里面，将会看到已经默认配置好站点地址了，这里我们改改 使用自己的域名，如图所示:  
-![](http://qiniu.xxgtalk.cn/blog/images/tools/travis_github_config.jpg) 
+![](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/tools/travis_github_config.jpg) 
 最后，去域名管理页，将自己的这个子域名一定一个类型为CNAME的，地址为:wetrial.github.io
 
 #### 结尾  
 访问刚配置的地址:http://ant.xxgtalk.cn 可以看到部署好的文档
 
-![wetrial示例](http://qiniu.xxgtalk.cn/blog/images/tools/wetrial-site.jpg) 
+![wetrial示例](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/tools/wetrial-site.jpg) 
 
 > 此外,打算写一篇这块的手册，[地址:https://www.yuque.com/wetrial/front-end/xuyan](https://www.yuque.com/wetrial/front-end/xuyan) 欢迎 [FORK](https://www.yuque.com/wetrial/front-end/xuyan)

@@ -31,7 +31,7 @@ ngrok http 8080
 ngrok tcp 22
 ```
 
-![20191217094149.png](http://qiniu.xxgtalk.cn/blog/images/20191217094149.png)
+![20191217094149.png](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/20191217094149.png)
 
 最终你会得到,一个外网可以访问的地址. 用这个地址就可以直接访问到你本机的端口了.  
 

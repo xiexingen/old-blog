@@ -30,7 +30,7 @@ Flutter-01 环境搭建
 2. 为Android Studio安装Flutter和Dart插件
 File->Settings->Plugins 然后搜索Flutter点击安装，这个时候会提示安装Dart插件，点安装 然后重启Android Studio
 如图
-![20190909203319.png](http://qiniu.xxgtalk.cn/blog/images/20190909203319.png)
+![20190909203319.png](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/20190909203319.png)
 
 ### Flutter SDK
 1. 配置flutter临时镜像(非必须)
@@ -123,7 +123,7 @@ export PATH=/Users/xiexingen/flutter/bin:$PATH
 2. 为Android Studio安装Flutter和Dart插件
 File->Settings->Plugins 然后搜索Flutter点击安装，这个时候会提示安装Dart插件，点安装 然后重启Android Studio
 如图
-![20190909203319.png](http://qiniu.xxgtalk.cn/blog/images/20190909203319.png)
+![20190909203319.png](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/20190909203319.png)
 
 ### 设置环境变量
 - 添加系统环境变量
@@ -209,7 +209,7 @@ flutter run
 ### 无法启动模拟器
 > emulator: ERROR:x86 emulation currently requires hardware acceleration! Please ensure Windows Hypervisor Platform (WHPX) is properly installed and usable. CPU acceleration status: HAXM is not installed on this machine  
 解决方案:选择 Tools-> SDK Manager -> SDK Tools,安装 HAXM 即可
-![20190909204602.png](http://qiniu.xxgtalk.cn/blog/images/20190909204602.png)
+![20190909204602.png](https://cdn.jsdelivr.net/gh/xiexingen/blog/assets/images/20190909204602.png)
 
 ### 创建flutter项目
 1. 通过android studio创建
