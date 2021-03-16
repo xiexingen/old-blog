@@ -30,7 +30,7 @@ Signalr是以Group、Connect为核心来进行推送，比如，给某个组、�
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
-<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="atom.xml" title="程序有Bug技术栈" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
@@ -336,7 +336,7 @@ Signalr是以Group、Connect为核心来进行推送，比如，给某个组、�
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>.net core 3.0 Signalr - 05 使用jwt将用户跟signalr关联</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>Signalr是以Group、Connect为核心来进行推送，比如，给某个组、某个连接来推送，但实际场景中，核心应该是某个组、某个人；然而一个人可以对应多个连接(浏览器多个tab页)；本节就来介绍下自行管理人、组、连接这些关系<br>由于signalr连接的时候不那么方便附带header和cookie(因为推送独立成一个子系统了)，实际实现中采用以url query的形式附带上token，然后服务器端自定义解析token得到用户信息；</p>
 <h2 id="服务器端实现"><a href="#服务器端实现" class="headerlink" title="服务器端实现"></a>服务器端实现</h2><ul>
 <li><p>ConfigureServices中添加服务相关方法，代码如下,完整代码</p>
